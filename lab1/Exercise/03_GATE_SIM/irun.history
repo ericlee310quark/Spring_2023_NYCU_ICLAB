@@ -1,0 +1,15 @@
+s1(24Feb2023:02:27:55):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s2(24Feb2023:04:32:55):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s3(25Feb2023:00:53:03):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s4(25Feb2023:03:03:30):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s5(25Feb2023:03:33:02):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s6(25Feb2023:04:04:21):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s7(25Feb2023:05:05:21):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s8(25Feb2023:05:52:41):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s9(25Feb2023:05:58:57):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s10(25Feb2023:06:12:20):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s11(25Feb2023:07:36:26):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s12(25Feb2023:20:03:18):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s13(26Feb2023:04:10:02):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s14(26Feb2023:04:13:26):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
+s15(26Feb2023:04:28:40):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v 
