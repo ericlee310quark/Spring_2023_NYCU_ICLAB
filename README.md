@@ -1,2 +1,2 @@
-# Lab1 Combinational Circuit Design
+# Spring_2023_NYCU_ICLAB
 
