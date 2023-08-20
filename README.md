@@ -19,7 +19,6 @@
 - Lab 06 : Synthesis
     - Practice : Complex Multiplier (Genvar Version)
     - Exercise : Elliptic Curve Group Operation
-- Midterm Project : Gray-level Co-occurrence Matrix (GLCM)
 - Online Test :     Area and Angles of a Triangle
 - Lab 07 : Static Timing Analysis
     - Practice: Convolution
@@ -38,3 +37,7 @@
 - Lab 12 : APR II - Things to Do after Layout
     - Practice: Power Rail Analysis Practice Tutorial
     - Exercise: Train Tour APRII
+
+## Projects
+- Midterm Project : Gray-level Co-occurrence Matrix (GLCM)
+- Final Prject :    Customized ISA Processor
