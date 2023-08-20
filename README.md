@@ -1,6 +1,6 @@
 # Spring_2023_NYCU_ICLAB
 ## Introduce
-     Hi! This is Eric's Course Record for NYCU ICLAB (Spring 2023: EEIE30041). I put the files I submitted then here, and leave some scripts that I had used to develop 
+Hi! This is Eric's Course Record for NYCU ICLAB (Spring 2023: EEIE30041). I put the files I submitted then here, and leave some scripts that I had used to develop 
 my design or test my algorithm.
 
 
