@@ -1,0 +1,2560 @@
+======================================================
+[ Dram Id ] :   0/@00000
+[ Shop Info ]           | [ User Info ]
+[ 000010000 ]           | [ 000010004 ]
+[ Large  ] :         42 | [ Money ]     : 51431
+[ Medium ] :          9 | < Shopping History >
+[ Small  ] :         14 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         52 >
+[ Exp    ] :        939 | < Seller Id > :         44 >
+======================================================
+======================================================
+[ Dram Id ] :   1/@00001
+[ Shop Info ]           | [ User Info ]
+[ 000010008 ]           | [ 00001000c ]
+[ Large  ] :         48 | [ Money ]     : 43611
+[ Medium ] :         49 | < Shopping History >
+[ Small  ] :         44 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         20 >
+[ Exp    ] :        614 | < Seller Id > :         16 >
+======================================================
+======================================================
+[ Dram Id ] :   2/@00002
+[ Shop Info ]           | [ User Info ]
+[ 000010010 ]           | [ 000010014 ]
+[ Large  ] :         23 | [ Money ]     : 53607
+[ Medium ] :          5 | < Shopping History >
+[ Small  ] :         61 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :          8 >
+[ Exp    ] :       2159 | < Seller Id > :        141 >
+======================================================
+======================================================
+[ Dram Id ] :   3/@00003
+[ Shop Info ]           | [ User Info ]
+[ 000010018 ]           | [ 00001001c ]
+[ Large  ] :          2 | [ Money ]     : 43155
+[ Medium ] :         53 | < Shopping History >
+[ Small  ] :         49 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         48 >
+[ Exp    ] :       1639 | < Seller Id > :        107 >
+======================================================
+======================================================
+[ Dram Id ] :   4/@00004
+[ Shop Info ]           | [ User Info ]
+[ 000010020 ]           | [ 000010024 ]
+[ Large  ] :         31 | [ Money ]     : 64054
+[ Medium ] :         39 | < Shopping History >
+[ Small  ] :         24 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         38 >
+[ Exp    ] :       1032 | < Seller Id > :         13 >
+======================================================
+======================================================
+[ Dram Id ] :   5/@00005
+[ Shop Info ]           | [ User Info ]
+[ 000010028 ]           | [ 00001002c ]
+[ Large  ] :          6 | [ Money ]     : 10070
+[ Medium ] :         32 | < Shopping History >
+[ Small  ] :         29 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         58 >
+[ Exp    ] :       1631 | < Seller Id > :         41 >
+======================================================
+======================================================
+[ Dram Id ] :   6/@00006
+[ Shop Info ]           | [ User Info ]
+[ 000010030 ]           | [ 000010034 ]
+[ Large  ] :         56 | [ Money ]     : 62942
+[ Medium ] :         22 | < Shopping History >
+[ Small  ] :         60 | < Item Id   > :      Small >
+[ Level  ] :     Copper | < Item num  > :         46 >
+[ Exp    ] :        413 | < Seller Id > :        213 >
+======================================================
+======================================================
+[ Dram Id ] :   7/@00007
+[ Shop Info ]           | [ User Info ]
+[ 000010038 ]           | [ 00001003c ]
+[ Large  ] :         59 | [ Money ]     : 57928
+[ Medium ] :         61 | < Shopping History >
+[ Small  ] :         32 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         58 >
+[ Exp    ] :       2015 | < Seller Id > :        133 >
+======================================================
+======================================================
+[ Dram Id ] :   8/@00008
+[ Shop Info ]           | [ User Info ]
+[ 000010040 ]           | [ 000010044 ]
+[ Large  ] :         30 | [ Money ]     : 53527
+[ Medium ] :         59 | < Shopping History >
+[ Small  ] :         31 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :          2 >
+[ Exp    ] :        629 | < Seller Id > :        110 >
+======================================================
+======================================================
+[ Dram Id ] :   9/@00009
+[ Shop Info ]           | [ User Info ]
+[ 000010048 ]           | [ 00001004c ]
+[ Large  ] :         55 | [ Money ]     : 21159
+[ Medium ] :         46 | < Shopping History >
+[ Small  ] :         53 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :          6 >
+[ Exp    ] :       2005 | < Seller Id > :        177 >
+======================================================
+======================================================
+[ Dram Id ] :  10/@0000a
+[ Shop Info ]           | [ User Info ]
+[ 000010050 ]           | [ 000010054 ]
+[ Large  ] :          9 | [ Money ]     : 40258
+[ Medium ] :         28 | < Shopping History >
+[ Small  ] :          1 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         56 >
+[ Exp    ] :       3576 | < Seller Id > :        104 >
+======================================================
+======================================================
+[ Dram Id ] :  11/@0000b
+[ Shop Info ]           | [ User Info ]
+[ 000010058 ]           | [ 00001005c ]
+[ Large  ] :         45 | [ Money ]     : 15571
+[ Medium ] :         22 | < Shopping History >
+[ Small  ] :         56 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         46 >
+[ Exp    ] :       1013 | < Seller Id > :        215 >
+======================================================
+======================================================
+[ Dram Id ] :  12/@0000c
+[ Shop Info ]           | [ User Info ]
+[ 000010060 ]           | [ 000010064 ]
+[ Large  ] :          0 | [ Money ]     : 23268
+[ Medium ] :         51 | < Shopping History >
+[ Small  ] :         56 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         63 >
+[ Exp    ] :         43 | < Seller Id > :        179 >
+======================================================
+======================================================
+[ Dram Id ] :  13/@0000d
+[ Shop Info ]           | [ User Info ]
+[ 000010068 ]           | [ 00001006c ]
+[ Large  ] :         24 | [ Money ]     : 19385
+[ Medium ] :         59 | < Shopping History >
+[ Small  ] :         43 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         56 >
+[ Exp    ] :       1946 | < Seller Id > :        168 >
+======================================================
+======================================================
+[ Dram Id ] :  14/@0000e
+[ Shop Info ]           | [ User Info ]
+[ 000010070 ]           | [ 000010074 ]
+[ Large  ] :         32 | [ Money ]     : 35406
+[ Medium ] :         41 | < Shopping History >
+[ Small  ] :         57 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         62 >
+[ Exp    ] :       1371 | < Seller Id > :         27 >
+======================================================
+======================================================
+[ Dram Id ] :  15/@0000f
+[ Shop Info ]           | [ User Info ]
+[ 000010078 ]           | [ 00001007c ]
+[ Large  ] :         61 | [ Money ]     : 38609
+[ Medium ] :         38 | < Shopping History >
+[ Small  ] :         12 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         45 >
+[ Exp    ] :        144 | < Seller Id > :         80 >
+======================================================
+======================================================
+[ Dram Id ] :  16/@00010
+[ Shop Info ]           | [ User Info ]
+[ 000010080 ]           | [ 000010084 ]
+[ Large  ] :         27 | [ Money ]     : 16124
+[ Medium ] :         11 | < Shopping History >
+[ Small  ] :         32 | < Item Id   > :      Small >
+[ Level  ] :     Copper | < Item num  > :         24 >
+[ Exp    ] :        657 | < Seller Id > :        117 >
+======================================================
+======================================================
+[ Dram Id ] :  17/@00011
+[ Shop Info ]           | [ User Info ]
+[ 000010088 ]           | [ 00001008c ]
+[ Large  ] :         30 | [ Money ]     : 47688
+[ Medium ] :         40 | < Shopping History >
+[ Small  ] :         37 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         28 >
+[ Exp    ] :         83 | < Seller Id > :          2 >
+======================================================
+======================================================
+[ Dram Id ] :  18/@00012
+[ Shop Info ]           | [ User Info ]
+[ 000010090 ]           | [ 000010094 ]
+[ Large  ] :         30 | [ Money ]     :  3893
+[ Medium ] :         33 | < Shopping History >
+[ Small  ] :         43 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         22 >
+[ Exp    ] :       1597 | < Seller Id > :        241 >
+======================================================
+======================================================
+[ Dram Id ] :  19/@00013
+[ Shop Info ]           | [ User Info ]
+[ 000010098 ]           | [ 00001009c ]
+[ Large  ] :         22 | [ Money ]     :  4855
+[ Medium ] :         17 | < Shopping History >
+[ Small  ] :          3 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         58 >
+[ Exp    ] :       3881 | < Seller Id > :         16 >
+======================================================
+======================================================
+[ Dram Id ] :  20/@00014
+[ Shop Info ]           | [ User Info ]
+[ 0000100a0 ]           | [ 0000100a4 ]
+[ Large  ] :         24 | [ Money ]     :  6663
+[ Medium ] :         45 | < Shopping History >
+[ Small  ] :         17 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         51 >
+[ Exp    ] :       3104 | < Seller Id > :        132 >
+======================================================
+======================================================
+[ Dram Id ] :  21/@00015
+[ Shop Info ]           | [ User Info ]
+[ 0000100a8 ]           | [ 0000100ac ]
+[ Large  ] :         19 | [ Money ]     : 42696
+[ Medium ] :         11 | < Shopping History >
+[ Small  ] :         27 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         27 >
+[ Exp    ] :       1433 | < Seller Id > :        167 >
+======================================================
+======================================================
+[ Dram Id ] :  22/@00016
+[ Shop Info ]           | [ User Info ]
+[ 0000100b0 ]           | [ 0000100b4 ]
+[ Large  ] :         48 | [ Money ]     : 61016
+[ Medium ] :         43 | < Shopping History >
+[ Small  ] :         16 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :          1 >
+[ Exp    ] :       1198 | < Seller Id > :         82 >
+======================================================
+======================================================
+[ Dram Id ] :  23/@00017
+[ Shop Info ]           | [ User Info ]
+[ 0000100b8 ]           | [ 0000100bc ]
+[ Large  ] :         19 | [ Money ]     : 57711
+[ Medium ] :         16 | < Shopping History >
+[ Small  ] :         26 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         61 >
+[ Exp    ] :       1819 | < Seller Id > :         77 >
+======================================================
+======================================================
+[ Dram Id ] :  24/@00018
+[ Shop Info ]           | [ User Info ]
+[ 0000100c0 ]           | [ 0000100c4 ]
+[ Large  ] :         43 | [ Money ]     : 39397
+[ Medium ] :         42 | < Shopping History >
+[ Small  ] :         58 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         29 >
+[ Exp    ] :        566 | < Seller Id > :         31 >
+======================================================
+======================================================
+[ Dram Id ] :  25/@00019
+[ Shop Info ]           | [ User Info ]
+[ 0000100c8 ]           | [ 0000100cc ]
+[ Large  ] :         61 | [ Money ]     : 21129
+[ Medium ] :         15 | < Shopping History >
+[ Small  ] :         18 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         34 >
+[ Exp    ] :        450 | < Seller Id > :         55 >
+======================================================
+======================================================
+[ Dram Id ] :  26/@0001a
+[ Shop Info ]           | [ User Info ]
+[ 0000100d0 ]           | [ 0000100d4 ]
+[ Large  ] :         37 | [ Money ]     : 49509
+[ Medium ] :         58 | < Shopping History >
+[ Small  ] :         38 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         54 >
+[ Exp    ] :       2157 | < Seller Id > :        157 >
+======================================================
+======================================================
+[ Dram Id ] :  27/@0001b
+[ Shop Info ]           | [ User Info ]
+[ 0000100d8 ]           | [ 0000100dc ]
+[ Large  ] :         10 | [ Money ]     : 51069
+[ Medium ] :         22 | < Shopping History >
+[ Small  ] :         57 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         14 >
+[ Exp    ] :       2873 | < Seller Id > :        195 >
+======================================================
+======================================================
+[ Dram Id ] :  28/@0001c
+[ Shop Info ]           | [ User Info ]
+[ 0000100e0 ]           | [ 0000100e4 ]
+[ Large  ] :         60 | [ Money ]     :  3674
+[ Medium ] :         26 | < Shopping History >
+[ Small  ] :         35 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         35 >
+[ Exp    ] :       2817 | < Seller Id > :         62 >
+======================================================
+======================================================
+[ Dram Id ] :  29/@0001d
+[ Shop Info ]           | [ User Info ]
+[ 0000100e8 ]           | [ 0000100ec ]
+[ Large  ] :         48 | [ Money ]     : 49343
+[ Medium ] :         53 | < Shopping History >
+[ Small  ] :          7 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         13 >
+[ Exp    ] :       1617 | < Seller Id > :         58 >
+======================================================
+======================================================
+[ Dram Id ] :  30/@0001e
+[ Shop Info ]           | [ User Info ]
+[ 0000100f0 ]           | [ 0000100f4 ]
+[ Large  ] :         40 | [ Money ]     : 51479
+[ Medium ] :         33 | < Shopping History >
+[ Small  ] :          2 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         18 >
+[ Exp    ] :       2855 | < Seller Id > :        253 >
+======================================================
+======================================================
+[ Dram Id ] :  31/@0001f
+[ Shop Info ]           | [ User Info ]
+[ 0000100f8 ]           | [ 0000100fc ]
+[ Large  ] :         53 | [ Money ]     : 61681
+[ Medium ] :         62 | < Shopping History >
+[ Small  ] :          0 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         37 >
+[ Exp    ] :       2479 | < Seller Id > :        111 >
+======================================================
+======================================================
+[ Dram Id ] :  32/@00020
+[ Shop Info ]           | [ User Info ]
+[ 000010100 ]           | [ 000010104 ]
+[ Large  ] :         10 | [ Money ]     : 45239
+[ Medium ] :         60 | < Shopping History >
+[ Small  ] :         34 | < Item Id   > :     Medium >
+[ Level  ] :     Copper | < Item num  > :         24 >
+[ Exp    ] :        723 | < Seller Id > :        217 >
+======================================================
+======================================================
+[ Dram Id ] :  33/@00021
+[ Shop Info ]           | [ User Info ]
+[ 000010108 ]           | [ 00001010c ]
+[ Large  ] :         24 | [ Money ]     : 57069
+[ Medium ] :         42 | < Shopping History >
+[ Small  ] :         54 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         50 >
+[ Exp    ] :       1715 | < Seller Id > :        120 >
+======================================================
+======================================================
+[ Dram Id ] :  34/@00022
+[ Shop Info ]           | [ User Info ]
+[ 000010110 ]           | [ 000010114 ]
+[ Large  ] :         20 | [ Money ]     : 15998
+[ Medium ] :         61 | < Shopping History >
+[ Small  ] :         20 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         17 >
+[ Exp    ] :       1883 | < Seller Id > :        160 >
+======================================================
+======================================================
+[ Dram Id ] :  35/@00023
+[ Shop Info ]           | [ User Info ]
+[ 000010118 ]           | [ 00001011c ]
+[ Large  ] :         55 | [ Money ]     : 37416
+[ Medium ] :         36 | < Shopping History >
+[ Small  ] :          9 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :          4 >
+[ Exp    ] :         35 | < Seller Id > :        112 >
+======================================================
+======================================================
+[ Dram Id ] :  36/@00024
+[ Shop Info ]           | [ User Info ]
+[ 000010120 ]           | [ 000010124 ]
+[ Large  ] :         16 | [ Money ]     : 52786
+[ Medium ] :         12 | < Shopping History >
+[ Small  ] :         57 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         62 >
+[ Exp    ] :       1908 | < Seller Id > :        127 >
+======================================================
+======================================================
+[ Dram Id ] :  37/@00025
+[ Shop Info ]           | [ User Info ]
+[ 000010128 ]           | [ 00001012c ]
+[ Large  ] :         54 | [ Money ]     : 39051
+[ Medium ] :         33 | < Shopping History >
+[ Small  ] :         60 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         59 >
+[ Exp    ] :        901 | < Seller Id > :        156 >
+======================================================
+======================================================
+[ Dram Id ] :  38/@00026
+[ Shop Info ]           | [ User Info ]
+[ 000010130 ]           | [ 000010134 ]
+[ Large  ] :         49 | [ Money ]     : 61050
+[ Medium ] :          9 | < Shopping History >
+[ Small  ] :         57 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         59 >
+[ Exp    ] :       2652 | < Seller Id > :        168 >
+======================================================
+======================================================
+[ Dram Id ] :  39/@00027
+[ Shop Info ]           | [ User Info ]
+[ 000010138 ]           | [ 00001013c ]
+[ Large  ] :         17 | [ Money ]     : 57211
+[ Medium ] :         16 | < Shopping History >
+[ Small  ] :          7 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :          6 >
+[ Exp    ] :        344 | < Seller Id > :         91 >
+======================================================
+======================================================
+[ Dram Id ] :  40/@00028
+[ Shop Info ]           | [ User Info ]
+[ 000010140 ]           | [ 000010144 ]
+[ Large  ] :         51 | [ Money ]     : 58852
+[ Medium ] :         50 | < Shopping History >
+[ Small  ] :         19 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         16 >
+[ Exp    ] :       2258 | < Seller Id > :        185 >
+======================================================
+======================================================
+[ Dram Id ] :  41/@00029
+[ Shop Info ]           | [ User Info ]
+[ 000010148 ]           | [ 00001014c ]
+[ Large  ] :         28 | [ Money ]     : 46446
+[ Medium ] :         14 | < Shopping History >
+[ Small  ] :         43 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         40 >
+[ Exp    ] :        362 | < Seller Id > :        105 >
+======================================================
+======================================================
+[ Dram Id ] :  42/@0002a
+[ Shop Info ]           | [ User Info ]
+[ 000010150 ]           | [ 000010154 ]
+[ Large  ] :         14 | [ Money ]     : 50283
+[ Medium ] :         22 | < Shopping History >
+[ Small  ] :         49 | < Item Id   > :      Large >
+[ Level  ] :     Copper | < Item num  > :         14 >
+[ Exp    ] :        569 | < Seller Id > :        141 >
+======================================================
+======================================================
+[ Dram Id ] :  43/@0002b
+[ Shop Info ]           | [ User Info ]
+[ 000010158 ]           | [ 00001015c ]
+[ Large  ] :         46 | [ Money ]     :  5061
+[ Medium ] :         40 | < Shopping History >
+[ Small  ] :         25 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         56 >
+[ Exp    ] :       2389 | < Seller Id > :         90 >
+======================================================
+======================================================
+[ Dram Id ] :  44/@0002c
+[ Shop Info ]           | [ User Info ]
+[ 000010160 ]           | [ 000010164 ]
+[ Large  ] :         33 | [ Money ]     : 36052
+[ Medium ] :         55 | < Shopping History >
+[ Small  ] :          0 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :          6 >
+[ Exp    ] :       3193 | < Seller Id > :        243 >
+======================================================
+======================================================
+[ Dram Id ] :  45/@0002d
+[ Shop Info ]           | [ User Info ]
+[ 000010168 ]           | [ 00001016c ]
+[ Large  ] :         53 | [ Money ]     : 16183
+[ Medium ] :         52 | < Shopping History >
+[ Small  ] :         58 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         28 >
+[ Exp    ] :       1717 | < Seller Id > :         25 >
+======================================================
+======================================================
+[ Dram Id ] :  46/@0002e
+[ Shop Info ]           | [ User Info ]
+[ 000010170 ]           | [ 000010174 ]
+[ Large  ] :         11 | [ Money ]     : 43071
+[ Medium ] :         47 | < Shopping History >
+[ Small  ] :         31 | < Item Id   > :      Large >
+[ Level  ] :     Copper | < Item num  > :         12 >
+[ Exp    ] :        349 | < Seller Id > :        185 >
+======================================================
+======================================================
+[ Dram Id ] :  47/@0002f
+[ Shop Info ]           | [ User Info ]
+[ 000010178 ]           | [ 00001017c ]
+[ Large  ] :         26 | [ Money ]     : 28282
+[ Medium ] :          6 | < Shopping History >
+[ Small  ] :          7 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         14 >
+[ Exp    ] :        694 | < Seller Id > :        221 >
+======================================================
+======================================================
+[ Dram Id ] :  48/@00030
+[ Shop Info ]           | [ User Info ]
+[ 000010180 ]           | [ 000010184 ]
+[ Large  ] :         55 | [ Money ]     : 19662
+[ Medium ] :          1 | < Shopping History >
+[ Small  ] :         30 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         31 >
+[ Exp    ] :       3043 | < Seller Id > :        254 >
+======================================================
+======================================================
+[ Dram Id ] :  49/@00031
+[ Shop Info ]           | [ User Info ]
+[ 000010188 ]           | [ 00001018c ]
+[ Large  ] :         37 | [ Money ]     : 42116
+[ Medium ] :         23 | < Shopping History >
+[ Small  ] :         28 | < Item Id   > :      Small >
+[ Level  ] :     Copper | < Item num  > :         54 >
+[ Exp    ] :         62 | < Seller Id > :        183 >
+======================================================
+======================================================
+[ Dram Id ] :  50/@00032
+[ Shop Info ]           | [ User Info ]
+[ 000010190 ]           | [ 000010194 ]
+[ Large  ] :         27 | [ Money ]     : 21021
+[ Medium ] :          7 | < Shopping History >
+[ Small  ] :          5 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         33 >
+[ Exp    ] :       2379 | < Seller Id > :        149 >
+======================================================
+======================================================
+[ Dram Id ] :  51/@00033
+[ Shop Info ]           | [ User Info ]
+[ 000010198 ]           | [ 00001019c ]
+[ Large  ] :         20 | [ Money ]     :  4368
+[ Medium ] :         10 | < Shopping History >
+[ Small  ] :         52 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         29 >
+[ Exp    ] :       1572 | < Seller Id > :        192 >
+======================================================
+======================================================
+[ Dram Id ] :  52/@00034
+[ Shop Info ]           | [ User Info ]
+[ 0000101a0 ]           | [ 0000101a4 ]
+[ Large  ] :         21 | [ Money ]     : 33438
+[ Medium ] :         40 | < Shopping History >
+[ Small  ] :         54 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         51 >
+[ Exp    ] :        910 | < Seller Id > :         95 >
+======================================================
+======================================================
+[ Dram Id ] :  53/@00035
+[ Shop Info ]           | [ User Info ]
+[ 0000101a8 ]           | [ 0000101ac ]
+[ Large  ] :         15 | [ Money ]     : 16843
+[ Medium ] :         45 | < Shopping History >
+[ Small  ] :         26 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         31 >
+[ Exp    ] :       3788 | < Seller Id > :        127 >
+======================================================
+======================================================
+[ Dram Id ] :  54/@00036
+[ Shop Info ]           | [ User Info ]
+[ 0000101b0 ]           | [ 0000101b4 ]
+[ Large  ] :         44 | [ Money ]     : 22828
+[ Medium ] :         60 | < Shopping History >
+[ Small  ] :         19 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :          0 >
+[ Exp    ] :       3770 | < Seller Id > :         95 >
+======================================================
+======================================================
+[ Dram Id ] :  55/@00037
+[ Shop Info ]           | [ User Info ]
+[ 0000101b8 ]           | [ 0000101bc ]
+[ Large  ] :         55 | [ Money ]     : 24638
+[ Medium ] :         41 | < Shopping History >
+[ Small  ] :         43 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         38 >
+[ Exp    ] :        791 | < Seller Id > :         33 >
+======================================================
+======================================================
+[ Dram Id ] :  56/@00038
+[ Shop Info ]           | [ User Info ]
+[ 0000101c0 ]           | [ 0000101c4 ]
+[ Large  ] :          1 | [ Money ]     : 63075
+[ Medium ] :          6 | < Shopping History >
+[ Small  ] :         56 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         32 >
+[ Exp    ] :        506 | < Seller Id > :        240 >
+======================================================
+======================================================
+[ Dram Id ] :  57/@00039
+[ Shop Info ]           | [ User Info ]
+[ 0000101c8 ]           | [ 0000101cc ]
+[ Large  ] :         54 | [ Money ]     :   633
+[ Medium ] :         57 | < Shopping History >
+[ Small  ] :         59 | < Item Id   > :     Medium >
+[ Level  ] :     Copper | < Item num  > :         17 >
+[ Exp    ] :        964 | < Seller Id > :        167 >
+======================================================
+======================================================
+[ Dram Id ] :  58/@0003a
+[ Shop Info ]           | [ User Info ]
+[ 0000101d0 ]           | [ 0000101d4 ]
+[ Large  ] :         53 | [ Money ]     : 57287
+[ Medium ] :         35 | < Shopping History >
+[ Small  ] :         43 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         43 >
+[ Exp    ] :       2585 | < Seller Id > :        104 >
+======================================================
+======================================================
+[ Dram Id ] :  59/@0003b
+[ Shop Info ]           | [ User Info ]
+[ 0000101d8 ]           | [ 0000101dc ]
+[ Large  ] :         54 | [ Money ]     : 37121
+[ Medium ] :         21 | < Shopping History >
+[ Small  ] :         10 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         60 >
+[ Exp    ] :       2597 | < Seller Id > :         85 >
+======================================================
+======================================================
+[ Dram Id ] :  60/@0003c
+[ Shop Info ]           | [ User Info ]
+[ 0000101e0 ]           | [ 0000101e4 ]
+[ Large  ] :         41 | [ Money ]     : 52860
+[ Medium ] :          2 | < Shopping History >
+[ Small  ] :         35 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         34 >
+[ Exp    ] :         13 | < Seller Id > :        154 >
+======================================================
+======================================================
+[ Dram Id ] :  61/@0003d
+[ Shop Info ]           | [ User Info ]
+[ 0000101e8 ]           | [ 0000101ec ]
+[ Large  ] :          2 | [ Money ]     :  8382
+[ Medium ] :         31 | < Shopping History >
+[ Small  ] :         36 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         49 >
+[ Exp    ] :        984 | < Seller Id > :         12 >
+======================================================
+======================================================
+[ Dram Id ] :  62/@0003e
+[ Shop Info ]           | [ User Info ]
+[ 0000101f0 ]           | [ 0000101f4 ]
+[ Large  ] :         61 | [ Money ]     : 31912
+[ Medium ] :         13 | < Shopping History >
+[ Small  ] :         13 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         31 >
+[ Exp    ] :       1313 | < Seller Id > :        168 >
+======================================================
+======================================================
+[ Dram Id ] :  63/@0003f
+[ Shop Info ]           | [ User Info ]
+[ 0000101f8 ]           | [ 0000101fc ]
+[ Large  ] :         32 | [ Money ]     : 31369
+[ Medium ] :         47 | < Shopping History >
+[ Small  ] :         46 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :          0 >
+[ Exp    ] :       1892 | < Seller Id > :        173 >
+======================================================
+======================================================
+[ Dram Id ] :  64/@00040
+[ Shop Info ]           | [ User Info ]
+[ 000010200 ]           | [ 000010204 ]
+[ Large  ] :         36 | [ Money ]     : 20341
+[ Medium ] :         15 | < Shopping History >
+[ Small  ] :          7 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         54 >
+[ Exp    ] :       1668 | < Seller Id > :         38 >
+======================================================
+======================================================
+[ Dram Id ] :  65/@00041
+[ Shop Info ]           | [ User Info ]
+[ 000010208 ]           | [ 00001020c ]
+[ Large  ] :         41 | [ Money ]     : 42936
+[ Medium ] :         28 | < Shopping History >
+[ Small  ] :          0 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         40 >
+[ Exp    ] :       3472 | < Seller Id > :        173 >
+======================================================
+======================================================
+[ Dram Id ] :  66/@00042
+[ Shop Info ]           | [ User Info ]
+[ 000010210 ]           | [ 000010214 ]
+[ Large  ] :         41 | [ Money ]     : 31258
+[ Medium ] :         20 | < Shopping History >
+[ Small  ] :         43 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         54 >
+[ Exp    ] :       2812 | < Seller Id > :        188 >
+======================================================
+======================================================
+[ Dram Id ] :  67/@00043
+[ Shop Info ]           | [ User Info ]
+[ 000010218 ]           | [ 00001021c ]
+[ Large  ] :          7 | [ Money ]     : 61512
+[ Medium ] :         54 | < Shopping History >
+[ Small  ] :         38 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         37 >
+[ Exp    ] :       3465 | < Seller Id > :        253 >
+======================================================
+======================================================
+[ Dram Id ] :  68/@00044
+[ Shop Info ]           | [ User Info ]
+[ 000010220 ]           | [ 000010224 ]
+[ Large  ] :          8 | [ Money ]     : 61218
+[ Medium ] :         13 | < Shopping History >
+[ Small  ] :          3 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         15 >
+[ Exp    ] :       1890 | < Seller Id > :        101 >
+======================================================
+======================================================
+[ Dram Id ] :  69/@00045
+[ Shop Info ]           | [ User Info ]
+[ 000010228 ]           | [ 00001022c ]
+[ Large  ] :         24 | [ Money ]     : 22800
+[ Medium ] :         28 | < Shopping History >
+[ Small  ] :         57 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         24 >
+[ Exp    ] :       1220 | < Seller Id > :        236 >
+======================================================
+======================================================
+[ Dram Id ] :  70/@00046
+[ Shop Info ]           | [ User Info ]
+[ 000010230 ]           | [ 000010234 ]
+[ Large  ] :         24 | [ Money ]     : 12810
+[ Medium ] :         13 | < Shopping History >
+[ Small  ] :         12 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         47 >
+[ Exp    ] :       2923 | < Seller Id > :        186 >
+======================================================
+======================================================
+[ Dram Id ] :  71/@00047
+[ Shop Info ]           | [ User Info ]
+[ 000010238 ]           | [ 00001023c ]
+[ Large  ] :         52 | [ Money ]     : 15450
+[ Medium ] :         17 | < Shopping History >
+[ Small  ] :         39 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :          9 >
+[ Exp    ] :        545 | < Seller Id > :         30 >
+======================================================
+======================================================
+[ Dram Id ] :  72/@00048
+[ Shop Info ]           | [ User Info ]
+[ 000010240 ]           | [ 000010244 ]
+[ Large  ] :         35 | [ Money ]     : 10227
+[ Medium ] :         54 | < Shopping History >
+[ Small  ] :         40 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :          5 >
+[ Exp    ] :       2035 | < Seller Id > :         51 >
+======================================================
+======================================================
+[ Dram Id ] :  73/@00049
+[ Shop Info ]           | [ User Info ]
+[ 000010248 ]           | [ 00001024c ]
+[ Large  ] :         11 | [ Money ]     : 25300
+[ Medium ] :         30 | < Shopping History >
+[ Small  ] :         32 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         40 >
+[ Exp    ] :       1726 | < Seller Id > :          3 >
+======================================================
+======================================================
+[ Dram Id ] :  74/@0004a
+[ Shop Info ]           | [ User Info ]
+[ 000010250 ]           | [ 000010254 ]
+[ Large  ] :         30 | [ Money ]     : 58223
+[ Medium ] :         48 | < Shopping History >
+[ Small  ] :         34 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         53 >
+[ Exp    ] :        392 | < Seller Id > :        122 >
+======================================================
+======================================================
+[ Dram Id ] :  75/@0004b
+[ Shop Info ]           | [ User Info ]
+[ 000010258 ]           | [ 00001025c ]
+[ Large  ] :         27 | [ Money ]     : 61210
+[ Medium ] :         40 | < Shopping History >
+[ Small  ] :         41 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         44 >
+[ Exp    ] :        706 | < Seller Id > :        207 >
+======================================================
+======================================================
+[ Dram Id ] :  76/@0004c
+[ Shop Info ]           | [ User Info ]
+[ 000010260 ]           | [ 000010264 ]
+[ Large  ] :         54 | [ Money ]     :  9409
+[ Medium ] :          3 | < Shopping History >
+[ Small  ] :         59 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         54 >
+[ Exp    ] :       1156 | < Seller Id > :         33 >
+======================================================
+======================================================
+[ Dram Id ] :  77/@0004d
+[ Shop Info ]           | [ User Info ]
+[ 000010268 ]           | [ 00001026c ]
+[ Large  ] :         57 | [ Money ]     : 30958
+[ Medium ] :         55 | < Shopping History >
+[ Small  ] :         35 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         27 >
+[ Exp    ] :       2336 | < Seller Id > :         42 >
+======================================================
+======================================================
+[ Dram Id ] :  78/@0004e
+[ Shop Info ]           | [ User Info ]
+[ 000010270 ]           | [ 000010274 ]
+[ Large  ] :         28 | [ Money ]     : 45883
+[ Medium ] :         55 | < Shopping History >
+[ Small  ] :         24 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         39 >
+[ Exp    ] :        192 | < Seller Id > :         49 >
+======================================================
+======================================================
+[ Dram Id ] :  79/@0004f
+[ Shop Info ]           | [ User Info ]
+[ 000010278 ]           | [ 00001027c ]
+[ Large  ] :         52 | [ Money ]     : 59814
+[ Medium ] :         13 | < Shopping History >
+[ Small  ] :          5 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :          5 >
+[ Exp    ] :       2623 | < Seller Id > :        178 >
+======================================================
+======================================================
+[ Dram Id ] :  80/@00050
+[ Shop Info ]           | [ User Info ]
+[ 000010280 ]           | [ 000010284 ]
+[ Large  ] :         39 | [ Money ]     : 49844
+[ Medium ] :         30 | < Shopping History >
+[ Small  ] :         48 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         51 >
+[ Exp    ] :       2611 | < Seller Id > :        175 >
+======================================================
+======================================================
+[ Dram Id ] :  81/@00051
+[ Shop Info ]           | [ User Info ]
+[ 000010288 ]           | [ 00001028c ]
+[ Large  ] :         14 | [ Money ]     : 21623
+[ Medium ] :         55 | < Shopping History >
+[ Small  ] :          3 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         59 >
+[ Exp    ] :       2786 | < Seller Id > :         70 >
+======================================================
+======================================================
+[ Dram Id ] :  82/@00052
+[ Shop Info ]           | [ User Info ]
+[ 000010290 ]           | [ 000010294 ]
+[ Large  ] :         17 | [ Money ]     : 32002
+[ Medium ] :         43 | < Shopping History >
+[ Small  ] :         61 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         30 >
+[ Exp    ] :       3720 | < Seller Id > :        139 >
+======================================================
+======================================================
+[ Dram Id ] :  83/@00053
+[ Shop Info ]           | [ User Info ]
+[ 000010298 ]           | [ 00001029c ]
+[ Large  ] :         40 | [ Money ]     : 19718
+[ Medium ] :         49 | < Shopping History >
+[ Small  ] :         40 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         34 >
+[ Exp    ] :       3611 | < Seller Id > :         90 >
+======================================================
+======================================================
+[ Dram Id ] :  84/@00054
+[ Shop Info ]           | [ User Info ]
+[ 0000102a0 ]           | [ 0000102a4 ]
+[ Large  ] :         14 | [ Money ]     : 42031
+[ Medium ] :          1 | < Shopping History >
+[ Small  ] :         60 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         29 >
+[ Exp    ] :       1596 | < Seller Id > :        119 >
+======================================================
+======================================================
+[ Dram Id ] :  85/@00055
+[ Shop Info ]           | [ User Info ]
+[ 0000102a8 ]           | [ 0000102ac ]
+[ Large  ] :         22 | [ Money ]     : 25606
+[ Medium ] :         21 | < Shopping History >
+[ Small  ] :         38 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         44 >
+[ Exp    ] :       2847 | < Seller Id > :         56 >
+======================================================
+======================================================
+[ Dram Id ] :  86/@00056
+[ Shop Info ]           | [ User Info ]
+[ 0000102b0 ]           | [ 0000102b4 ]
+[ Large  ] :         60 | [ Money ]     : 60869
+[ Medium ] :         15 | < Shopping History >
+[ Small  ] :         15 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         44 >
+[ Exp    ] :       2090 | < Seller Id > :        156 >
+======================================================
+======================================================
+[ Dram Id ] :  87/@00057
+[ Shop Info ]           | [ User Info ]
+[ 0000102b8 ]           | [ 0000102bc ]
+[ Large  ] :         13 | [ Money ]     :  1478
+[ Medium ] :         60 | < Shopping History >
+[ Small  ] :         50 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         35 >
+[ Exp    ] :       2127 | < Seller Id > :        139 >
+======================================================
+======================================================
+[ Dram Id ] :  88/@00058
+[ Shop Info ]           | [ User Info ]
+[ 0000102c0 ]           | [ 0000102c4 ]
+[ Large  ] :         30 | [ Money ]     :  3713
+[ Medium ] :         49 | < Shopping History >
+[ Small  ] :         44 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         55 >
+[ Exp    ] :       2109 | < Seller Id > :        175 >
+======================================================
+======================================================
+[ Dram Id ] :  89/@00059
+[ Shop Info ]           | [ User Info ]
+[ 0000102c8 ]           | [ 0000102cc ]
+[ Large  ] :         53 | [ Money ]     :  5988
+[ Medium ] :         20 | < Shopping History >
+[ Small  ] :         35 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         10 >
+[ Exp    ] :        314 | < Seller Id > :         23 >
+======================================================
+======================================================
+[ Dram Id ] :  90/@0005a
+[ Shop Info ]           | [ User Info ]
+[ 0000102d0 ]           | [ 0000102d4 ]
+[ Large  ] :         24 | [ Money ]     : 45800
+[ Medium ] :         49 | < Shopping History >
+[ Small  ] :         58 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         13 >
+[ Exp    ] :       1790 | < Seller Id > :         78 >
+======================================================
+======================================================
+[ Dram Id ] :  91/@0005b
+[ Shop Info ]           | [ User Info ]
+[ 0000102d8 ]           | [ 0000102dc ]
+[ Large  ] :          1 | [ Money ]     : 62708
+[ Medium ] :         17 | < Shopping History >
+[ Small  ] :         18 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         41 >
+[ Exp    ] :       2183 | < Seller Id > :         50 >
+======================================================
+======================================================
+[ Dram Id ] :  92/@0005c
+[ Shop Info ]           | [ User Info ]
+[ 0000102e0 ]           | [ 0000102e4 ]
+[ Large  ] :         21 | [ Money ]     : 59044
+[ Medium ] :         45 | < Shopping History >
+[ Small  ] :          5 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         50 >
+[ Exp    ] :        506 | < Seller Id > :        216 >
+======================================================
+======================================================
+[ Dram Id ] :  93/@0005d
+[ Shop Info ]           | [ User Info ]
+[ 0000102e8 ]           | [ 0000102ec ]
+[ Large  ] :         29 | [ Money ]     : 20091
+[ Medium ] :         39 | < Shopping History >
+[ Small  ] :         30 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         19 >
+[ Exp    ] :       2634 | < Seller Id > :        235 >
+======================================================
+======================================================
+[ Dram Id ] :  94/@0005e
+[ Shop Info ]           | [ User Info ]
+[ 0000102f0 ]           | [ 0000102f4 ]
+[ Large  ] :         25 | [ Money ]     : 38825
+[ Medium ] :         39 | < Shopping History >
+[ Small  ] :         14 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         31 >
+[ Exp    ] :       2032 | < Seller Id > :         41 >
+======================================================
+======================================================
+[ Dram Id ] :  95/@0005f
+[ Shop Info ]           | [ User Info ]
+[ 0000102f8 ]           | [ 0000102fc ]
+[ Large  ] :         26 | [ Money ]     : 60648
+[ Medium ] :         12 | < Shopping History >
+[ Small  ] :         48 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         16 >
+[ Exp    ] :       2457 | < Seller Id > :        186 >
+======================================================
+======================================================
+[ Dram Id ] :  96/@00060
+[ Shop Info ]           | [ User Info ]
+[ 000010300 ]           | [ 000010304 ]
+[ Large  ] :         39 | [ Money ]     : 50603
+[ Medium ] :         37 | < Shopping History >
+[ Small  ] :          4 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         12 >
+[ Exp    ] :        172 | < Seller Id > :        148 >
+======================================================
+======================================================
+[ Dram Id ] :  97/@00061
+[ Shop Info ]           | [ User Info ]
+[ 000010308 ]           | [ 00001030c ]
+[ Large  ] :         38 | [ Money ]     : 10606
+[ Medium ] :         61 | < Shopping History >
+[ Small  ] :          5 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         39 >
+[ Exp    ] :       1215 | < Seller Id > :        189 >
+======================================================
+======================================================
+[ Dram Id ] :  98/@00062
+[ Shop Info ]           | [ User Info ]
+[ 000010310 ]           | [ 000010314 ]
+[ Large  ] :         20 | [ Money ]     :  6848
+[ Medium ] :         45 | < Shopping History >
+[ Small  ] :         41 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :          3 >
+[ Exp    ] :       1889 | < Seller Id > :        170 >
+======================================================
+======================================================
+[ Dram Id ] :  99/@00063
+[ Shop Info ]           | [ User Info ]
+[ 000010318 ]           | [ 00001031c ]
+[ Large  ] :         15 | [ Money ]     : 52558
+[ Medium ] :         44 | < Shopping History >
+[ Small  ] :         32 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         33 >
+[ Exp    ] :       2172 | < Seller Id > :        183 >
+======================================================
+======================================================
+[ Dram Id ] : 100/@00064
+[ Shop Info ]           | [ User Info ]
+[ 000010320 ]           | [ 000010324 ]
+[ Large  ] :          8 | [ Money ]     : 61864
+[ Medium ] :         28 | < Shopping History >
+[ Small  ] :         32 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         43 >
+[ Exp    ] :       1881 | < Seller Id > :        227 >
+======================================================
+======================================================
+[ Dram Id ] : 101/@00065
+[ Shop Info ]           | [ User Info ]
+[ 000010328 ]           | [ 00001032c ]
+[ Large  ] :         12 | [ Money ]     :  5331
+[ Medium ] :         54 | < Shopping History >
+[ Small  ] :          5 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         24 >
+[ Exp    ] :       3562 | < Seller Id > :          4 >
+======================================================
+======================================================
+[ Dram Id ] : 102/@00066
+[ Shop Info ]           | [ User Info ]
+[ 000010330 ]           | [ 000010334 ]
+[ Large  ] :         58 | [ Money ]     : 11008
+[ Medium ] :         19 | < Shopping History >
+[ Small  ] :         46 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         42 >
+[ Exp    ] :       1524 | < Seller Id > :        104 >
+======================================================
+======================================================
+[ Dram Id ] : 103/@00067
+[ Shop Info ]           | [ User Info ]
+[ 000010338 ]           | [ 00001033c ]
+[ Large  ] :         12 | [ Money ]     : 14871
+[ Medium ] :         35 | < Shopping History >
+[ Small  ] :         31 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         14 >
+[ Exp    ] :       3867 | < Seller Id > :         18 >
+======================================================
+======================================================
+[ Dram Id ] : 104/@00068
+[ Shop Info ]           | [ User Info ]
+[ 000010340 ]           | [ 000010344 ]
+[ Large  ] :         62 | [ Money ]     : 36472
+[ Medium ] :         16 | < Shopping History >
+[ Small  ] :         29 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         29 >
+[ Exp    ] :       3283 | < Seller Id > :         76 >
+======================================================
+======================================================
+[ Dram Id ] : 105/@00069
+[ Shop Info ]           | [ User Info ]
+[ 000010348 ]           | [ 00001034c ]
+[ Large  ] :         61 | [ Money ]     : 14691
+[ Medium ] :         11 | < Shopping History >
+[ Small  ] :         41 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         46 >
+[ Exp    ] :       1028 | < Seller Id > :        209 >
+======================================================
+======================================================
+[ Dram Id ] : 106/@0006a
+[ Shop Info ]           | [ User Info ]
+[ 000010350 ]           | [ 000010354 ]
+[ Large  ] :         37 | [ Money ]     :  3013
+[ Medium ] :         50 | < Shopping History >
+[ Small  ] :         20 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         47 >
+[ Exp    ] :        165 | < Seller Id > :        207 >
+======================================================
+======================================================
+[ Dram Id ] : 107/@0006b
+[ Shop Info ]           | [ User Info ]
+[ 000010358 ]           | [ 00001035c ]
+[ Large  ] :         58 | [ Money ]     : 47539
+[ Medium ] :         45 | < Shopping History >
+[ Small  ] :         29 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         59 >
+[ Exp    ] :       2274 | < Seller Id > :         46 >
+======================================================
+======================================================
+[ Dram Id ] : 108/@0006c
+[ Shop Info ]           | [ User Info ]
+[ 000010360 ]           | [ 000010364 ]
+[ Large  ] :         23 | [ Money ]     : 38189
+[ Medium ] :         62 | < Shopping History >
+[ Small  ] :         29 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         29 >
+[ Exp    ] :       2490 | < Seller Id > :        182 >
+======================================================
+======================================================
+[ Dram Id ] : 109/@0006d
+[ Shop Info ]           | [ User Info ]
+[ 000010368 ]           | [ 00001036c ]
+[ Large  ] :          9 | [ Money ]     : 30514
+[ Medium ] :         41 | < Shopping History >
+[ Small  ] :         16 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :          7 >
+[ Exp    ] :       3770 | < Seller Id > :         59 >
+======================================================
+======================================================
+[ Dram Id ] : 110/@0006e
+[ Shop Info ]           | [ User Info ]
+[ 000010370 ]           | [ 000010374 ]
+[ Large  ] :          9 | [ Money ]     : 55264
+[ Medium ] :         45 | < Shopping History >
+[ Small  ] :         19 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         38 >
+[ Exp    ] :       3138 | < Seller Id > :         58 >
+======================================================
+======================================================
+[ Dram Id ] : 111/@0006f
+[ Shop Info ]           | [ User Info ]
+[ 000010378 ]           | [ 00001037c ]
+[ Large  ] :         33 | [ Money ]     : 19968
+[ Medium ] :          1 | < Shopping History >
+[ Small  ] :         29 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         33 >
+[ Exp    ] :       2470 | < Seller Id > :        184 >
+======================================================
+======================================================
+[ Dram Id ] : 112/@00070
+[ Shop Info ]           | [ User Info ]
+[ 000010380 ]           | [ 000010384 ]
+[ Large  ] :         63 | [ Money ]     : 14234
+[ Medium ] :          5 | < Shopping History >
+[ Small  ] :         12 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         52 >
+[ Exp    ] :       3659 | < Seller Id > :        237 >
+======================================================
+======================================================
+[ Dram Id ] : 113/@00071
+[ Shop Info ]           | [ User Info ]
+[ 000010388 ]           | [ 00001038c ]
+[ Large  ] :         58 | [ Money ]     : 20389
+[ Medium ] :         18 | < Shopping History >
+[ Small  ] :         40 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :          1 >
+[ Exp    ] :       3787 | < Seller Id > :        234 >
+======================================================
+======================================================
+[ Dram Id ] : 114/@00072
+[ Shop Info ]           | [ User Info ]
+[ 000010390 ]           | [ 000010394 ]
+[ Large  ] :         53 | [ Money ]     : 53851
+[ Medium ] :         12 | < Shopping History >
+[ Small  ] :         34 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         22 >
+[ Exp    ] :        339 | < Seller Id > :        146 >
+======================================================
+======================================================
+[ Dram Id ] : 115/@00073
+[ Shop Info ]           | [ User Info ]
+[ 000010398 ]           | [ 00001039c ]
+[ Large  ] :         39 | [ Money ]     :   174
+[ Medium ] :         53 | < Shopping History >
+[ Small  ] :         21 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         50 >
+[ Exp    ] :       1590 | < Seller Id > :         16 >
+======================================================
+======================================================
+[ Dram Id ] : 116/@00074
+[ Shop Info ]           | [ User Info ]
+[ 0000103a0 ]           | [ 0000103a4 ]
+[ Large  ] :         63 | [ Money ]     : 46660
+[ Medium ] :         10 | < Shopping History >
+[ Small  ] :         27 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         59 >
+[ Exp    ] :       1938 | < Seller Id > :         28 >
+======================================================
+======================================================
+[ Dram Id ] : 117/@00075
+[ Shop Info ]           | [ User Info ]
+[ 0000103a8 ]           | [ 0000103ac ]
+[ Large  ] :         10 | [ Money ]     : 25261
+[ Medium ] :         49 | < Shopping History >
+[ Small  ] :         41 | < Item Id   > :      Large >
+[ Level  ] :     Copper | < Item num  > :         61 >
+[ Exp    ] :        941 | < Seller Id > :        204 >
+======================================================
+======================================================
+[ Dram Id ] : 118/@00076
+[ Shop Info ]           | [ User Info ]
+[ 0000103b0 ]           | [ 0000103b4 ]
+[ Large  ] :         23 | [ Money ]     : 22427
+[ Medium ] :         45 | < Shopping History >
+[ Small  ] :         15 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :          3 >
+[ Exp    ] :       1501 | < Seller Id > :        226 >
+======================================================
+======================================================
+[ Dram Id ] : 119/@00077
+[ Shop Info ]           | [ User Info ]
+[ 0000103b8 ]           | [ 0000103bc ]
+[ Large  ] :         10 | [ Money ]     : 57087
+[ Medium ] :         21 | < Shopping History >
+[ Small  ] :         62 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         19 >
+[ Exp    ] :        816 | < Seller Id > :        125 >
+======================================================
+======================================================
+[ Dram Id ] : 120/@00078
+[ Shop Info ]           | [ User Info ]
+[ 0000103c0 ]           | [ 0000103c4 ]
+[ Large  ] :         38 | [ Money ]     : 46315
+[ Medium ] :         14 | < Shopping History >
+[ Small  ] :         21 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :          6 >
+[ Exp    ] :       1656 | < Seller Id > :        183 >
+======================================================
+======================================================
+[ Dram Id ] : 121/@00079
+[ Shop Info ]           | [ User Info ]
+[ 0000103c8 ]           | [ 0000103cc ]
+[ Large  ] :         48 | [ Money ]     : 49021
+[ Medium ] :         56 | < Shopping History >
+[ Small  ] :         42 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         42 >
+[ Exp    ] :       2156 | < Seller Id > :         75 >
+======================================================
+======================================================
+[ Dram Id ] : 122/@0007a
+[ Shop Info ]           | [ User Info ]
+[ 0000103d0 ]           | [ 0000103d4 ]
+[ Large  ] :         22 | [ Money ]     : 58881
+[ Medium ] :         63 | < Shopping History >
+[ Small  ] :         18 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :          3 >
+[ Exp    ] :       2235 | < Seller Id > :        110 >
+======================================================
+======================================================
+[ Dram Id ] : 123/@0007b
+[ Shop Info ]           | [ User Info ]
+[ 0000103d8 ]           | [ 0000103dc ]
+[ Large  ] :          2 | [ Money ]     : 56410
+[ Medium ] :         11 | < Shopping History >
+[ Small  ] :         57 | < Item Id   > :      Small >
+[ Level  ] :     Copper | < Item num  > :          4 >
+[ Exp    ] :        994 | < Seller Id > :        167 >
+======================================================
+======================================================
+[ Dram Id ] : 124/@0007c
+[ Shop Info ]           | [ User Info ]
+[ 0000103e0 ]           | [ 0000103e4 ]
+[ Large  ] :         37 | [ Money ]     : 12142
+[ Medium ] :         50 | < Shopping History >
+[ Small  ] :         43 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         42 >
+[ Exp    ] :       1413 | < Seller Id > :        159 >
+======================================================
+======================================================
+[ Dram Id ] : 125/@0007d
+[ Shop Info ]           | [ User Info ]
+[ 0000103e8 ]           | [ 0000103ec ]
+[ Large  ] :         24 | [ Money ]     : 57502
+[ Medium ] :         35 | < Shopping History >
+[ Small  ] :         41 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         60 >
+[ Exp    ] :       3987 | < Seller Id > :        140 >
+======================================================
+======================================================
+[ Dram Id ] : 126/@0007e
+[ Shop Info ]           | [ User Info ]
+[ 0000103f0 ]           | [ 0000103f4 ]
+[ Large  ] :         34 | [ Money ]     : 17210
+[ Medium ] :         56 | < Shopping History >
+[ Small  ] :         39 | < Item Id   > :      Large >
+[ Level  ] :     Copper | < Item num  > :          9 >
+[ Exp    ] :        872 | < Seller Id > :         60 >
+======================================================
+======================================================
+[ Dram Id ] : 127/@0007f
+[ Shop Info ]           | [ User Info ]
+[ 0000103f8 ]           | [ 0000103fc ]
+[ Large  ] :         24 | [ Money ]     : 16590
+[ Medium ] :         40 | < Shopping History >
+[ Small  ] :         40 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         27 >
+[ Exp    ] :       1631 | < Seller Id > :        249 >
+======================================================
+======================================================
+[ Dram Id ] : 128/@00080
+[ Shop Info ]           | [ User Info ]
+[ 000010400 ]           | [ 000010404 ]
+[ Large  ] :          1 | [ Money ]     : 30134
+[ Medium ] :          1 | < Shopping History >
+[ Small  ] :         57 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         30 >
+[ Exp    ] :        475 | < Seller Id > :        121 >
+======================================================
+======================================================
+[ Dram Id ] : 129/@00081
+[ Shop Info ]           | [ User Info ]
+[ 000010408 ]           | [ 00001040c ]
+[ Large  ] :         22 | [ Money ]     : 61975
+[ Medium ] :         36 | < Shopping History >
+[ Small  ] :         21 | < Item Id   > :      Large >
+[ Level  ] :     Copper | < Item num  > :         13 >
+[ Exp    ] :        775 | < Seller Id > :        154 >
+======================================================
+======================================================
+[ Dram Id ] : 130/@00082
+[ Shop Info ]           | [ User Info ]
+[ 000010410 ]           | [ 000010414 ]
+[ Large  ] :         37 | [ Money ]     : 55839
+[ Medium ] :          9 | < Shopping History >
+[ Small  ] :          0 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         31 >
+[ Exp    ] :       2427 | < Seller Id > :         47 >
+======================================================
+======================================================
+[ Dram Id ] : 131/@00083
+[ Shop Info ]           | [ User Info ]
+[ 000010418 ]           | [ 00001041c ]
+[ Large  ] :          9 | [ Money ]     : 17701
+[ Medium ] :          9 | < Shopping History >
+[ Small  ] :         28 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         38 >
+[ Exp    ] :       1388 | < Seller Id > :        237 >
+======================================================
+======================================================
+[ Dram Id ] : 132/@00084
+[ Shop Info ]           | [ User Info ]
+[ 000010420 ]           | [ 000010424 ]
+[ Large  ] :         52 | [ Money ]     :    42
+[ Medium ] :         25 | < Shopping History >
+[ Small  ] :         30 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         37 >
+[ Exp    ] :       2216 | < Seller Id > :        130 >
+======================================================
+======================================================
+[ Dram Id ] : 133/@00085
+[ Shop Info ]           | [ User Info ]
+[ 000010428 ]           | [ 00001042c ]
+[ Large  ] :         59 | [ Money ]     : 32135
+[ Medium ] :         14 | < Shopping History >
+[ Small  ] :         45 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         43 >
+[ Exp    ] :       1951 | < Seller Id > :        124 >
+======================================================
+======================================================
+[ Dram Id ] : 134/@00086
+[ Shop Info ]           | [ User Info ]
+[ 000010430 ]           | [ 000010434 ]
+[ Large  ] :          3 | [ Money ]     : 50334
+[ Medium ] :         20 | < Shopping History >
+[ Small  ] :         10 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         27 >
+[ Exp    ] :       2886 | < Seller Id > :         20 >
+======================================================
+======================================================
+[ Dram Id ] : 135/@00087
+[ Shop Info ]           | [ User Info ]
+[ 000010438 ]           | [ 00001043c ]
+[ Large  ] :         60 | [ Money ]     : 19863
+[ Medium ] :          1 | < Shopping History >
+[ Small  ] :         48 | < Item Id   > :     Medium >
+[ Level  ] :     Copper | < Item num  > :         47 >
+[ Exp    ] :        234 | < Seller Id > :        106 >
+======================================================
+======================================================
+[ Dram Id ] : 136/@00088
+[ Shop Info ]           | [ User Info ]
+[ 000010440 ]           | [ 000010444 ]
+[ Large  ] :          3 | [ Money ]     : 62201
+[ Medium ] :         10 | < Shopping History >
+[ Small  ] :         10 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         10 >
+[ Exp    ] :       3404 | < Seller Id > :         93 >
+======================================================
+======================================================
+[ Dram Id ] : 137/@00089
+[ Shop Info ]           | [ User Info ]
+[ 000010448 ]           | [ 00001044c ]
+[ Large  ] :         57 | [ Money ]     : 60772
+[ Medium ] :         31 | < Shopping History >
+[ Small  ] :         49 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         51 >
+[ Exp    ] :       1376 | < Seller Id > :        152 >
+======================================================
+======================================================
+[ Dram Id ] : 138/@0008a
+[ Shop Info ]           | [ User Info ]
+[ 000010450 ]           | [ 000010454 ]
+[ Large  ] :         58 | [ Money ]     : 17665
+[ Medium ] :         26 | < Shopping History >
+[ Small  ] :         31 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         14 >
+[ Exp    ] :       1363 | < Seller Id > :         61 >
+======================================================
+======================================================
+[ Dram Id ] : 139/@0008b
+[ Shop Info ]           | [ User Info ]
+[ 000010458 ]           | [ 00001045c ]
+[ Large  ] :         41 | [ Money ]     : 50537
+[ Medium ] :         56 | < Shopping History >
+[ Small  ] :         10 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         62 >
+[ Exp    ] :        120 | < Seller Id > :        170 >
+======================================================
+======================================================
+[ Dram Id ] : 140/@0008c
+[ Shop Info ]           | [ User Info ]
+[ 000010460 ]           | [ 000010464 ]
+[ Large  ] :         21 | [ Money ]     : 55282
+[ Medium ] :          4 | < Shopping History >
+[ Small  ] :         56 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         16 >
+[ Exp    ] :       1261 | < Seller Id > :        157 >
+======================================================
+======================================================
+[ Dram Id ] : 141/@0008d
+[ Shop Info ]           | [ User Info ]
+[ 000010468 ]           | [ 00001046c ]
+[ Large  ] :         31 | [ Money ]     :   830
+[ Medium ] :         42 | < Shopping History >
+[ Small  ] :         41 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         32 >
+[ Exp    ] :        904 | < Seller Id > :        232 >
+======================================================
+======================================================
+[ Dram Id ] : 142/@0008e
+[ Shop Info ]           | [ User Info ]
+[ 000010470 ]           | [ 000010474 ]
+[ Large  ] :         43 | [ Money ]     : 53953
+[ Medium ] :          0 | < Shopping History >
+[ Small  ] :          0 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         23 >
+[ Exp    ] :       1290 | < Seller Id > :        161 >
+======================================================
+======================================================
+[ Dram Id ] : 143/@0008f
+[ Shop Info ]           | [ User Info ]
+[ 000010478 ]           | [ 00001047c ]
+[ Large  ] :         53 | [ Money ]     : 53028
+[ Medium ] :         43 | < Shopping History >
+[ Small  ] :         20 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         13 >
+[ Exp    ] :       2440 | < Seller Id > :         88 >
+======================================================
+======================================================
+[ Dram Id ] : 144/@00090
+[ Shop Info ]           | [ User Info ]
+[ 000010480 ]           | [ 000010484 ]
+[ Large  ] :         54 | [ Money ]     : 52541
+[ Medium ] :         33 | < Shopping History >
+[ Small  ] :          7 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         15 >
+[ Exp    ] :       2340 | < Seller Id > :         21 >
+======================================================
+======================================================
+[ Dram Id ] : 145/@00091
+[ Shop Info ]           | [ User Info ]
+[ 000010488 ]           | [ 00001048c ]
+[ Large  ] :         48 | [ Money ]     : 32078
+[ Medium ] :         20 | < Shopping History >
+[ Small  ] :         32 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         20 >
+[ Exp    ] :        517 | < Seller Id > :        221 >
+======================================================
+======================================================
+[ Dram Id ] : 146/@00092
+[ Shop Info ]           | [ User Info ]
+[ 000010490 ]           | [ 000010494 ]
+[ Large  ] :          4 | [ Money ]     : 45109
+[ Medium ] :         16 | < Shopping History >
+[ Small  ] :          6 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         55 >
+[ Exp    ] :        646 | < Seller Id > :        134 >
+======================================================
+======================================================
+[ Dram Id ] : 147/@00093
+[ Shop Info ]           | [ User Info ]
+[ 000010498 ]           | [ 00001049c ]
+[ Large  ] :         42 | [ Money ]     :  8187
+[ Medium ] :         57 | < Shopping History >
+[ Small  ] :         54 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         48 >
+[ Exp    ] :       1899 | < Seller Id > :        219 >
+======================================================
+======================================================
+[ Dram Id ] : 148/@00094
+[ Shop Info ]           | [ User Info ]
+[ 0000104a0 ]           | [ 0000104a4 ]
+[ Large  ] :          7 | [ Money ]     : 57784
+[ Medium ] :          1 | < Shopping History >
+[ Small  ] :         38 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :          0 >
+[ Exp    ] :       3398 | < Seller Id > :         31 >
+======================================================
+======================================================
+[ Dram Id ] : 149/@00095
+[ Shop Info ]           | [ User Info ]
+[ 0000104a8 ]           | [ 0000104ac ]
+[ Large  ] :          2 | [ Money ]     : 16613
+[ Medium ] :         42 | < Shopping History >
+[ Small  ] :         43 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :          6 >
+[ Exp    ] :       1025 | < Seller Id > :          1 >
+======================================================
+======================================================
+[ Dram Id ] : 150/@00096
+[ Shop Info ]           | [ User Info ]
+[ 0000104b0 ]           | [ 0000104b4 ]
+[ Large  ] :         18 | [ Money ]     : 18739
+[ Medium ] :         44 | < Shopping History >
+[ Small  ] :         53 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :          2 >
+[ Exp    ] :        710 | < Seller Id > :         45 >
+======================================================
+======================================================
+[ Dram Id ] : 151/@00097
+[ Shop Info ]           | [ User Info ]
+[ 0000104b8 ]           | [ 0000104bc ]
+[ Large  ] :          4 | [ Money ]     : 14700
+[ Medium ] :         20 | < Shopping History >
+[ Small  ] :         55 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         61 >
+[ Exp    ] :       2513 | < Seller Id > :        251 >
+======================================================
+======================================================
+[ Dram Id ] : 152/@00098
+[ Shop Info ]           | [ User Info ]
+[ 0000104c0 ]           | [ 0000104c4 ]
+[ Large  ] :          3 | [ Money ]     : 25325
+[ Medium ] :         61 | < Shopping History >
+[ Small  ] :          5 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         55 >
+[ Exp    ] :       1345 | < Seller Id > :        111 >
+======================================================
+======================================================
+[ Dram Id ] : 153/@00099
+[ Shop Info ]           | [ User Info ]
+[ 0000104c8 ]           | [ 0000104cc ]
+[ Large  ] :         44 | [ Money ]     : 40962
+[ Medium ] :          3 | < Shopping History >
+[ Small  ] :         24 | < Item Id   > :      Large >
+[ Level  ] :     Copper | < Item num  > :         43 >
+[ Exp    ] :        282 | < Seller Id > :        154 >
+======================================================
+======================================================
+[ Dram Id ] : 154/@0009a
+[ Shop Info ]           | [ User Info ]
+[ 0000104d0 ]           | [ 0000104d4 ]
+[ Large  ] :         39 | [ Money ]     : 63036
+[ Medium ] :         29 | < Shopping History >
+[ Small  ] :         48 | < Item Id   > :      Large >
+[ Level  ] :     Copper | < Item num  > :         21 >
+[ Exp    ] :        270 | < Seller Id > :         24 >
+======================================================
+======================================================
+[ Dram Id ] : 155/@0009b
+[ Shop Info ]           | [ User Info ]
+[ 0000104d8 ]           | [ 0000104dc ]
+[ Large  ] :         29 | [ Money ]     : 36475
+[ Medium ] :         16 | < Shopping History >
+[ Small  ] :         61 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :          9 >
+[ Exp    ] :       2249 | < Seller Id > :         91 >
+======================================================
+======================================================
+[ Dram Id ] : 156/@0009c
+[ Shop Info ]           | [ User Info ]
+[ 0000104e0 ]           | [ 0000104e4 ]
+[ Large  ] :         47 | [ Money ]     : 30620
+[ Medium ] :         26 | < Shopping History >
+[ Small  ] :         60 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         23 >
+[ Exp    ] :       1808 | < Seller Id > :         44 >
+======================================================
+======================================================
+[ Dram Id ] : 157/@0009d
+[ Shop Info ]           | [ User Info ]
+[ 0000104e8 ]           | [ 0000104ec ]
+[ Large  ] :          8 | [ Money ]     : 21137
+[ Medium ] :         57 | < Shopping History >
+[ Small  ] :         32 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         50 >
+[ Exp    ] :       1538 | < Seller Id > :          2 >
+======================================================
+======================================================
+[ Dram Id ] : 158/@0009e
+[ Shop Info ]           | [ User Info ]
+[ 0000104f0 ]           | [ 0000104f4 ]
+[ Large  ] :         45 | [ Money ]     : 46604
+[ Medium ] :          8 | < Shopping History >
+[ Small  ] :         37 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :          0 >
+[ Exp    ] :       2342 | < Seller Id > :        209 >
+======================================================
+======================================================
+[ Dram Id ] : 159/@0009f
+[ Shop Info ]           | [ User Info ]
+[ 0000104f8 ]           | [ 0000104fc ]
+[ Large  ] :         13 | [ Money ]     : 48092
+[ Medium ] :         10 | < Shopping History >
+[ Small  ] :         60 | < Item Id   > :     Medium >
+[ Level  ] :     Copper | < Item num  > :         38 >
+[ Exp    ] :         19 | < Seller Id > :        107 >
+======================================================
+======================================================
+[ Dram Id ] : 160/@000a0
+[ Shop Info ]           | [ User Info ]
+[ 000010500 ]           | [ 000010504 ]
+[ Large  ] :         24 | [ Money ]     : 21840
+[ Medium ] :         57 | < Shopping History >
+[ Small  ] :         26 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         16 >
+[ Exp    ] :       2482 | < Seller Id > :         72 >
+======================================================
+======================================================
+[ Dram Id ] : 161/@000a1
+[ Shop Info ]           | [ User Info ]
+[ 000010508 ]           | [ 00001050c ]
+[ Large  ] :         16 | [ Money ]     : 52047
+[ Medium ] :         49 | < Shopping History >
+[ Small  ] :          7 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         63 >
+[ Exp    ] :        959 | < Seller Id > :         91 >
+======================================================
+======================================================
+[ Dram Id ] : 162/@000a2
+[ Shop Info ]           | [ User Info ]
+[ 000010510 ]           | [ 000010514 ]
+[ Large  ] :         58 | [ Money ]     : 24494
+[ Medium ] :         38 | < Shopping History >
+[ Small  ] :         12 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         47 >
+[ Exp    ] :       1724 | < Seller Id > :         81 >
+======================================================
+======================================================
+[ Dram Id ] : 163/@000a3
+[ Shop Info ]           | [ User Info ]
+[ 000010518 ]           | [ 00001051c ]
+[ Large  ] :         49 | [ Money ]     :  6833
+[ Medium ] :         12 | < Shopping History >
+[ Small  ] :         60 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :          5 >
+[ Exp    ] :        255 | < Seller Id > :        213 >
+======================================================
+======================================================
+[ Dram Id ] : 164/@000a4
+[ Shop Info ]           | [ User Info ]
+[ 000010520 ]           | [ 000010524 ]
+[ Large  ] :         24 | [ Money ]     : 30600
+[ Medium ] :         58 | < Shopping History >
+[ Small  ] :          5 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         52 >
+[ Exp    ] :       1190 | < Seller Id > :        108 >
+======================================================
+======================================================
+[ Dram Id ] : 165/@000a5
+[ Shop Info ]           | [ User Info ]
+[ 000010528 ]           | [ 00001052c ]
+[ Large  ] :         53 | [ Money ]     : 28228
+[ Medium ] :         48 | < Shopping History >
+[ Small  ] :         61 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         20 >
+[ Exp    ] :       1345 | < Seller Id > :        216 >
+======================================================
+======================================================
+[ Dram Id ] : 166/@000a6
+[ Shop Info ]           | [ User Info ]
+[ 000010530 ]           | [ 000010534 ]
+[ Large  ] :         46 | [ Money ]     : 21347
+[ Medium ] :          2 | < Shopping History >
+[ Small  ] :         13 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         45 >
+[ Exp    ] :        141 | < Seller Id > :        102 >
+======================================================
+======================================================
+[ Dram Id ] : 167/@000a7
+[ Shop Info ]           | [ User Info ]
+[ 000010538 ]           | [ 00001053c ]
+[ Large  ] :         12 | [ Money ]     : 26721
+[ Medium ] :         34 | < Shopping History >
+[ Small  ] :         45 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         28 >
+[ Exp    ] :       2249 | < Seller Id > :        138 >
+======================================================
+======================================================
+[ Dram Id ] : 168/@000a8
+[ Shop Info ]           | [ User Info ]
+[ 000010540 ]           | [ 000010544 ]
+[ Large  ] :         43 | [ Money ]     : 57290
+[ Medium ] :         62 | < Shopping History >
+[ Small  ] :         36 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         33 >
+[ Exp    ] :       1295 | < Seller Id > :        232 >
+======================================================
+======================================================
+[ Dram Id ] : 169/@000a9
+[ Shop Info ]           | [ User Info ]
+[ 000010548 ]           | [ 00001054c ]
+[ Large  ] :         44 | [ Money ]     : 21699
+[ Medium ] :         22 | < Shopping History >
+[ Small  ] :         32 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         36 >
+[ Exp    ] :         25 | < Seller Id > :        210 >
+======================================================
+======================================================
+[ Dram Id ] : 170/@000aa
+[ Shop Info ]           | [ User Info ]
+[ 000010550 ]           | [ 000010554 ]
+[ Large  ] :          1 | [ Money ]     : 32965
+[ Medium ] :         55 | < Shopping History >
+[ Small  ] :         40 | < Item Id   > :      Small >
+[ Level  ] :     Copper | < Item num  > :         35 >
+[ Exp    ] :        332 | < Seller Id > :        193 >
+======================================================
+======================================================
+[ Dram Id ] : 171/@000ab
+[ Shop Info ]           | [ User Info ]
+[ 000010558 ]           | [ 00001055c ]
+[ Large  ] :         49 | [ Money ]     : 56343
+[ Medium ] :         50 | < Shopping History >
+[ Small  ] :         44 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         12 >
+[ Exp    ] :        593 | < Seller Id > :        237 >
+======================================================
+======================================================
+[ Dram Id ] : 172/@000ac
+[ Shop Info ]           | [ User Info ]
+[ 000010560 ]           | [ 000010564 ]
+[ Large  ] :         39 | [ Money ]     : 46134
+[ Medium ] :         18 | < Shopping History >
+[ Small  ] :         36 | < Item Id   > :      Small >
+[ Level  ] :     Copper | < Item num  > :         28 >
+[ Exp    ] :        472 | < Seller Id > :        115 >
+======================================================
+======================================================
+[ Dram Id ] : 173/@000ad
+[ Shop Info ]           | [ User Info ]
+[ 000010568 ]           | [ 00001056c ]
+[ Large  ] :         36 | [ Money ]     : 45187
+[ Medium ] :         28 | < Shopping History >
+[ Small  ] :         27 | < Item Id   > :      Small >
+[ Level  ] :     Copper | < Item num  > :         10 >
+[ Exp    ] :        150 | < Seller Id > :         74 >
+======================================================
+======================================================
+[ Dram Id ] : 174/@000ae
+[ Shop Info ]           | [ User Info ]
+[ 000010570 ]           | [ 000010574 ]
+[ Large  ] :         21 | [ Money ]     : 61073
+[ Medium ] :         18 | < Shopping History >
+[ Small  ] :         30 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         58 >
+[ Exp    ] :       1468 | < Seller Id > :        140 >
+======================================================
+======================================================
+[ Dram Id ] : 175/@000af
+[ Shop Info ]           | [ User Info ]
+[ 000010578 ]           | [ 00001057c ]
+[ Large  ] :         62 | [ Money ]     : 45672
+[ Medium ] :          0 | < Shopping History >
+[ Small  ] :         35 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         35 >
+[ Exp    ] :        197 | < Seller Id > :        187 >
+======================================================
+======================================================
+[ Dram Id ] : 176/@000b0
+[ Shop Info ]           | [ User Info ]
+[ 000010580 ]           | [ 000010584 ]
+[ Large  ] :         28 | [ Money ]     :  5735
+[ Medium ] :         37 | < Shopping History >
+[ Small  ] :         29 | < Item Id   > :     Medium >
+[ Level  ] :     Copper | < Item num  > :         55 >
+[ Exp    ] :        108 | < Seller Id > :        191 >
+======================================================
+======================================================
+[ Dram Id ] : 177/@000b1
+[ Shop Info ]           | [ User Info ]
+[ 000010588 ]           | [ 00001058c ]
+[ Large  ] :          7 | [ Money ]     : 15454
+[ Medium ] :          0 | < Shopping History >
+[ Small  ] :         15 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         42 >
+[ Exp    ] :       3922 | < Seller Id > :        162 >
+======================================================
+======================================================
+[ Dram Id ] : 178/@000b2
+[ Shop Info ]           | [ User Info ]
+[ 000010590 ]           | [ 000010594 ]
+[ Large  ] :         31 | [ Money ]     : 27761
+[ Medium ] :         61 | < Shopping History >
+[ Small  ] :         27 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         24 >
+[ Exp    ] :       3961 | < Seller Id > :        164 >
+======================================================
+======================================================
+[ Dram Id ] : 179/@000b3
+[ Shop Info ]           | [ User Info ]
+[ 000010598 ]           | [ 00001059c ]
+[ Large  ] :          2 | [ Money ]     : 29772
+[ Medium ] :         32 | < Shopping History >
+[ Small  ] :         61 | < Item Id   > :      Small >
+[ Level  ] :     Copper | < Item num  > :         26 >
+[ Exp    ] :        306 | < Seller Id > :        189 >
+======================================================
+======================================================
+[ Dram Id ] : 180/@000b4
+[ Shop Info ]           | [ User Info ]
+[ 0000105a0 ]           | [ 0000105a4 ]
+[ Large  ] :         14 | [ Money ]     : 55088
+[ Medium ] :         61 | < Shopping History >
+[ Small  ] :          7 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         19 >
+[ Exp    ] :       1689 | < Seller Id > :         19 >
+======================================================
+======================================================
+[ Dram Id ] : 181/@000b5
+[ Shop Info ]           | [ User Info ]
+[ 0000105a8 ]           | [ 0000105ac ]
+[ Large  ] :         52 | [ Money ]     : 48042
+[ Medium ] :         46 | < Shopping History >
+[ Small  ] :         23 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         46 >
+[ Exp    ] :       3681 | < Seller Id > :        167 >
+======================================================
+======================================================
+[ Dram Id ] : 182/@000b6
+[ Shop Info ]           | [ User Info ]
+[ 0000105b0 ]           | [ 0000105b4 ]
+[ Large  ] :         25 | [ Money ]     :  9085
+[ Medium ] :         44 | < Shopping History >
+[ Small  ] :         51 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         45 >
+[ Exp    ] :        808 | < Seller Id > :        225 >
+======================================================
+======================================================
+[ Dram Id ] : 183/@000b7
+[ Shop Info ]           | [ User Info ]
+[ 0000105b8 ]           | [ 0000105bc ]
+[ Large  ] :         19 | [ Money ]     :  6362
+[ Medium ] :         60 | < Shopping History >
+[ Small  ] :         62 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         59 >
+[ Exp    ] :       1183 | < Seller Id > :         89 >
+======================================================
+======================================================
+[ Dram Id ] : 184/@000b8
+[ Shop Info ]           | [ User Info ]
+[ 0000105c0 ]           | [ 0000105c4 ]
+[ Large  ] :         40 | [ Money ]     : 64055
+[ Medium ] :         37 | < Shopping History >
+[ Small  ] :         54 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :          7 >
+[ Exp    ] :       1421 | < Seller Id > :        136 >
+======================================================
+======================================================
+[ Dram Id ] : 185/@000b9
+[ Shop Info ]           | [ User Info ]
+[ 0000105c8 ]           | [ 0000105cc ]
+[ Large  ] :         13 | [ Money ]     : 22157
+[ Medium ] :          9 | < Shopping History >
+[ Small  ] :         60 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         44 >
+[ Exp    ] :       1991 | < Seller Id > :         49 >
+======================================================
+======================================================
+[ Dram Id ] : 186/@000ba
+[ Shop Info ]           | [ User Info ]
+[ 0000105d0 ]           | [ 0000105d4 ]
+[ Large  ] :         60 | [ Money ]     : 28484
+[ Medium ] :         32 | < Shopping History >
+[ Small  ] :         28 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         62 >
+[ Exp    ] :       1091 | < Seller Id > :          8 >
+======================================================
+======================================================
+[ Dram Id ] : 187/@000bb
+[ Shop Info ]           | [ User Info ]
+[ 0000105d8 ]           | [ 0000105dc ]
+[ Large  ] :         33 | [ Money ]     : 50719
+[ Medium ] :         62 | < Shopping History >
+[ Small  ] :         60 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         43 >
+[ Exp    ] :       2436 | < Seller Id > :        140 >
+======================================================
+======================================================
+[ Dram Id ] : 188/@000bc
+[ Shop Info ]           | [ User Info ]
+[ 0000105e0 ]           | [ 0000105e4 ]
+[ Large  ] :         49 | [ Money ]     : 23370
+[ Medium ] :          1 | < Shopping History >
+[ Small  ] :         41 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         20 >
+[ Exp    ] :        988 | < Seller Id > :        141 >
+======================================================
+======================================================
+[ Dram Id ] : 189/@000bd
+[ Shop Info ]           | [ User Info ]
+[ 0000105e8 ]           | [ 0000105ec ]
+[ Large  ] :         26 | [ Money ]     : 16086
+[ Medium ] :         36 | < Shopping History >
+[ Small  ] :         53 | < Item Id   > :      Small >
+[ Level  ] :     Copper | < Item num  > :         13 >
+[ Exp    ] :        680 | < Seller Id > :        252 >
+======================================================
+======================================================
+[ Dram Id ] : 190/@000be
+[ Shop Info ]           | [ User Info ]
+[ 0000105f0 ]           | [ 0000105f4 ]
+[ Large  ] :         23 | [ Money ]     : 61816
+[ Medium ] :         23 | < Shopping History >
+[ Small  ] :         41 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         48 >
+[ Exp    ] :       2740 | < Seller Id > :         80 >
+======================================================
+======================================================
+[ Dram Id ] : 191/@000bf
+[ Shop Info ]           | [ User Info ]
+[ 0000105f8 ]           | [ 0000105fc ]
+[ Large  ] :         18 | [ Money ]     : 45174
+[ Medium ] :         21 | < Shopping History >
+[ Small  ] :         51 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         39 >
+[ Exp    ] :       2210 | < Seller Id > :        242 >
+======================================================
+======================================================
+[ Dram Id ] : 192/@000c0
+[ Shop Info ]           | [ User Info ]
+[ 000010600 ]           | [ 000010604 ]
+[ Large  ] :         24 | [ Money ]     : 46996
+[ Medium ] :         55 | < Shopping History >
+[ Small  ] :         25 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :          8 >
+[ Exp    ] :       1961 | < Seller Id > :        207 >
+======================================================
+======================================================
+[ Dram Id ] : 193/@000c1
+[ Shop Info ]           | [ User Info ]
+[ 000010608 ]           | [ 00001060c ]
+[ Large  ] :         53 | [ Money ]     : 55665
+[ Medium ] :         50 | < Shopping History >
+[ Small  ] :         32 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :          3 >
+[ Exp    ] :       1807 | < Seller Id > :        124 >
+======================================================
+======================================================
+[ Dram Id ] : 194/@000c2
+[ Shop Info ]           | [ User Info ]
+[ 000010610 ]           | [ 000010614 ]
+[ Large  ] :         53 | [ Money ]     : 20133
+[ Medium ] :         34 | < Shopping History >
+[ Small  ] :         28 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         61 >
+[ Exp    ] :       3701 | < Seller Id > :        145 >
+======================================================
+======================================================
+[ Dram Id ] : 195/@000c3
+[ Shop Info ]           | [ User Info ]
+[ 000010618 ]           | [ 00001061c ]
+[ Large  ] :         31 | [ Money ]     : 22427
+[ Medium ] :         26 | < Shopping History >
+[ Small  ] :         48 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         45 >
+[ Exp    ] :       3135 | < Seller Id > :        204 >
+======================================================
+======================================================
+[ Dram Id ] : 196/@000c4
+[ Shop Info ]           | [ User Info ]
+[ 000010620 ]           | [ 000010624 ]
+[ Large  ] :          0 | [ Money ]     : 30811
+[ Medium ] :         11 | < Shopping History >
+[ Small  ] :          6 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         31 >
+[ Exp    ] :       1484 | < Seller Id > :        174 >
+======================================================
+======================================================
+[ Dram Id ] : 197/@000c5
+[ Shop Info ]           | [ User Info ]
+[ 000010628 ]           | [ 00001062c ]
+[ Large  ] :          6 | [ Money ]     : 42813
+[ Medium ] :          4 | < Shopping History >
+[ Small  ] :         51 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :          6 >
+[ Exp    ] :       1444 | < Seller Id > :        200 >
+======================================================
+======================================================
+[ Dram Id ] : 198/@000c6
+[ Shop Info ]           | [ User Info ]
+[ 000010630 ]           | [ 000010634 ]
+[ Large  ] :         22 | [ Money ]     : 60774
+[ Medium ] :         63 | < Shopping History >
+[ Small  ] :         32 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         53 >
+[ Exp    ] :       2402 | < Seller Id > :        142 >
+======================================================
+======================================================
+[ Dram Id ] : 199/@000c7
+[ Shop Info ]           | [ User Info ]
+[ 000010638 ]           | [ 00001063c ]
+[ Large  ] :         27 | [ Money ]     : 48067
+[ Medium ] :         38 | < Shopping History >
+[ Small  ] :         11 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         32 >
+[ Exp    ] :        463 | < Seller Id > :         70 >
+======================================================
+======================================================
+[ Dram Id ] : 200/@000c8
+[ Shop Info ]           | [ User Info ]
+[ 000010640 ]           | [ 000010644 ]
+[ Large  ] :         48 | [ Money ]     : 14362
+[ Medium ] :         10 | < Shopping History >
+[ Small  ] :         18 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         13 >
+[ Exp    ] :       2084 | < Seller Id > :        219 >
+======================================================
+======================================================
+[ Dram Id ] : 201/@000c9
+[ Shop Info ]           | [ User Info ]
+[ 000010648 ]           | [ 00001064c ]
+[ Large  ] :         62 | [ Money ]     : 10088
+[ Medium ] :         55 | < Shopping History >
+[ Small  ] :         24 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         18 >
+[ Exp    ] :       1289 | < Seller Id > :        237 >
+======================================================
+======================================================
+[ Dram Id ] : 202/@000ca
+[ Shop Info ]           | [ User Info ]
+[ 000010650 ]           | [ 000010654 ]
+[ Large  ] :         61 | [ Money ]     :  9232
+[ Medium ] :         18 | < Shopping History >
+[ Small  ] :         14 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         57 >
+[ Exp    ] :       3215 | < Seller Id > :        232 >
+======================================================
+======================================================
+[ Dram Id ] : 203/@000cb
+[ Shop Info ]           | [ User Info ]
+[ 000010658 ]           | [ 00001065c ]
+[ Large  ] :         28 | [ Money ]     : 56222
+[ Medium ] :         27 | < Shopping History >
+[ Small  ] :          8 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :          4 >
+[ Exp    ] :       1249 | < Seller Id > :         89 >
+======================================================
+======================================================
+[ Dram Id ] : 204/@000cc
+[ Shop Info ]           | [ User Info ]
+[ 000010660 ]           | [ 000010664 ]
+[ Large  ] :         28 | [ Money ]     : 19444
+[ Medium ] :         30 | < Shopping History >
+[ Small  ] :         43 | < Item Id   > :      Small >
+[ Level  ] :     Copper | < Item num  > :          1 >
+[ Exp    ] :        415 | < Seller Id > :        199 >
+======================================================
+======================================================
+[ Dram Id ] : 205/@000cd
+[ Shop Info ]           | [ User Info ]
+[ 000010668 ]           | [ 00001066c ]
+[ Large  ] :         39 | [ Money ]     : 23979
+[ Medium ] :         20 | < Shopping History >
+[ Small  ] :         41 | < Item Id   > :      Large >
+[ Level  ] :     Copper | < Item num  > :         57 >
+[ Exp    ] :        207 | < Seller Id > :         54 >
+======================================================
+======================================================
+[ Dram Id ] : 206/@000ce
+[ Shop Info ]           | [ User Info ]
+[ 000010670 ]           | [ 000010674 ]
+[ Large  ] :         55 | [ Money ]     : 54842
+[ Medium ] :         49 | < Shopping History >
+[ Small  ] :          8 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         59 >
+[ Exp    ] :        658 | < Seller Id > :        181 >
+======================================================
+======================================================
+[ Dram Id ] : 207/@000cf
+[ Shop Info ]           | [ User Info ]
+[ 000010678 ]           | [ 00001067c ]
+[ Large  ] :         46 | [ Money ]     : 53089
+[ Medium ] :         20 | < Shopping History >
+[ Small  ] :          1 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :          7 >
+[ Exp    ] :        193 | < Seller Id > :         12 >
+======================================================
+======================================================
+[ Dram Id ] : 208/@000d0
+[ Shop Info ]           | [ User Info ]
+[ 000010680 ]           | [ 000010684 ]
+[ Large  ] :         19 | [ Money ]     : 23489
+[ Medium ] :         44 | < Shopping History >
+[ Small  ] :         62 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         46 >
+[ Exp    ] :       1364 | < Seller Id > :        252 >
+======================================================
+======================================================
+[ Dram Id ] : 209/@000d1
+[ Shop Info ]           | [ User Info ]
+[ 000010688 ]           | [ 00001068c ]
+[ Large  ] :         32 | [ Money ]     : 55634
+[ Medium ] :         13 | < Shopping History >
+[ Small  ] :         30 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         32 >
+[ Exp    ] :       3697 | < Seller Id > :         61 >
+======================================================
+======================================================
+[ Dram Id ] : 210/@000d2
+[ Shop Info ]           | [ User Info ]
+[ 000010690 ]           | [ 000010694 ]
+[ Large  ] :         53 | [ Money ]     : 31871
+[ Medium ] :         53 | < Shopping History >
+[ Small  ] :         58 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         62 >
+[ Exp    ] :        631 | < Seller Id > :        198 >
+======================================================
+======================================================
+[ Dram Id ] : 211/@000d3
+[ Shop Info ]           | [ User Info ]
+[ 000010698 ]           | [ 00001069c ]
+[ Large  ] :         49 | [ Money ]     : 51015
+[ Medium ] :          8 | < Shopping History >
+[ Small  ] :         49 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         34 >
+[ Exp    ] :        490 | < Seller Id > :          2 >
+======================================================
+======================================================
+[ Dram Id ] : 212/@000d4
+[ Shop Info ]           | [ User Info ]
+[ 0000106a0 ]           | [ 0000106a4 ]
+[ Large  ] :         35 | [ Money ]     : 42024
+[ Medium ] :         46 | < Shopping History >
+[ Small  ] :          5 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         21 >
+[ Exp    ] :       3119 | < Seller Id > :        142 >
+======================================================
+======================================================
+[ Dram Id ] : 213/@000d5
+[ Shop Info ]           | [ User Info ]
+[ 0000106a8 ]           | [ 0000106ac ]
+[ Large  ] :          6 | [ Money ]     :  1274
+[ Medium ] :         27 | < Shopping History >
+[ Small  ] :         37 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         27 >
+[ Exp    ] :       1309 | < Seller Id > :        222 >
+======================================================
+======================================================
+[ Dram Id ] : 214/@000d6
+[ Shop Info ]           | [ User Info ]
+[ 0000106b0 ]           | [ 0000106b4 ]
+[ Large  ] :         11 | [ Money ]     : 47412
+[ Medium ] :         34 | < Shopping History >
+[ Small  ] :         21 | < Item Id   > :     Medium >
+[ Level  ] :     Copper | < Item num  > :         36 >
+[ Exp    ] :         76 | < Seller Id > :          9 >
+======================================================
+======================================================
+[ Dram Id ] : 215/@000d7
+[ Shop Info ]           | [ User Info ]
+[ 0000106b8 ]           | [ 0000106bc ]
+[ Large  ] :         16 | [ Money ]     : 28784
+[ Medium ] :          6 | < Shopping History >
+[ Small  ] :         54 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         26 >
+[ Exp    ] :        531 | < Seller Id > :        123 >
+======================================================
+======================================================
+[ Dram Id ] : 216/@000d8
+[ Shop Info ]           | [ User Info ]
+[ 0000106c0 ]           | [ 0000106c4 ]
+[ Large  ] :         35 | [ Money ]     : 36410
+[ Medium ] :          6 | < Shopping History >
+[ Small  ] :         40 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         25 >
+[ Exp    ] :        942 | < Seller Id > :         59 >
+======================================================
+======================================================
+[ Dram Id ] : 217/@000d9
+[ Shop Info ]           | [ User Info ]
+[ 0000106c8 ]           | [ 0000106cc ]
+[ Large  ] :         30 | [ Money ]     :  2553
+[ Medium ] :         21 | < Shopping History >
+[ Small  ] :         17 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         57 >
+[ Exp    ] :       2494 | < Seller Id > :         80 >
+======================================================
+======================================================
+[ Dram Id ] : 218/@000da
+[ Shop Info ]           | [ User Info ]
+[ 0000106d0 ]           | [ 0000106d4 ]
+[ Large  ] :         48 | [ Money ]     : 36209
+[ Medium ] :          1 | < Shopping History >
+[ Small  ] :         53 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :          2 >
+[ Exp    ] :       2167 | < Seller Id > :        171 >
+======================================================
+======================================================
+[ Dram Id ] : 219/@000db
+[ Shop Info ]           | [ User Info ]
+[ 0000106d8 ]           | [ 0000106dc ]
+[ Large  ] :         39 | [ Money ]     : 24290
+[ Medium ] :         62 | < Shopping History >
+[ Small  ] :         14 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :          7 >
+[ Exp    ] :       3491 | < Seller Id > :         81 >
+======================================================
+======================================================
+[ Dram Id ] : 220/@000dc
+[ Shop Info ]           | [ User Info ]
+[ 0000106e0 ]           | [ 0000106e4 ]
+[ Large  ] :          1 | [ Money ]     : 62675
+[ Medium ] :         61 | < Shopping History >
+[ Small  ] :         52 | < Item Id   > :      Small >
+[ Level  ] :     Copper | < Item num  > :         37 >
+[ Exp    ] :         94 | < Seller Id > :        227 >
+======================================================
+======================================================
+[ Dram Id ] : 221/@000dd
+[ Shop Info ]           | [ User Info ]
+[ 0000106e8 ]           | [ 0000106ec ]
+[ Large  ] :         42 | [ Money ]     : 14916
+[ Medium ] :         21 | < Shopping History >
+[ Small  ] :         19 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         15 >
+[ Exp    ] :       1861 | < Seller Id > :          6 >
+======================================================
+======================================================
+[ Dram Id ] : 222/@000de
+[ Shop Info ]           | [ User Info ]
+[ 0000106f0 ]           | [ 0000106f4 ]
+[ Large  ] :         36 | [ Money ]     : 50858
+[ Medium ] :         63 | < Shopping History >
+[ Small  ] :         60 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         37 >
+[ Exp    ] :       1021 | < Seller Id > :        214 >
+======================================================
+======================================================
+[ Dram Id ] : 223/@000df
+[ Shop Info ]           | [ User Info ]
+[ 0000106f8 ]           | [ 0000106fc ]
+[ Large  ] :         44 | [ Money ]     : 60283
+[ Medium ] :         12 | < Shopping History >
+[ Small  ] :         14 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :          2 >
+[ Exp    ] :       2367 | < Seller Id > :        143 >
+======================================================
+======================================================
+[ Dram Id ] : 224/@000e0
+[ Shop Info ]           | [ User Info ]
+[ 000010700 ]           | [ 000010704 ]
+[ Large  ] :         49 | [ Money ]     : 60338
+[ Medium ] :         15 | < Shopping History >
+[ Small  ] :         26 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         17 >
+[ Exp    ] :        186 | < Seller Id > :        116 >
+======================================================
+======================================================
+[ Dram Id ] : 225/@000e1
+[ Shop Info ]           | [ User Info ]
+[ 000010708 ]           | [ 00001070c ]
+[ Large  ] :          8 | [ Money ]     : 15822
+[ Medium ] :         52 | < Shopping History >
+[ Small  ] :         32 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         28 >
+[ Exp    ] :       1091 | < Seller Id > :         27 >
+======================================================
+======================================================
+[ Dram Id ] : 226/@000e2
+[ Shop Info ]           | [ User Info ]
+[ 000010710 ]           | [ 000010714 ]
+[ Large  ] :          1 | [ Money ]     : 14218
+[ Medium ] :          9 | < Shopping History >
+[ Small  ] :         39 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         27 >
+[ Exp    ] :       3293 | < Seller Id > :         49 >
+======================================================
+======================================================
+[ Dram Id ] : 227/@000e3
+[ Shop Info ]           | [ User Info ]
+[ 000010718 ]           | [ 00001071c ]
+[ Large  ] :         47 | [ Money ]     :  4291
+[ Medium ] :         45 | < Shopping History >
+[ Small  ] :          8 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         43 >
+[ Exp    ] :       2064 | < Seller Id > :        154 >
+======================================================
+======================================================
+[ Dram Id ] : 228/@000e4
+[ Shop Info ]           | [ User Info ]
+[ 000010720 ]           | [ 000010724 ]
+[ Large  ] :         22 | [ Money ]     : 37105
+[ Medium ] :         13 | < Shopping History >
+[ Small  ] :         50 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         37 >
+[ Exp    ] :        615 | < Seller Id > :        120 >
+======================================================
+======================================================
+[ Dram Id ] : 229/@000e5
+[ Shop Info ]           | [ User Info ]
+[ 000010728 ]           | [ 00001072c ]
+[ Large  ] :         28 | [ Money ]     : 24558
+[ Medium ] :         62 | < Shopping History >
+[ Small  ] :         27 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :          7 >
+[ Exp    ] :        831 | < Seller Id > :        104 >
+======================================================
+======================================================
+[ Dram Id ] : 230/@000e6
+[ Shop Info ]           | [ User Info ]
+[ 000010730 ]           | [ 000010734 ]
+[ Large  ] :         30 | [ Money ]     :  6861
+[ Medium ] :          9 | < Shopping History >
+[ Small  ] :          6 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         28 >
+[ Exp    ] :       1190 | < Seller Id > :        128 >
+======================================================
+======================================================
+[ Dram Id ] : 231/@000e7
+[ Shop Info ]           | [ User Info ]
+[ 000010738 ]           | [ 00001073c ]
+[ Large  ] :         28 | [ Money ]     : 39006
+[ Medium ] :          0 | < Shopping History >
+[ Small  ] :         56 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         39 >
+[ Exp    ] :       2765 | < Seller Id > :         33 >
+======================================================
+======================================================
+[ Dram Id ] : 232/@000e8
+[ Shop Info ]           | [ User Info ]
+[ 000010740 ]           | [ 000010744 ]
+[ Large  ] :         34 | [ Money ]     : 42432
+[ Medium ] :         41 | < Shopping History >
+[ Small  ] :          5 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         60 >
+[ Exp    ] :       1129 | < Seller Id > :        206 >
+======================================================
+======================================================
+[ Dram Id ] : 233/@000e9
+[ Shop Info ]           | [ User Info ]
+[ 000010748 ]           | [ 00001074c ]
+[ Large  ] :         13 | [ Money ]     : 31287
+[ Medium ] :         63 | < Shopping History >
+[ Small  ] :         60 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         26 >
+[ Exp    ] :        111 | < Seller Id > :        140 >
+======================================================
+======================================================
+[ Dram Id ] : 234/@000ea
+[ Shop Info ]           | [ User Info ]
+[ 000010750 ]           | [ 000010754 ]
+[ Large  ] :         20 | [ Money ]     : 22089
+[ Medium ] :         49 | < Shopping History >
+[ Small  ] :         37 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :          5 >
+[ Exp    ] :       1449 | < Seller Id > :         12 >
+======================================================
+======================================================
+[ Dram Id ] : 235/@000eb
+[ Shop Info ]           | [ User Info ]
+[ 000010758 ]           | [ 00001075c ]
+[ Large  ] :         46 | [ Money ]     :  1813
+[ Medium ] :         28 | < Shopping History >
+[ Small  ] :         45 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         26 >
+[ Exp    ] :       1929 | < Seller Id > :         73 >
+======================================================
+======================================================
+[ Dram Id ] : 236/@000ec
+[ Shop Info ]           | [ User Info ]
+[ 000010760 ]           | [ 000010764 ]
+[ Large  ] :         13 | [ Money ]     : 42314
+[ Medium ] :         46 | < Shopping History >
+[ Small  ] :         19 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         44 >
+[ Exp    ] :       2781 | < Seller Id > :         90 >
+======================================================
+======================================================
+[ Dram Id ] : 237/@000ed
+[ Shop Info ]           | [ User Info ]
+[ 000010768 ]           | [ 00001076c ]
+[ Large  ] :         31 | [ Money ]     :  1430
+[ Medium ] :         42 | < Shopping History >
+[ Small  ] :         47 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         41 >
+[ Exp    ] :       1058 | < Seller Id > :        126 >
+======================================================
+======================================================
+[ Dram Id ] : 238/@000ee
+[ Shop Info ]           | [ User Info ]
+[ 000010770 ]           | [ 000010774 ]
+[ Large  ] :         51 | [ Money ]     : 45864
+[ Medium ] :         56 | < Shopping History >
+[ Small  ] :         42 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         49 >
+[ Exp    ] :       1295 | < Seller Id > :        173 >
+======================================================
+======================================================
+[ Dram Id ] : 239/@000ef
+[ Shop Info ]           | [ User Info ]
+[ 000010778 ]           | [ 00001077c ]
+[ Large  ] :         41 | [ Money ]     :  8041
+[ Medium ] :         49 | < Shopping History >
+[ Small  ] :         42 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         54 >
+[ Exp    ] :        947 | < Seller Id > :        182 >
+======================================================
+======================================================
+[ Dram Id ] : 240/@000f0
+[ Shop Info ]           | [ User Info ]
+[ 000010780 ]           | [ 000010784 ]
+[ Large  ] :         61 | [ Money ]     : 47995
+[ Medium ] :         33 | < Shopping History >
+[ Small  ] :         30 | < Item Id   > :      Small >
+[ Level  ] :       Gold | < Item num  > :         63 >
+[ Exp    ] :       1965 | < Seller Id > :        152 >
+======================================================
+======================================================
+[ Dram Id ] : 241/@000f1
+[ Shop Info ]           | [ User Info ]
+[ 000010788 ]           | [ 00001078c ]
+[ Large  ] :          0 | [ Money ]     : 47717
+[ Medium ] :         21 | < Shopping History >
+[ Small  ] :         41 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         51 >
+[ Exp    ] :        766 | < Seller Id > :        120 >
+======================================================
+======================================================
+[ Dram Id ] : 242/@000f2
+[ Shop Info ]           | [ User Info ]
+[ 000010790 ]           | [ 000010794 ]
+[ Large  ] :         38 | [ Money ]     : 43221
+[ Medium ] :          7 | < Shopping History >
+[ Small  ] :          4 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         32 >
+[ Exp    ] :       1432 | < Seller Id > :        163 >
+======================================================
+======================================================
+[ Dram Id ] : 243/@000f3
+[ Shop Info ]           | [ User Info ]
+[ 000010798 ]           | [ 00001079c ]
+[ Large  ] :         11 | [ Money ]     : 22384
+[ Medium ] :         58 | < Shopping History >
+[ Small  ] :         35 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         13 >
+[ Exp    ] :       3713 | < Seller Id > :        123 >
+======================================================
+======================================================
+[ Dram Id ] : 244/@000f4
+[ Shop Info ]           | [ User Info ]
+[ 0000107a0 ]           | [ 0000107a4 ]
+[ Large  ] :         45 | [ Money ]     :  2795
+[ Medium ] :         31 | < Shopping History >
+[ Small  ] :         15 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         44 >
+[ Exp    ] :       1879 | < Seller Id > :        104 >
+======================================================
+======================================================
+[ Dram Id ] : 245/@000f5
+[ Shop Info ]           | [ User Info ]
+[ 0000107a8 ]           | [ 0000107ac ]
+[ Large  ] :         28 | [ Money ]     : 35976
+[ Medium ] :          5 | < Shopping History >
+[ Small  ] :         36 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         46 >
+[ Exp    ] :        629 | < Seller Id > :         80 >
+======================================================
+======================================================
+[ Dram Id ] : 246/@000f6
+[ Shop Info ]           | [ User Info ]
+[ 0000107b0 ]           | [ 0000107b4 ]
+[ Large  ] :         36 | [ Money ]     : 13949
+[ Medium ] :         56 | < Shopping History >
+[ Small  ] :         35 | < Item Id   > :      Large >
+[ Level  ] :       Gold | < Item num  > :         36 >
+[ Exp    ] :       2927 | < Seller Id > :        148 >
+======================================================
+======================================================
+[ Dram Id ] : 247/@000f7
+[ Shop Info ]           | [ User Info ]
+[ 0000107b8 ]           | [ 0000107bc ]
+[ Large  ] :         36 | [ Money ]     : 57678
+[ Medium ] :         62 | < Shopping History >
+[ Small  ] :         52 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :          7 >
+[ Exp    ] :        164 | < Seller Id > :         20 >
+======================================================
+======================================================
+[ Dram Id ] : 248/@000f8
+[ Shop Info ]           | [ User Info ]
+[ 0000107c0 ]           | [ 0000107c4 ]
+[ Large  ] :         55 | [ Money ]     : 16757
+[ Medium ] :         18 | < Shopping History >
+[ Small  ] :          3 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :          3 >
+[ Exp    ] :       2460 | < Seller Id > :        141 >
+======================================================
+======================================================
+[ Dram Id ] : 249/@000f9
+[ Shop Info ]           | [ User Info ]
+[ 0000107c8 ]           | [ 0000107cc ]
+[ Large  ] :         20 | [ Money ]     : 28951
+[ Medium ] :         35 | < Shopping History >
+[ Small  ] :          5 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         25 >
+[ Exp    ] :        522 | < Seller Id > :        139 >
+======================================================
+======================================================
+[ Dram Id ] : 250/@000fa
+[ Shop Info ]           | [ User Info ]
+[ 0000107d0 ]           | [ 0000107d4 ]
+[ Large  ] :         16 | [ Money ]     : 38318
+[ Medium ] :          2 | < Shopping History >
+[ Small  ] :         47 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :          4 >
+[ Exp    ] :        517 | < Seller Id > :         89 >
+======================================================
+======================================================
+[ Dram Id ] : 251/@000fb
+[ Shop Info ]           | [ User Info ]
+[ 0000107d8 ]           | [ 0000107dc ]
+[ Large  ] :         53 | [ Money ]     : 58581
+[ Medium ] :         41 | < Shopping History >
+[ Small  ] :          6 | < Item Id   > :      Small >
+[ Level  ] :     Silver | < Item num  > :         14 >
+[ Exp    ] :       1875 | < Seller Id > :        216 >
+======================================================
+======================================================
+[ Dram Id ] : 252/@000fc
+[ Shop Info ]           | [ User Info ]
+[ 0000107e0 ]           | [ 0000107e4 ]
+[ Large  ] :         59 | [ Money ]     : 15269
+[ Medium ] :         22 | < Shopping History >
+[ Small  ] :          8 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         13 >
+[ Exp    ] :       2105 | < Seller Id > :        160 >
+======================================================
+======================================================
+[ Dram Id ] : 253/@000fd
+[ Shop Info ]           | [ User Info ]
+[ 0000107e8 ]           | [ 0000107ec ]
+[ Large  ] :          7 | [ Money ]     : 48726
+[ Medium ] :         37 | < Shopping History >
+[ Small  ] :         16 | < Item Id   > :      Large >
+[ Level  ] :     Silver | < Item num  > :         42 >
+[ Exp    ] :       2306 | < Seller Id > :        198 >
+======================================================
+======================================================
+[ Dram Id ] : 254/@000fe
+[ Shop Info ]           | [ User Info ]
+[ 0000107f0 ]           | [ 0000107f4 ]
+[ Large  ] :         26 | [ Money ]     : 48155
+[ Medium ] :         20 | < Shopping History >
+[ Small  ] :         40 | < Item Id   > :     Medium >
+[ Level  ] :     Silver | < Item num  > :         47 >
+[ Exp    ] :        660 | < Seller Id > :        119 >
+======================================================
+======================================================
+[ Dram Id ] : 255/@000ff
+[ Shop Info ]           | [ User Info ]
+[ 0000107f8 ]           | [ 0000107fc ]
+[ Large  ] :         51 | [ Money ]     : 41508
+[ Medium ] :         11 | < Shopping History >
+[ Small  ] :         46 | < Item Id   > :     Medium >
+[ Level  ] :       Gold | < Item num  > :         56 >
+[ Exp    ] :       2552 | < Seller Id > :        166 >
+======================================================

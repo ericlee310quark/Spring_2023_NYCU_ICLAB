@@ -1,0 +1,1 @@
+s1(20Apr2023:19:25:00):  irun TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v -loadpli1 debpli:novas_pli_boot 

@@ -1,0 +1,42 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Fri Apr 21 17:40:10 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              28
+    Cells do not drive (LINT-1)                                    28
+--------------------------------------------------------------------------------
+
+Warning: In design 'SNN', cell 'C3696' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C3700' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C3704' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C3708' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_109' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_111' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_113' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_115' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_117' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_119' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_121' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_123' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_125' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_130' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_131' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_132' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_133' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_134' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_135' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_136' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_137' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_138' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_139' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_141' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_142' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_143' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_144' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_145' does not drive any nets. (LINT-1)
+1

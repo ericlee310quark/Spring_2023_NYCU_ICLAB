@@ -1,0 +1,330 @@
+//############################################################################
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//   (C) Copyright Laboratory System Integration and Silicon Implementation
+//   All Right Reserved
+//
+//   File Name   : CHECKER.sv
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//############################################################################
+
+module Checker(input clk, INF.CHECKER inf);
+import usertype::*;
+
+//covergroup Spec1 @();
+	
+       //finish your covergroup here
+	
+	
+//endgroup
+
+
+
+
+covergroup check_spec1 @ (posedge clk iff inf.amnt_valid);
+       Act: coverpoint inf.D.d_money {
+              option.at_least     = 10;
+              bins money_12000 = {[0:12000]};
+              bins money_24000 = {[12001:24000]};
+              bins money_36000 = {[24001:36000]};
+              bins money_48000 = {[36001:48000]};
+              bins money_60000 = {[48001:60000]};
+       }
+option.per_instance = 1;
+endgroup
+
+covergroup check_spec2 @ (posedge clk iff inf.id_valid);
+       coverpoint inf.D.d_id[0] {
+              option.at_least     = 2 ; 
+	       option.auto_bin_max = 256;
+       }
+option.per_instance = 1;
+endgroup
+
+covergroup check_spec3 @ (posedge clk iff inf.act_valid);
+       coverpoint inf.D.d_act[0] {
+              option.at_least     = 10 ; 
+	       bins a0  = (Buy     => Buy     );
+              bins a1  = (Buy     => Check   );
+              bins a2  = (Buy     => Deposit );
+              bins a3  = (Buy     => Return  );
+              bins a4  = (Check   => Buy     );
+              bins a5  = (Check   => Check   );
+              bins a6  = (Check   => Deposit );
+              bins a7  = (Check   => Return  );
+              bins a8  = (Deposit => Buy     );
+              bins a9  = (Deposit => Check   );
+              bins a10 = (Deposit => Deposit );
+              bins a11 = (Deposit => Return  );
+              bins a12 = (Return  => Buy     );
+              bins a13 = (Return  => Check   );
+              bins a14 = (Return  => Deposit );
+              bins a15 = (Return  => Return  );
+               
+       }
+option.per_instance = 1;
+endgroup
+
+
+covergroup check_spec4 @ (negedge clk iff inf.out_valid);
+       coverpoint inf.err_msg {
+              option.at_least     = 20;
+              bins err_01  = {INV_Not_Enough};
+              bins err_02  = {Out_of_money};
+              bins err_03  = {INV_Full};
+              bins err_04  = {Wallet_is_Full};
+              bins err_05  = {Wrong_ID};
+              bins err_06  = {Wrong_Num};
+              bins err_07  = {Wrong_Item};
+              bins err_08  = {Wrong_act};
+       }
+option.per_instance = 1;
+endgroup
+
+covergroup check_spec5 @ (negedge clk iff inf.out_valid);
+       coverpoint inf.complete {
+              option.at_least     = 200;
+              bins complete_01[]  = {[0:1]};
+       }
+option.per_instance = 1;
+endgroup
+
+covergroup check_spec6 @ (posedge clk iff inf.out_valid);
+       coverpoint inf.D.d_item[0] {
+              option.at_least     = 20 ; 
+              bins item_01  = {Large };
+              bins item_02  = {Medium};
+              bins item_03  = {Small };
+       }
+       option.per_instance = 1;
+endgroup
+
+check_spec1 cover_spec1 = new();
+check_spec2 cover_spec2 = new();
+check_spec3 cover_spec3 = new();
+check_spec4 cover_spec4 = new();
+check_spec5 cover_spec5 = new();
+check_spec6 cover_spec6 = new();
+//declare other cover group
+
+
+
+//declare the cover group 
+//Spec1 cov_inst_1 = new();
+
+
+//************************************ below assertion is to check your pattern ***************************************** 
+//                                          Please finish and hand in it
+// This is an example assertion given by TA, please write the required assertions below
+//  assert_interval : assert property ( @(posedge clk)  inf.out_valid |=> inf.id_valid == 0 [*2])
+//  else
+//  begin
+//  	$display("Assertion X is violated");
+//  	$fatal; 
+//  end
+
+//write other assertions
+
+wire #(0.5) rst_reg = inf.rst_n;
+
+Action act_reg;
+logic check_flag;
+logic id_flag;
+logic act_flag;
+logic [3:0] check_cnt;
+always_ff @(posedge clk or negedge inf.rst_n) begin
+	if(!inf.rst_n)
+		act_reg <= 0;
+	else if(inf.act_valid)
+		act_reg <= inf.D.d_act;
+	else
+		act_reg <= act_reg;
+end
+
+always_ff @(posedge clk or negedge inf.rst_n) begin
+       if(!inf.rst_n)
+              act_flag <= 0;
+       else if(inf.act_valid)
+              act_flag <= 1;
+       else if(inf.out_valid)
+              act_flag <= 0;
+       else
+              act_flag <= act_flag;
+end
+
+always_ff @(posedge clk or negedge inf.rst_n) begin
+       if(!inf.rst_n)
+              check_flag <= 0;
+       else if(inf.out_valid)
+              check_flag <= 0;
+       else if(check_cnt >= 'd5)
+              check_flag <= 1;
+       else
+              check_flag <= check_flag;
+end
+
+always_ff @(posedge clk or negedge inf.rst_n) begin
+       if(!inf.rst_n)
+              check_cnt <= 0;
+       else if(inf.out_valid)
+              check_cnt <= 0;
+       else if(act_flag && act_reg == Check)
+              check_cnt <= (check_cnt < 'd6) ? check_cnt + 1 : check_cnt;
+       else
+              check_cnt <= 0;
+end
+
+always_ff @(posedge clk or negedge inf.rst_n) begin
+       if(!inf.rst_n)
+              id_flag <= 0;
+       else if(inf.id_valid && check_flag) 
+              id_flag <= 1;
+       else if(inf.out_valid)
+              id_flag <= 0;
+       else
+              id_flag <= id_flag;
+end
+always_ff @(negedge rst_reg) begin
+    //#1;
+    assert_1 : assert ((inf.out_valid === 0 ) && (inf.out_info === 0) && (inf.err_msg === 0    ) && 
+                       (inf.complete === 0  ) && (inf.C_addr === 0  ) && (inf.C_data_w === 0   ) && 
+                       (inf.C_in_valid === 0) && (inf.C_r_wb === 0  ) && (inf.C_out_valid === 0) && 
+                       (inf.C_data_r === 0  ) && (inf.AR_VALID === 0) && (inf.AR_ADDR === 0    ) && 
+                       (inf.R_READY === 0   ) && (inf.AW_VALID === 0) && (inf.AW_ADDR === 0    ) && 
+                       (inf.W_VALID === 0   ) && (inf.W_DATA === 0  ) && (inf.B_READY === 0    ))
+    else begin
+       $display("Assertion 1 is violated");
+       $fatal; 
+    end
+end
+
+assert_2 : assert property ( @(posedge clk) (inf.out_valid && inf.complete) |-> (inf.err_msg === No_Err))
+else begin
+    $display("Assertion 2 is violated");
+    $fatal; 
+end
+assert_3 : assert property ( @(posedge clk)  (inf.out_valid && !inf.complete) |-> (inf.out_info === 0))
+else begin
+	$display("Assertion 3 is violated");
+	$fatal; 
+end
+assert_4_1 : assert property ( @(posedge clk) (inf.id_valid) |-> ##1 (!inf.id_valid))
+else begin
+       $display("Assertion 4 is violated");
+       $fatal; 
+end
+assert_4_2 : assert property ( @(posedge clk) (inf.act_valid) |-> ##1 (!inf.act_valid))
+else begin
+       $display("Assertion 4 is violated");
+       $fatal; 
+end
+
+assert_4_3 : assert property ( @(posedge clk) (inf.amnt_valid) |-> ##1 (!inf.amnt_valid))
+else begin
+       $display("Assertion 4 is violated");
+       $fatal; 
+end
+
+assert_4_4 : assert property ( @(posedge clk) (inf.item_valid) |-> ##1 (!inf.item_valid))
+else begin
+       $display("Assertion 4 is violated");
+       $fatal; 
+end
+
+assert_4_5 : assert property ( @(posedge clk) (inf.num_valid) |-> ##1 (!inf.num_valid))
+else begin
+       $display("Assertion 4 is violated");
+       $fatal; 
+end
+
+//1~5 gap invalid
+
+assert_5 : assert property ( @(posedge clk)  (inf.id_valid && !act_flag) |-> ##[2:6] inf.act_valid)
+else begin
+       $display("Assertion 5 is violated");
+       $fatal; 
+end
+//buy
+assert_5_buy_1 : assert property ( @(posedge clk)  (inf.act_valid && inf.D.d_act == Buy) |-> ##[2:6] inf.item_valid)
+else begin
+       $display("Assertion 5 is violated");
+       $fatal; 
+end
+assert_5_buy_2 : assert property ( @(posedge clk)  (inf.item_valid && act_reg == Buy) |-> ##[2:6] inf.num_valid)
+else begin
+       $display("Assertion 5 is violated");
+       $fatal; 
+end
+assert_5_buy_3 : assert property ( @(posedge clk)  (inf.num_valid && act_reg == Buy) |-> ##[2:6] inf.id_valid)
+else begin
+       $display("Assertion 5 is violated");
+       $fatal; 
+end
+
+//Check
+// assert_5_check_1 : assert property ( @(posedge clk)  (act_flag && act_reg == Check) |-> ##[2:6](inf.id_valid || !inf.id_valid)) begin
+//        $display("Assertion 5 is violated");
+//        $fatal; 
+// end
+always_ff @(posedge inf.id_valid) begin
+       assert_5_check_1 : assert(check_cnt < 6)
+       else begin
+              $display("Assertion 5 is violated");
+              $fatal;
+       end
+end
+
+//Deposit
+assert_5_deposit_1 : assert property ( @(posedge clk)  (inf.act_valid && inf.D.d_act == Deposit) |-> ##[2:6] inf.amnt_valid)
+else begin
+       $display("Assertion 5 is violated");
+       $fatal; 
+end
+//Return
+assert_5_return_1 : assert property ( @(posedge clk)  (inf.act_valid && inf.D.d_act == Return) |-> ##[2:6] inf.item_valid)
+else begin
+       $display("Assertion 5 is violated");
+       $fatal; 
+end
+assert_5_return_2 : assert property ( @(posedge clk)  (inf.item_valid && act_reg == Return) |-> ##[2:6] inf.num_valid)
+else begin
+       $display("Assertion 5 is violated");
+       $fatal; 
+end
+
+assert_5_return_3 : assert property ( @(posedge clk)  (inf.num_valid && act_reg == Return) |-> ##[2:6] inf.id_valid)
+else begin
+       $display("Assertion 5 is violated");
+       $fatal; 
+end
+
+//overlap
+
+assert_6 : assert property( @(posedge clk) (inf.id_valid + inf.act_valid + inf.item_valid + inf.num_valid + inf.amnt_valid) < 2)
+else begin
+    $display("Assertion 6 is violated");
+	$fatal;
+end
+
+//assert 7
+assert_7 : assert property ( @(posedge clk)  (inf.out_valid ) |=> (inf.out_valid === 0))
+else begin
+    $display("Assertion 7 is violated");
+       $fatal;
+end
+//assert 8
+assert_8 : assert property ( @(posedge clk)  (inf.out_valid ) |-> ##[2:10] (inf.id_valid || inf.act_valid))
+else begin
+    $display("Assertion 8 is violated");
+       $fatal;
+end
+
+//assert 9
+
+assert8 : assert property ( @(posedge clk) ((inf.id_valid && act_reg == Buy) || (inf.id_valid && act_reg == Return) || (inf.amnt_valid && act_reg == Deposit) || (inf.id_valid && act_reg == Check) || (inf.act_valid && inf.D.d_act == Check)) |=> ##[0:10000] (inf.out_valid))
+else begin
+	$display("Assertion 9 is violated");
+	$fatal;
+end
+
+
+endmodule

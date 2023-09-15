@@ -1,0 +1,56 @@
+Information: Running time_based power analysis... (PWR-601)
+Warning: Cell 'GATED_shar/U4(Y)' drives 1200 loads. (PWR-300)
+Warning: 1 high fanout drivers are detected. Power analysis may be affected by high fanout drivers. (PWR-301)
+Information: Reading vcd file '/RAID2/COURSE/iclab/iclab034/Lab08/PRACTICE/04_PTPX/File/IP_SYN.fsdb'
+Information: The waveform options are:
+		File name:	vcd.out
+		File format:	out
+		Time interval:	1ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+Information: analysis is done for time window (0ns - 338010ns)
+
+Information: Total simulation time = 338010.000000 ns
+****************************************
+Report : Time Based Power
+Design : IP
+Version: P-2019.03-SP5-1
+Date   : Thu Apr 20 19:31:57 2023
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network           -2.893e-06
+                                  5.016e-04 9.657e-09 4.987e-04 ( 3.65%)  
+register                9.934e-03 5.229e-04 2.340e-05    0.0105 (76.75%)  i
+combinational           1.651e-03 1.009e-03 1.637e-05 2.676e-03 (19.60%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 2.033e-03   (14.89%)
+  Cell Internal Power  =    0.0116   (84.82%)
+  Cell Leakage Power   = 3.978e-05   ( 0.29%)
+    Intrinsic Leakage  = 3.978e-05
+    Gate Leakage       =    0.0000
+                         ---------
+Total Power            =    0.0137  (100.00%)
+
+X Transition Power     = 6.887e-08
+Glitching Power        =    0.0000
+
+Peak Power             =    0.2647
+Peak Time              =     31700
+
+1

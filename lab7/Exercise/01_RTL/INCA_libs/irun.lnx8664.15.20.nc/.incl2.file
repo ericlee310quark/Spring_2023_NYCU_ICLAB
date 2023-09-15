@@ -1,0 +1,16 @@
+PATTERN_TA.v
+/RAID2/COURSE/iclab/iclab034/Lab07/EXERCISE/00_TESTBED/PATTERN_TA.v
+CDC.v
+/RAID2/COURSE/iclab/iclab034/Lab07/EXERCISE/01_RTL/CDC.v
+AFIFO.v
+/RAID2/COURSE/iclab/iclab034/Lab07/EXERCISE/01_RTL/AFIFO.v
+sync_r2w.v
+/RAID2/COURSE/iclab/iclab034/Lab07/EXERCISE/01_RTL/sync_r2w.v
+sync_w2r.v
+/RAID2/COURSE/iclab/iclab034/Lab07/EXERCISE/01_RTL/sync_w2r.v
+fifomem.v
+/RAID2/COURSE/iclab/iclab034/Lab07/EXERCISE/01_RTL/fifomem.v
+rptr_empty.v
+/RAID2/COURSE/iclab/iclab034/Lab07/EXERCISE/01_RTL/rptr_empty.v
+wptr_full.v
+/RAID2/COURSE/iclab/iclab034/Lab07/EXERCISE/01_RTL/wptr_full.v

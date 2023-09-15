@@ -1,0 +1,10 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(24Apr2023:18:20:31):( irun TESTBED.v -define GATE+NCG -debug -loadpli1 debpli:novas_pli_boot -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v )
+s2::(24Apr2023:18:20:36):( irun TESTBED.v -define GATE+CG -debug -loadpli1 debpli:novas_pli_boot -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v )
+s3::(24Apr2023:18:24:02):( irun TESTBED.v -define GATE+NCG -debug -loadpli1 debpli:novas_pli_boot -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v )
+s4::(24Apr2023:18:24:07):( irun TESTBED.v -define GATE+CG -debug -loadpli1 debpli:novas_pli_boot -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v )
+s5::(24Apr2023:18:28:25):( irun TESTBED.v -define GATE+NCG -debug -loadpli1 debpli:novas_pli_boot -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v )
+s6::(24Apr2023:18:28:30):( irun TESTBED.v -define GATE+CG -debug -loadpli1 debpli:novas_pli_boot -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v )

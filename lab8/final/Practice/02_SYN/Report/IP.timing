@@ -1,0 +1,130 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'IP' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : IP
+Version: T-2022.03
+Date   : Thu Apr 20 19:24:37 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: img_mean_reg[2][2][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: out_reg[7][7][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  img_mean_reg[2][2][0]/CK (DFFRHQX1)                     0.00       0.00 r
+  img_mean_reg[2][2][0]/Q (DFFRHQX1)                      0.57       0.57 r
+  add_7_root_add_0_root_add_301_8_G8_G8/A[0] (IP_DW01_add_8)
+                                                          0.00       0.57 r
+  add_7_root_add_0_root_add_301_8_G8_G8/U1/Y (AND2X1)     0.26       0.83 r
+  add_7_root_add_0_root_add_301_8_G8_G8/U1_1/S (ADDFX2)
+                                                          0.38       1.21 r
+  add_7_root_add_0_root_add_301_8_G8_G8/SUM[1] (IP_DW01_add_8)
+                                                          0.00       1.21 r
+  U15331/CO (ADDFX2)                                      0.61       1.82 r
+  U15326/S (ADDFX2)                                       0.38       2.20 r
+  add_2_root_add_0_root_add_301_8_G8_G8/A[2] (IP_DW01_add_5)
+                                                          0.00       2.20 r
+  add_2_root_add_0_root_add_301_8_G8_G8/U1_2/S (ADDFX2)
+                                                          0.52       2.72 f
+  add_2_root_add_0_root_add_301_8_G8_G8/SUM[2] (IP_DW01_add_5)
+                                                          0.00       2.72 f
+  add_0_root_add_0_root_add_301_8_G8_G8/B[2] (IP_DW01_add_1)
+                                                          0.00       2.72 f
+  add_0_root_add_0_root_add_301_8_G8_G8/U1_2/CO (ADDFX2)
+                                                          0.56       3.29 f
+  add_0_root_add_0_root_add_301_8_G8_G8/U1_3/CO (ADDFX2)
+                                                          0.36       3.64 f
+  add_0_root_add_0_root_add_301_8_G8_G8/U1_4/CO (ADDFX2)
+                                                          0.36       4.00 f
+  add_0_root_add_0_root_add_301_8_G8_G8/U1_5/CO (ADDFX2)
+                                                          0.36       4.36 f
+  add_0_root_add_0_root_add_301_8_G8_G8/U1_6/CO (ADDFX2)
+                                                          0.36       4.71 f
+  add_0_root_add_0_root_add_301_8_G8_G8/U1_7/CO (ADDFX2)
+                                                          0.36       5.07 f
+  add_0_root_add_0_root_add_301_8_G8_G8/U1_8/CO (ADDFX2)
+                                                          0.36       5.43 f
+  add_0_root_add_0_root_add_301_8_G8_G8/U1_9/CO (ADDFX2)
+                                                          0.37       5.80 f
+  add_0_root_add_0_root_add_301_8_G8_G8/U3/Y (XOR2X1)     0.35       6.15 r
+  add_0_root_add_0_root_add_301_8_G8_G8/SUM[10] (IP_DW01_add_1)
+                                                          0.00       6.15 r
+  div_301_G8_G8/a[10] (IP_DW_div_uns_6)                   0.00       6.15 r
+  div_301_G8_G8/U50/Y (OR2X1)                             0.20       6.35 r
+  div_301_G8_G8/U24/Y (AND2X1)                            0.42       6.77 r
+  div_301_G8_G8/U3/Y (MX2X2)                              0.31       7.08 f
+  div_301_G8_G8/U97/Y (OR2X1)                             0.28       7.36 f
+  div_301_G8_G8/U51/Y (OR2X1)                             0.30       7.66 f
+  div_301_G8_G8/U25/Y (AND2X1)                            0.22       7.88 f
+  div_301_G8_G8/U61/Y (OR2X1)                             0.43       8.31 f
+  div_301_G8_G8/U5/Y (MX2X2)                              0.28       8.59 f
+  div_301_G8_G8/U84/Y (OR2X1)                             0.28       8.86 f
+  div_301_G8_G8/U52/Y (OR2X1)                             0.30       9.17 f
+  div_301_G8_G8/U26/Y (AND2X1)                            0.22       9.38 f
+  div_301_G8_G8/U32/Y (OR2X1)                             0.43       9.81 f
+  div_301_G8_G8/U6/Y (MX2X2)                              0.28      10.09 f
+  div_301_G8_G8/U85/Y (OR2X1)                             0.28      10.37 f
+  div_301_G8_G8/U53/Y (OR2X1)                             0.30      10.67 f
+  div_301_G8_G8/U27/Y (AND2X1)                            0.22      10.89 f
+  div_301_G8_G8/U34/Y (OR2X1)                             0.43      11.32 f
+  div_301_G8_G8/U7/Y (MX2X2)                              0.28      11.60 f
+  div_301_G8_G8/U86/Y (OR2X1)                             0.28      11.88 f
+  div_301_G8_G8/U54/Y (OR2X1)                             0.30      12.18 f
+  div_301_G8_G8/U28/Y (AND2X1)                            0.22      12.40 f
+  div_301_G8_G8/U16/Y (OR2X1)                             0.43      12.83 f
+  div_301_G8_G8/U8/Y (MX2X2)                              0.28      13.11 f
+  div_301_G8_G8/U87/Y (OR2X1)                             0.28      13.38 f
+  div_301_G8_G8/U55/Y (OR2X1)                             0.30      13.69 f
+  div_301_G8_G8/U29/Y (AND2X1)                            0.22      13.90 f
+  div_301_G8_G8/U18/Y (OR2X1)                             0.43      14.34 f
+  div_301_G8_G8/U4/Y (MX2X2)                              0.27      14.61 f
+  div_301_G8_G8/U88/Y (OR2X1)                             0.27      14.88 f
+  div_301_G8_G8/U56/Y (OR2X1)                             0.30      15.19 f
+  div_301_G8_G8/U30/Y (AND2X1)                            0.22      15.40 f
+  div_301_G8_G8/U20/Y (OR2X1)                             0.42      15.82 f
+  div_301_G8_G8/U79/Y (MXI2X1)                            0.23      16.05 r
+  div_301_G8_G8/U58/Y (INVX2)                             0.07      16.12 f
+  div_301_G8_G8/U82/Y (OR2X1)                             0.28      16.40 f
+  div_301_G8_G8/U57/Y (OR2X1)                             0.30      16.70 f
+  div_301_G8_G8/U31/Y (AND2X1)                            0.22      16.92 f
+  div_301_G8_G8/U22/Y (OR2X1)                             0.42      17.34 f
+  div_301_G8_G8/U1/Y (MXI2X1)                             0.18      17.52 r
+  div_301_G8_G8/U108/Y (NAND2X1)                          0.07      17.59 f
+  div_301_G8_G8/U95/Y (OR2X1)                             0.27      17.86 f
+  div_301_G8_G8/U59/Y (NAND2X1)                           0.10      17.96 r
+  div_301_G8_G8/U110/Y (NAND2X1)                          0.07      18.03 f
+  div_301_G8_G8/quotient[0] (IP_DW_div_uns_6)             0.00      18.03 f
+  U15324/Y (AOI222XL)                                     0.48      18.51 r
+  U15323/Y (OAI221X1)                                     0.19      18.69 f
+  out_reg[7][7][0]/D (DFFRX1)                             0.00      18.69 f
+  data arrival time                                                 18.69
+
+  clock clk (rise edge)                                  20.00      20.00
+  clock network delay (ideal)                             0.00      20.00
+  out_reg[7][7][0]/CK (DFFRX1)                            0.00      20.00 r
+  library setup time                                     -0.34      19.66
+  data required time                                                19.66
+  --------------------------------------------------------------------------
+  data required time                                                19.66
+  data arrival time                                                -18.69
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.97
+
+
+1

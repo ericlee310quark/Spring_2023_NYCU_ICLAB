@@ -1,0 +1,23 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Fri Apr 21 00:36:54 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               9
+    Cells do not drive (LINT-1)                                     9
+--------------------------------------------------------------------------------
+
+Warning: In design 'SNN', cell 'C2889' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C2893' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C2897' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C2901' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_86' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_92' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_93' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_94' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_95' does not drive any nets. (LINT-1)
+1

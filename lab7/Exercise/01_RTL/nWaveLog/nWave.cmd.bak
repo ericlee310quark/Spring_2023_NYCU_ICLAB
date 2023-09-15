@@ -1,0 +1,454 @@
+wvSetPosition -win $_nWave1 {("G1" 0)}
+wvOpenFile -win $_nWave1 \
+           {/RAID2/COURSE/iclab/iclab034/Lab07/EXERCISE/01_RTL/CDC.fsdb}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED"
+wvResizeWindow -win $_nWave1 0 23 1536 801
+wvSetPosition -win $_nWave1 {("G1" 2)}
+wvSetPosition -win $_nWave1 {("G1" 2)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 )} 
+wvSetPosition -win $_nWave1 {("G1" 2)}
+wvSetPosition -win $_nWave1 {("G1" 4)}
+wvSetPosition -win $_nWave1 {("G1" 4)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 3 4 )} 
+wvSetPosition -win $_nWave1 {("G1" 4)}
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+{/TESTBED/eq_score\[7:0\]} \
+{/TESTBED/iq_score\[7:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 5 6 )} 
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvSetPosition -win $_nWave1 {("G1" 9)}
+wvSetPosition -win $_nWave1 {("G1" 9)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+{/TESTBED/eq_score\[7:0\]} \
+{/TESTBED/iq_score\[7:0\]} \
+{/TESTBED/eq_weight\[2:0\]} \
+{/TESTBED/iq_weight\[2:0\]} \
+{/TESTBED/size_weight\[2:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 7 8 9 )} 
+wvSetPosition -win $_nWave1 {("G1" 9)}
+wvSetPosition -win $_nWave1 {("G1" 10)}
+wvSetPosition -win $_nWave1 {("G1" 10)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+{/TESTBED/eq_score\[7:0\]} \
+{/TESTBED/iq_score\[7:0\]} \
+{/TESTBED/eq_weight\[2:0\]} \
+{/TESTBED/iq_weight\[2:0\]} \
+{/TESTBED/size_weight\[2:0\]} \
+{/TESTBED/in_valid} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 10 )} 
+wvSetPosition -win $_nWave1 {("G1" 10)}
+wvSetPosition -win $_nWave1 {("G1" 13)}
+wvSetPosition -win $_nWave1 {("G1" 13)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+{/TESTBED/eq_score\[7:0\]} \
+{/TESTBED/iq_score\[7:0\]} \
+{/TESTBED/eq_weight\[2:0\]} \
+{/TESTBED/iq_weight\[2:0\]} \
+{/TESTBED/size_weight\[2:0\]} \
+{/TESTBED/in_valid} \
+{/TESTBED/out\[7:0\]} \
+{/TESTBED/out_valid} \
+{/TESTBED/ready} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 11 12 13 )} 
+wvSetPosition -win $_nWave1 {("G1" 13)}
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/u_CDC"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/u_PATTERN"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/u_CDC"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/u_CDC/afifo_u0"
+wvSetPosition -win $_nWave1 {("G1" 14)}
+wvSetPosition -win $_nWave1 {("G1" 14)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+{/TESTBED/eq_score\[7:0\]} \
+{/TESTBED/iq_score\[7:0\]} \
+{/TESTBED/eq_weight\[2:0\]} \
+{/TESTBED/iq_weight\[2:0\]} \
+{/TESTBED/size_weight\[2:0\]} \
+{/TESTBED/in_valid} \
+{/TESTBED/out\[7:0\]} \
+{/TESTBED/out_valid} \
+{/TESTBED/ready} \
+{/TESTBED/u_CDC/afifo_u0/wdata\[7:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 14 )} 
+wvSetPosition -win $_nWave1 {("G1" 14)}
+wvSetPosition -win $_nWave1 {("G1" 15)}
+wvSetPosition -win $_nWave1 {("G1" 15)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+{/TESTBED/eq_score\[7:0\]} \
+{/TESTBED/iq_score\[7:0\]} \
+{/TESTBED/eq_weight\[2:0\]} \
+{/TESTBED/iq_weight\[2:0\]} \
+{/TESTBED/size_weight\[2:0\]} \
+{/TESTBED/in_valid} \
+{/TESTBED/out\[7:0\]} \
+{/TESTBED/out_valid} \
+{/TESTBED/ready} \
+{/TESTBED/u_CDC/afifo_u0/wdata\[7:0\]} \
+{/TESTBED/u_CDC/afifo_u0/wfull} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 15 )} 
+wvSetPosition -win $_nWave1 {("G1" 15)}
+wvZoomOut -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/u_CDC"
+wvSetPosition -win $_nWave1 {("G1" 16)}
+wvSetPosition -win $_nWave1 {("G1" 16)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+{/TESTBED/eq_score\[7:0\]} \
+{/TESTBED/iq_score\[7:0\]} \
+{/TESTBED/eq_weight\[2:0\]} \
+{/TESTBED/iq_weight\[2:0\]} \
+{/TESTBED/size_weight\[2:0\]} \
+{/TESTBED/in_valid} \
+{/TESTBED/out\[7:0\]} \
+{/TESTBED/out_valid} \
+{/TESTBED/ready} \
+{/TESTBED/u_CDC/afifo_u0/wdata\[7:0\]} \
+{/TESTBED/u_CDC/afifo_u0/wfull} \
+{/TESTBED/u_CDC/fifo_full} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 16 )} 
+wvSetPosition -win $_nWave1 {("G1" 16)}
+wvSetPosition -win $_nWave1 {("G1" 17)}
+wvSetPosition -win $_nWave1 {("G1" 17)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+{/TESTBED/eq_score\[7:0\]} \
+{/TESTBED/iq_score\[7:0\]} \
+{/TESTBED/eq_weight\[2:0\]} \
+{/TESTBED/iq_weight\[2:0\]} \
+{/TESTBED/size_weight\[2:0\]} \
+{/TESTBED/in_valid} \
+{/TESTBED/out\[7:0\]} \
+{/TESTBED/out_valid} \
+{/TESTBED/ready} \
+{/TESTBED/u_CDC/afifo_u0/wdata\[7:0\]} \
+{/TESTBED/u_CDC/afifo_u0/wfull} \
+{/TESTBED/u_CDC/fifo_full} \
+{/TESTBED/u_CDC/winc_regs} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 17 )} 
+wvSetPosition -win $_nWave1 {("G1" 17)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/u_CDC"
+wvSetPosition -win $_nWave1 {("G2" 1)}
+wvSetPosition -win $_nWave1 {("G2" 1)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+{/TESTBED/eq_score\[7:0\]} \
+{/TESTBED/iq_score\[7:0\]} \
+{/TESTBED/eq_weight\[2:0\]} \
+{/TESTBED/iq_weight\[2:0\]} \
+{/TESTBED/size_weight\[2:0\]} \
+{/TESTBED/in_valid} \
+{/TESTBED/out\[7:0\]} \
+{/TESTBED/out_valid} \
+{/TESTBED/ready} \
+{/TESTBED/u_CDC/afifo_u0/wdata\[7:0\]} \
+{/TESTBED/u_CDC/afifo_u0/wfull} \
+{/TESTBED/u_CDC/fifo_full} \
+{/TESTBED/u_CDC/winc_regs} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/TESTBED/u_CDC/cmp_top_regs\[7:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+}
+wvSelectSignal -win $_nWave1 {( "G2" 1 )} 
+wvSetPosition -win $_nWave1 {("G2" 1)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 9415.764409 -snap {("G2" 1)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 23629.947220 -snap {("G2" 1)}
+wvResizeWindow -win $_nWave1 0 23 1536 801
+wvResizeWindow -win $_nWave1 0 23 1536 801
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSetCursor -win $_nWave1 194131.122581 -snap {("G1" 14)}
+wvSetCursor -win $_nWave1 23610.541935 -snap {("G1" 13)}
+wvSelectSignal -win $_nWave1 {( "G1" 12 )} 
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 16 )} 
+wvSetPosition -win $_nWave1 {("G3" 1)}
+wvSetPosition -win $_nWave1 {("G3" 1)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+{/TESTBED/eq_score\[7:0\]} \
+{/TESTBED/iq_score\[7:0\]} \
+{/TESTBED/eq_weight\[2:0\]} \
+{/TESTBED/iq_weight\[2:0\]} \
+{/TESTBED/size_weight\[2:0\]} \
+{/TESTBED/in_valid} \
+{/TESTBED/out\[7:0\]} \
+{/TESTBED/out_valid} \
+{/TESTBED/ready} \
+{/TESTBED/u_CDC/afifo_u0/wdata\[7:0\]} \
+{/TESTBED/u_CDC/afifo_u0/wfull} \
+{/TESTBED/u_CDC/fifo_full} \
+{/TESTBED/u_CDC/winc_regs} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/TESTBED/u_CDC/cmp_top_regs\[7:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+{/TESTBED/u_CDC/afifo_u0/winc} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "G3" 1 )} 
+wvSetPosition -win $_nWave1 {("G3" 1)}
+wvSetPosition -win $_nWave1 {("G3" 3)}
+wvSetPosition -win $_nWave1 {("G3" 3)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+{/TESTBED/eq_score\[7:0\]} \
+{/TESTBED/iq_score\[7:0\]} \
+{/TESTBED/eq_weight\[2:0\]} \
+{/TESTBED/iq_weight\[2:0\]} \
+{/TESTBED/size_weight\[2:0\]} \
+{/TESTBED/in_valid} \
+{/TESTBED/out\[7:0\]} \
+{/TESTBED/out_valid} \
+{/TESTBED/ready} \
+{/TESTBED/u_CDC/afifo_u0/wdata\[7:0\]} \
+{/TESTBED/u_CDC/afifo_u0/wfull} \
+{/TESTBED/u_CDC/fifo_full} \
+{/TESTBED/u_CDC/winc_regs} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/TESTBED/u_CDC/cmp_top_regs\[7:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+{/TESTBED/u_CDC/afifo_u0/winc} \
+{/TESTBED/u_CDC/afifo_u0/wptr\[4:0\]} \
+{/TESTBED/u_CDC/afifo_u0/wq2_rptr\[4:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "G3" 2 3 )} 
+wvSetPosition -win $_nWave1 {("G3" 3)}
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSetPosition -win $_nWave1 {("G3" 5)}
+wvSetPosition -win $_nWave1 {("G3" 5)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+{/TESTBED/eq_score\[7:0\]} \
+{/TESTBED/iq_score\[7:0\]} \
+{/TESTBED/eq_weight\[2:0\]} \
+{/TESTBED/iq_weight\[2:0\]} \
+{/TESTBED/size_weight\[2:0\]} \
+{/TESTBED/in_valid} \
+{/TESTBED/out\[7:0\]} \
+{/TESTBED/out_valid} \
+{/TESTBED/ready} \
+{/TESTBED/u_CDC/afifo_u0/wdata\[7:0\]} \
+{/TESTBED/u_CDC/afifo_u0/wfull} \
+{/TESTBED/u_CDC/fifo_full} \
+{/TESTBED/u_CDC/winc_regs} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/TESTBED/u_CDC/cmp_top_regs\[7:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+{/TESTBED/u_CDC/afifo_u0/winc} \
+{/TESTBED/u_CDC/afifo_u0/wptr\[4:0\]} \
+{/TESTBED/u_CDC/afifo_u0/wq2_rptr\[4:0\]} \
+{/TESTBED/u_CDC/afifo_u0/rinc} \
+{/TESTBED/u_CDC/afifo_u0/rptr\[4:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+}
+wvSelectSignal -win $_nWave1 {( "G3" 4 5 )} 
+wvSetPosition -win $_nWave1 {("G3" 5)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 16 )} 
+wvSetCursor -win $_nWave1 269553.687097 -snap {("G2" 1)}
+wvSelectSignal -win $_nWave1 {( "G1" 13 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 14 )} 
+wvZoomIn -win $_nWave1
+wvSetCursor -win $_nWave1 286933.669355 -snap {("G1" 14)}
+wvSetPosition -win $_nWave1 {("G4" 1)}
+wvSetPosition -win $_nWave1 {("G4" 1)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/clk1} \
+{/TESTBED/clk2} \
+{/TESTBED/doraemon_id\[4:0\]} \
+{/TESTBED/size\[7:0\]} \
+{/TESTBED/eq_score\[7:0\]} \
+{/TESTBED/iq_score\[7:0\]} \
+{/TESTBED/eq_weight\[2:0\]} \
+{/TESTBED/iq_weight\[2:0\]} \
+{/TESTBED/size_weight\[2:0\]} \
+{/TESTBED/in_valid} \
+{/TESTBED/out\[7:0\]} \
+{/TESTBED/out_valid} \
+{/TESTBED/ready} \
+{/TESTBED/u_CDC/afifo_u0/wdata\[7:0\]} \
+{/TESTBED/u_CDC/afifo_u0/wfull} \
+{/TESTBED/u_CDC/fifo_full} \
+{/TESTBED/u_CDC/winc_regs} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/TESTBED/u_CDC/cmp_top_regs\[7:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+{/TESTBED/u_CDC/afifo_u0/winc} \
+{/TESTBED/u_CDC/afifo_u0/wptr\[4:0\]} \
+{/TESTBED/u_CDC/afifo_u0/wq2_rptr\[4:0\]} \
+{/TESTBED/u_CDC/afifo_u0/rinc} \
+{/TESTBED/u_CDC/afifo_u0/rptr\[4:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G4" \
+{/TESTBED/u_CDC/afifo_u0/fifomem_m0/mem\[15:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G5" \
+}
+wvSelectSignal -win $_nWave1 {( "G4" 1 )} 
+wvSetPosition -win $_nWave1 {("G4" 1)}
+wvSelectSignal -win $_nWave1 {( "G4" 1 )} 
+wvExpandBus -win $_nWave1 {("G4" 1)}
+wvSelectSignal -win $_nWave1 {( "G4" 1 )} 
+wvSetPosition -win $_nWave1 {("G4" 1)}
+wvCollapseBus -win $_nWave1 {("G4" 1)}
+wvSetPosition -win $_nWave1 {("G4" 1)}
+wvSetCursor -win $_nWave1 270865.383871 -snap {("G4" 1)}
+wvSetCursor -win $_nWave1 23610.541935 -snap {("G3" 1)}
+wvSetCursor -win $_nWave1 27873.556452 -snap {("G3" 0)}
+wvSetCursor -win $_nWave1 272177.080645 -snap {("G3" 2)}
+wvSelectSignal -win $_nWave1 {( "G3" 2 )} 
+wvSelectSignal -win $_nWave1 {( "G3" 3 )} 
+wvSelectSignal -win $_nWave1 {( "G3" 2 )} 
+wvSelectSignal -win $_nWave1 {( "G3" 2 )} 
+wvSetPosition -win $_nWave1 {("G3" 2)}
+wvExpandBus -win $_nWave1 {("G3" 2)}
+wvSetPosition -win $_nWave1 {("G4" 1)}
+wvSelectSignal -win $_nWave1 {( "G3" 2 )} 
+wvSetPosition -win $_nWave1 {("G3" 2)}
+wvCollapseBus -win $_nWave1 {("G3" 2)}
+wvSetPosition -win $_nWave1 {("G3" 2)}
+wvSetPosition -win $_nWave1 {("G4" 1)}
+wvSelectSignal -win $_nWave1 {( "G3" 2 )} 
+wvSetPosition -win $_nWave1 {("G3" 2)}
+wvExpandBus -win $_nWave1 {("G3" 2)}
+wvSetPosition -win $_nWave1 {("G4" 1)}
+wvSelectSignal -win $_nWave1 {( "G3" 2 )} 
+wvSetPosition -win $_nWave1 {("G3" 2)}
+wvCollapseBus -win $_nWave1 {("G3" 2)}
+wvSetPosition -win $_nWave1 {("G3" 2)}
+wvSetPosition -win $_nWave1 {("G4" 1)}
+wvSelectSignal -win $_nWave1 {( "G3" 2 )} 
+wvSetPosition -win $_nWave1 {("G3" 2)}
+wvExpandBus -win $_nWave1 {("G3" 2)}
+wvSetPosition -win $_nWave1 {("G4" 1)}
+wvSelectSignal -win $_nWave1 {( "G3" 2 )} 
+wvSetPosition -win $_nWave1 {("G3" 2)}
+wvCollapseBus -win $_nWave1 {("G3" 2)}
+wvSetPosition -win $_nWave1 {("G3" 2)}
+wvSetPosition -win $_nWave1 {("G4" 1)}
+wvExit

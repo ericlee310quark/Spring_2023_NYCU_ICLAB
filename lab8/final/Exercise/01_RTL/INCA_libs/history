@@ -1,0 +1,5 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(04May2023:13:13:18):( irun TESTBED.v -define RTL+NCG -debug -notimingchecks -loadpli1 debpli:novas_pli_boot )

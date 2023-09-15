@@ -1,0 +1,117 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on May 10, 2023 at 01:21:43 CST
+irun
+	TESTBED.sv
+	-define RTL
+	-debug
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+Recompiling... reason: file './TESTBED.sv' is newer than expected.
+	expected: Wed May 10 01:21:30 2023
+	actual:   Wed May 10 01:21:42 2023
+file: TESTBED.sv
+	module worklib.pseudo_DRAM:sv
+		errors: 0, warnings: 0
+program automatic PATTERN(input clk, INF.PATTERN inf);
+                |
+ncvlog: *W,DFAUTO (PATTERN.sv,26|16): Default automatic lifetime will not be applied outside tasks and functions.
+(`include file: PATTERN.sv line 26, file: TESTBED.sv line 23)
+module pseudo_DRAM(input clk, INF.DRAM inf);
+                 |
+ncvlog: *W,RECOME (./../00_TESTBED/pseudo_DRAM.sv,23|17): recompiling design unit worklib.pseudo_DRAM:sv.
+	First compiled from line 23 of ../00_TESTBED/pseudo_DRAM.sv.
+(`include file: ./../00_TESTBED/pseudo_DRAM.sv line 23, file: TESTBED.sv line 28)
+	module worklib.pseudo_DRAM:sv
+		errors: 0, warnings: 1
+        act_state <= 'b0;
+                       |
+ncvlog: *W,ENUMERR (CHECKER.sv,264|23): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+(`include file: CHECKER.sv line 545, file: TESTBED.sv line 30)
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+ncvlog: *W,WARIPR: warning within protected source code.
+		errors: 0, warnings: 4
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		usertype
+		$unit_0x08175a18
+		TESTBED
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+    $readmemh(DRAM_p_r, golden_DRAM);
+                                  |
+ncelab: *W,MEMODR (./PATTERN.sv,588|34): $readmem default memory order incompatible with IEEE1364.
+            inf.D.d_act[0]= 'b0;
+                              |
+ncelab: *W,ENUMERR (./PATTERN.sv,1077|30): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+            inf.D.d_item[0] = 'b0;
+                                |
+ncelab: *W,ENUMERR (./PATTERN.sv,1090|32): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+            inf.D.d_act[0]= 'b0;
+                              |
+ncelab: *W,ENUMERR (./PATTERN.sv,1282|30): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+            inf.D.d_act[0]= 'b0;
+                              |
+ncelab: *W,ENUMERR (./PATTERN.sv,1320|30): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+ncelab: *W,MEMODR (./TESTBED.sv): warning within protected source code.
+        act_state <= 'b0;
+                       |
+ncelab: *W,ENUMERR (./CHECKER.sv,264|23): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+        act_state <= inf.D.d_act;
+                         |
+ncelab: *W,ENUMERR (./CHECKER.sv,266|25): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+ncelab: *W,ENUMERR (./TESTBED.sv): warning within protected source code.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+			streams:  95, words: 95114
+		worklib.pseudo_DRAM:sv <0x2d1fd58a>
+			streams:   5, words: 17334
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                     Instances  Unique
+		Modules:                     5       5
+		Interfaces:                  1       1
+		Programs:                    1       1
+		Verilog packages:            1       1
+		Registers:                 300     326
+		Scalar wires:                6       -
+		Vectored wires:              9       -
+		Named events:               14      14
+		Always blocks:             596      86
+		Initial blocks:             52      52
+		Cont. assignments:          10      10
+		Pseudo assignments:          1       1
+		Assertions:                 25      25
+		Covergroup Instances:        0       6
+		Compilation units:           1       1
+		SV Class declarations:      11      11
+		SV Class specializations:   11      11
+		Simulation timescale:      1ps
+	Writing initial simulation snapshot: worklib.TESTBED:sv
+Loading snapshot worklib.TESTBED:sv .................... Done
+SVSEED default: 1
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+Simulation complete via $finish(1) at time 10713 NS + 2
+./PATTERN.sv:1419 $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on May 10, 2023 at 01:21:44 CST  (total: 00:00:01)

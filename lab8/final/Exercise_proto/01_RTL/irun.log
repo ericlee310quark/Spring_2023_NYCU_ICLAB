@@ -1,0 +1,66 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Apr 24, 2023 at 03:25:06 CST
+irun
+	TESTBED.v
+	-define RTL+CG
+	-debug
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+Recompiling... reason: file './SNN.v' is newer than expected.
+	expected: Mon Apr 24 03:21:12 2023
+	actual:   Mon Apr 24 03:25:06 2023
+file: TESTBED.v
+	module worklib.SNN:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.SNN:v <0x44748c68>
+			streams: 156, words: 76546
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 34       4
+		Registers:              108      78
+		Scalar wires:            74       -
+		Vectored wires:          48       -
+		Always blocks:           82      33
+		Initial blocks:          12      12
+		Cont. assignments:       85      50
+		Pseudo assignments:      23       2
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'SNN_CG.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+
+
+
+
+[1;0m
+        ----------------------------               
+        --                        --       |__||  
+        --  Congratulations !!    --      / O.O  | 
+        --                        --    /_____   | 
+        --  Simulation out!!     --   /^ ^ ^ \  |
+        --                        --  |^ ^ ^ ^ |w| 
+        ----------------------------   \m___m__|_|
+total latency =         100
+
+
+Simulation complete via $finish(1) at time 59707500 PS + 0
+./PATTERN_EXE_CG_v2.v:793 		$finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Apr 24, 2023 at 03:25:08 CST  (total: 00:00:02)

@@ -1,0 +1,27 @@
+Warning: Design 'CONV' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Fri Apr 14 14:46:06 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      3
+    Multiply driven inputs (LINT-6)                                 3
+
+Cells                                                               2
+    Cells do not drive (LINT-1)                                     2
+
+Tristate                                                            1
+    A tristate bus has a non tri-state driver (LINT-34)             1
+--------------------------------------------------------------------------------
+
+Warning: In design 'CONV', cell 'C310' does not drive any nets. (LINT-1)
+Warning: In design 'CONV', cell 'C321' does not drive any nets. (LINT-1)
+Warning: In design 'CONV', input port 'clk_1' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'CONV', input port 'clk_2' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'CONV', input port 'rst_n' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'CONV', three-state bus 'in_end' has non three-state driver 'in_end_reg/Q'. (LINT-34)
+1

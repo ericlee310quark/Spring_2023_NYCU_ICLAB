@@ -1,0 +1,168 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on May 06, 2023 at 13:37:07 CST
+irun
+	TESTBED.sv
+	-define RTL
+	-debug
+	-coverage U
+	-covoverwrite
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+Recompiling... reason: file './CHECKER.sv' is newer than expected.
+	expected: Sat May  6 13:36:53 2023
+	actual:   Sat May  6 13:37:07 2023
+file: TESTBED.sv
+	module worklib.pseudo_DRAM:sv
+		errors: 0, warnings: 0
+program automatic PATTERN(input clk, INF.PATTERN inf);
+                |
+ncvlog: *W,DFAUTO (PATTERN.sv,48|16): Default automatic lifetime will not be applied outside tasks and functions.
+(`include file: PATTERN.sv line 48, file: TESTBED.sv line 23)
+module pseudo_DRAM(input clk, INF.DRAM inf);
+                 |
+ncvlog: *W,RECOME (./../00_TESTBED/pseudo_DRAM.sv,23|17): recompiling design unit worklib.pseudo_DRAM:sv.
+	First compiled from line 23 of ../00_TESTBED/pseudo_DRAM.sv.
+(`include file: ./../00_TESTBED/pseudo_DRAM.sv line 23, file: TESTBED.sv line 26)
+	module worklib.pseudo_DRAM:sv
+		errors: 0, warnings: 1
+        act_state <= 'b0;
+                       |
+ncvlog: *W,ENUMERR (CHECKER.sv,251|23): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+(`include file: CHECKER.sv line 524, file: TESTBED.sv line 27)
+	module worklib.Checker:sv
+		errors: 0, warnings: 1
+    else    er_state = No_Err;
+                            |
+ncvlog: *W,ENUMERR (OS.sv,635|28): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+(`include file: OS.sv line 709, file: TESTBED.sv line 32)
+        if(level_up)    rank = last_user_shop_info[13:12]-'d1;
+                                                         |
+ncvlog: *W,ENUMERR (OS.sv,691|57): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+(`include file: OS.sv line 709, file: TESTBED.sv line 32)
+        else            rank = last_user_shop_info[13:12];
+                                                 |
+ncvlog: *W,ENUMERR (OS.sv,692|49): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+(`include file: OS.sv line 709, file: TESTBED.sv line 32)
+    else                rank = last_user_shop_info[13:12];
+                                                 |
+ncvlog: *W,ENUMERR (OS.sv,693|49): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+(`include file: OS.sv line 709, file: TESTBED.sv line 32)
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		usertype
+		$unit_0x08175a18
+		TESTBED
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+    $readmemh(DRAM_p_r, golden_DRAM);
+                                  |
+ncelab: *W,MEMODR (./PATTERN.sv,621|34): $readmem default memory order incompatible with IEEE1364.
+            inf.D.d_act[0]= 'b0;
+                              |
+ncelab: *W,ENUMERR (./PATTERN.sv,1108|30): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+            inf.D.d_item[0] = 'b0;
+                                |
+ncelab: *W,ENUMERR (./PATTERN.sv,1121|32): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+            inf.D.d_act[0]= 'b0;
+                              |
+ncelab: *W,ENUMERR (./PATTERN.sv,1313|30): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+            inf.D.d_act[0]= 'b0;
+                              |
+ncelab: *W,ENUMERR (./PATTERN.sv,1351|30): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+ncelab: *W,MEMODR (./TESTBED.sv): warning within protected source code.
+        act_state <= 'b0;
+                       |
+ncelab: *W,ENUMERR (./CHECKER.sv,251|23): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+        act_state <= inf.D.d_act;
+                         |
+ncelab: *W,ENUMERR (./CHECKER.sv,253|25): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+    if(~inf.rst_n)                                   inf.err_msg <= 'b0;
+                                                                      |
+ncelab: *W,ENUMERR (./OS.sv,154|70): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+    else if(next_os==s_OUTPUT&(|(er_state)))      inf.err_msg <= er_state;
+                                                                        |
+ncelab: *W,ENUMERR (./OS.sv,155|72): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+    else                                             inf.err_msg <= 'b0;
+                                                                      |
+ncelab: *W,ENUMERR (./OS.sv,156|70): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+    else    er_state = No_Err;
+                            |
+ncelab: *W,ENUMERR (./OS.sv,635|28): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+        if(level_up)    rank = last_user_shop_info[13:12]-'d1;
+                                                         |
+ncelab: *W,ENUMERR (./OS.sv,691|57): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+        else            rank = last_user_shop_info[13:12];
+                                                 |
+ncelab: *W,ENUMERR (./OS.sv,692|49): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+    else                rank = last_user_shop_info[13:12];
+                                                 |
+ncelab: *W,ENUMERR (./OS.sv,693|49): This assignment is a violation of SystemVerilog strong typing rules for enumeration datatypes.
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: functional
+	Generating native compiled code:
+		worklib.Checker:sv <0x171c81f0>
+			streams:  91, words: 109146
+		worklib.pseudo_DRAM:sv <0x0beb0b20>
+			streams:   5, words: 18767
+	Building instance specific data structures.
+ncelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+ncelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                     Instances  Unique
+		Modules:                     5       5
+		Interfaces:                  1       1
+		Programs:                    1       1
+		Verilog packages:            1       1
+		Registers:                 320     346
+		Scalar wires:               19       -
+		Vectored wires:             13       -
+		Named events:               13      13
+		Always blocks:             609      99
+		Initial blocks:             51      51
+		Cont. assignments:          27      27
+		Pseudo assignments:          1       1
+		Assertions:                 24      24
+		Covergroup Instances:        0       6
+		Compilation units:           1       1
+		SV Class declarations:      11      11
+		SV Class specializations:   11      11
+		Simulation timescale:      1ps
+	Writing initial simulation snapshot: worklib.TESTBED:sv
+Loading snapshot worklib.TESTBED:sv .................... Done
+SVSEED default: 1
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'OSB.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the SVA assertions, layer (0).
+*Verdi* : End of traversing the SVA assertions.
+Simulation complete via $finish(1) at time 13641 NS + 2
+./PATTERN.sv:1450 $finish;
+ncsim> exit
+ncsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+ncsim: *W,CGPIZE: Instance coverage for covergroup instance "conv_1" will not be dumped to database as per_instance option value is set to 0:./CHECKER.sv, 89.
+ncsim: *W,CGPIZE: Instance coverage for covergroup instance "conv_2" will not be dumped to database as per_instance option value is set to 0:./CHECKER.sv, 90.
+ncsim: *W,CGPIZE: Instance coverage for covergroup instance "conv_3" will not be dumped to database as per_instance option value is set to 0:./CHECKER.sv, 91.
+ncsim: *W,CGPIZE: Instance coverage for covergroup instance "conv_4" will not be dumped to database as per_instance option value is set to 0:./CHECKER.sv, 92.
+ncsim: *W,CGPIZE: Instance coverage for covergroup instance "conv_5" will not be dumped to database as per_instance option value is set to 0:./CHECKER.sv, 93.
+ncsim: *W,CGPIZE: Instance coverage for covergroup instance "conv_6" will not be dumped to database as per_instance option value is set to 0:./CHECKER.sv, 94.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  TESTBED(TESTBED)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_00000000_3efb6ffb.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_00000000_3efb6ffb.ucd
+TOOL:	irun(64)	15.20-s084: Exiting on May 06, 2023 at 13:37:09 CST  (total: 00:00:02)

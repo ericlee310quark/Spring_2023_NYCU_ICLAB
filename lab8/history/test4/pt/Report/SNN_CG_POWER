@@ -1,0 +1,53 @@
+Information: Running time_based power analysis... (PWR-601)
+Information: Reading vcd file '/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE/04_PTPX/SNN_SYN_CG.fsdb'
+Information: The waveform options are:
+		File name:	vcd.out
+		File format:	out
+		Time interval:	1ns
+		Hierarchical level:	all
+
+Information: Power analysis is running, please wait ...
+
+Information: analysis is done for time window (0ns - 12172.5ns)
+
+Information: Total simulation time = 12172.500000 ns
+****************************************
+Report : Time Based Power
+Design : SNN
+Version: P-2019.03-SP5-1
+Date   : Sat Apr 22 20:58:52 2023
+****************************************
+
+
+
+  Attributes
+  ----------
+      i  -  Including register clock pin internal power
+      u  -  User defined power group
+
+                        Internal  Switching  Leakage    Total
+Power Group             Power     Power      Power      Power   (     %)  Attrs
+--------------------------------------------------------------------------------
+clock_network           3.527e-06 6.230e-05 1.931e-08 6.584e-05 ( 1.55%)  
+register                1.588e-03 4.189e-05 2.056e-06 1.632e-03 (38.42%)  i
+combinational           1.578e-03 9.606e-04 1.082e-05 2.550e-03 (60.03%)  
+sequential                 0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+memory                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+io_pad                     0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+black_box                  0.0000    0.0000    0.0000    0.0000 ( 0.00%)  
+
+  Net Switching Power  = 1.065e-03   (25.07%)
+  Cell Internal Power  = 3.170e-03   (74.63%)
+  Cell Leakage Power   = 1.289e-05   ( 0.30%)
+    Intrinsic Leakage  = 1.289e-05
+    Gate Leakage       =    0.0000
+                         ---------
+Total Power            = 4.248e-03  (100.00%)
+
+X Transition Power     =    0.0000
+Glitching Power        =    0.0000
+
+Peak Power             =    0.0350
+Peak Time              =      8536
+
+1

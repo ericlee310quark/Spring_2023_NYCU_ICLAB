@@ -1,0 +1,31 @@
+Warning: Design 'IP' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Thu Apr 20 19:23:35 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      2
+    Multiply driven inputs (LINT-6)                                 2
+
+Cells                                                               4
+    Cells do not drive (LINT-1)                                     4
+
+Tristate                                                            4
+    A tristate bus has a non tri-state driver (LINT-34)             4
+--------------------------------------------------------------------------------
+
+Warning: In design 'IP', cell 'C32813' does not drive any nets. (LINT-1)
+Warning: In design 'IP', cell 'C38865' does not drive any nets. (LINT-1)
+Warning: In design 'IP', cell 'C38866' does not drive any nets. (LINT-1)
+Warning: In design 'IP', cell 'C38867' does not drive any nets. (LINT-1)
+Warning: In design 'IP', input port 'clk' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'IP', input port 'rst_n' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'IP', three-state bus 'G_sleep_midp' has non three-state driver 'C32758/Z'. (LINT-34)
+Warning: In design 'IP', three-state bus 'G_sleep_mean' has non three-state driver 'C32757/Z'. (LINT-34)
+Warning: In design 'IP', three-state bus 'G_sleep_shar' has non three-state driver 'C32756/Z'. (LINT-34)
+Warning: In design 'IP', three-state bus 'G_sleep_input' has non three-state driver 'C32755/Z'. (LINT-34)
+1

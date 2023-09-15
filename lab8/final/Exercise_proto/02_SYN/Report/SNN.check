@@ -1,0 +1,20 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Mon Apr 24 03:25:19 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               2
+    Cells do not drive (LINT-1)                                     2
+
+Nets                                                                1
+    Unloaded nets (LINT-2)                                          1
+--------------------------------------------------------------------------------
+
+Warning: In design 'SNN', cell 'C3675' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C3679' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', net 'G_clock_img_[14]' driven by pin 'gated_img_array[14].GATED_input__/CLOCK_GATED' has no loads. (LINT-2)
+1

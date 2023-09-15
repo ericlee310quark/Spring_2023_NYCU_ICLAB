@@ -1,0 +1,153 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SNN
+Version: T-2022.03
+Date   : Fri Apr 21 00:40:02 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: current_state_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: nn_1_reg[0][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  current_state_reg[2]/CK (DFFRHQX4)                      0.00       0.00 r
+  current_state_reg[2]/Q (DFFRHQX4)                       0.35       0.35 r
+  U1462/Y (INVX4)                                         0.09       0.44 f
+  U1592/Y (CLKINVX8)                                      0.08       0.51 r
+  U1075/Y (CLKBUFX20)                                     0.20       0.72 r
+  U1294/Y (MX2X2)                                         0.27       0.99 r
+  mult_408/b[1] (SNN_DW_mult_uns_55)                      0.00       0.99 r
+  mult_408/U347/Y (BUFX4)                                 0.22       1.20 r
+  mult_408/U496/Y (XOR2X1)                                0.33       1.53 r
+  mult_408/U318/Y (NAND2X2)                               0.15       1.68 f
+  mult_408/U473/Y (OAI22XL)                               0.28       1.96 r
+  mult_408/U495/Y (NAND2X1)                               0.13       2.08 f
+  mult_408/U353/Y (AND2X1)                                0.27       2.35 f
+  mult_408/product[1] (SNN_DW_mult_uns_55)                0.00       2.35 f
+  add_419/A[1] (SNN_DW01_add_339)                         0.00       2.35 f
+  add_419/U167/Y (OR2X1)                                  0.26       2.62 f
+  add_419/U186/Y (OAI2BB1X2)                              0.20       2.82 f
+  add_419/U165/Y (AOI21X1)                                0.25       3.07 r
+  add_419/U227/Y (OAI21X1)                                0.12       3.19 f
+  add_419/U210/Y (INVX1)                                  0.16       3.35 r
+  add_419/U175/Y (OAI21X2)                                0.14       3.49 f
+  add_419/U178/Y (AOI21X2)                                0.19       3.69 r
+  add_419/U208/Y (XOR2XL)                                 0.45       4.14 f
+  add_419/SUM[6] (SNN_DW01_add_339)                       0.00       4.14 f
+  add_1_root_add_0_root_add_423_4/A[6] (SNN_DW01_add_340)
+                                                          0.00       4.14 f
+  add_1_root_add_0_root_add_423_4/U155/Y (NOR2X1)         0.21       4.34 r
+  add_1_root_add_0_root_add_423_4/U197/Y (CLKINVXL)       0.11       4.45 f
+  add_1_root_add_0_root_add_423_4/U218/Y (NAND2X1)        0.11       4.56 r
+  add_1_root_add_0_root_add_423_4/U196/Y (XOR2XL)         0.36       4.92 r
+  add_1_root_add_0_root_add_423_4/SUM[6] (SNN_DW01_add_340)
+                                                          0.00       4.92 r
+  add_0_root_add_0_root_add_423_4/B[6] (SNN_DW01_add_248)
+                                                          0.00       4.92 r
+  add_0_root_add_0_root_add_423_4/U231/Y (NOR2X1)         0.11       5.03 f
+  add_0_root_add_0_root_add_423_4/U175/Y (OAI21X2)        0.20       5.23 r
+  add_0_root_add_0_root_add_423_4/U204/Y (AOI21X2)        0.13       5.35 f
+  add_0_root_add_0_root_add_423_4/U193/Y (OAI21X2)        0.25       5.60 r
+  add_0_root_add_0_root_add_423_4/U266/Y (AOI21X4)        0.13       5.73 f
+  add_0_root_add_0_root_add_423_4/U265/Y (OAI21X4)        0.16       5.89 r
+  add_0_root_add_0_root_add_423_4/U263/Y (AOI21X2)        0.12       6.02 f
+  add_0_root_add_0_root_add_423_4/U267/Y (OAI21X2)        0.22       6.24 r
+  add_0_root_add_0_root_add_423_4/U152/Y (INVX3)          0.07       6.31 f
+  add_0_root_add_0_root_add_423_4/U189/Y (OAI21X2)        0.16       6.47 r
+  add_0_root_add_0_root_add_423_4/U174/Y (XOR2X2)         0.30       6.77 r
+  add_0_root_add_0_root_add_423_4/SUM[16] (SNN_DW01_add_248)
+                                                          0.00       6.77 r
+  U1433/Y (CLKINVX4)                                      0.06       6.83 f
+  U1438/Y (NOR2X2)                                        0.12       6.96 r
+  U1261/Y (NOR2X2)                                        0.08       7.04 f
+  U1262/Y (INVX3)                                         0.14       7.17 r
+  div_427/u_div/u_add_PartRem_3_2/A[7] (SNN_DW01_add_297)
+                                                          0.00       7.17 r
+  div_427/u_div/u_add_PartRem_3_2/U94/Y (AND2X4)          0.17       7.34 r
+  div_427/u_div/u_add_PartRem_3_2/U93/Y (NOR2BX4)         0.16       7.50 r
+  div_427/u_div/u_add_PartRem_3_2/U36/Y (NAND2X4)         0.09       7.60 f
+  div_427/u_div/u_add_PartRem_3_2/U87/Y (OAI21XL)         0.21       7.81 r
+  div_427/u_div/u_add_PartRem_3_2/U90/Y (XNOR2X1)         0.26       8.08 f
+  div_427/u_div/u_add_PartRem_3_2/SUM[10] (SNN_DW01_add_297)
+                                                          0.00       8.08 f
+  U1246/Y (AOI33XL)                                       0.27       8.35 r
+  U2347/Y (INVX1)                                         0.08       8.42 f
+  U1029/Y (NOR3X1)                                        0.22       8.64 r
+  U1091/Y (OAI21X1)                                       0.15       8.79 f
+  U1089/Y (BUFX2)                                         0.19       8.98 f
+  div_427/u_div/u_add_PartRem_2_4/A[13] (SNN_DW01_add_361)
+                                                          0.00       8.98 f
+  div_427/u_div/u_add_PartRem_2_4/U96/Y (AND2X2)          0.16       9.14 f
+  div_427/u_div/u_add_PartRem_2_4/U92/Y (OR2X1)           0.27       9.41 f
+  div_427/u_div/u_add_PartRem_2_4/U98/Y (AOI21X2)         0.18       9.59 r
+  div_427/u_div/u_add_PartRem_2_4/U3/Y (OAI21X4)          0.15       9.74 f
+  div_427/u_div/u_add_PartRem_2_4/CO (SNN_DW01_add_361)
+                                                          0.00       9.74 f
+  U1033/Y (CLKINVX3)                                      0.11       9.85 r
+  U1392/Y (OR2X4)                                         0.23      10.08 r
+  U1087/Y (INVX8)                                         0.07      10.15 f
+  U1079/Y (AOI221XL)                                      0.39      10.54 r
+  U2390/Y (INVX1)                                         0.07      10.60 f
+  U1249/Y (NAND2XL)                                       0.11      10.72 r
+  U1254/Y (NAND3X1)                                       0.15      10.87 f
+  U1163/Y (OR2X2)                                         0.30      11.17 f
+  div_427/u_div/u_add_PartRem_1_6/A[10] (SNN_DW01_add_182)
+                                                          0.00      11.17 f
+  div_427/u_div/u_add_PartRem_1_6/U127/Y (NAND2X1)        0.13      11.30 r
+  div_427/u_div/u_add_PartRem_1_6/U184/Y (OAI21XL)        0.13      11.43 f
+  div_427/u_div/u_add_PartRem_1_6/U15/Y (AOI21X1)         0.15      11.58 r
+  div_427/u_div/u_add_PartRem_1_6/U128/Y (AND2X2)         0.21      11.79 r
+  div_427/u_div/u_add_PartRem_1_6/U159/Y (OAI21X4)        0.12      11.91 f
+  div_427/u_div/u_add_PartRem_1_6/CO (SNN_DW01_add_182)
+                                                          0.00      11.91 f
+  U2377/Y (NAND2X2)                                       0.13      12.04 r
+  U1423/Y (INVX3)                                         0.06      12.10 f
+  U2451/Y (OR3X4)                                         0.32      12.41 f
+  U1239/Y (INVX2)                                         0.12      12.53 r
+  U1225/Y (NOR2X1)                                        0.11      12.63 f
+  U1665/Y (NAND2X1)                                       0.13      12.76 r
+  U1664/Y (INVX2)                                         0.06      12.82 f
+  U2495/Y (OR2X4)                                         0.21      13.03 f
+  U1404/Y (OR4X4)                                         0.43      13.46 f
+  div_427/u_div/u_add_PartRem_0_5/A[6] (SNN_DW01_add_337)
+                                                          0.00      13.46 f
+  div_427/u_div/u_add_PartRem_0_5/U124/Y (CLKINVX3)       0.06      13.53 r
+  div_427/u_div/u_add_PartRem_0_5/U140/Y (NOR2X1)         0.07      13.59 f
+  div_427/u_div/u_add_PartRem_0_5/U79/Y (AOI21X1)         0.16      13.75 r
+  div_427/u_div/u_add_PartRem_0_5/U142/Y (OAI21XL)        0.10      13.85 f
+  div_427/u_div/u_add_PartRem_0_5/U129/Y (OAI2BB1X2)      0.21      14.07 f
+  div_427/u_div/u_add_PartRem_0_5/CO (SNN_DW01_add_337)
+                                                          0.00      14.07 f
+  U2422/Y (AOI33X2)                                       0.35      14.42 r
+  U2358/Y (NAND3X2)                                       0.14      14.56 f
+  U2440/Y (MX2X1)                                         0.25      14.81 f
+  nn_1_reg[0][0]/D (DFFRXL)                               0.00      14.81 f
+  data arrival time                                                 14.81
+
+  clock clk (rise edge)                                  15.00      15.00
+  clock network delay (ideal)                             0.00      15.00
+  nn_1_reg[0][0]/CK (DFFRXL)                              0.00      15.00 r
+  library setup time                                     -0.18      14.82
+  data required time                                                14.82
+  --------------------------------------------------------------------------
+  data required time                                                14.82
+  data arrival time                                                -14.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1

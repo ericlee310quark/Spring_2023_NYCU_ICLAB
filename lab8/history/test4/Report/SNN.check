@@ -1,0 +1,26 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Sat Apr 22 20:54:18 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                              12
+    Cells do not drive (LINT-1)                                    12
+--------------------------------------------------------------------------------
+
+Warning: In design 'SNN', cell 'C3252' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C3256' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'C3260' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_120' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_122' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_124' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_126' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_128' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_130' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_132' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_134' does not drive any nets. (LINT-1)
+Warning: In design 'SNN', cell 'B_136' does not drive any nets. (LINT-1)
+1

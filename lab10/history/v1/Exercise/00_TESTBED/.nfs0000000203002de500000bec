@@ -1,0 +1,1004 @@
+`include "../00_TESTBED/pseudo_DRAM.sv"
+`include "Usertype_OS.sv"
+
+program automatic PATTERN(input clk, INF.PATTERN inf);
+import usertype::*;
+
+//================================================================
+// parameters & integer
+//================================================================
+
+parameter DRAM_p_r = "../00_TESTBED/DRAM/dram.dat";
+parameter IDNUM   = 256;
+
+integer gap, gap_outvalid;
+integer cycles, total_cycles, patcount;
+integer i, j, k;
+integer	cnt_out;
+integer	Pat_num = 100000000;
+//================================================================
+// wire & registers 
+//================================================================
+// GOLDEN   DRAM
+logic [7:0] golden_DRAM [((65536+256*8)-1):(65536+0)];
+
+// check the input signal 
+Error_Msg    golden_err_msg;
+logic        golden_complete;
+logic [31:0] golden_out_info;
+
+//
+Action  act;
+Item_id item;
+Item_num item_num, item_num_tmp;
+Money given_money, now_money;
+User_id seller, user;
+User_Info user_info, seller_info;
+Shop_Info user_shopinfo, seller_shopinfo;
+
+logic has_given_id; //record given id or not
+logic [255:0] record_return; // record buy or not
+logic [16:0] addr; //use to read/write golden DRAM
+logic [8:0] item_money; //9bit($300~>512)
+logic [6:0] delivery_fee;
+logic [15:0] spend_money; //9bit($300~>512) * 6bit + 7bit
+logic flag;
+logic [11:0] earn_exp; // 6bit('d60~>64) * 6bit
+logic [12:0] acc_exp; // earn_exp + original
+//================================================================
+// class random
+//================================================================
+class random_id;
+    randc User_id ran_id;
+    constraint range{
+        ran_id inside{[0:255]};
+    }
+endclass
+
+class random_act; 
+    rand Action ran_act;
+    constraint range{
+        ran_act inside{Buy, Check, Deposit, Return};
+    }
+endclass
+
+class random_seller_id; 
+    rand User_id ran_seller_id;
+    constraint range{
+        ran_seller_id inside{[0:255]};
+    }
+endclass
+
+class random_item_id; 
+    rand Item_id ran_item_id;
+    constraint range{
+        ran_item_id inside{Large, Medium, Small};
+    }
+endclass
+
+class random_num_item; 
+    rand Item_num ran_num_item;
+    constraint range{
+        ran_num_item inside{[1:50]};//1~63
+    }
+endclass
+
+class random_user_level;
+    rand User_Level ran_user_level;
+    constraint range{
+        ran_user_level inside{Platinum, Gold, Silver, Copper};
+    }    
+endclass
+
+class random_new_id_or_not;
+    rand logic give_id;
+    constraint range{
+        give_id inside {0,1};
+    }    
+endclass
+
+class random_deposit;
+	rand Money deposit_amt;
+	Money now_money;
+	Money remain;
+	constraint limit { 
+        deposit_amt inside {[1:65535]}; 
+    }
+	task set (logic [15:0] in);
+		now_money = in;
+	endtask
+	task cal_remain;
+		remain = 16'b1111_1111_1111_1111 - now_money;
+	endtask
+endclass
+
+//================================================================
+// initial
+//================================================================
+initial $readmemh(DRAM_p_r, golden_DRAM);
+
+random_id            r_id           =   new();
+random_act           r_act          =   new();
+random_seller_id     r_seller_id    =   new();
+random_item_id       r_item_id      =   new();
+random_num_item      r_num_item     =   new();
+random_user_level    r_user_level   =   new();
+random_new_id_or_not r_give_id      =   new(); 
+random_deposit       r_amt          =   new(); 
+
+initial begin
+
+    inf.rst_n = 1'b1;
+    reset_task;
+    @(negedge clk);
+
+    //MAIN PATTERN 
+	for( patcount=0 ; patcount<Pat_num ; patcount=patcount+1 ) begin 
+        decide_id_task;
+        decide_act;
+        give_act;
+        case(act)
+			Buy:		act_buy;
+			Check: 		act_check;
+			Deposit: 	act_deposit;
+			Return: 	begin
+                if(record_return[user])
+                    act_return_success;
+                else
+                    act_return;
+            end
+		endcase
+        store_ans;
+        handle_return;
+        wait_out_valid;
+        check_ans;
+        gap_outvalid_task;
+    end
+    repeat(3) @(negedge clk);
+    test;
+	YOU_PASS_task;
+	$finish;
+
+end
+
+User_id test_user;
+task test;
+    //original id
+    user = 'd10;
+    test_user = user;
+    inf.id_valid = 'd1;
+	inf.D = {8'd0, user};
+    repeat(1) @(negedge clk);
+	inf.id_valid = 'b0;
+	inf.D = 'dx;
+    gap_invalid_task;
+
+    act = Buy;
+    inf.act_valid = 'b1;
+    inf.D = {12'd0, act};
+    repeat(1) @(negedge clk);
+    inf.act_valid = 'b0;
+    inf.D = 'dx;
+    gap_invalid_task;
+
+    
+    item = Medium;
+    inf.item_valid = 'b1;
+    inf.D = {14'd0, item};
+    repeat(1) @(negedge clk);
+    inf.item_valid = 'b0;
+    inf.D = 'dx;
+
+    gap_invalid_task;
+
+    item_num = 'd1;
+    inf.num_valid = 'd1;
+    inf.D = {10'd0, item_num};
+    repeat(1) @(negedge clk);
+    inf.num_valid = 'b0;
+    inf.D = 'dx;
+
+    gap_invalid_task;
+
+    seller = 'd31;
+    inf.id_valid = 'd1;
+	inf.D = {8'd0, seller};
+    repeat(1) @(negedge clk);
+	inf.id_valid = 'b0;
+	inf.D = 'dx;
+
+    store_ans;
+    handle_return;
+    wait_out_valid;
+    check_ans;
+    gap_outvalid_task;
+
+    //new user
+    user = 'd32;
+    inf.id_valid = 'b1;
+	inf.D = {8'd0, user};
+    repeat(1) @(negedge clk);
+	inf.id_valid = 'b0;
+	inf.D = 'dx;
+    gap_invalid_task;
+
+    act = Buy;
+    inf.act_valid = 'b1;
+    inf.D = {12'd0, act};
+    repeat(1) @(negedge clk);
+    inf.act_valid = 'b0;
+    inf.D = 'dx;
+    gap_invalid_task;
+
+    item = Medium;
+    inf.item_valid = 'b1;
+    inf.D = {14'd0, item};
+    repeat(1) @(negedge clk);
+    inf.item_valid = 'b0;
+    inf.D = 'dx;
+
+    gap_invalid_task;
+
+    item_num = 'd1;
+    inf.num_valid = 'd1;
+    inf.D = {10'd0, item_num};
+    repeat(1) @(negedge clk);
+    inf.num_valid = 'b0;
+    inf.D = 'dx;
+
+    gap_invalid_task;
+
+    seller = 'd31;
+    inf.id_valid = 'd31;
+	inf.D = {8'd0, seller};
+    repeat(1) @(negedge clk);
+	inf.id_valid = 'b0;
+	inf.D = 'dx;
+
+    store_ans;
+    handle_return;
+    wait_out_valid;
+    check_ans;
+    gap_outvalid_task;
+
+    user = test_user;
+    inf.id_valid = 'b1;
+	inf.D = {8'd0, user};
+    repeat(1) @(negedge clk);
+	inf.id_valid = 'b0;
+	inf.D = 'dx;
+
+    gap_invalid_task;
+
+    act = Return;
+    inf.act_valid = 'b1;
+    inf.D = {12'd0, act};
+    repeat(1) @(negedge clk);
+    inf.act_valid = 'b0;
+    inf.D = 'dx;
+    gap_invalid_task;
+
+    act_return;
+    store_ans;
+    handle_return;
+    wait_out_valid;
+    check_ans;
+    gap_outvalid_task;
+
+
+    user = 'd32;
+    inf.id_valid = 'b1;
+	inf.D = {8'd0, user};
+    repeat(1) @(negedge clk);
+	inf.id_valid = 'b0;
+	inf.D = 'dx;
+    gap_invalid_task;
+
+    act = Return;
+    inf.act_valid = 'b1;
+    inf.D = {12'd0, act};
+    repeat(1) @(negedge clk);
+    inf.act_valid = 'b0;
+    inf.D = 'dx;
+    gap_invalid_task;
+
+    item = Medium;//wrong
+    inf.item_valid = 'b1;
+    inf.D = {14'd0, item};
+    repeat(1) @(negedge clk);
+    inf.item_valid = 'b0;
+    inf.D = 'dx;
+
+    gap_invalid_task;
+
+    item_num = 'd2;
+    inf.num_valid = 'd1;
+    inf.D = {10'd0, item_num};
+    repeat(1) @(negedge clk);
+    inf.num_valid = 'b0;
+    inf.D = 'dx;
+
+    gap_invalid_task;
+
+    seller = 'd31;
+    inf.id_valid = 'd31;
+	inf.D = {8'd0, seller};
+    repeat(1) @(negedge clk);
+	inf.id_valid = 'b0;
+	inf.D = 'dx;
+
+    store_ans;
+    handle_return;
+    wait_out_valid;
+    check_ans;
+    gap_outvalid_task;
+endtask
+
+task reset_task;
+    #(1);  
+    inf.rst_n       <= 0;
+	inf.D        	<= 'bx;    
+	inf.act_valid   <= 0;
+	inf.item_valid  <= 0;    
+	inf.id_valid    <= 0;  
+    inf.num_valid   <= 0;
+    inf.amnt_valid  <= 0; 
+	cycles          = 0;
+    total_cycles    = 0;
+    patcount        = 0;
+    record_return   = 0;
+
+    #(15);
+	if (inf.out_valid!==0 || inf.err_msg!==0 || inf.complete!==0 || inf.out_info!==0) begin
+        fail_task;
+        $display("************************************************************");
+        $display("*                             FAIL                         *");
+        $display("*   Output signal should be 0 after initial RESET at %t    *",$time);
+        $display("************************************************************");
+        $finish;
+    end
+    #(5); inf.rst_n <=1;
+    repeat(2) @(negedge clk);
+endtask
+
+task wait_out_valid;
+    cycles = 0;
+	while(inf.out_valid !== 1)begin
+        cycles = cycles + 1;
+        if(cycles > 10000 )begin
+            fail_task;
+            $display("************************************************************");
+			$display("*                             FAIL                         *");
+			$display("*             execution latency more than 10000 cycles     *"); 
+            $display("************************************************************");
+			repeat(4) @(negedge clk);
+			$finish;
+		end
+	    @(negedge clk);
+	end 
+endtask
+
+task gap_invalid_task; //gap invalid
+    gap = $urandom_range(2,4);
+    repeat(gap) @(negedge clk);
+endtask
+
+task gap_outvalid_task;
+    gap_outvalid = $urandom_range(2,10);
+    repeat(gap_outvalid) @(negedge clk);
+endtask
+
+task decide_id_task;
+    r_give_id.randomize();
+    if(patcount!=0)
+      has_given_id = r_give_id.give_id;
+    else 
+      has_given_id = 0;
+    if (!has_given_id) begin
+        r_id.randomize();
+        user = r_id.ran_id;
+        inf.id_valid = 'b1;
+	    inf.D = {8'd0, user};
+        repeat(1) @(negedge clk);
+	    inf.id_valid = 'b0;
+	    inf.D = 'dx;
+        gap_invalid_task;
+    end
+endtask
+
+task decide_act;
+    r_act.randomize();
+    act = r_act.ran_act;
+endtask
+
+task give_act;
+    inf.act_valid = 'b1;
+    inf.D = {12'd0, act};
+    repeat(1) @(negedge clk);
+    inf.act_valid = 'b0;
+    inf.D = 'dx;
+    gap_invalid_task;
+endtask
+
+task act_buy; //item -> item_num -> seller id
+    given_item_id;
+    gap_invalid_task;
+    given_item_num;
+    gap_invalid_task;
+    given_seller_id;
+endtask
+
+task act_check; //pull up seller id or not
+    r_give_id.randomize();
+    has_given_id = r_give_id.give_id;
+    if(has_given_id) begin
+        given_seller_id;
+    end
+endtask
+
+task act_deposit; //amnt 
+    r_amt.randomize();
+    given_money = r_amt.deposit_amt;
+    inf.amnt_valid = 'b1;
+    inf.D = {given_money};
+    repeat(1) @(negedge clk);
+    inf.amnt_valid = 'b0;
+    inf.D = 'dx;
+endtask
+
+task act_return; //item -> item_num -> seller id 
+    given_item_id;
+    gap_invalid_task;
+    given_item_num;
+    gap_invalid_task;
+    given_seller_id;
+endtask
+
+task act_return_success; //item -> item_num -> seller id
+    inf.item_valid = 'b1;
+    inf.D = {14'd0, user_info.shop_history.item_ID};
+    repeat(1) @(negedge clk);
+    inf.item_valid = 'b0;
+    inf.D = 'dx;
+    gap_invalid_task;
+    inf.num_valid = 'b1;
+    inf.D = {10'd0, user_info.shop_history.item_num};
+    repeat(1) @(negedge clk);
+    inf.num_valid = 'b0;
+    inf.D = 'dx;
+    gap_invalid_task;
+    inf.id_valid = 'b1;
+    inf.D = {8'd0, user_info.shop_history.seller_ID};
+    repeat(1) @(negedge clk);
+    inf.id_valid = 'b0;
+    inf.D = 'dx;
+    seller = user_info.shop_history.seller_ID;
+    item = user_info.shop_history.item_ID;
+    item_num = user_info.shop_history.item_num;
+endtask
+
+task given_seller_id; 
+    has_given_id = 0;
+    while(!has_given_id) begin
+        r_id.randomize();
+        seller = r_id.ran_id;
+        if (seller != user) 
+            has_given_id = 1;
+    end
+    inf.id_valid = 'b1;
+    inf.D = {8'd0, seller};
+    repeat(1) @(negedge clk);
+    inf.id_valid = 'b0;
+    inf.D = 'dx;
+endtask
+
+task given_item_id; 
+    r_item_id.randomize();
+    item = r_item_id.ran_item_id;
+    inf.item_valid = 'b1;
+    inf.D = {14'd0, item};
+    repeat(1) @(negedge clk);
+    inf.item_valid = 'b0;
+    inf.D = 'dx;
+endtask
+
+task given_item_num; 
+    r_num_item.randomize();
+    item_num = r_num_item.ran_num_item;
+    inf.num_valid = 'b1;
+    inf.D = {10'd0, item_num};
+    repeat(1) @(negedge clk);
+    inf.num_valid = 'b0;
+    inf.D = 'dx;
+endtask
+
+task store_ans; //golden_complete, golden_err_msg, golden_out_info 
+    read_user_golden_dram;
+    if(act == Buy || act == Return || (act == Check && has_given_id))
+        read_seller_golden_dram;
+    case(act)
+        Buy:		act_buy_ans;
+        Check: 		act_check_ans;
+        Deposit: 	act_deposit_ans;
+        Return: 	act_return_ans;
+    endcase
+    if(golden_complete && (act == Buy || act == Deposit || act == Return)) 
+        update_user_golden_dram;    
+    if(golden_complete && (act == Buy || act == Return)) 
+        update_seller_golden_dram;
+endtask
+
+task act_buy_ans;
+    flag = 1'b0;
+    // User's inventory is full (1)
+    case(item)
+        Large: item_num_tmp = user_shopinfo.large_num;
+        Medium: item_num_tmp = user_shopinfo.medium_num;
+        Small: item_num_tmp = user_shopinfo.small_num;
+    endcase
+    if (item_num_tmp + item_num > 'd63) begin
+        golden_complete = 1'b0;
+        golden_err_msg = INV_Full;
+        golden_out_info = 32'd0;
+        flag = 1'b1;
+    end
+    // Seller's inventory is not enough (2)
+    if(~flag) begin
+        case(item)
+            Large: item_num_tmp = seller_shopinfo.large_num;
+            Medium: item_num_tmp = seller_shopinfo.medium_num;
+            Small: item_num_tmp = seller_shopinfo.small_num;
+        endcase
+        if (item_num_tmp < item_num) begin
+            golden_complete = 1'b0;
+            golden_err_msg = INV_Not_Enough;
+            golden_out_info = 32'd0;
+            flag = 1'b1;
+        end
+    end
+    // Out of money (3)
+    if(~flag) begin
+        case(item)
+            Large: item_money = 'd300;
+            Medium: item_money = 'd200;
+            Small: item_money = 'd100;
+        endcase
+        case(user_shopinfo.level)
+            Platinum: delivery_fee = 'd10;
+            Gold: delivery_fee = 'd30;
+            Silver: delivery_fee = 'd50;
+            Copper: delivery_fee = 'd70;
+        endcase
+        spend_money = item_money * item_num + delivery_fee;
+        if(user_info.money < spend_money) begin
+            golden_complete = 1'b0;
+            golden_err_msg = Out_of_money;
+            golden_out_info = 32'd0;
+            flag = 1'b1;
+        end
+    end
+    // Complete
+    if(~flag) begin
+        golden_complete = 1'b1;
+        golden_err_msg = No_Err;
+        flag = 1'b1;
+        //money
+        user_info.money = user_info.money - spend_money;
+        case(user_shopinfo.level)
+            Platinum: delivery_fee = 'd10;
+            Gold: delivery_fee = 'd30;
+            Silver: delivery_fee = 'd50;
+            Copper: delivery_fee = 'd70;
+        endcase
+        spend_money = spend_money - delivery_fee;
+        r_amt.set(seller_info.money);
+        r_amt.cal_remain();
+        if(spend_money > r_amt.remain) 
+            seller_info.money = 16'b1111_1111_1111_1111;
+        else
+            seller_info.money = seller_info.money + spend_money;
+        //stock
+        case(item)
+            Large: user_shopinfo.large_num = user_shopinfo.large_num + item_num;
+            Medium: user_shopinfo.medium_num = user_shopinfo.medium_num + item_num;
+            Small: user_shopinfo.small_num = user_shopinfo.small_num + item_num;
+        endcase
+        case(item)
+            Large: seller_shopinfo.large_num = seller_shopinfo.large_num - item_num;
+            Medium: seller_shopinfo.medium_num = seller_shopinfo.medium_num - item_num;
+            Small: seller_shopinfo.small_num = seller_shopinfo.small_num - item_num;
+        endcase
+        //exp
+        if(user_shopinfo.level != Platinum) begin
+            case(item)
+                Large: earn_exp = item_num * 'd60;
+                Medium: earn_exp = item_num * 'd40;
+                Small: earn_exp = item_num * 'd20;
+            endcase
+            acc_exp = earn_exp + user_shopinfo.exp;
+            case(user_shopinfo.level)
+                Gold: begin
+                    if(acc_exp >= 'd4000) begin
+                        user_shopinfo.exp = 'd0;
+                        user_shopinfo.level = Platinum;
+                    end
+                    else 
+                        user_shopinfo.exp = acc_exp[11:0];
+                end
+                Silver: begin
+                    if(acc_exp >= 'd2500) begin
+                        user_shopinfo.exp = 'd0;
+                        user_shopinfo.level = Gold;
+                    end
+                    else 
+                        user_shopinfo.exp = acc_exp[11:0];
+                end
+                Copper: begin
+                    if(acc_exp >= 'd1000) begin
+                        user_shopinfo.exp = 'd0;
+                        user_shopinfo.level = Silver;
+                    end
+                    else 
+                        user_shopinfo.exp = acc_exp[11:0];
+                end
+            endcase
+        end
+        // Shopping_His
+        user_info.shop_history.item_ID = item;
+        user_info.shop_history.item_num = item_num;
+        user_info.shop_history.seller_ID = seller;
+        //out info
+        golden_out_info = user_info;
+    end
+endtask
+
+task act_check_ans;
+    golden_complete = 1'b1;
+    golden_err_msg = No_Err;
+    if(has_given_id)
+        golden_out_info = {14'd0, seller_shopinfo.large_num, seller_shopinfo.medium_num, seller_shopinfo.small_num};
+    else
+        golden_out_info = {16'd0, user_info.money};
+endtask
+
+task act_deposit_ans;
+    now_money = user_info.money;
+    r_amt.set(now_money);
+    r_amt.cal_remain();
+    // $display("%d", r_amt.remain);
+    if(r_amt.remain >= given_money) begin
+        golden_complete = 1'b1;
+        golden_err_msg = No_Err;
+        user_info.money = user_info.money + given_money;
+        golden_out_info = {16'd0, user_info.money};
+    end
+    else begin
+        golden_complete = 1'b0;
+        golden_err_msg = Wallet_is_Full;
+        golden_out_info = 32'd0;
+    end
+endtask
+
+task act_return_ans;
+    flag = 1'b0;
+    // Wrong operation (1)
+    if(!record_return[user]) begin
+        golden_complete = 1'b0;
+        golden_err_msg = Wrong_act;
+        golden_out_info = 32'd0;
+        flag = 1'b1;
+    end 
+    // Wrong seller ID (2)
+    if(~flag && (user_info.shop_history.seller_ID != seller)) begin
+        golden_complete = 1'b0;
+        golden_err_msg = Wrong_ID;
+        golden_out_info = 32'd0;
+        flag = 1'b1;
+    end
+    // Wrong number (3)
+    if(~flag && (user_info.shop_history.item_num != item_num)) begin
+        golden_complete = 1'b0;
+        golden_err_msg = Wrong_Num;
+        golden_out_info = 32'd0;
+        flag = 1'b1;
+    end
+    // Wrong item (4)
+    if(~flag && (user_info.shop_history.item_ID != item)) begin
+        golden_complete = 1'b0;
+        golden_err_msg = Wrong_Item;
+        golden_out_info = 32'd0;
+        flag = 1'b1;
+    end
+    // Complete
+    if(~flag) begin
+        golden_complete = 1'b1;
+        golden_err_msg = No_Err;
+        flag = 1'b1;
+        // money (refund)
+        case(item)
+            Large: item_money = 'd300;
+            Medium: item_money = 'd200;
+            Small: item_money = 'd100;
+        endcase
+        spend_money = item_money * item_num;
+        user_info.money = user_info.money + spend_money;
+        seller_info.money = seller_info.money - spend_money;
+        // stock
+        case(item)
+            Large: user_shopinfo.large_num = user_shopinfo.large_num - item_num;
+            Medium: user_shopinfo.medium_num = user_shopinfo.medium_num - item_num;
+            Small: user_shopinfo.small_num = user_shopinfo.small_num - item_num;
+        endcase
+        case(item)
+            Large: seller_shopinfo.large_num = seller_shopinfo.large_num + item_num;
+            Medium: seller_shopinfo.medium_num = seller_shopinfo.medium_num + item_num;
+            Small: seller_shopinfo.small_num = seller_shopinfo.small_num + item_num;
+        endcase
+        // out info
+        golden_out_info = {14'd0, user_shopinfo.large_num, user_shopinfo.medium_num, user_shopinfo.small_num};
+        // $display("return  success~~~~~");
+    end
+endtask
+
+task handle_return;
+    // if(golden_complete) begin
+    //     if(act == Buy) begin
+    //         for(i=0;i<256;i=i+1) begin
+    //             addr = i*8+65536+4; 
+    //             if(golden_DRAM[addr+3][7:0] == user) 
+    //                 record_return[i] = 0;
+    //         end
+    //         record_return[user] = 1;
+    //     end
+    //     else begin
+    //         for(i=0;i<256;i=i+1) begin
+    //             addr = i*8+65536+4; 
+    //             if(golden_DRAM[addr+3][7:0] == user) 
+    //                 record_return[i] = 'd0;
+    //         end
+    //         record_return[user] = 0;
+    //     end
+    // end
+    if(golden_complete) begin
+        if(act == Buy) begin
+            for(i=0;i<256;i=i+1) begin
+                addr = i*8+65536+4; 
+                if(golden_DRAM[addr+3][7:0] == user) 
+                    record_return[i] = 0;
+            end
+            for(i=0;i<256;i=i+1) begin
+                addr = i*8+65536+4; 
+                if(golden_DRAM[addr+3][7:0] == user_info.shop_history.seller_ID) 
+                    record_return[i] = 0;
+            end
+            record_return[user_info.shop_history.seller_ID] = 0;
+            record_return[user] = 1;
+        end
+        else begin
+            for(i=0;i<256;i=i+1) begin
+                addr = i*8+65536+4; 
+                if(golden_DRAM[addr+3][7:0] == user) 
+                    record_return[i] = 'd0;
+            end
+            record_return[user] = 0;
+        end
+    end
+endtask
+
+task read_user_golden_dram; 
+    addr = user*8+65536; //shop info
+    user_shopinfo.large_num = golden_DRAM[addr][7:2];
+    user_shopinfo.medium_num = {golden_DRAM[addr][1:0], golden_DRAM[addr+1][7:4]};
+    user_shopinfo.small_num = {golden_DRAM[addr+1][3:0], golden_DRAM[addr+2][7:6]};
+    user_shopinfo.level = golden_DRAM[addr+2][5:4];
+    user_shopinfo.exp = {golden_DRAM[addr+2][3:0], golden_DRAM[addr+3][7:0]};
+    addr = user*8+65536+4; //user info
+    // $display("%d",addr);
+    user_info.money = {golden_DRAM[addr][7:0], golden_DRAM[addr+1][7:0]};
+    user_info.shop_history.item_ID = golden_DRAM[addr+2][7:6];
+    user_info.shop_history.item_num = golden_DRAM[addr+2][5:0];
+    user_info.shop_history.seller_ID = golden_DRAM[addr+3][7:0];
+endtask
+
+task read_seller_golden_dram; 
+    addr = seller*8+65536; //shop info
+    // $display("%h",addr);
+    seller_shopinfo.large_num = golden_DRAM[addr][7:2];
+    seller_shopinfo.medium_num = {golden_DRAM[addr][1:0], golden_DRAM[addr+1][7:4]};
+    seller_shopinfo.small_num = {golden_DRAM[addr+1][3:0], golden_DRAM[addr+2][7:6]};
+    seller_shopinfo.level = golden_DRAM[addr+2][5:4];
+    seller_shopinfo.exp = {golden_DRAM[addr+2][3:0], golden_DRAM[addr+3][7:0]};
+    addr = seller*8+65536+4; //user info
+    // $display("%h",addr);
+    seller_info.money = {golden_DRAM[addr][7:0], golden_DRAM[addr+1][7:0]};
+    seller_info.shop_history.item_ID = golden_DRAM[addr+2][7:6];
+    seller_info.shop_history.item_num = golden_DRAM[addr+2][5:0];
+    seller_info.shop_history.seller_ID = golden_DRAM[addr+3][7:0];
+endtask
+
+task update_user_golden_dram; 
+    addr = user*8+65536;
+    golden_DRAM[addr][7:2] = user_shopinfo.large_num;
+    golden_DRAM[addr][1:0] = user_shopinfo.medium_num[5:4];
+    golden_DRAM[addr+1][7:4] = user_shopinfo.medium_num[3:0];
+    golden_DRAM[addr+1][3:0] = user_shopinfo.small_num[5:2];
+    golden_DRAM[addr+2][7:6] = user_shopinfo.small_num[1:0];
+    golden_DRAM[addr+2][5:4] = user_shopinfo.level;
+    golden_DRAM[addr+2][3:0] = user_shopinfo.exp[11:8];
+    golden_DRAM[addr+3][7:0] = user_shopinfo.exp[7:0];
+    addr = user*8+65536+4;
+    golden_DRAM[addr][7:0] = user_info.money[15:8];
+    golden_DRAM[addr+1][7:0] = user_info.money[7:0];
+    golden_DRAM[addr+2][7:6] = user_info.shop_history.item_ID;
+    golden_DRAM[addr+2][5:0] = user_info.shop_history.item_num;
+    golden_DRAM[addr+3][7:0] = user_info.shop_history.seller_ID;
+endtask
+
+task update_seller_golden_dram; 
+    addr = seller*8+65536;
+    golden_DRAM[addr][7:2] = seller_shopinfo.large_num;
+    golden_DRAM[addr][1:0] = seller_shopinfo.medium_num[5:4];
+    golden_DRAM[addr+1][7:4] = seller_shopinfo.medium_num[3:0];
+    golden_DRAM[addr+1][3:0] = seller_shopinfo.small_num[5:2];
+    golden_DRAM[addr+2][7:6] = seller_shopinfo.small_num[1:0];
+    golden_DRAM[addr+2][5:4] = seller_shopinfo.level;
+    golden_DRAM[addr+2][3:0] = seller_shopinfo.exp[11:8];
+    golden_DRAM[addr+3][7:0] = seller_shopinfo.exp[7:0];
+    addr = seller*8+65536+4;
+    golden_DRAM[addr][7:0] = seller_info.money[15:8];
+    golden_DRAM[addr+1][7:0] = seller_info.money[7:0];
+    golden_DRAM[addr+2][7:6] = seller_info.shop_history.item_ID;
+    golden_DRAM[addr+2][5:0] = seller_info.shop_history.item_num;
+    golden_DRAM[addr+3][7:0] = seller_info.shop_history.seller_ID;
+endtask
+
+task check_ans;
+    cnt_out = 0;
+	while (inf.out_valid===1) begin
+		if (cnt_out >= 1) begin
+			$display ("--------------------------------------------------");
+			$display ("                        FAIL                      ");
+			$display ("          Outvalid is more than 1 cycles          ");
+			$display ("--------------------------------------------------");
+			fail_task;
+			$finish;
+		end
+		else begin
+			if ( (inf.complete!==golden_complete) || (inf.err_msg!==golden_err_msg) || (inf.out_info!==golden_out_info)) begin
+				$display("-----------------------------------------------------------");
+				$display("                          PATTERM %d                 ", patcount);
+				$display("    Golden complete : %6d    your complete : %6d ", golden_complete, inf.complete);
+				$display("    Golden err_msg  : %6d    your err_msg  : %6d ", golden_err_msg, inf.err_msg);
+				$display("    Golden info     : %8h  your info     : %8h   ", golden_out_info, inf.out_info);
+				$display("-----------------------------------------------------------");
+				fail_task;
+				$finish;
+			end
+            else begin
+                total_cycles = total_cycles + cycles;
+                $display("\033[0;38;5;111mPASS Pat \033[4m NO.%4d \033[m \033[0;38;5;219mACT %2d\033[m latency: %4d", patcount, act, cycles);
+                cycles = 0;
+            end
+		end
+		@(negedge clk);
+		cnt_out = cnt_out + 1;
+    end
+endtask
+
+task YOU_PASS_task;
+    $display("                                                             \033[33m`-                                                                            ");        
+    $display("                                                             /NN.                                                                           ");        
+    $display("                                                            sMMM+                                                                           ");        
+    $display(" .``                                                       sMMMMy                                                                           ");        
+    $display(" oNNmhs+:-`                                               oMMMMMh                                                                           ");        
+    $display("  /mMMMMMNNd/:-`                                         :+smMMMh                                                                           ");        
+    $display("   .sNMMMMMN::://:-`                                    .o--:sNMy                                                                           ");        
+    $display("     -yNMMMM:----::/:-.                                 o:----/mo                                                                           ");        
+    $display("       -yNMMo--------://:.                             -+------+/                                                                           ");        
+    $display("         .omd/::--------://:`                          o-------o.                                                                           ");        
+    $display("           `/+o+//::-------:+:`                       .+-------y                                                                            ");        
+    $display("              .:+++//::------:+/.---------.`          +:------/+                                                                            ");        
+    $display("                 `-/+++/::----:/:::::::::::://:-.     o------:s.          \033[37m:::::----.           -::::.          `-:////:-`     `.:////:-.    \033[33m");        
+    $display("                    `.:///+/------------------:::/:- `o-----:/o          \033[37m.NNNNNNNNNNds-       -NNNNNd`       -smNMMMMMMNy   .smNNMMMMMNh    \033[33m");        
+    $display("                         :+:----------------------::/:s-----/s.          \033[37m.MMMMo++sdMMMN-     `mMMmMMMs      -NMMMh+///oys  `mMMMdo///oyy    \033[33m");        
+    $display("                        :/---------------------------:++:--/++           \033[37m.MMMM.   `mMMMy     yMMM:dMMM/     +MMMM:      `  :MMMM+`     `    \033[33m");        
+    $display("                       :/---///:-----------------------::-/+o`           \033[37m.MMMM.   -NMMMo    +MMMs -NMMm.    .mMMMNdo:.     `dMMMNds/-`      \033[33m");        
+    $display("                      -+--/dNs-o/------------------------:+o`            \033[37m.MMMMyyyhNMMNy`   -NMMm`  sMMMh     .odNMMMMNd+`   `+dNMMMMNdo.    \033[33m");        
+    $display("                     .o---yMMdsdo------------------------:s`             \033[37m.MMMMNmmmdho-    `dMMMdooosMMMM+      `./sdNMMMd.    `.:ohNMMMm-   \033[33m");        
+    $display("                    -yo:--/hmmds:----------------//:------o              \033[37m.MMMM:...`       sMMMMMMMMMMMMMN-  ``     `:MMMM+ ``      -NMMMs   \033[33m");        
+    $display("                   /yssy----:::-------o+-------/h/-hy:---:+              \033[37m.MMMM.          /MMMN:------hMMMd` +dy+:::/yMMMN- :my+:::/sMMMM/   \033[33m");        
+    $display("                  :ysssh:------//////++/-------sMdyNMo---o.              \033[37m.MMMM.         .mMMMs       .NMMMs /NMMMMMMMMmh:  -NMMMMMMMMNh/    \033[33m");        
+    $display("                  ossssh:-------ddddmmmds/:----:hmNNh:---o               \033[37m`::::`         .::::`        -:::: `-:/++++/-.     .:/++++/-.      \033[33m");        
+    $display("                  /yssyo--------dhhyyhhdmmhy+:---://----+-                                                                                  ");        
+    $display("                  `yss+---------hoo++oosydms----------::s    `.....-.                                                                       ");        
+    $display("                   :+-----------y+++++++oho--------:+sssy.://:::://+o.                                                                      ");        
+    $display("                    //----------y++++++os/--------+yssssy/:--------:/s-                                                                     ");        
+    $display("             `..:::::s+//:::----+s+++ooo:--------+yssssy:-----------++                                                                      ");        
+    $display("           `://::------::///+/:--+soo+:----------ssssys/---------:o+s.``                                                                    ");        
+    $display("          .+:----------------/++/:---------------:sys+----------:o/////////::::-...`                                                        ");        
+    $display("          o---------------------oo::----------::/+//---------::o+--------------:/ohdhyo/-.``                                                ");        
+    $display("          o---------------------/s+////:----:://:---------::/+h/------------------:oNMMMMNmhs+:.`                                           ");        
+    $display("          -+:::::--------------:s+-:::-----------------:://++:s--::------------::://sMMMMMMMMMMNds/`                                        ");        
+    $display("           .+++/////////////+++s/:------------------:://+++- :+--////::------/ydmNNMMMMMMMMMMMMMMmo`                                        ");        
+    $display("             ./+oo+++oooo++/:---------------------:///++/-   o--:///////::----sNMMMMMMMMMMMMMMMmo.                                          ");        
+    $display("                o::::::--------------------------:/+++:`    .o--////////////:--+mMMMMMMMMMMMMmo`                                            ");        
+    $display("               :+--------------------------------/so.       +:-:////+++++///++//+mMMMMMMMMMmo`                                              ");        
+    $display("              .s----------------------------------+: ````` `s--////o:.-:/+syddmNMMMMMMMMMmo`                                                ");        
+    $display("              o:----------------------------------s. :s+/////--//+o-       `-:+shmNNMMMNs.                                                  ");        
+    $display("             //-----------------------------------s` .s///:---:/+o.               `-/+o.                                                    ");        
+    $display("            .o------------------------------------o.  y///+//:/+o`                                                                          ");        
+    $display("            o-------------------------------------:/  o+//s//+++`                                                                           ");        
+    $display("           //--------------------------------------s+/o+//s`                                                                                ");        
+    $display("          -+---------------------------------------:y++///s                                                                                 ");        
+    $display("          o-----------------------------------------oo/+++o                                                                                 ");        
+    $display("         `s-----------------------------------------:s   ``                                                                                 ");        
+    $display("          o-:::::------------------:::::-------------o.                                                                                     ");        
+    $display("          .+//////////::::::://///////////////:::----o`                                                                                     ");        
+    $display("          `:soo+///////////+++oooooo+/////////////:-//                                                                                      ");        
+    $display("       -/os/--:++/+ooo:::---..:://+ooooo++///////++so-`                                                                                     ");        
+    $display("      syyooo+o++//::-                 ``-::/yoooo+/:::+s/.                                                                                  ");        
+    $display("       `..``                                `-::::///:++sys:                                                                                ");        
+    $display("                                                    `.:::/o+  \033[37m                                                                              ");	
+    $display("********************************************************************");
+    $display("                        \033[0;38;5;219mCongratulations!\033[m      ");
+    $display("                 \033[0;38;5;219mYou have passed all patterns!\033[m");
+    $display("                 \033[0;38;5;219mTOTAL LATENCY IS: %d\033[m",total_cycles);    
+    $display("********************************************************************");
+    $finish;
+endtask
+
+task fail_task; 
+    $display("\033[33m	                                                         .:                                                                                         ");      
+    $display("                                                   .:                                                                                                 ");
+    $display("                                                  --`                                                                                                 ");
+    $display("                                                `--`                                                                                                  ");
+    $display("                 `-.                            -..        .-//-                                                                                      ");
+    $display("                  `.:.`                        -.-     `:+yhddddo.                                                                                    ");
+    $display("                    `-:-`             `       .-.`   -ohdddddddddh:                                                                                   ");
+    $display("                      `---`       `.://:-.    :`- `:ydddddhhsshdddh-                       \033[31m.yhhhhhhhhhs       /yyyyy`       .yhhy`   +yhyo           \033[33m");
+    $display("                        `--.     ./////:-::` `-.--yddddhs+//::/hdddy`                      \033[31m-MMMMNNNNNNh      -NMMMMMs       .MMMM.   sMMMh           \033[33m");
+    $display("                          .-..   ////:-..-// :.:oddddho:----:::+dddd+                      \033[31m-MMMM-......     `dMMmhMMM/      .MMMM.   sMMMh           \033[33m");
+    $display("                           `-.-` ///::::/::/:/`odddho:-------:::sdddh`                     \033[31m-MMMM.           sMMM/.NMMN.     .MMMM.   sMMMh           \033[33m");
+    $display("             `:/+++//:--.``  .--..+----::://o:`osss/-.--------::/dddd/             ..`     \033[31m-MMMMysssss.    /MMMh  oMMMh     .MMMM.   sMMMh           \033[33m");
+    $display("             oddddddddddhhhyo///.-/:-::--//+o-`:``````...------::dddds          `.-.`      \033[31m-MMMMMMMMMM-   .NMMN-``.mMMM+    .MMMM.   sMMMh           \033[33m");
+    $display("            .ddddhhhhhddddddddddo.//::--:///+/`.````````..``...-:ddddh       `.-.`         \033[31m-MMMM:.....`  `hMMMMmmmmNMMMN-   .MMMM.   sMMMh           \033[33m");
+    $display("            /dddd//::///+syhhdy+:-`-/--/////+o```````.-.......``./yddd`   `.--.`           \033[31m-MMMM.        oMMMmhhhhhhdMMMd`  .MMMM.   sMMMh```````    \033[33m");
+    $display("            /dddd:/------:://-.`````-/+////+o:`````..``     `.-.``./ym.`..--`              \033[31m-MMMM.       :NMMM:      .NMMMs  .MMMM.   sMMMNmmmmmms    \033[33m");
+    $display("            :dddd//--------.`````````.:/+++/.`````.` `.-      `-:.``.o:---`                \033[31m.dddd`       yddds        /dddh. .dddd`   +ddddddddddo    \033[33m");
+    $display("            .ddddo/-----..`........`````..```````..  .-o`       `:.`.--/-      ``````````` \033[31m ````        ````          ````   ````     ``````````     \033[33m");
+    $display("             ydddh/:---..--.````.`.-.````````````-   `yd:        `:.`...:` `................`                                                         ");
+    $display("             :dddds:--..:.     `.:  .-``````````.:    +ys         :-````.:...```````````````..`                                                       ");
+    $display("              sdddds:.`/`      ``s.  `-`````````-/.   .sy`      .:.``````-`````..-.-:-.````..`-                                                       ");
+    $display("              `ydddd-`.:       `sh+   /:``````````..`` +y`   `.--````````-..---..``.+::-.-``--:                                                       ");
+    $display("               .yddh``-.        oys`  /.``````````````.-:.`.-..`..```````/--.`      /:::-:..--`                                                       ");
+    $display("                .sdo``:`        .sy. .:``````````````````````````.:```...+.``       -::::-`.`                                                         ");
+    $display(" ````.........```.++``-:`        :y:.-``````````````....``.......-.```..::::----.```  ``                                                              ");
+    $display("`...````..`....----:.``...````  ``::.``````.-:/+oosssyyy:`.yyh-..`````.:` ````...-----..`                                                             ");
+    $display("                 `.+.``````........````.:+syhdddddddddddhoyddh.``````--              `..--.`                                                          ");
+    $display("            ``.....--```````.```````.../ddddddhhyyyyyyyhhhddds````.--`             ````   ``                                                          ");
+    $display("         `.-..``````-.`````.-.`.../ss/.oddhhyssssooooooossyyd:``.-:.         `-//::/++/:::.`                                                          ");
+    $display("       `..```````...-::`````.-....+hddhhhyssoo+++//////++osss.-:-.           /++++o++//s+++/                                                          ");
+    $display("     `-.```````-:-....-/-``````````:hddhsso++/////////////+oo+:`             +++::/o:::s+::o            \033[31m     `-/++++:-`                              \033[33m");
+    $display("    `:````````./`  `.----:..````````.oysso+///////////////++:::.             :++//+++/+++/+-            \033[31m   :ymMMMMMMMMms-                            \033[33m");
+    $display("    :.`-`..```./.`----.`  .----..`````-oo+////////////////o:-.`-.            `+++++++++++/.             \033[31m `yMMMNho++odMMMNo                           \033[33m");
+    $display("    ..`:..-.`.-:-::.`        `..-:::::--/+++////////////++:-.```-`            +++++++++o:               \033[31m hMMMm-      /MMMMo  .ssss`/yh+.syyyyyyyyss. \033[33m");
+    $display("     `.-::-:..-:-.`                 ```.+::/++//++++++++:..``````:`          -++++++++oo                \033[31m:MMMM:        yMMMN  -MMMMdMNNs-mNNNNNMMMMd` \033[33m");
+    $display("        `   `--`                        /``...-::///::-.`````````.: `......` ++++++++oy-                \033[31m+MMMM`        +MMMN` -MMMMh:--. ````:mMMNs`  \033[33m");
+    $display("           --`                          /`````````````````````````/-.``````.::-::::::/+                 \033[31m:MMMM:        yMMMm  -MMMM`       `oNMMd:    \033[33m");
+    $display("          .`                            :```````````````````````--.`````````..````.``/-                 \033[31m dMMMm:`    `+MMMN/  -MMMN       :dMMNs`     \033[33m");
+    $display("                                        :``````````````````````-.``.....````.```-::-.+                  \033[31m `yNMMMdsooymMMMm/   -MMMN     `sMMMMy/////` \033[33m");
+    $display("                                        :.````````````````````````-:::-::.`````-:::::+::-.`             \033[31m   -smNMMMMMNNd+`    -NNNN     hNNNNNNNNNNN- \033[33m");
+    $display("                                `......../```````````````````````-:/:   `--.```.://.o++++++/.           \033[31m      .:///:-`       `----     ------------` \033[33m");
+    $display("                              `:.``````````````````````````````.-:-`      `/````..`+sssso++++:                                                        ");
+    $display("                              :`````.---...`````````````````.--:-`         :-````./ysoooss++++.                                                       ");
+    $display("                              -.````-:/.`.--:--....````...--:/-`            /-..-+oo+++++o++++.                                                       ");
+    $display("             `:++/:.`          -.```.::      `.--:::::://:::::.              -:/o++++++++s++++                                                        ");
+    $display("           `-+++++++++////:::/-.:.```.:-.`              :::::-.-`               -+++++++o++++.                                                        ");
+    $display("           /++osoooo+++++++++:`````````.-::.             .::::.`-.`              `/oooo+++++.                                                         ");
+    $display("           ++oysssosyssssooo/.........---:::               -:::.``.....`     `.:/+++++++++:                                                           ");
+    $display("           -+syoooyssssssyo/::/+++++/+::::-`                 -::.``````....../++++++++++:`                                                            ");
+    $display("             .:///-....---.-..-.----..`                        `.--.``````````++++++/:.                                                               ");
+    $display("                                                                   `........-:+/:-.`                                                            \033[37m      ");
+endtask
+
+endprogram

@@ -1,0 +1,763 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version T-2022.03 for linux64 - Feb 22, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path {./../01_RTL \
+                   ~iclabta01/umc018/Synthesis \
+                   /usr/synopsys/libraries/syn/ \
+                   /usr/synthesis/dw/ }
+./../01_RTL  ~iclabta01/umc018/Synthesis  /usr/synopsys/libraries/syn/  /usr/synthesis/dw/ 
+set link_library {* slow.db dw_foundation.sldb standard.sldb}
+* slow.db dw_foundation.sldb standard.sldb
+#set synthetic_library {standard.sldb dw01.sldb dw02.sldb dw03.sldb dw04.sldb dw05.sldb}
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set target_library {slow.db}
+slow.db
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "OS"
+OS
+set CLK_period 4.1
+4.1
+set IN_DLY [expr 0.5*$CLK_period]
+2.05
+set OUT_DLY [expr 0.5*$CLK_period]
+2.05
+set hdlin_ff_always_sync_set_reset true
+true
+#======================================================
+#  Read RTL Code
+#======================================================
+set hdlin_auto_save_templates TRUE
+TRUE
+read_sverilog { Usertype_OS.sv INF.sv OS.sv }
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Loading sverilog files: '/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/Usertype_OS.sv' '/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/INF.sv' '/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv' 
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/Usertype_OS.sv
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/Usertype_OS.sv:23: The package usertype has already been analyzed. It is being replaced. (VER-26)
+Compiling source file /RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/INF.sv
+Information:  /RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/INF.sv:20: List () of one, unnamed, port is ignored. (VER-988)
+Compiling source file /RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv:381: signed to unsigned part selection occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv:473: signed to unsigned part selection occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv:641: unsigned to signed assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv:642: unsigned to signed assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv:655: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 165 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           168            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 227 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           228            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 339 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           342            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 377 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           380            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 405 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           408            |    auto/auto     |
+|           409            |    auto/auto     |
+|           417            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 467 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           471            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 478 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           482            |    auto/auto     |
+|           483            |    auto/auto     |
+|           490            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 561 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           562            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 569 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           570            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 580 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           581            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 615 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           617            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 645 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           646            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 654 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           655            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 663 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           664            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 671 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           672            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine OS line 147 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  inf.out_valid_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 153 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   inf.err_msg_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 159 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  inf.complete_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 165 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  inf.out_info_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 192 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   inf.C_addr_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 200 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  inf.C_data_w_reg   | Flip-flop |  64   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 208 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| inf.C_in_valid_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 214 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   inf.C_r_wb_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 223 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     curr_os_reg     | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 292 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cnt_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 301 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     in_user_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 325 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    in_seller_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 331 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  enable_seller_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 339 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     in_act_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 355 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  in_item_type_reg   | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 361 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   in_item_num_reg   | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 367 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    in_money_reg     | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 387 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| last_user_INFO_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 427 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+| last_user_shop_info_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===================================================================================
+
+Inferred memory devices in process
+	in routine OS line 467 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| last_seller_INFO_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+
+Inferred memory devices in process
+	in routine OS line 478 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+| last_seller_shop_info_reg | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+=====================================================================================
+
+Inferred memory devices in process
+	in routine OS line 504 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  enable_return_reg  | Flip-flop |  256  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine OS line 544 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  last_buyer_id_reg  | Flip-flop | 2048  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|      OS/607      |  256   |    1    |      8       |
+|      OS/609      |  256   |    8    |      8       |
+|      OS/609      |  256   |    8    |      8       |
+======================================================
+Information:  Complex logic will not be considered for set/reset inference. (ELAB-2008)
+Presto compilation completed successfully.
+Current design is now '/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/01_RTL/OS.db:OS'
+Loaded 1 design.
+Current design is 'OS'.
+OS
+# read_verilog -rtl $DESIGN\.sv
+current_design $DESIGN
+Current design is 'OS'.
+{OS}
+#======================================================
+#  Global Setting
+#======================================================
+set_wire_load_mode top
+1
+#======================================================
+#  Set Design Constraints
+#======================================================
+create_clock -name "clk" -period $CLK_period clk
+1
+# create_clock -name "clk" -period $CLK_period inf.clk
+set_ideal_net clk
+Information: It is recommended to use set_ideal_network command instead of set_ideal_net. (UID-604)
+Warning: Replacing set_ideal_net command with set_ideal_network -no_propagate command. (UID-605)
+Warning: Transferring ideal_net attribute onto the driver pin clk of net clk. (UID-606)
+1
+set_input_delay $IN_DLY -clock clk [all_inputs]
+1
+set_input_delay 0 -clock clk clk
+1
+# set_input_delay $IN_DLY -clock clk reset
+set_output_delay $OUT_DLY -clock clk [all_outputs]
+1
+set_load 0.05 [all_outputs]
+1
+#set hdlin_ff_always_sync_set_reset true
+#======================================================
+#  Optimization
+#======================================================
+uniquify
+1
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants
+1
+set_fix_hold [all_clocks]
+1
+current_design $DESIGN
+Current design is 'OS'.
+{OS}
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Comand line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 16632                                  |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 2594                                   |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch cells                              | 2337                                   |
+| Number of Dont Touch nets                               | 1                                      |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'OS'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'OS'
+Information: Added key list 'DesignWare' to design 'OS'. (DDB-72)
+ Implement Synthetic for 'OS'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 6)
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:01:11  769416.3      1.01     159.8       0.0                           94220384.0000      0.00  
+    0:01:12  765644.1      2.44     367.2       0.0                           93833584.0000      0.00  
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:01:13  774459.1      1.95     288.0       0.0                           96060576.0000      0.00  
+    0:01:14  774299.4      2.58     422.0       0.0                           96047976.0000      0.00  
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:01:19  406961.8      1.47     218.4       0.0                           29372964.0000      0.00  
+    0:01:26  410521.0      0.30      44.0       0.0                           30267306.0000      0.00  
+    0:01:26  410521.0      0.30      44.0       0.0                           30267306.0000      0.00  
+    0:01:29  396510.2      0.29      42.0       0.0                           29690940.0000      0.00  
+    0:01:37  396473.6      0.29      41.9       0.0                           29687994.0000      0.00  
+    0:01:38  396170.9      0.50      70.9       0.0                           29663492.0000      0.00  
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:01:47  387668.6      0.48      73.4       0.0                           28526866.0000      0.00  
+    0:01:48  387622.1      0.31      45.0       0.0                           28538918.0000      0.00  
+    0:01:48  387622.1      0.31      45.0       0.0                           28538918.0000      0.00  
+    0:01:48  387286.1      0.30      41.8       0.0                           28187818.0000      0.00  
+    0:01:48  387286.1      0.30      41.8       0.0                           28187818.0000      0.00  
+    0:01:52  389454.9      0.27      37.7       0.0                           28536724.0000      0.00  
+    0:01:52  389454.9      0.27      37.7       0.0                           28536724.0000      0.00  
+    0:01:52  389474.9      0.27      37.6       0.0                           28537860.0000      0.00  
+    0:01:52  389474.9      0.27      37.6       0.0                           28537860.0000      0.00  
+    0:01:53  389474.9      0.27      37.6       0.0                           28537860.0000      0.00  
+    0:01:53  389474.9      0.27      37.6       0.0                           28537860.0000      0.00  
+    0:01:59  391071.5      0.13      17.1       0.0                           28960184.0000      0.00  
+    0:01:59  391071.5      0.13      17.1       0.0                           28960184.0000      0.00  
+    0:02:11  394065.3      0.13      14.3       0.0                           29479138.0000      0.00  
+    0:02:11  394065.3      0.13      14.3       0.0                           29479138.0000      0.00  
+    0:02:27  395558.9      0.00       0.0       0.0                           30009754.0000      0.00  
+    0:02:27  395558.9      0.00       0.0       0.0                           30009754.0000      0.00  
+    0:02:27  395558.9      0.00       0.0       0.0                           30009754.0000      0.00  
+    0:02:27  395558.9      0.00       0.0       0.0                           30009754.0000      0.00  
+    0:02:27  395558.9      0.00       0.0       0.0                           30009754.0000      0.00  
+    0:02:27  395558.9      0.00       0.0       0.0                           30009754.0000      0.00  
+    0:02:27  395558.9      0.00       0.0       0.0                           30009754.0000      0.00  
+    0:02:27  395558.9      0.00       0.0       0.0                           30009754.0000      0.00  
+    0:02:27  395558.9      0.00       0.0       0.0                           30009754.0000      0.00  
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:02:27  395558.9      0.00       0.0       0.0                           30009754.0000      0.00  
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+    0:02:32  398699.0      0.02       0.7       0.0 inf.C_data_w_reg[49]/D    29935576.0000      0.00  
+    0:02:32  398758.9      0.01       0.2       0.0                           29941978.0000      0.00  
+    0:02:43  399231.2      0.00       0.0       0.0                           30021376.0000      0.00  
+    0:02:43  399231.2      0.00       0.0       0.0                           30021376.0000      0.00  
+    0:02:44  389657.8      0.00       0.0       0.0                           27358154.0000      0.00  
+    0:02:44  389657.8      0.00       0.0       0.0                           27358154.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358154.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358154.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:49  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+
+                                  TOTAL                                                            
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE   MIN DELAY 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER      COST    
+  --------- --------- --------- --------- --------- ------------------------- --------- -----------
+    0:02:50  389657.8      0.00       0.0       0.0                           27358720.0000      0.00  
+    0:02:50  385792.5      0.01       0.0       0.0                           26892704.0000      0.00  
+    0:02:50  385819.2      0.00       0.0       0.0                           26895846.0000      0.00  
+    0:02:50  385819.2      0.00       0.0       0.0                           26895846.0000      0.00  
+    0:02:51  385074.0      0.00       0.0       0.0                           26730694.0000      0.00  
+    0:02:52  383706.9      0.00       0.0       0.0                           26473146.0000      0.00  
+    0:02:52  383706.9      0.00       0.0       0.0                           26473146.0000      0.00  
+    0:02:52  383706.9      0.00       0.0       0.0                           26473146.0000      0.00  
+    0:02:52  383706.9      0.00       0.0       0.0                           26473146.0000      0.00  
+    0:02:52  383706.9      0.00       0.0       0.0                           26473146.0000      0.00  
+    0:02:52  383706.9      0.00       0.0       0.0                           26473146.0000      0.00  
+    0:02:54  382153.5      0.00       0.0       0.0                           26281172.0000      0.00  
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'OS' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 2594 load(s), 1 driver(s)
+     Net 'inf.rst_n': 2594 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#compile
+#======================================================
+#  Output Reports 
+#======================================================
+report_timing >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/02_SYN/Netlist/OS_SYN.v'.
+1
+write -format svsim   -output Netlist/$DESIGN\_Wrapper.sv
+Writing svsim file '/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/02_SYN/Netlist/OS_Wrapper.sv'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab034/Lab09/Exercise/02_SYN/Netlist/OS_SYN.sdf'. (WT-3)
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+exit
+
+Memory usage for this session 331 Mbytes.
+Memory usage for this session including child processes 331 Mbytes.
+CPU usage for this session 179 seconds ( 0.05 hours ).
+Elapsed time for this session 185 seconds ( 0.05 hours ).
+
+Thank you...

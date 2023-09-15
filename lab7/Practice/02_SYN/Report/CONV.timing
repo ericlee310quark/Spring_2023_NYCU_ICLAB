@@ -1,0 +1,85 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CONV
+Version: T-2022.03
+Date   : Fri Apr 14 14:47:05 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: in_valid (input port clocked by clk_1)
+  Endpoint: h_reg[0][0]
+            (rising edge-triggered flip-flop clocked by clk_1)
+  Path Group: clk_1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk_1 (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     5.05       5.05 f
+  in_valid (in)                            0.00       5.05 f
+  U452/Y (INVXL)                           0.58       5.63 r
+  U446/Y (AOI22XL)                         0.18       5.81 f
+  h_reg[0][0]/D (DFFHQX1)                  0.00       5.81 f
+  data arrival time                                   5.81
+
+  clock clk_1 (rise edge)                 10.10      10.10
+  clock network delay (ideal)              0.00      10.10
+  h_reg[0][0]/CK (DFFHQX1)                 0.00      10.10 r
+  library setup time                      -0.44       9.66
+  data required time                                  9.66
+  -----------------------------------------------------------
+  data required time                                  9.66
+  data arrival time                                  -5.81
+  -----------------------------------------------------------
+  slack (MET)                                         3.85
+
+
+  Startpoint: h_exe_reg[3][0]
+              (rising edge-triggered flip-flop clocked by clk_2)
+  Endpoint: out_data_reg[5]
+            (rising edge-triggered flip-flop clocked by clk_2)
+  Path Group: clk_2
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk_2 (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  h_exe_reg[3][0]/CK (DFFX1)               0.00       0.00 r
+  h_exe_reg[3][0]/QN (DFFX1)               0.65       0.65 f
+  U265/Y (NOR4XL)                          0.40       1.05 r
+  U329/Y (AOI21XL)                         0.09       1.14 f
+  intadd_0/U6/S (ADDFXL)                   0.90       2.04 f
+  U582/CO (ADDFXL)                         0.99       3.03 f
+  U587/CO (ADDFXL)                         0.99       4.01 f
+  intadd_0/U4/CO (ADDFXL)                  1.31       5.32 f
+  intadd_0/U3/CO (ADDFXL)                  0.47       5.79 f
+  intadd_0/U2/S (ADDFXL)                   0.32       6.11 f
+  U268/Y (AOI22XL)                         0.23       6.33 r
+  U271/Y (NAND4XL)                         0.14       6.47 f
+  U423/Y (AOI211XL)                        0.28       6.75 r
+  U166/Y (NOR2X1)                          0.10       6.85 f
+  out_data_reg[5]/D (DFFRHQXL)             0.00       6.85 f
+  data arrival time                                   6.85
+
+  clock clk_2 (rise edge)                 11.10      11.10
+  clock network delay (ideal)              0.00      11.10
+  out_data_reg[5]/CK (DFFRHQXL)            0.00      11.10 r
+  library setup time                      -0.29      10.81
+  data required time                                 10.81
+  -----------------------------------------------------------
+  data required time                                 10.81
+  data arrival time                                  -6.85
+  -----------------------------------------------------------
+  slack (MET)                                         3.97
+
+
+1

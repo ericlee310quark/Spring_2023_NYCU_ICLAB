@@ -1,0 +1,74 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on May 04, 2023 at 13:13:18 CST
+irun
+	TESTBED.v
+	-define RTL+NCG
+	-debug
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+file: TESTBED.v
+		errors: 0, warnings: 0
+	module worklib.GATED_OR:v
+		errors: 0, warnings: 0
+	module worklib.SNN:v
+		errors: 0, warnings: 0
+	module worklib.TESTBED:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		TESTBED
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.GATED_OR:v <0x2419d310>
+			streams:   2, words:   481
+			streams:  35, words: 94551
+		worklib.SNN:v <0x4debce68>
+			streams: 162, words: 77018
+		worklib.TESTBED:v <0x739d4fa5>
+			streams:   1, words:   613
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 34       4
+		Registers:              106      76
+		Scalar wires:            74       -
+		Vectored wires:          48       -
+		Always blocks:           83      34
+		Initial blocks:           9       9
+		Cont. assignments:       85      50
+		Pseudo assignments:      23       2
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBED:v
+Loading snapshot worklib.TESTBED:v .................... Done
+SVSEED default: 1
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'SNN.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+[0;34mPASS PATTERN NO.   0,[m [0;32mexecution cycle :   4[m
+[0;34mPASS PATTERN NO.   1,[m [0;32mexecution cycle :   4[m
+[0;34mPASS PATTERN NO.   2,[m [0;32mexecution cycle :   4[m
+[0;34mPASS PATTERN NO.   3,[m [0;32mexecution cycle :   4[m
+[0;34mPASS PATTERN NO.   4,[m [0;32mexecution cycle :   4[m
+[0;34mPASS PATTERN NO.   5,[m [0;32mexecution cycle :   4[m
+[0;34mPASS PATTERN NO.   6,[m [0;32mexecution cycle :   4[m
+[0;34mPASS PATTERN NO.   7,[m [0;32mexecution cycle :   4[m
+[0;34mPASS PATTERN NO.   8,[m [0;32mexecution cycle :   4[m
+[0;34mPASS PATTERN NO.   9,[m [0;32mexecution cycle :   4[m
+----------------------------------------------------------------------------------------------------------------------
+                                                  Congratulations!                                                    
+                                           You have passed all patterns!                                              
+                                           Your execution cycles =    40 cycles                                         
+                                           Your clock period = 15.0 ns                                                
+                                           Your total latency = 600.0 ns                                               
+----------------------------------------------------------------------------------------------------------------------
+Simulation complete via $finish(1) at time 11932500 PS + 0
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on May 04, 2023 at 13:13:19 CST  (total: 00:00:01)

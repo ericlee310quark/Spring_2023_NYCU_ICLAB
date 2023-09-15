@@ -1,0 +1,25 @@
+s1(13Apr2023:12:58:14):  irun TESTBED.v -define RTL -debug +incdir+/usr/synthesis/dw/sim_ver -notimingchecks 
+s2(13Apr2023:12:59:17):  irun TESTBED.v -define RTL -debug +incdir+/usr/synthesis/dw/sim_ver -notimingchecks 
+s3(13Apr2023:13:00:43):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s4(13Apr2023:13:00:49):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s5(13Apr2023:13:03:45):  irun TESTBED.v -define RTL_TOP -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s6(13Apr2023:13:06:56):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s7(13Apr2023:13:07:02):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s8(13Apr2023:13:09:55):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s9(14Apr2023:01:06:05):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s10(14Apr2023:01:19:51):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s11(14Apr2023:01:21:04):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s12(14Apr2023:01:21:18):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s13(14Apr2023:01:22:54):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s14(14Apr2023:01:26:57):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s15(14Apr2023:01:27:00):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s16(14Apr2023:01:27:15):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s17(14Apr2023:01:27:33):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s18(14Apr2023:01:29:04):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s19(14Apr2023:01:29:18):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s20(14Apr2023:01:30:07):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s21(14Apr2023:01:30:08):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s22(14Apr2023:01:30:19):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s23(14Apr2023:01:30:41):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s24(14Apr2023:02:09:20):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 
+s25(14Apr2023:13:03:26):  irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot 

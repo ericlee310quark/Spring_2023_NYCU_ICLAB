@@ -1,0 +1,26 @@
+Warning: Dont_touch on net 'clk2' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+Warning: Dont_touch on net 'clk1' may be overridden by compile because it
+	is connected to generic logic. Use all_connected to see net
+	connections. (OPT-461)
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Sun Apr 16 22:52:14 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Unconnected ports (LINT-28)                                     1
+
+Cells                                                               2
+    Cells do not drive (LINT-1)                                     2
+--------------------------------------------------------------------------------
+
+Warning: In design 'CDC', cell 'B_14' does not drive any nets. (LINT-1)
+Warning: In design 'CDC', cell 'C1121' does not drive any nets. (LINT-1)
+Warning: In design 'CDC', port 'Port53' is not connected to any nets. (LINT-28)
+1

@@ -1,0 +1,190 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version T-2022.03 for linux64 - Feb 22, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path    {./../01_RTL \
+                    ~iclabta01/umc018/Synthesis/ \
+                    /usr/synthesis/libraries/syn/ }
+./../01_RTL  ~iclabta01/umc018/Synthesis/  /usr/synthesis/libraries/syn/ 
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set link_library {* dw_foundation.sldb standard.sldb slow.db}
+* dw_foundation.sldb standard.sldb slow.db
+set target_library {slow.db}
+slow.db
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "QUEEN"
+QUEEN
+set hdlin_ff_always_sync_set_reset true
+true
+set CYCLE 10.0
+10.0
+#======================================================
+#  Read RTL Code
+#======================================================
+read_sverilog { QUEEN.v}
+Loading db file '/RAID2/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb'
+Loading db file '/RAID2/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loading db file '/RAID2/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Loading sverilog file '/RAID2/COURSE/iclab/iclab034/Lab12_d/Lab12/Exercise/01_RTL/QUEEN.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /RAID2/COURSE/iclab/iclab034/Lab12_d/Lab12/Exercise/01_RTL/QUEEN.v
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab12_d/Lab12/Exercise/01_RTL/QUEEN.v:16: Empty port in module declaration. (VER-986)
+Error:  /RAID2/COURSE/iclab/iclab034/Lab12_d/Lab12/Exercise/01_RTL/QUEEN.v:32: Syntax error at or near token '/'. (VER-294)
+*** Presto compilation terminated with 1 errors. ***
+Error: Can't read 'sverilog' file '/RAID2/COURSE/iclab/iclab034/Lab12_d/Lab12/Exercise/01_RTL/QUEEN.v'. (UID-59)
+No designs were read
+current_design QUEEN
+Error: Can't find design 'QUEEN'. (UID-109)
+Error: Current design is not defined. (UID-4)
+#======================================================
+#  Global Setting
+#======================================================
+set_wire_load_mode top
+Error: Current design is not defined. (UID-4)
+0
+#======================================================
+#  Set Design Constraints
+#======================================================
+create_clock -name "clk" -period $CYCLE clk 
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'clk'. (UID-109)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
+0
+set_input_delay  [ expr $CYCLE*0.5 ] -clock clk [all_inputs]
+Error: Current design is not defined. (UID-4)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'clk'. (UID-109)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
+0
+set_output_delay [ expr $CYCLE*0.5 ] -clock clk [all_outputs]
+Error: Current design is not defined. (UID-4)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'clk'. (UID-109)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
+0
+set_input_delay 0 -clock clk clk
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'clk'. (UID-109)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'clk'. (UID-109)
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
+0
+set_load 0.05 [all_outputs]
+Error: Current design is not defined. (UID-4)
+Error: Value for list 'objects' must have 1 elements. (CMD-036)
+0
+#======================================================
+#  Optimization
+#======================================================
+uniquify
+Error: Current design is not defined. (UID-4)
+0
+set_fix_multiple_port_nets -all -buffer_constants
+Error: Current design is not defined. (UID-4)
+0
+compile_ultra
+Error: Current design is not defined. (UID-4)
+0
+#======================================================
+#  Output Reports 
+#======================================================
+check_design > Report/QUEEN.check
+Error: could not open output redirect file "Report/QUEEN.check" (CMD-015)
+report_timing >  Report/QUEEN.timing
+Error: could not open output redirect file "Report/QUEEN.timing" (CMD-015)
+report_area >  Report/QUEEN.area
+Error: could not open output redirect file "Report/QUEEN.area" (CMD-015)
+report_resource >  Report/QUEEN.resource
+Error: could not open output redirect file "Report/QUEEN.resource" (CMD-015)
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+Error: Current design is not defined. (UID-4)
+0
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+Error: Current design is not defined. (UID-4)
+0
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/QUEEN_SYN.v -hierarchy
+Error: No files or designs were specified. (UID-22)
+0
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/QUEEN_SYN.sdf -significant_digits 6
+Error: Current design is not defined. (UID-4)
+0
+write_sdc Netlist/QUEEN_SYN.sdc
+Error: Current design is not defined. (UID-4)
+0
+#======================================================
+#  Finish and Quit
+#======================================================
+exit
+
+Memory usage for this session 148 Mbytes.
+Memory usage for this session including child processes 148 Mbytes.
+CPU usage for this session 2 seconds ( 0.00 hours ).
+Elapsed time for this session 4 seconds ( 0.00 hours ).
+
+Thank you...

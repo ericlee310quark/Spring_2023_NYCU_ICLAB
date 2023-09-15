@@ -1,0 +1,16 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Mon May  1 17:48:05 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               2
+    Cells do not drive (LINT-1)                                     2
+--------------------------------------------------------------------------------
+
+Warning: In design 'OS', cell 'C42710' does not drive any nets. (LINT-1)
+Warning: In design 'OS', cell 'C49179' does not drive any nets. (LINT-1)
+1

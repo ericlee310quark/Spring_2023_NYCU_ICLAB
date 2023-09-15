@@ -1,0 +1,930 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version T-2022.03 for linux64 - Feb 22, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path {./../01_RTL \
+                   ~iclabta01/umc018/Synthesis/ \
+                   /usr/synthesis/libraries/syn/ \
+                }
+./../01_RTL  ~iclabta01/umc018/Synthesis/  /usr/synthesis/libraries/syn/  
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set link_library {* dw_foundation.sldb standard.sldb slow.db }
+* dw_foundation.sldb standard.sldb slow.db 
+set target_library {slow.db}
+slow.db
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "SNN"
+SNN
+set CLK_period 15.0
+15.0
+#======================================================
+#  Read RTL Code
+#======================================================
+set hdlin_auto_save_templates TRUE
+TRUE
+read_sverilog {SNN_wocg.v}
+Loading db file '/RAID2/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb'
+Loading db file '/RAID2/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loading db file '/RAID2/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Loading sverilog file '/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v:646: unsigned to signed assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v:647: unsigned to signed assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v:648: unsigned to signed assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v:649: unsigned to signed assignment occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v:661: signed to unsigned conversion occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v:662: signed to unsigned conversion occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v:663: signed to unsigned conversion occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v:664: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 119 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           120            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 148 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           149            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine SNN line 101 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 106 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_data_reg     | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 115 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 163 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cnt_reg       | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 182 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      img0_reg       | Flip-flop |  112  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 174 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      img0_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 239 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   weight_map_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 244 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   weight_map_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 250 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   weight_map_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 255 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   weight_map_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 283 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     kernel_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 288 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     kernel_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 293 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     kernel_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 299 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     kernel_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 304 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     kernel_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 309 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     kernel_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 315 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     kernel_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 320 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     kernel_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 325 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     kernel_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 411 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cnn_map0_reg     | Flip-flop |  56   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 403 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    cnn_map0_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 422 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   max_map_new_reg   | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 520 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      nn_1_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 535 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      nn_1_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 550 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      nn_2_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SNN line 565 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN_wocg.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      nn_2_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/01_RTL/SNN.db:SNN'
+Loaded 1 design.
+Current design is 'SNN'.
+SNN
+current_design $DESIGN
+Current design is 'SNN'.
+{SNN}
+link > Report/$DESIGN\.link
+#======================================================
+#  Global Setting
+#======================================================
+#======================================================
+#  Set Design Constraints
+#======================================================
+create_clock -name "clk" -period $CLK_period clk 
+1
+set_input_delay  [ expr $CLK_period*0.5 ] -clock clk [all_inputs]
+1
+set_output_delay [ expr $CLK_period*0.5 ] -clock clk [all_outputs]
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst_n
+1
+set_load 0.05 [all_outputs]
+1
+set_max_delay $CLK_period -from [all_inputs] -to [all_outputs]
+1
+set_dont_use slow/JKFF*
+1
+#set hdlin_ff_always_sync_set_reset true
+#report_clock -skew clk
+#======================================================
+#  Optimization
+#======================================================
+check_design > Report/$DESIGN\.check
+uniquify
+1
+set_fix_multiple_port_nets -all -buffer_constants
+1
+current_design $DESIGN
+Current design is 'SNN'.
+{SNN}
+compile
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 1145                                   |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 388                                    |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch cells                              | 169                                    |
+| Number of Dont Touch nets                               | 0                                      |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'SNN'
+Information: Added key list 'DesignWare' to design 'SNN'. (DDB-72)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'SNN_DW01_sub_0'
+  Processing 'SNN_DW01_sub_1'
+  Processing 'SNN_DW01_sub_2'
+  Processing 'SNN_DW01_sub_3'
+  Processing 'SNN_DW01_sub_4'
+  Processing 'SNN_DW01_sub_5'
+  Processing 'SNN_DW01_sub_6'
+  Processing 'SNN_DW01_sub_7'
+  Allocating blocks in 'DW_div_uns_a_width17_b_width9'
+  Allocating blocks in 'DW_div_a_width17_b_width9_tc_mode0_rem_mode1'
+  Processing 'SNN_DW_div_uns_0'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'SNN_DW01_add_0'
+  Mapping 'SNN_DW01_add_1'
+  Mapping 'SNN_DW01_add_2'
+  Mapping 'SNN_DW01_add_3'
+  Mapping 'SNN_DW01_add_4'
+  Mapping 'SNN_DW01_add_5'
+  Mapping 'SNN_DW01_add_6'
+  Mapping 'SNN_DW01_add_7'
+  Mapping 'SNN_DW01_add_8'
+  Mapping 'SNN_DW01_add_9'
+  Mapping 'SNN_DW01_add_10'
+  Mapping 'SNN_DW01_add_11'
+  Allocating blocks in 'DW_div_uns_a_width20_b_width12'
+  Allocating blocks in 'DW_div_a_width20_b_width12_tc_mode0_rem_mode1'
+  Processing 'SNN_DW_div_uns_1'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Mapping 'SNN_DW01_add_12'
+  Mapping 'SNN_DW01_add_13'
+  Mapping 'SNN_DW01_add_14'
+  Mapping 'SNN_DW01_add_15'
+  Mapping 'SNN_DW01_add_16'
+  Mapping 'SNN_DW01_add_17'
+  Mapping 'SNN_DW01_add_18'
+  Mapping 'SNN_DW01_add_19'
+  Mapping 'SNN_DW01_add_20'
+  Mapping 'SNN_DW01_add_21'
+  Mapping 'SNN_DW01_add_22'
+  Mapping 'SNN_DW01_add_23'
+  Mapping 'SNN_DW01_add_24'
+  Mapping 'SNN_DW01_add_25'
+  Mapping 'SNN_DW01_add_26'
+  Mapping 'SNN_DW_cmp_0'
+  Mapping 'SNN_DW_cmp_1'
+  Mapping 'SNN_DW_cmp_2'
+  Mapping 'SNN_DW_cmp_3'
+  Mapping 'SNN_DW_cmp_4'
+  Mapping 'SNN_DW_cmp_5'
+  Mapping 'SNN_DW_cmp_6'
+  Mapping 'SNN_DW_cmp_7'
+  Mapping 'SNN_DW_cmp_8'
+  Mapping 'SNN_DW_cmp_9'
+  Mapping 'SNN_DW_cmp_10'
+  Mapping 'SNN_DW_cmp_11'
+  Mapping 'SNN_DW_cmp_12'
+  Mapping 'SNN_DW_cmp_13'
+  Mapping 'SNN_DW_cmp_14'
+  Processing 'SNN_DW01_inc_0'
+  Mapping 'SNN_DW_cmp_15'
+  Building model 'DW01_add_width10' (rpl)
+  Processing 'DW01_add_width10'
+  Building model 'DW01_add_width9' (rpl)
+  Processing 'DW01_add_width9'
+  Building model 'DW01_add_width17' (rpl)
+  Processing 'DW01_add_width17'
+  Building model 'DW01_add_width18' (rpl)
+  Processing 'DW01_add_width18'
+  Building model 'DW01_add_width20' (rpl)
+  Processing 'DW01_add_width20'
+  Building model 'DW01_add_width19' (rpl)
+  Processing 'DW01_add_width19'
+  Processing 'SNN_DW01_add_27_DW01_add_0'
+  Processing 'SNN_DW01_add_28_DW01_add_1'
+  Processing 'SNN_DW01_add_29'
+  Processing 'SNN_DW01_add_30'
+  Mapping 'SNN_DW_mult_uns_0'
+  Mapping 'SNN_DW_mult_uns_1'
+  Processing 'SNN_DW01_add_31_DW01_add_4'
+  Mapping 'SNN_DW_mult_uns_2'
+  Mapping 'SNN_DW_mult_uns_3'
+  Processing 'SNN_DW01_add_32_DW01_add_5'
+  Processing 'SNN_DW01_add_33_DW01_add_6'
+  Processing 'SNN_DW01_add_34_DW01_add_7'
+  Processing 'SNN_DW01_add_35_DW01_add_8'
+  Processing 'SNN_DW01_add_36_DW01_add_9'
+  Processing 'SNN_DW01_add_37_DW01_add_10'
+  Processing 'SNN_DW01_add_38_DW01_add_11'
+  Mapping 'SNN_DW_mult_uns_4'
+  Mapping 'SNN_DW_mult_uns_5'
+  Mapping 'SNN_DW_mult_uns_6'
+  Mapping 'SNN_DW_mult_uns_7'
+  Mapping 'SNN_DW_mult_uns_8'
+  Mapping 'SNN_DW_mult_uns_9'
+  Mapping 'SNN_DW_mult_uns_10'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Allocating blocks in 'DW_div_uns_a_width20_b_width12'
+  Allocating blocks in 'DW_div_a_width20_b_width12_tc_mode0_rem_mode1'
+  Allocating blocks in 'DW_div_uns_a_width20_b_width12'
+  Allocating blocks in 'DW_div_a_width20_b_width12_tc_mode0_rem_mode1'
+  Allocating blocks in 'DW_div_uns_a_width17_b_width9'
+  Allocating blocks in 'DW_div_a_width17_b_width9_tc_mode0_rem_mode1'
+  Allocating blocks in 'DW_div_uns_a_width17_b_width9'
+  Allocating blocks in 'DW_div_a_width17_b_width9_tc_mode0_rem_mode1'
+  Allocating blocks in 'DW_div_a_width17_b_width9_tc_mode0_rem_mode1'
+  Allocating blocks in 'DW_div_uns_a_width17_b_width9'
+  Allocating blocks in 'DW_div_a_width17_b_width9_tc_mode0_rem_mode1'
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 6)
+  Mapping Optimization (Phase 7)
+  Mapping Optimization (Phase 8)
+  Selecting implementations
+  Allocating blocks in 'DW_div_uns_a_width17_b_width9'
+  Building model 'DW_div_a_width17_b_width9_tc_mode0_rem_mode1' (rpl)
+  Structuring 'SNN_DW_div_uns_4'
+  Mapping 'SNN_DW_div_uns_4'
+  Building model 'DW_div_uns_a_width17_b_width9' (rpl)
+  Allocating blocks in 'DW_div_uns_a_width17_b_width9'
+  Allocating blocks in 'DW_div_a_width17_b_width9_tc_mode0_rem_mode1'
+  Structuring 'SNN_DW_div_uns_5'
+  Mapping 'SNN_DW_div_uns_5'
+  Allocating blocks in 'DW_div_uns_a_width17_b_width9'
+  Allocating blocks in 'DW_div_a_width17_b_width9_tc_mode0_rem_mode1'
+  Building model 'DW_div_a_width17_b_width9_tc_mode0_rem_mode1' (cla2)
+  Structuring 'SNN_DW_div_uns_6'
+  Mapping 'SNN_DW_div_uns_6'
+  Building model 'DW_div_uns_a_width17_b_width9' (cla2)
+  Allocating blocks in 'DW_div_uns_a_width17_b_width9'
+  Allocating blocks in 'DW_div_a_width17_b_width9_tc_mode0_rem_mode1'
+  Building model 'DW_div_a_width17_b_width9_tc_mode0_rem_mode1' (cla3)
+  Structuring 'SNN_DW_div_uns_7'
+  Mapping 'SNN_DW_div_uns_7'
+  Building model 'DW_div_uns_a_width17_b_width9' (cla3)
+  Allocating blocks in 'DW_div_uns_a_width17_b_width9'
+  Allocating blocks in 'DW_div_a_width17_b_width9_tc_mode0_rem_mode1'
+  Structuring 'SNN_DW_div_uns_8'
+  Mapping 'SNN_DW_div_uns_8'
+  Allocating blocks in 'DW_div_uns_a_width17_b_width9'
+  Allocating blocks in 'DW_div_a_width17_b_width9_tc_mode0_rem_mode1'
+  Structuring 'SNN_DW_div_uns_9'
+  Mapping 'SNN_DW_div_uns_9'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:03:05  343254.5      3.19     126.0       0.0                          
+    0:03:06  342738.9      3.73     168.1       0.0                          
+    0:03:06  342738.9      3.73     168.1       0.0                          
+    0:03:06  342755.6      3.66     167.1       0.0                          
+    0:03:06  342755.6      3.66     167.1       0.0                          
+    0:03:09  215061.7      4.23      61.1       0.0                          
+    0:03:10  212690.0      3.82      49.7       0.0                          
+    0:03:11  212537.0      3.69      36.2       0.0                          
+    0:03:12  212344.1      3.01      27.1       0.0                          
+    0:03:12  212154.5      2.81      23.9       0.0                          
+    0:03:13  212234.3      2.61      21.2       0.0                          
+    0:03:13  212297.5      2.59      20.7       0.0                          
+    0:03:13  212320.8      2.57      20.6       0.0                          
+    0:03:13  212367.4      2.50      19.6       0.0                          
+    0:03:14  212357.4      2.44      18.8       0.0                          
+    0:03:14  212390.6      2.44      18.8       0.0                          
+    0:03:14  212423.9      2.42      18.4       0.0                          
+    0:03:14  212417.3      2.32      17.2       0.0                          
+    0:03:14  212417.3      2.32      17.2       0.0                          
+    0:03:14  212417.3      2.32      17.2       0.0                          
+    0:03:14  212417.3      2.32      17.2       0.0                          
+    0:03:14  212417.3      2.32      17.2       0.0                          
+    0:03:14  212417.3      2.32      17.2       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:03:14  212417.3      2.32      17.2       0.0                          
+    0:03:17  214376.5      1.25       7.7       0.0 cnn_map0_reg[7][0]/D     
+    0:03:19  215141.6      1.05       6.3       0.0 cnn_map0_reg[7][0]/D     
+    0:03:19  215427.6      1.01       6.0       0.0 cnn_map0_reg[7][0]/D     
+    0:03:20  215733.7      0.94       5.6       0.0 cnn_map0_reg[7][0]/D     
+    0:03:21  216172.8      0.87       5.0       0.0 cnn_map0_reg[7][0]/D     
+    0:03:21  216448.8      0.84       4.8       0.0 cnn_map0_reg[7][0]/D     
+    0:03:21  216475.5      0.82       4.7       0.0 cnn_map0_reg[7][0]/D     
+    0:03:22  216325.8      0.81       4.6       0.0 cnn_map0_reg[7][0]/D     
+    0:03:22  216362.4      0.80       4.5       0.0 cnn_map0_reg[7][0]/D     
+    0:03:22  216528.7      0.78       3.8       0.0 cnn_map0_reg[7][0]/D     
+    0:03:23  216608.5      0.76       3.7       0.0 cnn_map0_reg[7][0]/D     
+    0:03:23  216681.7      0.75       3.7       0.0 cnn_map0_reg[7][0]/D     
+    0:03:23  216798.1      0.74       3.6       0.0 cnn_map0_reg[7][0]/D     
+    0:03:23  216811.4      0.71       3.4       0.0 cnn_map0_reg[7][0]/D     
+    0:03:24  216818.1      0.68       3.3       0.0 cnn_map0_reg[7][0]/D     
+    0:03:24  216868.0      0.67       3.2       0.0 cnn_map0_reg[7][0]/D     
+    0:03:25  217027.6      0.63       3.0       0.0 cnn_map0_reg[7][0]/D     
+    0:03:25  216977.7      0.61       2.9       0.0 cnn_map0_reg[7][0]/D     
+    0:03:26  217277.1      0.57       2.6       0.0 cnn_map0_reg[7][0]/D     
+    0:03:27  217546.6      0.47       2.0       0.0 cnn_map0_reg[7][0]/D     
+    0:03:28  217816.0      0.39       1.5       0.0 cnn_map0_reg[7][0]/D     
+    0:03:29  217736.2      0.37       1.5       0.0 cnn_map0_reg[7][0]/D     
+    0:03:29  217746.1      0.35       1.3       0.0 cnn_map0_reg[7][0]/D     
+    0:03:29  217979.0      0.33       1.2       0.0 cnn_map0_reg[7][0]/D     
+    0:03:30  217965.7      0.31       1.1       0.0 cnn_map0_reg[7][0]/D     
+    0:03:31  218344.9      0.26       0.8       0.0 cnn_map0_reg[7][0]/D     
+    0:03:31  218448.0      0.24       0.7       0.0 cnn_map0_reg[7][0]/D     
+    0:03:32  218837.2      0.19       0.5       0.0 cnn_map0_reg[7][0]/D     
+    0:03:32  218890.4      0.17       0.4       0.0 cnn_map0_reg[7][0]/D     
+    0:03:32  218853.8      0.16       0.4       0.0 cnn_map0_reg[7][0]/D     
+    0:03:32  219129.9      0.15       0.4       0.0 cnn_map0_reg[7][0]/D     
+    0:03:33  219146.6      0.10       0.2       0.0 cnn_map0_reg[7][0]/D     
+    0:03:34  219362.8      0.08       0.2       0.0 cnn_map0_reg[7][0]/D     
+    0:03:34  219465.9      0.04       0.0       0.0 cnn_map0_reg[7][0]/D     
+    0:03:35  219585.6      0.00       0.0       0.0                          
+    0:03:36  218128.7      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:03:36  218128.7      0.00       0.0       0.0                          
+    0:03:36  218128.7      0.00       0.0       0.0                          
+    0:03:37  213395.2      0.14       0.3       0.0                          
+    0:03:37  211865.1      0.12       0.3       0.0                          
+    0:03:37  211312.9      0.13       0.3       0.0                          
+    0:03:37  211096.7      0.14       0.4       0.0                          
+    0:03:37  210947.0      0.14       0.3       0.0                          
+    0:03:37  210947.0      0.14       0.3       0.0                          
+    0:03:38  211003.5      0.00       0.0       0.0                          
+    0:03:38  201889.2      1.07      14.2       0.0                          
+    0:03:39  199613.9      1.07       6.4       0.0                          
+    0:03:39  198965.3      1.07       6.4       0.0                          
+    0:03:39  198888.8      1.08       6.5       0.0                          
+    0:03:39  198888.8      1.08       6.5       0.0                          
+    0:03:39  198888.8      1.08       6.5       0.0                          
+    0:03:39  198888.8      1.08       6.5       0.0                          
+    0:03:39  198888.8      1.08       6.5       0.0                          
+    0:03:40  199374.4      0.43       2.7       0.0 cnn_map0_reg[7][0]/D     
+    0:03:40  199713.7      0.27       1.3       0.0 cnn_map0_reg[7][0]/D     
+    0:03:41  199903.3      0.18       1.0       0.0 cnn_map0_reg[7][0]/D     
+    0:03:42  199999.8      0.15       0.8       0.0 cnn_map0_reg[7][0]/D     
+    0:03:42  200106.2      0.12       0.7       0.0 cnn_map0_reg[7][0]/D     
+    0:03:42  200189.4      0.10       0.6       0.0 cnn_map0_reg[7][0]/D     
+    0:03:43  200535.4      0.07       0.5       0.0 cnn_map0_reg[7][0]/D     
+    0:03:43  200997.7      0.05       0.4       0.0 cnn_map0_reg[7][0]/D     
+    0:03:44  202664.2      0.00       0.0       0.0                          
+    0:03:44  202621.0      0.00       0.0       0.0                          
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+#======================================================
+#  Output Reports 
+#======================================================
+report_timing >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/02_SYN/Netlist/SNN_SYN.v'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab034/Lab08/EXERCISE_wocg/02_SYN/Netlist/SNN_SYN.sdf'. (WT-3)
+1
+write_sdc Netlist/$DESIGN\_SYN.sdc
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : SNN
+Version: T-2022.03
+Date   : Mon Apr 24 11:20:37 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                         2780
+Number of nets:                         10797
+Number of cells:                         8381
+Number of combinational cells:           7875
+Number of sequential cells:               388
+Number of macros/black boxes:               0
+Number of buf/inv:                       1742
+Number of references:                     196
+
+Combinational area:             172586.938348
+Buf/Inv area:                    19123.474157
+Noncombinational area:           30034.065910
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                202621.004258
+Total area:                 undefined
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SNN
+Version: T-2022.03
+Date   : Mon Apr 24 11:20:37 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: cnn_map0_reg_4__0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: cnn_map0_reg_7__0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  cnn_map0_reg_4__0_/CK (DFFRX1)                          0.00       0.00 r
+  cnn_map0_reg_4__0_/QN (DFFRX1)                          0.63       0.63 f
+  U1457/Y (AOI211X2)                                      0.25       0.88 r
+  U1524/Y (OAI221X2)                                      0.19       1.07 f
+  U1029/Y (INVX4)                                         0.11       1.18 r
+  U1222/Y (NOR2X1)                                        0.08       1.26 f
+  U1476/Y (MX2X2)                                         0.29       1.55 r
+  U1930/Y (INVX2)                                         0.05       1.60 f
+  U938/Y (OR2X1)                                          0.23       1.82 f
+  U935/Y (AND2X2)                                         0.18       2.01 f
+  U937/Y (NOR3X2)                                         0.14       2.14 r
+  U1412/Y (OR4X4)                                         0.21       2.35 r
+  U1682/Y (NOR2BX4)                                       0.18       2.53 r
+  U1459/Y (MX2X1)                                         0.33       2.87 r
+  U1460/Y (MX2X2)                                         0.22       3.08 r
+  mult_598/a[1] (SNN_DW_mult_uns_52)                      0.00       3.08 r
+  mult_598/U371/Y (INVX3)                                 0.11       3.20 f
+  mult_598/U200/Y (NOR2X4)                                0.14       3.33 r
+  mult_598/U372/S (ADDFHX2)                               0.36       3.69 f
+  mult_598/U382/S (ADDFHX2)                               0.31       3.99 f
+  mult_598/U392/Y (OR2X4)                                 0.23       4.23 f
+  mult_598/U412/Y (NAND2X1)                               0.10       4.32 r
+  mult_598/U370/Y (XNOR2X1)                               0.24       4.56 f
+  mult_598/product[4] (SNN_DW_mult_uns_52)                0.00       4.56 f
+  add_611/A[4] (SNN_DW01_add_293)                         0.00       4.56 f
+  add_611/U195/Y (OR2X2)                                  0.25       4.81 f
+  add_611/U169/Y (AOI21X1)                                0.27       5.08 r
+  add_611/U212/Y (OAI21X2)                                0.19       5.27 f
+  add_611/U251/Y (AOI21X4)                                0.23       5.50 r
+  add_611/U196/Y (INVX4)                                  0.07       5.57 f
+  add_611/U168/Y (AOI21X2)                                0.16       5.73 r
+  add_611/U193/Y (XNOR2X2)                                0.23       5.96 f
+  add_611/SUM[8] (SNN_DW01_add_293)                       0.00       5.96 f
+  add_0_root_add_0_root_add_615_4/A[8] (SNN_DW01_add_307)
+                                                          0.00       5.96 f
+  add_0_root_add_0_root_add_615_4/U178/Y (OR2X4)          0.23       6.19 f
+  add_0_root_add_0_root_add_615_4/U220/Y (AOI21X4)        0.21       6.40 r
+  add_0_root_add_0_root_add_615_4/U165/Y (INVX3)          0.06       6.46 f
+  add_0_root_add_0_root_add_615_4/U193/Y (XOR2X2)         0.25       6.71 r
+  add_0_root_add_0_root_add_615_4/SUM[9] (SNN_DW01_add_307)
+                                                          0.00       6.71 r
+  U943/Y (NAND2X2)                                        0.09       6.80 f
+  U944/Y (NAND2X4)                                        0.16       6.96 r
+  div_631_u_div_u_add_PartRem_3_3/A[0] (SNN_DW01_add_316)
+                                                          0.00       6.96 r
+  div_631_u_div_u_add_PartRem_3_3/U129/Y (OR2X4)          0.15       7.11 r
+  div_631_u_div_u_add_PartRem_3_3/U134/CO (ADDFHX2)       0.43       7.54 r
+  div_631_u_div_u_add_PartRem_3_3/U130/CO (ADDFHX4)       0.23       7.77 r
+  div_631_u_div_u_add_PartRem_3_3/U111/Y (AOI21X4)        0.09       7.86 f
+  div_631_u_div_u_add_PartRem_3_3/U168/Y (OAI21X2)        0.17       8.03 r
+  div_631_u_div_u_add_PartRem_3_3/U116/Y (NAND2X2)        0.11       8.14 f
+  div_631_u_div_u_add_PartRem_3_3/U109/Y (OAI21X2)        0.22       8.36 r
+  div_631_u_div_u_add_PartRem_3_3/U3/Y (NAND2X4)          0.10       8.46 f
+  div_631_u_div_u_add_PartRem_3_3/U136/Y (INVX8)          0.13       8.59 r
+  div_631_u_div_u_add_PartRem_3_3/CO (SNN_DW01_add_316)
+                                                          0.00       8.59 r
+  U1500/Y (INVX8)                                         0.07       8.66 f
+  U919/Y (NAND2X2)                                        0.11       8.76 r
+  U922/Y (INVX2)                                          0.06       8.82 f
+  U974/Y (OAI22X1)                                        0.21       9.03 r
+  U973/Y (NAND3X1)                                        0.12       9.15 f
+  U1848/Y (OR2X2)                                         0.26       9.41 f
+  div_631_u_div_u_add_PartRem_2_6/A[3] (SNN_DW01_add_124)
+                                                          0.00       9.41 f
+  div_631_u_div_u_add_PartRem_2_6/U161/Y (NOR2X2)         0.10       9.52 r
+  div_631_u_div_u_add_PartRem_2_6/U152/Y (INVX2)          0.06       9.58 f
+  div_631_u_div_u_add_PartRem_2_6/U160/Y (NAND2X2)        0.08       9.66 r
+  div_631_u_div_u_add_PartRem_2_6/U163/Y (NAND2X2)        0.10       9.76 f
+  div_631_u_div_u_add_PartRem_2_6/U168/Y (AOI21X4)        0.20       9.96 r
+  div_631_u_div_u_add_PartRem_2_6/U50/Y (OAI21X4)         0.10      10.06 f
+  div_631_u_div_u_add_PartRem_2_6/U202/Y (OAI2BB1X4)      0.23      10.29 f
+  div_631_u_div_u_add_PartRem_2_6/CO (SNN_DW01_add_124)
+                                                          0.00      10.29 f
+  U1309/Y (OR2X2)                                         0.28      10.57 f
+  U898/Y (OAI33X2)                                        0.44      11.01 r
+  U1533/Y (OR3X4)                                         0.26      11.27 r
+  U1514/Y (OR2X4)                                         0.13      11.40 r
+  div_631_u_div_u_add_PartRem_1_4/A[5] (SNN_DW01_add_251)
+                                                          0.00      11.40 r
+  div_631_u_div_u_add_PartRem_1_4/U85/Y (OR2X2)           0.19      11.59 r
+  div_631_u_div_u_add_PartRem_1_4/U97/Y (NAND2X4)         0.08      11.67 f
+  div_631_u_div_u_add_PartRem_1_4/U52/Y (OAI21X4)         0.17      11.83 r
+  div_631_u_div_u_add_PartRem_1_4/U116/Y (NAND2X4)        0.10      11.93 f
+  div_631_u_div_u_add_PartRem_1_4/U3/Y (OAI21X4)          0.14      12.07 r
+  div_631_u_div_u_add_PartRem_1_4/CO (SNN_DW01_add_251)
+                                                          0.00      12.07 r
+  U1680/Y (BUFX12)                                        0.18      12.25 r
+  U1570/Y (CLKINVX8)                                      0.12      12.37 f
+  U1403/Y (OR2X4)                                         0.23      12.60 f
+  U1402/Y (OR2X4)                                         0.23      12.83 f
+  U1213/Y (INVX2)                                         0.09      12.92 r
+  U1190/Y (AND2X1)                                        0.27      13.19 r
+  U2485/Y (OR3X2)                                         0.17      13.36 r
+  U1771/Y (OR2X1)                                         0.17      13.53 r
+  div_631_u_div_u_add_PartRem_0_5/A[6] (SNN_DW01_add_266)
+                                                          0.00      13.53 r
+  div_631_u_div_u_add_PartRem_0_5/U119/Y (NOR2BX2)        0.15      13.68 r
+  div_631_u_div_u_add_PartRem_0_5/U140/Y (NAND2X1)        0.08      13.76 f
+  div_631_u_div_u_add_PartRem_0_5/U142/Y (OAI21X1)        0.16      13.92 r
+  div_631_u_div_u_add_PartRem_0_5/U110/Y (AOI21X1)        0.12      14.04 f
+  div_631_u_div_u_add_PartRem_0_5/U141/Y (CLKINVX2)       0.08      14.12 r
+  div_631_u_div_u_add_PartRem_0_5/CO (SNN_DW01_add_266)
+                                                          0.00      14.12 r
+  U2437/Y (INVX2)                                         0.06      14.17 f
+  U1030/Y (OR4X4)                                         0.43      14.60 f
+  U1031/Y (OAI211X2)                                      0.11      14.71 r
+  U1551/Y (NAND3BX2)                                      0.18      14.89 r
+  cnn_map0_reg_7__0_/D (DFFRXL)                           0.00      14.89 r
+  data arrival time                                                 14.89
+
+  clock clk (rise edge)                                  15.00      15.00
+  clock network delay (ideal)                             0.00      15.00
+  cnn_map0_reg_7__0_/CK (DFFRXL)                          0.00      15.00 r
+  library setup time                                     -0.11      14.89
+  data required time                                                14.89
+  --------------------------------------------------------------------------
+  data required time                                                14.89
+  data arrival time                                                -14.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+exit
+
+Memory usage for this session 1453 Mbytes.
+Memory usage for this session including child processes 1453 Mbytes.
+CPU usage for this session 226 seconds ( 0.06 hours ).
+Elapsed time for this session 233 seconds ( 0.06 hours ).
+
+Thank you...

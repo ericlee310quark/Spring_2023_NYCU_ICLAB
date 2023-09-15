@@ -1,0 +1,108 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : CDC
+Version: T-2022.03
+Date   : Sun Apr 16 22:53:18 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: info_0_reg[1][0][0]
+              (rising edge-triggered flip-flop clocked by clk1)
+  Endpoint: id_0_reg[0][0]
+            (rising edge-triggered flip-flop clocked by clk1)
+  Path Group: clk1
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk1 (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  info_0_reg[1][0][0]/CK (DFFSX1)          0.00       0.00 r
+  info_0_reg[1][0][0]/QN (DFFSX1)          0.55       0.55 r
+  U1398/Y (AND2XL)                         0.26       0.82 r
+  U1197/CO (ADDFX1)                        0.56       1.37 r
+  U913/S (ADDFXL)                          0.98       2.35 f
+  U1396/Y (INVXL)                          0.17       2.52 r
+  U1971/Y (OAI2BB1XL)                      0.22       2.74 r
+  U1364/Y (OAI22XL)                        0.16       2.90 f
+  U1972/Y (AOI222XL)                       0.61       3.51 r
+  U974/Y (AOI222X1)                        0.31       3.82 f
+  U1973/Y (AOI222XL)                       0.64       4.46 r
+  U1074/Y (AOI222XL)                       0.34       4.80 f
+  U1975/Y (AOI222XL)                       0.61       5.40 r
+  U1977/Y (AOI222XL)                       0.34       5.74 f
+  U1978/Y (AOI222XL)                       0.64       6.38 r
+  U1554/Y (AOI222XL)                       0.31       6.69 f
+  U1553/Y (AOI222XL)                       0.58       7.27 r
+  U1564/Y (OAI31X1)                        0.18       7.45 f
+  U1563/Y (BUFX4)                          0.29       7.74 f
+  U957/Y (MXI2XL)                          0.20       7.94 f
+  U1033/Y (NAND2X1)                        0.14       8.08 r
+  U951/Y (INVX1)                           0.06       8.15 f
+  U881/Y (OAI21X1)                         0.20       8.35 r
+  U950/Y (OAI22X1)                         0.16       8.51 f
+  U948/Y (OAI22X2)                         0.21       8.72 r
+  U1029/CON (AFHCONX2)                     0.17       8.89 f
+  U1547/CON (AFHCONX2)                     0.21       9.10 r
+  U1984/CON (AFHCONX2)                     0.14       9.24 f
+  U947/Y (AOI2BB1XL)                       0.27       9.51 f
+  U928/Y (AOI2BB1XL)                       0.27       9.78 f
+  U945/Y (AOI2BB2X2)                       0.26      10.04 f
+  U944/CON (AFHCONX2)                      0.22      10.26 r
+  U1321/Y (NOR2X2)                         0.11      10.37 f
+  U943/Y (NAND2X2)                         0.17      10.55 r
+  U927/Y (NAND2X2)                         0.09      10.64 f
+  U1019/Y (NOR2X1)                         0.19      10.83 r
+  U1015/Y (INVX1)                          0.12      10.95 f
+  U1014/Y (NOR2X1)                         0.14      11.08 r
+  U849/Y (BUFX4)                           0.33      11.41 r
+  U1686/Y (AOI222XL)                       0.20      11.61 f
+  id_0_reg[0][0]/D (DFFSX1)                0.00      11.61 f
+  data arrival time                                  11.61
+
+  clock clk1 (rise edge)                  12.00      12.00
+  clock network delay (ideal)              0.00      12.00
+  id_0_reg[0][0]/CK (DFFSX1)               0.00      12.00 r
+  library setup time                      -0.38      11.62
+  data required time                                 11.62
+  -----------------------------------------------------------
+  data required time                                 11.62
+  data arrival time                                 -11.61
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: out_reg[0] (rising edge-triggered flip-flop clocked by clk2)
+  Endpoint: out[0] (output port clocked by clk2)
+  Path Group: clk2
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk2 (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  out_reg[0]/CK (DFFRHQX4)                 0.00       0.00 r
+  out_reg[0]/Q (DFFRHQX4)                  0.34       0.34 r
+  U2545/Y (BUFX20)                         6.51       6.84 r
+  out[0] (out)                             0.00       6.84 r
+  data arrival time                                   6.84
+
+  clock clk2 (rise edge)                  13.70      13.70
+  clock network delay (ideal)              0.00      13.70
+  output external delay                   -6.85       6.85
+  data required time                                  6.85
+  -----------------------------------------------------------
+  data required time                                  6.85
+  data arrival time                                  -6.84
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+1

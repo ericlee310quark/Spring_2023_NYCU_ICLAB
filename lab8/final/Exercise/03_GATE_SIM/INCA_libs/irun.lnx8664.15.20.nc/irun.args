@@ -1,0 +1,12 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+TESTBED.v
+-define
+GATE+CG
+-debug
+-loadpli1
+debpli:novas_pli_boot
+-v
+/RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v

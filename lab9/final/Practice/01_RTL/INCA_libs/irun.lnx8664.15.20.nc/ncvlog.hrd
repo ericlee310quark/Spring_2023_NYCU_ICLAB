@@ -1,0 +1,12 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-YDIR
+/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/
+-DEFINE
+RTL
+-INCDIR
+/RAID2/cad/synopsys/synthesis/2022.03/dw/sim_ver/
+-LIBEXT
+.v

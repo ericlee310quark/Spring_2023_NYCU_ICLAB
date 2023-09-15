@@ -1,0 +1,76 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'OS' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : OS
+Version: T-2022.03
+Date   : Mon May  1 17:51:03 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: last_user_INFO_reg[shop_history][seller_ID][3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: last_seller_shop_info_reg[medium_num][3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  last_user_INFO_reg[shop_history][seller_ID][3]/CK (DFFRHQX4)
+                                                          0.00 #     0.00 r
+  last_user_INFO_reg[shop_history][seller_ID][3]/Q (DFFRHQX4)
+                                                          0.33       0.33 r
+  U13027/Y (INVX2)                                        0.10       0.43 f
+  U10870/Y (NAND2X4)                                      0.10       0.53 r
+  U11212/Y (INVX3)                                        0.06       0.59 f
+  U11276/Y (NAND2X4)                                      0.09       0.68 r
+  U11275/Y (INVX8)                                        0.06       0.74 f
+  U11516/Y (INVX3)                                        0.09       0.83 r
+  U7290/Y (NOR2X2)                                        0.07       0.91 f
+  U13059/Y (INVX4)                                        0.18       1.08 r
+  U7224/Y (AOI2BB2XL)                                     0.21       1.29 r
+  U11023/Y (NAND4XL)                                      0.16       1.45 f
+  U13620/Y (NOR2X1)                                       0.14       1.58 r
+  U11081/Y (NAND4XL)                                      0.15       1.74 f
+  U13634/Y (NAND2XL)                                      0.12       1.86 r
+  U13635/Y (NAND4X1)                                      0.16       2.02 f
+  U8271/Y (XOR2XL)                                        0.30       2.33 f
+  U7094/Y (NOR2X2)                                        0.17       2.50 r
+  U7091/Y (NAND4X4)                                       0.16       2.66 f
+  U7090/Y (NOR2X4)                                        0.13       2.79 r
+  U7089/Y (NAND2X4)                                       0.08       2.87 f
+  U11229/Y (NAND2X4)                                      0.10       2.96 r
+  U7314/Y (NAND2X1)                                       0.12       3.08 f
+  U11179/Y (INVX2)                                        0.10       3.18 r
+  U11337/Y (AOI2BB2X4)                                    0.18       3.35 r
+  U15551/Y (NAND2X1)                                      0.18       3.53 f
+  U15556/Y (AOI22XL)                                      0.19       3.71 r
+  U15557/Y (OAI21XL)                                      0.11       3.83 f
+  last_seller_shop_info_reg[medium_num][3]/D (DFFRX4)     0.00       3.83 f
+  data arrival time                                                  3.83
+
+  clock clk (rise edge)                                   4.10       4.10
+  clock network delay (ideal)                             0.00       4.10
+  last_seller_shop_info_reg[medium_num][3]/CK (DFFRX4)
+                                                          0.00       4.10 r
+  library setup time                                     -0.27       3.83
+  data required time                                                 3.83
+  --------------------------------------------------------------------------
+  data required time                                                 3.83
+  data arrival time                                                 -3.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
