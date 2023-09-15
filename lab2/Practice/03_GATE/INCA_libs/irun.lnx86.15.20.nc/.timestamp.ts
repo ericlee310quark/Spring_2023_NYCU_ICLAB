@@ -1,0 +1,2 @@
+1674996242 /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v
+1674996544 /RAID2/COURSE/iclab/iclab034/Lab02/Practice/00_TESTBED/TESTBED.v

@@ -1,0 +1,69 @@
+irun(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s084: Started on Oct 10, 2022 at 21:51:33 CST
+irun
+	TESTBENCH.v
+	-define RTL
+	-debug
+	-notimingchecks
+	-loadpli1 debpli:novas_pli_boot
+	-y /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/
+	+libext+.v
+file: TESTBENCH.v
+module VIP(
+         |
+ncvlog: *W,RECOME (./VIP.v,1|9): recompiling design unit worklib.VIP:v.
+	First compiled from line 1 of VIP.v.
+(`include file: ./VIP.v line 1, file: TESTBENCH.v line 4)
+ncvlog: *W,LIBNOU: Library "/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/" given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 1
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+DW_fp_mult #(inst_sig_width, inst_exp_width, inst_ieee_compliance) M0 (.a(mult_a), .b(mult_b), .rnd(3'b000), .z(mult_out));
+                                                                    |
+ncelab: *W,CUVWSP (./PATTERN.v,74|68): 1 output port was not connected:
+ncelab: (/usr/synthesis/dw/sim_ver/DW_fp_mult.v,88): status
+
+DW_fp_add #(inst_sig_width, inst_exp_width, inst_ieee_compliance) A0 (.a(add_a), .b(add_b), .rnd(3'b000), .z(add_out));
+                                                                   |
+ncelab: *W,CUVWSP (./PATTERN.v,75|67): 1 output port was not connected:
+ncelab: (/usr/synthesis/dw/sim_ver/DW_fp_add.v,64): status
+
+	Top level design units:
+		TESTBENCH
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.TESTBENCH:v <0x046803c7>
+			streams:   1, words:   613
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  6       6
+		Registers:              113     113
+		Scalar wires:             5       -
+		Vectored wires:          15       -
+		Always blocks:            3       5
+		Initial blocks:          10      10
+		Cont. assignments:        6       6
+		Pseudo assignments:       6       6
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.TESTBENCH:v
+Loading snapshot worklib.TESTBENCH:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/INCISIVE_15.20.084/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'VIP.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+**************************************************************
+*   Output signal should be 0 after initial RESET at  600     *
+**************************************************************
+Simulation complete via $finish(1) at time 5500 PS + 0
+./PATTERN.v:110     $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s084: Exiting on Oct 10, 2022 at 21:51:34 CST  (total: 00:00:01)

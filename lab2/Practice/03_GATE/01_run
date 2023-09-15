@@ -1,0 +1,2 @@
+irun TESTBED.v -define GATE -debug -v ~iclabta01/umc018/Verilog/umc18_neg.v
+

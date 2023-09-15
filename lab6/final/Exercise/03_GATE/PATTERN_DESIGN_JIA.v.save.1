@@ -1,0 +1,373 @@
+//############################################################################
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//    (C) Copyright Optimum Application-Specific Integrated System Laboratory
+//    All Right Reserved
+//		Date		: 2023/03
+//		Version		: v1.0
+//   	File Name   : PATTERN.v
+//   	Module Name : PATTERN
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//############################################################################
+
+`ifdef RTL_TOP
+    `define CYCLE_TIME 40
+`endif
+
+`ifdef GATE_TOP
+    `define CYCLE_TIME 
+`endif
+
+module PATTERN (
+    // Output signals
+    clk, rst_n, in_valid,
+    in_Px, in_Py, in_Qx, in_Qy, in_prime, in_a,
+    // Input signals
+    out_valid, out_Rx, out_Ry
+);
+
+// ===============================================================
+// Input & Output Declaration
+// ===============================================================
+output reg clk, rst_n, in_valid;
+output reg [5:0] in_Px, in_Py, in_Qx, in_Qy, in_prime, in_a;
+input out_valid;
+input [5:0] out_Rx, out_Ry;
+
+//================================================================
+//    wires % registers
+//================================================================
+real CYCLE = `CYCLE_TIME;
+
+parameter PATNUM = 50;
+//parameter LEN = 9;
+
+reg[9*8:1]  reset_color       = "\033[1;0m";
+reg[10*8:1] txt_black_prefix  = "\033[1;30m";
+reg[10*8:1] txt_blue_prefix   = "\033[1;34m";
+reg[10*8:1] txt_green_prefix  = "\033[1;32m";
+
+integer patcount = 1, total_latency, wait_val_time;
+integer SEED = 123;
+integer i,j, out_val_clk_times;
+
+integer px,py,qx,qy,a;
+
+integer prime_number, int_over_Fp;
+integer prime_choice, input_choice;
+
+integer prime_choice_end = 16;
+integer golden_deno, golden_deno_inv;
+integer golden_x, golden_y, golden_s;
+integer temp_y;
+//================================================================
+//    clock
+//================================================================
+initial 
+begin
+	clk = 0;
+end
+always #(CYCLE/2.0) clk = ~clk;
+//================================================================
+//    initial
+//================================================================
+initial 
+begin
+	rst_n = 1'b1;
+	in_valid = 1'b0;
+	
+    in_Px	 = 6'bxxxxx;
+	in_Py	 = 6'bxxxxx;
+	in_Qx	 = 6'bxxxxx;
+	in_Qy	 = 6'bxxxxx;
+	in_prime = 6'bxxxxx;
+	in_a     = 6'bxxxxx; 
+	
+	force clk = 0;
+	total_latency = 0;
+	reset_signal_task;
+	
+	for (prime_choice = 0; prime_choice < prime_choice_end; prime_choice = prime_choice + 1) begin
+		gen_prime_number;
+		if(prime_number <= 7)begin
+			for(px = 1; px < prime_number; px = px + 1) begin
+				for(py = 1; py < prime_number; py = py + 1) begin
+					for(qx = 1; qx < prime_number; qx = qx + 1) begin
+						for(qy = 1; qy < prime_number; qy = qy + 1) begin
+							for(a = 1; a < prime_number; a = a + 1) begin
+								if((px != qx) || ((px==qx) && (py==qy)))begin
+									input_task;
+									gen_golden_denominator_inverse;
+									gen_golden_out;
+									wait_out_valid;
+									check_ans;
+									$display("%0sPASS %0s(in_Px = %4d, in_Py = %4d, in_Qx = %4d, in_Qy = %4d, in_prime = %4d, in_a = %4d)",txt_blue_prefix, txt_green_prefix,
+																	px,			py,			qx,			qy,			prime_number,		a);
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+		else begin
+			for(patcount=1; patcount<=PATNUM; patcount=patcount+1) begin
+				px = ($urandom(SEED)) % (prime_number-1) + 1;
+				py = ($urandom(SEED)) % (prime_number-1) + 1;
+				qx = ($urandom(SEED)) % (prime_number-1) + 1;
+				qy = ($urandom(SEED)) % (prime_number-1) + 1;
+				a  = ($urandom(SEED)) % (prime_number-1) + 1;
+				if(patcount=='d1)begin
+					repeat(2)@(negedge clk);
+				end
+				if((px != qx) || ((px==qx) && (py==qy)))begin
+					input_task;
+					gen_golden_denominator_inverse;
+					gen_golden_out;
+					wait_out_valid;
+					check_ans;
+					$display("%0sPASS %0s(in_Px = %4d, in_Py = %4d, in_Qx = %4d, in_Qy = %4d, in_prime = %4d, in_a = %4d)",txt_blue_prefix, txt_green_prefix,
+												   px,			py,			qx,			 qy,	prime_number,		  a);
+				end
+			end
+		end
+	end
+	YOU_PASS_task;
+end
+
+task reset_signal_task; begin 
+  #CYCLE;  rst_n=0;
+  #CYCLE;  rst_n=1;
+  
+  if((out_valid !== 1'b0)|| (out_Rx !== 0) || (out_Ry !== 0)) begin
+	FAIL_task;
+	$display("************************************************************");  
+	$display("                          FAIL!                              ");    
+	$display("*  Output signal should be 0 after initial RESET  at %8t   *",$time);
+	$display("************************************************************");
+	repeat(2) #CYCLE;
+	$finish;
+  end
+  #(CYCLE);  release clk;
+end 
+endtask
+
+task gen_prime_number; begin
+	case (prime_choice)
+	'd0 :	prime_number = 5;
+	'd1 :	prime_number = 7;
+	'd2 :	prime_number = 11;
+	'd3 :	prime_number = 13;
+	'd4 :	prime_number = 17;
+	'd5 :	prime_number = 19;
+	'd6 :	prime_number = 23;
+	'd7 :	prime_number = 29;
+	'd8 :	prime_number = 31;
+	'd9 :	prime_number = 37;
+	'd10 :	prime_number = 41;
+	'd11 :	prime_number = 43;
+	'd12 :	prime_number = 47;
+	'd13 :	prime_number = 53;
+	'd14 :	prime_number = 59;
+	'd15 :	prime_number = 61;
+	default:prime_number = 0;
+	endcase
+end
+endtask
+
+task gen_golden_denominator_inverse; begin
+	if(px == qx && py == qy)begin
+		golden_deno = (py*2)% prime_number;
+	end
+	else begin
+		if(qx >= px)begin
+			golden_deno = (qx-px)% prime_number;
+		end
+		else begin
+			golden_deno = (qx-px+prime_number)% prime_number;
+		end
+	end
+	
+	for (i = 1; i < prime_number; i = i + 1)begin
+		if ((golden_deno * i) % prime_number == 1)begin
+			golden_deno_inv = i;
+		end
+	end
+end 
+endtask
+
+task input_task; 
+begin
+	// Inputs start from second negtive edge after the begining of clock
+	if(prime_choice=='d0)begin
+		@(negedge clk);
+		@(negedge clk);
+	end
+	
+	// Set in_valid and input the data
+	in_valid = 1'b1;
+	in_Px = px;
+	in_Py = py;
+	in_Qx = qx;
+	in_Qy = qy;
+	in_prime = prime_number;
+	in_a = a;
+	
+	@(negedge clk);
+	if(out_valid === 1'b0)begin
+		if((out_Rx !== 0) || (out_Ry !== 0))begin
+			FAIL_task;
+			$display("************************************************************");  
+			$display("                          FAIL!                              ");    
+			$display("*  Out should be 0 at %8t",$time);
+			$display("************************************************************");
+			repeat(2) #CYCLE;
+			$finish;
+		end
+	end
+	if(out_valid === 1'b1) begin
+		FAIL_task;
+		$display("************************************************************");  
+		$display("                          FAIL!                              ");    
+		$display("*  Outvalid should be 0 at %8t",$time);
+		$display("************************************************************");
+		repeat(2) #CYCLE;
+		$finish;
+	end
+	// Disable input
+	in_valid = 1'b0;
+	in_Px	 = 6'bxxxxx;
+	in_Py	 = 6'bxxxxx;
+	in_Qx	 = 6'bxxxxx;
+	in_Qy	 = 6'bxxxxx;
+	in_prime = 6'bxxxxx;
+	in_a     = 6'bxxxxx; 
+end
+endtask
+
+task gen_golden_out; begin
+	if(px == qx && py == qy)begin
+		golden_s = ((3 * px * px + a)*golden_deno_inv) % prime_number;
+	end
+	else begin
+		if(qy>=py)begin
+			golden_s = (qy - py) * golden_deno_inv % prime_number;
+		end
+		else begin
+			golden_s = (qy - py + prime_number) * golden_deno_inv % prime_number;
+		end
+	end
+	
+	golden_x = ((golden_s * golden_s) - px - qx) % prime_number;
+	if(px >= golden_x)begin
+		temp_y = golden_s * (px - golden_x);
+		if(temp_y >= golden_y)begin
+			golden_y = (temp_y - py) % prime_number;
+		end
+		else begin
+			golden_y = (temp_y - py + prime_number) % prime_number;
+		end
+	end
+	else begin
+		temp_y = golden_s * (px - golden_x + prime_number);
+		if(temp_y >= golden_y)begin
+			golden_y = (temp_y - py) % prime_number;
+		end
+		else begin
+			golden_y = (temp_y - py + prime_number) % prime_number;
+		end
+	end
+	
+	if(golden_x < 0)begin
+		golden_x = golden_x + prime_number;
+	end
+	if(golden_y < 0)begin
+		golden_y = golden_y + prime_number;
+	end
+end 
+endtask
+
+task wait_out_valid; begin
+  wait_val_time = -1;
+  while(out_valid !== 1'b1) begin
+	wait_val_time = wait_val_time + 1;
+	if(wait_val_time == 10000)
+	begin
+		FAIL_task;
+		$display("********************************************************");     
+        $display("                          FAIL!                              ");
+        $display("*  The execution latency are over 10000 cycles  at %8t   *",$time);//over max
+        $display("********************************************************");
+		repeat(2)@(negedge clk);
+		$finish;
+	end
+	@(negedge clk);
+  end
+  total_latency = total_latency + wait_val_time;
+end 
+endtask
+
+task check_ans; 
+begin
+  
+  //++++++++++++++++++++++++++++++++++++++++++++++++
+	i=0;
+	while(out_valid)begin
+		if(i >= 1)begin
+			FAIL_task;
+			$display("********************************************************");     
+			$display("                          FAIL!                              ");
+			$display("   Output should be asserted in only 1 cycles");
+			$display("********************************************************");
+			repeat(2)@(negedge clk);
+			$finish;
+		end
+		if(golden_x !== out_Rx || golden_y !== out_Ry)begin
+			$display("\n");
+			$display("%0sFAIL %0s(golden_s = %4d, golden_x = %4d, golden_y = %4d, your_x = %4d, your_y = %4d),(in_Px = %4d, in_Py = %4d, in_Qx = %4d, in_Qy = %4d, in_prime = %4d, in_a = %4d)",
+		txt_blue_prefix, txt_green_prefix,	golden_s, 	golden_x,		golden_y,		out_Rx,		out_Ry,				 px,	py,			qx,			qy,			prime_number,		a);
+			FAIL_task;
+			$display("%0s", reset_color);
+			$finish;
+		end
+		i=i+1;
+		@(negedge clk);
+	end
+	repeat(({$random(SEED)} % 3 + 1)) @(negedge clk);
+end 
+endtask
+
+task FAIL_task;
+begin
+        $display("\n");
+		$display("%0s", reset_color);
+        $display("        ----------------------------               ");
+        $display("        --                        --       |\\__/\\");
+        $display("        --  OOPS!!                --      / X,X  | ");
+        $display("        --                        --    /_____   | ");
+        $display("        --  Simulation Failed!!   --   /^ ^ ^ \\  |");
+        $display("        --                        --  |^ ^ ^ ^ |w| ");
+        $display("        ----------------------------   \\m___m__|_|");
+        $display("\n");
+end
+endtask
+
+task YOU_PASS_task;
+begin
+        $display("\n");
+        $display("\n");
+		$display("%0s", reset_color);
+        $display("        ----------------------------               ");
+        $display("        --                        --       |\__||  ");
+        $display("        --  Congratulations !!    --      / O.O  | ");
+        $display("        --                        --    /_____   | ");
+        $display("        --  Simulation out!!     --   /^ ^ ^ \\  |");
+        $display("        --                        --  |^ ^ ^ ^ |w| ");
+        $display("        ----------------------------   \\m___m__|_|");
+		$display ("total latency = %d",total_latency);	
+        $display("\n");
+		repeat(2)@(negedge clk);
+		$finish;
+end
+endtask
+
+endmodule

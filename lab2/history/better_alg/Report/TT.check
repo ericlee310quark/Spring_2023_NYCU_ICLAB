@@ -1,0 +1,19 @@
+ 
+****************************************
+check_design summary:
+Version:     R-2020.09
+Date:        Tue Mar  7 05:18:50 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      5
+    Unconnected ports (LINT-28)                                     5
+--------------------------------------------------------------------------------
+
+Warning: In design 'QUEEN', port 'in_valid_num' is not connected to any nets. (LINT-28)
+Warning: In design 'QUEEN', port 'in_num[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'QUEEN', port 'in_num[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'QUEEN', port 'in_num[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'QUEEN', port 'Port10' is not connected to any nets. (LINT-28)
+1

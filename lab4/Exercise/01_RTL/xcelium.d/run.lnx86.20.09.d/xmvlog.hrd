@@ -1,0 +1,10 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-YDIR
+/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/
+-DEFINE
+RTL
+-LIBEXT
+.v

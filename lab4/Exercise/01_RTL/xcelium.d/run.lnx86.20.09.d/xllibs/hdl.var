@@ -1,0 +1,3 @@
+define LIB_MAP ( $LIB_MAP \
+, ../../../../../../../../../../cad/synopsys/synthesis/2022.03/dw/sim_ver => sim_ver \
+)

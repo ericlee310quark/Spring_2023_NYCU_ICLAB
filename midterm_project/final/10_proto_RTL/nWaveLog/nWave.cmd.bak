@@ -1,0 +1,211 @@
+wvSetPosition -win $_nWave1 {("G1" 0)}
+wvOpenFile -win $_nWave1 \
+           {/RAID2/COURSE/iclab/iclab034/Midterm_project/10_RTL/GLCM.fsdb}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/U_GLCM"
+wvSetPosition -win $_nWave1 {("G1" 1)}
+wvSetPosition -win $_nWave1 {("G1" 1)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/U_GLCM/clk} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 )} 
+wvSetPosition -win $_nWave1 {("G1" 1)}
+wvSetPosition -win $_nWave1 {("G1" 2)}
+wvSetPosition -win $_nWave1 {("G1" 2)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/U_GLCM/clk} \
+{/TESTBED/U_GLCM/rst_n} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 2 )} 
+wvSetPosition -win $_nWave1 {("G1" 2)}
+wvResizeWindow -win $_nWave1 0 23 1536 801
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomOut -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/U_PATTERN"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/U_GLCM"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/U_GLCM/weight_sram"
+wvSetPosition -win $_nWave1 {("G1" 3)}
+wvSetPosition -win $_nWave1 {("G1" 3)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/U_GLCM/clk} \
+{/TESTBED/U_GLCM/rst_n} \
+{/TESTBED/U_GLCM/weight_sram/read_unit_state_c\[2:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 3 )} 
+wvSetPosition -win $_nWave1 {("G1" 3)}
+wvSetPosition -win $_nWave1 {("G1" 4)}
+wvSetPosition -win $_nWave1 {("G1" 4)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/U_GLCM/clk} \
+{/TESTBED/U_GLCM/rst_n} \
+{/TESTBED/U_GLCM/weight_sram/read_unit_state_c\[2:0\]} \
+{/TESTBED/U_GLCM/weight_sram/data_valid} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 4 )} 
+wvSetPosition -win $_nWave1 {("G1" 4)}
+wvSetPosition -win $_nWave1 {("G1" 5)}
+wvSetPosition -win $_nWave1 {("G1" 5)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/U_GLCM/clk} \
+{/TESTBED/U_GLCM/rst_n} \
+{/TESTBED/U_GLCM/weight_sram/read_unit_state_c\[2:0\]} \
+{/TESTBED/U_GLCM/weight_sram/data_valid} \
+{/TESTBED/U_GLCM/weight_sram/sram_read_out\[19:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 5 )} 
+wvSetPosition -win $_nWave1 {("G1" 5)}
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/U_GLCM"
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/U_GLCM/clk} \
+{/TESTBED/U_GLCM/rst_n} \
+{/TESTBED/U_GLCM/weight_sram/read_unit_state_c\[2:0\]} \
+{/TESTBED/U_GLCM/weight_sram/data_valid} \
+{/TESTBED/U_GLCM/weight_sram/sram_read_out\[19:0\]} \
+{/TESTBED/U_GLCM/image\[15:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 6 )} 
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvSelectSignal -win $_nWave1 {( "G1" 6 )} 
+wvExpandBus -win $_nWave1 {("G1" 6)}
+wvZoomIn -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 5 )} 
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomOut -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/U_GLCM/writer_ctr"
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/U_GLCM/weight_sram"
+wvSetPosition -win $_nWave1 {("G1" 23)}
+wvSetPosition -win $_nWave1 {("G1" 23)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/U_GLCM/clk} \
+{/TESTBED/U_GLCM/rst_n} \
+{/TESTBED/U_GLCM/weight_sram/read_unit_state_c\[2:0\]} \
+{/TESTBED/U_GLCM/weight_sram/data_valid} \
+{/TESTBED/U_GLCM/weight_sram/sram_read_out\[19:0\]} \
+{/TESTBED/U_GLCM/image\[15:0\]} \
+{/TESTBED/U_GLCM/image\[15\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[14\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[13\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[12\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[11\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[10\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[9\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[8\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[7\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[6\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[5\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[4\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[3\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[2\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[1\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[0\]\[79:0\]} \
+{/TESTBED/U_GLCM/weight_sram/dram_addr_reg\[5:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 23 )} 
+wvSetPosition -win $_nWave1 {("G1" 23)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 3585289.750987 -snap {("G1" 5)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalSetScope -win $_nWave1 "/TESTBED"
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomIn -win $_nWave1
+wvResizeWindow -win $_nWave1 1920 23 1920 1017
+wvZoomIn -win $_nWave1
+wvSetCursor -win $_nWave1 3712997.372785 -snap {("G1" 23)}
+wvResizeWindow -win $_nWave1 1920 23 1920 1017
+wvResizeWindow -win $_nWave1 1920 23 1920 1017
+wvResizeWindow -win $_nWave1 1920 23 1920 1017
+wvSetCursor -win $_nWave1 3710438.265641 -snap {("G1" 7)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSetCursor -win $_nWave1 3706295.348748 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/TESTBED/U_GLCM/weight_sram"
+wvSetPosition -win $_nWave1 {("G1" 24)}
+wvSetPosition -win $_nWave1 {("G1" 24)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/TESTBED/U_GLCM/clk} \
+{/TESTBED/U_GLCM/rst_n} \
+{/TESTBED/U_GLCM/weight_sram/read_unit_state_c\[2:0\]} \
+{/TESTBED/U_GLCM/weight_sram/data_valid} \
+{/TESTBED/U_GLCM/weight_sram/sram_read_out\[19:0\]} \
+{/TESTBED/U_GLCM/image\[15:0\]} \
+{/TESTBED/U_GLCM/image\[15\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[14\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[13\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[12\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[11\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[10\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[9\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[8\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[7\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[6\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[5\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[4\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[3\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[2\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[1\]\[79:0\]} \
+{/TESTBED/U_GLCM/image\[0\]\[79:0\]} \
+{/TESTBED/U_GLCM/weight_sram/dram_addr_reg\[5:0\]} \
+{/TESTBED/U_GLCM/weight_sram/last_data} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 24 )} 
+wvSetPosition -win $_nWave1 {("G1" 24)}
+wvGetSignalOpen -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomOut -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomIn -win $_nWave1
+wvSetCursor -win $_nWave1 3712982.556993 -snap {("G1" 24)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1

@@ -1,0 +1,75 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : QUEEN
+Version: R-2020.09
+Date   : Fri Mar 10 19:54:33 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: col_pointer_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lu_ram_reg[4]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  col_pointer_reg[0]/CK (DFFRHQX4)         0.00       0.00 r
+  col_pointer_reg[0]/Q (DFFRHQX4)          0.29       0.29 r
+  U2097/Y (BUFX8)                          0.19       0.48 r
+  U2102/Y (NOR2XL)                         0.09       0.57 f
+  U1172/Y (BUFX2)                          0.30       0.87 f
+  U2128/Y (NAND2XL)                        0.14       1.00 r
+  U2130/Y (NAND4XL)                        0.14       1.15 f
+  U2131/Y (NAND2XL)                        0.13       1.28 r
+  U2133/Y (NAND4X1)                        0.18       1.46 f
+  U2134/Y (INVX1)                          0.12       1.58 r
+  U2085/Y (OR2X1)                          0.18       1.76 r
+  U1456/Y (AND2XL)                         0.21       1.97 r
+  U2238/Y (NOR2X1)                         0.09       2.06 f
+  U2239/Y (AOI2BB1X2)                      0.23       2.30 f
+  U2254/Y (NAND2XL)                        0.15       2.44 r
+  U1324/Y (NAND2X1)                        0.15       2.59 f
+  U2272/Y (NOR3X2)                         0.26       2.85 r
+  U1321/Y (OAI21X2)                        0.12       2.97 f
+  U2090/Y (INVX2)                          0.09       3.06 r
+  U1318/Y (NAND4X1)                        0.09       3.15 f
+  U1317/Y (OAI2BB1X2)                      0.26       3.41 f
+  U1408/Y (MXI2X2)                         0.20       3.61 r
+  U1500/Y (NAND2X1)                        0.20       3.81 f
+  U1149/Y (NAND2X1)                        0.19       4.01 r
+  U1531/Y (XOR2X1)                         0.35       4.36 f
+  U1542/Y (INVXL)                          0.16       4.51 r
+  U1263/Y (NOR2X1)                         0.12       4.63 f
+  U1189/Y (AOI22XL)                        0.24       4.87 r
+  U1254/Y (NAND2XL)                        0.10       4.96 f
+  U2314/Y (MXI2X1)                         0.14       5.11 r
+  U2315/Y (AOI2BB1X2)                      0.21       5.32 r
+  U1129/Y (BUFX4)                          0.26       5.58 r
+  U2425/Y (MXI2X1)                         0.13       5.71 f
+  lu_ram_reg[4]/D (DFFRHQXL)               0.00       5.71 f
+  data arrival time                                   5.71
+
+  clock clk (rise edge)                    6.00       6.00
+  clock network delay (ideal)              0.00       6.00
+  lu_ram_reg[4]/CK (DFFRHQXL)              0.00       6.00 r
+  library setup time                      -0.29       5.71
+  data required time                                  5.71
+  -----------------------------------------------------------
+  data required time                                  5.71
+  data arrival time                                  -5.71
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1

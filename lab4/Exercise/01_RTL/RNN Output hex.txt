@@ -1,0 +1,74 @@
+[ PAT NO. 499 ]
+
+[ Layer 1 U*x ]
+
+4acc0055 4c08ffde c513c782 
+
+[ Layer 0->1 W*h ]
+
+4bda9747 c3e57468 4adc6747 
+
+[ Layer 1 U*x+W*h ]
+
+4c06cbae 4c08ff6b 4adc54ce 
+
+[ Layer 1 h ]
+
+4c06cbae 4c08ff6b 4adc54ce 
+
+[ Layer 1 V*h ]
+
+d76ac939 4cfcace9 ccd6f04e 
+
+[ Layer 1 y ]
+
+00000000 3f800000 00000000 
+==============================================
+[ Layer 2 U*x ]
+
+ca8e3a36 4a9367ed c508439f 
+
+[ Layer 1->2 W*h ]
+
+d7f885d1 50027790 d6fab09b 
+
+[ Layer 2 U*x+W*h ]
+
+d7f885d1 500289fd d6fab09b 
+
+[ Layer 2 h ]
+
+d646d174 500289fd d5488d49 
+
+[ Layer 2 V*h ]
+
+61d5988b d73995ee d0c3be97 
+
+[ Layer 2 y ]
+
+3f800000 00000000 00000000 
+==============================================
+[ Layer 3 U*x ]
+
+49be0a74 cad5977f 444cf99b 
+
+[ Layer 2->3 W*h ]
+
+6237484e da406f06 6138dbf6 
+
+[ Layer 3 U*x+W*h ]
+
+6237484e da406f06 6138dbf6 
+
+[ Layer 3 h ]
+
+6237484e d899f26b 6138dbf6 
+
+[ Layer 3 V*h ]
+
+edc4e1ef 632b1597 da4edf07 
+
+[ Layer 3 y ]
+
+00000000 3f800000 00000000 
+==============================================

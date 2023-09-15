@@ -1,0 +1,20 @@
+ 
+****************************************
+check_design summary:
+Version:     T-2022.03
+Date:        Fri Apr  7 16:21:52 2023
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               6
+    Cells do not drive (LINT-1)                                     6
+--------------------------------------------------------------------------------
+
+Warning: In design 'EC_TOP', cell 'B_95' does not drive any nets. (LINT-1)
+Warning: In design 'EC_TOP', cell 'B_96' does not drive any nets. (LINT-1)
+Warning: In design 'EC_TOP', cell 'B_97' does not drive any nets. (LINT-1)
+Warning: In design 'EC_TOP', cell 'C1542' does not drive any nets. (LINT-1)
+Warning: In design 'EC_TOP', cell 'C1546' does not drive any nets. (LINT-1)
+Warning: In design 'EC_TOP', cell 'C1550' does not drive any nets. (LINT-1)
+1

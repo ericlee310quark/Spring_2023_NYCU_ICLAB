@@ -1,0 +1,267 @@
+Information: Updating design information... (UID-85)
+Information: Timing loop detected. (OPT-150)
+	U1901/A0 U1901/Y U690/A U690/Y U564/A0N U564/Y U1087/A0 U1087/Y intadd_1/U6/A intadd_1/U6/S U494/A1 U494/Y 
+Information: Timing loop detected. (OPT-150)
+	U1903/A1 U1903/Y U2061/A0 U2061/Y U1794/A U1794/Y U560/A0N U560/Y U1823/A0 U1823/Y U688/A U688/S U482/A0 U482/Y U712/A0 U712/Y U861/A U861/Y U1509/A0N U1509/Y U1568/B U1568/Y U1627/A U1627/Y U1625/A0 U1625/Y U1139/A1 U1139/Y U702/A U702/Y U600/A U600/Y U1898/A1 U1898/Y U771/AN U771/Y U694/A U694/Y U1327/B U1327/Y U1901/A1 U1901/Y U690/A U690/Y U564/A0N U564/Y U1087/A0 U1087/Y intadd_1/U6/A intadd_1/U6/S U494/A1 U494/Y U1896/A U1896/Y U1617/A1 U1617/Y U1656/A U1656/Y U1328/A U1328/Y U764/A U764/Y U752/A U752/Y U562/A0N U562/Y U1081/A0 U1081/Y intadd_1/U4/A intadd_1/U4/S U488/A1 U488/Y U1890/A0 U1890/Y U809/A U809/Y U783/A0N U783/Y U1658/B U1658/Y U766/A U766/Y U1899/A0 U1899/Y 
+Warning: Disabling timing arc between pins 'A1' and 'Y' on cell 'U494'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A1' and 'Y' on cell 'U488'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A1' and 'Y' on cell 'U491'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0N' and 'Y' on cell 'U561'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0N' and 'Y' on cell 'U562'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A1' and 'Y' on cell 'U497'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U563'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U482'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0N' and 'Y' on cell 'U564'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U535'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U436'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0N' and 'Y' on cell 'U560'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0N' and 'Y' on cell 'U512'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0N' and 'Y' on cell 'U511'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U537'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U492'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U486'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U489'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U519'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U523'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U527'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U531'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A1' and 'Y' on cell 'U485'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U448'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U515'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U521'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U525'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U529'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U533'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U445'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U517'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U442'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U439'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A0' and 'Y' on cell 'U433'
+         to break a timing loop. (OPT-314)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : EC_TOP
+Version: T-2022.03
+Date   : Fri Apr  7 16:22:15 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: temp1_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  current_state_reg[1]/CK (DFFRX1)         0.00       0.00 r
+  current_state_reg[1]/Q (DFFRX1)          0.70       0.70 r
+  U1865/Y (NOR2X1)                         0.06       0.76 f
+  U685/Y (NAND2X1)                         0.26       1.02 r
+  U684/Y (INVX3)                           0.19       1.22 f
+  U1912/Y (AND2X2)                         0.23       1.45 f
+  U1115/Y (NOR2X1)                         0.37       1.82 r
+  U533/Y (AOI22X1)                         0.18       2.00 f
+  U1667/Y (OAI211XL)                       0.16       2.16 r
+  U1710/Y (AOI21XL)                        0.12       2.29 f
+  intadd_2/U6/CO (ADDFX1)                  0.54       2.83 f
+  intadd_2/U5/CO (ADDFX1)                  0.34       3.16 f
+  intadd_2/U4/CO (ADDFX1)                  0.34       3.50 f
+  intadd_2/U3/CO (ADDFX1)                  0.34       3.84 f
+  intadd_2/U2/S (ADDFXL)                   0.57       4.40 r
+  U2138/Y (INVX2)                          0.10       4.51 f
+  U1821/Y (AOI22XL)                        0.26       4.77 r
+  U433/Y (OAI211X1)                        0.24       5.01 f
+  U1054/Y (NAND2XL)                        0.20       5.21 r
+  U2075/Y (NOR2X1)                         0.12       5.32 f
+  U1677/Y (AOI21XL)                        0.20       5.52 r
+  mult_x_47/U25/S (CMPR42X1)               0.74       6.26 f
+  intadd_0/U8/CO (ADDFXL)                  1.27       7.53 f
+  intadd_0/U7/CO (ADDFXL)                  0.47       7.99 f
+  intadd_0/U6/CO (ADDFXL)                  0.47       8.46 f
+  intadd_0/U5/CO (ADDFX1)                  0.36       8.82 f
+  intadd_0/U4/CO (ADDFX1)                  0.34       9.16 f
+  intadd_0/U3/CO (ADDFX1)                  0.34       9.50 f
+  U640/CO (ADDFXL)                         0.47       9.97 f
+  U1870/Y (AOI211X1)                       0.32      10.29 r
+  U618/Y (NOR2X1)                          0.09      10.38 f
+  U1871/Y (NOR2X1)                         0.14      10.52 r
+  U1026/Y (AOI21X1)                        0.16      10.68 f
+  U673/Y (AOI222XL)                        0.59      11.28 r
+  U1341/Y (OAI21XL)                        0.15      11.43 f
+  U1023/Y (INVX1)                          0.12      11.54 r
+  U1140/Y (AOI211X1)                       0.10      11.64 f
+  U1022/Y (AND2X1)                         0.33      11.97 f
+  U1019/Y (NAND2XL)                        0.11      12.08 r
+  U1874/Y (OAI21X1)                        0.17      12.25 f
+  U1017/Y (AOI222X1)                       0.55      12.80 r
+  U1015/Y (AOI222XL)                       0.33      13.13 f
+  U1009/Y (INVX1)                          0.18      13.30 r
+  U1005/Y (OAI2BB1XL)                      0.09      13.40 f
+  U1876/Y (OAI211X1)                       0.17      13.57 r
+  U998/Y (NOR2X1)                          0.14      13.70 f
+  U727/Y (NAND2XL)                         0.12      13.82 r
+  U990/Y (OAI21X1)                         0.16      13.99 f
+  U989/Y (AOI222X1)                        0.60      14.58 r
+  U988/Y (AOI222X1)                        0.33      14.92 f
+  U982/Y (AOI222X1)                        0.54      15.45 r
+  U980/Y (OAI2BB1X1)                       0.09      15.55 f
+  U978/Y (OAI211X1)                        0.18      15.73 r
+  U975/Y (NOR2X1)                          0.14      15.87 f
+  U1355/Y (NAND2XL)                        0.12      15.99 r
+  U972/Y (OAI21X1)                         0.16      16.15 f
+  U1144/Y (AOI222X1)                       0.58      16.73 r
+  U963/Y (AOI222X1)                        0.33      17.06 f
+  U962/Y (AOI222X1)                        0.55      17.61 r
+  U1879/Y (AOI222X1)                       0.32      17.93 f
+  U1880/Y (AOI222X1)                       0.54      18.47 r
+  U726/Y (INVX2)                           0.12      18.58 f
+  U1377/Y (NAND3XL)                        0.20      18.78 r
+  U957/Y (XOR2X1)                          0.36      19.15 f
+  U936/Y (OAI222X1)                        0.40      19.55 r
+  U1141/Y (INVX2)                          0.09      19.64 f
+  U931/Y (AOI222X1)                        0.54      20.18 r
+  U624/Y (AOI222XL)                        0.37      20.55 f
+  U666/Y (AOI222X1)                        0.47      21.02 r
+  U665/Y (AOI21X1)                         0.14      21.17 f
+  U717/Y (INVX2)                           0.14      21.31 r
+  U922/Y (NAND2X1)                         0.10      21.40 f
+  U714/Y (NAND2XL)                         0.14      21.54 r
+  U914/Y (OAI21X1)                         0.15      21.69 f
+  U913/Y (AOI222X1)                        0.60      22.29 r
+  U912/Y (AOI222X1)                        0.32      22.61 f
+  U909/Y (AOI222X1)                        0.64      23.24 r
+  U903/Y (AOI222X1)                        0.32      23.56 f
+  U1431/Y (AOI2BB1XL)                      0.34      23.90 f
+  U901/Y (AOI31X1)                         0.24      24.14 r
+  U626/Y (INVXL)                           0.19      24.34 f
+  U711/Y (AOI211X1)                        0.28      24.61 r
+  U663/Y (XNOR2XL)                         0.42      25.03 f
+  U891/Y (AOI222X1)                        0.53      25.56 r
+  U1142/Y (INVX2)                          0.10      25.66 f
+  U887/Y (AOI222X1)                        0.50      26.16 r
+  U875/Y (AOI222X1)                        0.29      26.46 f
+  U708/Y (OAI2BB1XL)                       0.36      26.82 f
+  U870/Y (OAI31X1)                         0.20      27.01 r
+  U864/Y (INVX1)                           0.10      27.12 f
+  U859/Y (NAND2XL)                         0.14      27.26 r
+  U1886/Y (AOI22X1)                        0.15      27.41 f
+  U1506/Y (AOI222XL)                       0.57      27.99 r
+  U1563/Y (NAND2XL)                        0.12      28.11 f
+  U1509/Y (OAI2BB1X1)                      0.31      28.42 f
+  U706/Y (INVX2)                           0.11      28.52 r
+  U848/Y (AOI222X1)                        0.21      28.73 f
+  U705/Y (AOI222X1)                        0.62      29.35 r
+  U846/Y (NAND2X1)                         0.13      29.48 f
+  U845/Y (AOI22X1)                         0.39      29.88 r
+  U843/Y (NAND2XL)                         0.11      29.99 f
+  U1890/Y (AOI22X1)                        0.32      30.30 r
+  U1893/Y (AOI222X1)                       0.30      30.60 f
+  U831/Y (AOI222X1)                        0.49      31.09 r
+  U1143/Y (INVX2)                          0.10      31.19 f
+  U704/Y (AOI222X1)                        0.49      31.68 r
+  U1139/Y (AOI222X1)                       0.27      31.95 f
+  U702/Y (INVX2)                           0.18      32.13 r
+  U701/Y (NAND2XL)                         0.10      32.23 f
+  U815/Y (OAI32X1)                         0.36      32.59 r
+  U1895/Y (NOR2BX2)                        0.24      32.82 r
+  U1308/Y (INVX2)                          0.08      32.91 f
+  U700/Y (NAND2XL)                         0.12      33.03 r
+  U1897/Y (AOI22X1)                        0.15      33.18 f
+  U1617/Y (AOI222XL)                       0.58      33.75 r
+  U1656/Y (NAND2XL)                        0.13      33.88 f
+  U783/Y (OAI2BB1XL)                       0.27      34.16 f
+  U697/Y (OR2XL)                           0.25      34.41 f
+  U1662/Y (OAI2BB1X1)                      0.31      34.71 f
+  U655/Y (OAI222X1)                        0.35      35.07 r
+  U695/Y (INVX2)                           0.10      35.17 f
+  U772/Y (NAND2XL)                         0.14      35.31 r
+  U1898/Y (OAI32X1)                        0.17      35.48 f
+  U771/Y (NOR2BX1)                         0.28      35.76 f
+  U694/Y (INVX2)                           0.12      35.87 r
+  U1901/Y (AOI22X1)                        0.19      36.06 f
+  U1654/Y (AOI222XL)                       0.60      36.66 r
+  U1702/Y (NAND2XL)                        0.15      36.81 f
+  U1902/Y (AOI21X1)                        0.23      37.04 r
+  U1704/Y (NAND2XL)                        0.10      37.15 f
+  U654/Y (OAI2BB1X1)                       0.35      37.50 f
+  U1903/Y (AOI222X1)                       0.54      38.03 r
+  U1663/Y (OAI2BB1XL)                      0.25      38.29 r
+  U691/Y (OAI31XL)                         0.13      38.42 f
+  U754/Y (NAND2X1)                         0.22      38.64 r
+  U1787/Y (NAND2X1)                        0.12      38.75 f
+  U1786/Y (NAND2XL)                        0.14      38.89 r
+  U1785/Y (OAI21X1)                        0.20      39.09 f
+  U750/Y (AOI222X1)                        0.43      39.52 r
+  U653/Y (OR2X2)                           0.24      39.75 r
+  U1811/Y (OAI2BB1XL)                      0.20      39.96 f
+  U1784/Y (INVXL)                          0.26      40.22 r
+  U746/Y (NOR2X1)                          0.10      40.32 f
+  U651/Y (AOI222XL)                        0.60      40.92 r
+  U649/Y (AOI222XL)                        0.31      41.23 f
+  U648/Y (AOI222XL)                        0.64      41.88 r
+  U647/Y (AOI222XL)                        0.31      42.19 f
+  U1909/Y (AOI222XL)                       0.58      42.76 r
+  U742/Y (NOR3X1)                          0.12      42.88 f
+  U1910/Y (INVXL)                          0.12      43.00 r
+  U1911/Y (OAI22X1)                        0.20      43.20 f
+  U1741/Y (AOI22XL)                        0.28      43.49 r
+  U1739/Y (AOI32XL)                        0.18      43.66 f
+  temp1_reg[0]/D (DFFRX1)                  0.00      43.66 f
+  data arrival time                                  43.66
+
+  clock clk (rise edge)                   44.00      44.00
+  clock network delay (ideal)              0.00      44.00
+  temp1_reg[0]/CK (DFFRX1)                 0.00      44.00 r
+  library setup time                      -0.33      43.67
+  data required time                                 43.67
+  -----------------------------------------------------------
+  data required time                                 43.67
+  data arrival time                                 -43.66
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1

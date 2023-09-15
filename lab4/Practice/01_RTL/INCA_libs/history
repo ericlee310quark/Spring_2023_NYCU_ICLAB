@@ -1,0 +1,8 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(27Aug2022:22:17:09):( irun TESTBENCH.v -define RTL -debug -incdir /usr/synthesis/dw/sim_ver/ )
+s2::(10Oct2022:21:50:15):( irun TESTBENCH.v -define RTL -debug -incdir /usr/synthesis/dw/sim_ver/ )
+s3::(10Oct2022:21:51:08):( irun TESTBED.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot -y /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v  )
+s4::(10Oct2022:21:51:33):( irun TESTBENCH.v -define RTL -debug -notimingchecks -loadpli1 debpli:novas_pli_boot -y /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v  )

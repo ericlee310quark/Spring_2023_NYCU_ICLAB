@@ -1,0 +1,921 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version T-2022.03 for linux64 - Feb 22, 2022 
+
+                    Copyright (c) 1988 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path {	./../01_RTL \
+					~iclabta01/umc018/Synthesis/ \
+					/usr/synthesis/libraries/syn/ \
+					/usr/synthesis/dw/ }
+ ./../01_RTL  ~iclabta01/umc018/Synthesis/  /usr/synthesis/libraries/syn/  /usr/synthesis/dw/ 
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set link_library {* dw_foundation.sldb standard.sldb slow.db}
+* dw_foundation.sldb standard.sldb slow.db
+set target_library {slow.db}
+slow.db
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#report_lib slow
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "NN"
+NN
+set CLK_period 18.5
+18.5
+#======================================================
+#  Read RTL Code
+#======================================================
+analyze -f verilog $DESIGN\.v
+Running PRESTO HDLC
+Compiling source file ./../01_RTL/NN.v
+Presto compilation completed successfully.
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/standard.sldb'
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+1
+analyze -f verilog NN.v
+Running PRESTO HDLC
+Compiling source file ./../01_RTL/NN.v
+Presto compilation completed successfully.
+1
+elaborate $DESIGN
+Loading db file '/usr/cad/synopsys/synthesis/2022.03/libraries/syn/gtech.db'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Warning:  ./../01_RTL/NN.v:243: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./../01_RTL/NN.v:248: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./../01_RTL/NN.v:219: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 218 in file
+	'./../01_RTL/NN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           219            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 278 in file
+	'./../01_RTL/NN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           279            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 645 in file
+	'./../01_RTL/NN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           672            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine NN line 200 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 205 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 213 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_stage_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 233 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cnt_reg       | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 241 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       w_w_reg       | Flip-flop |  288  |  Y  | N  | Y  | N  | N  | N  | N  |
+|       w_v_reg       | Flip-flop |  288  |  Y  | N  | Y  | N  | N  | N  | N  |
+|       d_x_reg       | Flip-flop |  288  |  Y  | N  | Y  | N  | N  | N  | N  |
+|       w_u_reg       | Flip-flop |  288  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 265 in file
+		'./../01_RTL/NN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       d_h_reg       | Flip-flop |  96   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine NN line 645 in file
+		'./../01_RTL/NN.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+|       ans_reg        | Flip-flop |  64   |  Y  | N  | N  | N  | N  | N  | N  |
+|     exp_reg_reg      | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| h_mac_result_L11_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| x_mac_result_L21_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| v_mac_result_L00_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| h_mac_result_L21_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| h_mac_result_L10_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| h_mac_result_L01_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| h_mac_result_L00_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| x_mac_result_L10_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| x_mac_result_L11_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| x_mac_result_L01_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| x_mac_result_L12_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| x_mac_result_L22_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| x_mac_result_L00_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| x_mac_result_L02_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+| v_mac_result_L20_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     h_result_reg     | Flip-flop |  96   |  Y  | N  | N  | N  | N  | N  | N  |
+| v_mac_result_L10_reg | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully. (NN)
+Elaborated 1 design.
+Current design is now 'NN'.
+1
+current_design $DESIGN
+Current design is 'NN'.
+{NN}
+#======================================================
+#  Global Setting
+#======================================================
+#set_wire_load_mode top
+#======================================================
+#  Set Design Constraints
+#======================================================
+create_clock -name "clk" -period $CLK_period clk 
+1
+set_input_delay  [ expr $CLK_period*0.5 ] -clock clk [all_inputs]
+1
+set_output_delay [ expr $CLK_period*0.5 ] -clock clk [all_outputs]
+1
+set_input_delay 0 -clock clk clk
+1
+set_input_delay 0 -clock clk rst_n
+1
+set_load 0.05 [all_outputs]
+1
+#======================================================
+#  Optimization
+#======================================================
+uniquify
+1
+check_design > Report/$DESIGN\.check
+set_fix_multiple_port_nets -all -buffer_constants
+1
+#set_fix_hold [all_clocks]
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        | S-2021.06-DWBB_202106.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Comand line  | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 2801                                   |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 1992                                   |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch cells                              | 194                                    |
+| Number of Dont Touch nets                               | 0                                      |
+| Number of size only cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'NN'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'NN'
+Information: Added key list 'DesignWare' to design 'NN'. (DDB-72)
+ Implement Synthetic for 'NN'.
+  Processing 'NN_DW_fp_exp_J1_0'
+  Processing 'NN_DW_exp2_J1_0'
+  Processing 'NN_DW_fp_recip_J1_0'
+  Processing 'NN_DW_fp_addsub_J1_0'
+  Processing 'NN_DW_lzd_J1_0_DW_lzd_J1_1'
+  Processing 'NN_DW_fp_mult_J1_0'
+  Processing 'NN_DW_lzd_J1_1_DW_lzd_J1_2'
+  Processing 'NN_DW_lzd_J1_2_DW_lzd_J1_3'
+  Processing 'NN_DW_fp_addsub_J1_1'
+  Processing 'NN_DW_lzd_J1_3_DW_lzd_J1_4'
+  Processing 'NN_DW_fp_mult_J1_1'
+  Processing 'NN_DW_lzd_J1_4_DW_lzd_J1_5'
+  Processing 'NN_DW_lzd_J1_5_DW_lzd_J1_6'
+  Processing 'NN_DW_fp_addsub_J1_2'
+  Processing 'NN_DW_lzd_J1_6_DW_lzd_J1_7'
+  Processing 'NN_DW_fp_mult_J1_2'
+  Processing 'NN_DW_lzd_J1_7_DW_lzd_J1_8'
+  Processing 'NN_DW_lzd_J1_8_DW_lzd_J1_9'
+  Processing 'NN_DW_fp_addsub_J1_3'
+  Processing 'NN_DW_lzd_J1_9_DW_lzd_J1_10'
+  Processing 'NN_DW_fp_mult_J1_3'
+  Processing 'NN_DW_lzd_J1_10_DW_lzd_J1_11'
+  Processing 'NN_DW_lzd_J1_11_DW_lzd_J1_12'
+  Processing 'NN_DW_fp_addsub_J1_4'
+  Processing 'NN_DW_lzd_J1_12_DW_lzd_J1_13'
+  Processing 'NN_DW_fp_mult_J1_4'
+  Processing 'NN_DW_lzd_J1_13_DW_lzd_J1_14'
+  Processing 'NN_DW_lzd_J1_14_DW_lzd_J1_15'
+  Processing 'NN_DW_fp_addsub_J1_5'
+  Processing 'NN_DW_lzd_J1_15_DW_lzd_J1_16'
+  Processing 'NN_DW_fp_addsub_J1_6'
+  Processing 'NN_DW_lzd_J1_16_DW_lzd_J1_17'
+  Processing 'NN_DW_fp_mult_J1_5'
+  Processing 'NN_DW_lzd_J1_17_DW_lzd_J1_18'
+  Processing 'NN_DW_lzd_J1_18_DW_lzd_J1_19'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: The register 'exp_reg_reg[31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ans_reg[1][31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ans_reg[0][31]' is a constant and will be removed. (OPT-1206)
+Information: The register 'out_reg[31]' is a constant and will be removed. (OPT-1206)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Structuring 'NN_DW_fp_mult_0'
+  Mapping 'NN_DW_fp_mult_0'
+  Structuring 'NN_DW_fp_mult_1'
+  Mapping 'NN_DW_fp_mult_1'
+  Structuring 'NN_DW_fp_mult_2'
+  Mapping 'NN_DW_fp_mult_2'
+  Mapping 'NN_DW_cmp_0'
+  Mapping 'NN_DW_cmp_2'
+  Mapping 'NN_DW01_add_0'
+  Mapping 'NN_DW01_add_1'
+  Mapping 'NN_DW01_add_2'
+  Mapping 'DW_cmp'
+  Mapping 'NN_DW_cmp_3'
+  Mapping 'NN_DW_cmp_4'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Structuring 'NN_DW_lzd_2'
+  Mapping 'NN_DW_lzd_2'
+  Structuring 'NN_DW_lzd_3'
+  Mapping 'NN_DW_lzd_3'
+  Mapping 'NN_DW02_multp_0'
+  Mapping 'NN_DP_OP_108_155_7736_0'
+  Mapping 'NN_DP_OP_109_156_8092_0'
+  Mapping 'NN_DW_fp_mult_2'
+  Structuring 'NN_DW_fp_mult_3'
+  Mapping 'NN_DW_fp_mult_3'
+  Structuring 'NN_DW_fp_mult_4'
+  Mapping 'NN_DW_fp_mult_4'
+  Structuring 'NN_DW_fp_mult_5'
+  Mapping 'NN_DW_fp_mult_5'
+  Mapping 'NN_DW_cmp_5'
+  Mapping 'NN_DW_cmp_7'
+  Mapping 'NN_DW01_add_3'
+  Mapping 'NN_DW01_add_4'
+  Mapping 'NN_DW01_add_5'
+  Mapping 'DW_cmp'
+  Mapping 'NN_DW_cmp_8'
+  Mapping 'NN_DW_cmp_9'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Structuring 'NN_DW_lzd_6'
+  Mapping 'NN_DW_lzd_6'
+  Structuring 'NN_DW_lzd_7'
+  Mapping 'NN_DW_lzd_7'
+  Mapping 'NN_DW02_multp_1'
+  Mapping 'NN_DP_OP_108_159_7736_0'
+  Mapping 'NN_DP_OP_109_160_8092_0'
+  Mapping 'NN_DW_fp_mult_5'
+  Structuring 'NN_DW_fp_mult_6'
+  Mapping 'NN_DW_fp_mult_6'
+  Structuring 'NN_DW_fp_mult_7'
+  Mapping 'NN_DW_fp_mult_7'
+  Structuring 'NN_DW_fp_mult_8'
+  Mapping 'NN_DW_fp_mult_8'
+  Mapping 'NN_DW_cmp_10'
+  Mapping 'NN_DW_cmp_12'
+  Mapping 'NN_DW01_add_6'
+  Mapping 'NN_DW01_add_7'
+  Mapping 'NN_DW01_add_8'
+  Mapping 'DW_cmp'
+  Mapping 'NN_DW_cmp_13'
+  Mapping 'NN_DW_cmp_14'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Structuring 'NN_DW_lzd_10'
+  Mapping 'NN_DW_lzd_10'
+  Structuring 'NN_DW_lzd_11'
+  Mapping 'NN_DW_lzd_11'
+  Mapping 'NN_DW02_multp_2'
+  Mapping 'NN_DP_OP_108_163_7736_0'
+  Mapping 'NN_DP_OP_109_164_8092_0'
+  Mapping 'NN_DW_fp_mult_8'
+  Structuring 'NN_DW_fp_mult_9'
+  Mapping 'NN_DW_fp_mult_9'
+  Structuring 'NN_DW_fp_mult_10'
+  Mapping 'NN_DW_fp_mult_10'
+  Structuring 'NN_DW_fp_mult_11'
+  Mapping 'NN_DW_fp_mult_11'
+  Mapping 'NN_DW_cmp_15'
+  Mapping 'NN_DW_cmp_17'
+  Mapping 'NN_DW01_add_9'
+  Mapping 'NN_DW01_add_10'
+  Mapping 'NN_DW01_add_11'
+  Mapping 'DW_cmp'
+  Mapping 'NN_DW_cmp_18'
+  Mapping 'NN_DW_cmp_19'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Structuring 'NN_DW_lzd_14'
+  Mapping 'NN_DW_lzd_14'
+  Structuring 'NN_DW_lzd_15'
+  Mapping 'NN_DW_lzd_15'
+  Mapping 'NN_DW02_multp_3'
+  Mapping 'NN_DP_OP_108_167_7736_0'
+  Mapping 'NN_DP_OP_109_168_8092_0'
+  Mapping 'NN_DW_fp_mult_11'
+  Structuring 'NN_DW_fp_mult_12'
+  Mapping 'NN_DW_fp_mult_12'
+  Structuring 'NN_DW_fp_mult_13'
+  Mapping 'NN_DW_fp_mult_13'
+  Structuring 'NN_DW_fp_mult_14'
+  Mapping 'NN_DW_fp_mult_14'
+  Mapping 'NN_DW_cmp_20'
+  Mapping 'NN_DW_cmp_22'
+  Mapping 'NN_DW01_add_12'
+  Mapping 'NN_DW01_add_13'
+  Mapping 'NN_DW01_add_14'
+  Mapping 'DW_cmp'
+  Mapping 'NN_DW_cmp_23'
+  Mapping 'NN_DW_cmp_24'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Structuring 'NN_DW_lzd_18'
+  Mapping 'NN_DW_lzd_18'
+  Structuring 'NN_DW_lzd_19'
+  Mapping 'NN_DW_lzd_19'
+  Mapping 'NN_DW02_multp_4'
+  Mapping 'NN_DP_OP_108_171_7736_0'
+  Mapping 'NN_DP_OP_109_172_8092_0'
+  Mapping 'NN_DW_fp_mult_14'
+  Structuring 'NN_DW_fp_mult_15'
+  Mapping 'NN_DW_fp_mult_15'
+  Structuring 'NN_DW_fp_mult_16'
+  Mapping 'NN_DW_fp_mult_16'
+  Structuring 'NN_DW_fp_mult_17'
+  Mapping 'NN_DW_fp_mult_17'
+  Mapping 'NN_DW_cmp_25'
+  Mapping 'NN_DW_cmp_27'
+  Mapping 'NN_DW01_add_15'
+  Mapping 'NN_DW01_add_16'
+  Mapping 'NN_DW01_add_17'
+  Mapping 'DW_cmp'
+  Mapping 'NN_DW_cmp_28'
+  Mapping 'NN_DW_cmp_29'
+  Mapping 'DW01_add'
+  Mapping 'DW01_add'
+  Structuring 'NN_DW_lzd_22'
+  Mapping 'NN_DW_lzd_22'
+  Structuring 'NN_DW_lzd_23'
+  Mapping 'NN_DW_lzd_23'
+  Mapping 'NN_DW02_multp_5'
+  Mapping 'NN_DP_OP_108_175_7736_0'
+  Mapping 'NN_DP_OP_109_176_8092_0'
+  Mapping 'NN_DW_fp_mult_17'
+  Mapping Optimization (Phase 1)
+  Mapping Optimization (Phase 2)
+  Mapping Optimization (Phase 3)
+  Mapping Optimization (Phase 4)
+  Mapping Optimization (Phase 5)
+  Mapping Optimization (Phase 6)
+  Mapping Optimization (Phase 7)
+  Mapping Optimization (Phase 8)
+  Mapping Optimization (Phase 9)
+  Mapping Optimization (Phase 10)
+  Mapping Optimization (Phase 11)
+  Mapping Optimization (Phase 12)
+  Mapping Optimization (Phase 13)
+  Mapping Optimization (Phase 14)
+  Mapping Optimization (Phase 15)
+  Mapping Optimization (Phase 16)
+  Mapping Optimization (Phase 17)
+  Mapping Optimization (Phase 18)
+  Mapping Optimization (Phase 19)
+  Mapping Optimization (Phase 20)
+  Mapping Optimization (Phase 21)
+  Mapping Optimization (Phase 22)
+  Mapping Optimization (Phase 23)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:07:08 2187573.7      5.70    3346.3       1.1                           331876096.0000
+    0:07:11 2172668.1      6.49    3627.6       1.1                           329946304.0000
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:07:12 2178612.4      6.87    3427.1       1.1                           331376448.0000
+    0:07:15 2174530.9      6.87    3402.8       1.1                           330806112.0000
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+  Mapping 'NN_DP_OP_77_231_7241_9'
+  Mapping 'NN_DW_mult_uns_25'
+  Mapping 'NN_DW_mult_uns_26'
+  Mapping 'NN_DP_OP_49J1_147_3163_13'
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:07:38 1107132.4     10.11    1787.0       4.8                           112500032.0000
+    0:08:09 1133763.5      3.10    1553.8       4.8                           117871680.0000
+    0:08:09 1133763.5      3.10    1553.8       4.8                           117871680.0000
+    0:08:10 1133756.9      3.10    1561.9       4.8                           117838216.0000
+Information: The register 'ans_reg[1][30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'ans_reg[0][30]' is a constant and will be removed. (OPT-1206)
+Information: The register 'out_reg[30]' is a constant and will be removed. (OPT-1206)
+    0:08:39 1123312.0      3.41    1568.1       3.4                           116624216.0000
+    0:08:42 1117630.5      3.52    1578.8       3.4                           116238208.0000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:09:09 1116133.6      3.51    1572.9       3.4                           115821792.0000
+    0:09:10 1112783.9      3.51    1539.3       3.4                           115365456.0000
+    0:09:12 1104927.0      3.16    1510.3       3.4                           114454568.0000
+    0:09:14 1101574.0      3.15    1512.3       3.4                           114089168.0000
+    0:09:19 1106127.8      2.64    1342.0       8.5                           115045216.0000
+    0:09:19 1106127.8      2.64    1342.0       8.5                           115045216.0000
+    0:09:27 1103390.2      2.62    1248.6       0.0                           112222120.0000
+    0:09:27 1103390.2      2.62    1248.6       0.0                           112222120.0000
+    0:10:47 1158631.7      2.02    1146.4      24.3                           121830264.0000
+    0:10:47 1158631.7      2.02    1146.4      24.3                           121830264.0000
+    0:10:51 1165311.1      1.79     926.6       0.0                           123206808.0000
+    0:10:51 1165311.1      1.79     926.6       0.0                           123206808.0000
+    0:11:48 1191716.1      1.73     932.9       0.0                           127653776.0000
+    0:11:48 1191716.1      1.73     932.9       0.0                           127653776.0000
+    0:13:42 1239433.3      0.57     283.2      26.4                           136797920.0000
+    0:13:42 1239433.3      0.57     283.2      26.4                           136797920.0000
+    0:14:58 1255386.7      0.52     202.5      26.4                           139536064.0000
+    0:14:58 1255386.7      0.52     202.5      26.4                           139536064.0000
+    0:15:21 1261716.8      0.40     134.0      37.1                           140733360.0000
+    0:15:21 1261716.8      0.40     134.0      37.1                           140733360.0000
+    0:15:52 1265409.1      0.37     139.1      37.1                           141350800.0000
+    0:15:52 1265409.1      0.37     139.1      37.1                           141350800.0000
+    0:17:10 1275960.5      0.23      60.5      37.1                           143315264.0000
+    0:17:10 1275960.5      0.23      60.5      37.1                           143315264.0000
+    0:17:15 1276329.7      0.23      59.8      37.1                           143367392.0000
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:17:15 1276329.7      0.23      59.8      37.1                           143367392.0000
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+    0:17:18 1276236.6      0.19      45.6       0.0 ans_reg[1][14]/D          143388352.0000
+    0:17:19 1276030.3      0.18      44.9       0.0                           143329792.0000
+    0:17:34 1276805.4      0.18      44.5       0.0                           143470064.0000
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:17:34 1276805.4      0.18      44.5       0.0                           143470064.0000
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+  Global Optimization (Phase 46)
+  Global Optimization (Phase 47)
+  Global Optimization (Phase 48)
+  Global Optimization (Phase 49)
+  Global Optimization (Phase 50)
+    0:17:57 1209585.5      0.73     348.3       0.0                           127771616.0000
+    0:19:03 1231895.7      0.64     309.4       0.3                           131705080.0000
+    0:19:03 1231895.7      0.64     309.4       0.3                           131705080.0000
+    0:19:10 1214106.1      0.63     275.1       0.0                           127847088.0000
+    0:19:10 1214106.1      0.63     275.1       0.0                           127847088.0000
+    0:20:15 1230252.4      0.56     268.4       2.9                           130688472.0000
+    0:20:15 1230252.4      0.56     268.4       2.9                           130688472.0000
+    0:20:15 1230445.3      0.55     267.3       2.9                           130726040.0000
+    0:20:16 1230445.3      0.55     267.3       2.9                           130726040.0000
+    0:20:29 1230804.6      0.54     267.0       2.9                           130783352.0000
+    0:20:29 1230804.6      0.54     267.0       2.9                           130783352.0000
+    0:21:25 1243385.0      0.15      30.0       0.0                           133114496.0000
+    0:21:25 1243385.0      0.15      30.0       0.0                           133114496.0000
+    0:21:50 1246102.7      0.12      15.7       0.0                           133620760.0000
+    0:21:50 1246102.7      0.12      15.7       0.0                           133620760.0000
+    0:22:20 1251275.3      0.04       2.5       1.7                           134600848.0000
+    0:22:20 1251275.3      0.04       2.5       1.7                           134600848.0000
+    0:22:47 1255220.4      0.03       1.4       1.7                           135252080.0000
+    0:22:47 1255220.4      0.03       1.4       1.7                           135252080.0000
+    0:22:57 1255606.2      0.02       0.7       1.7                           135317520.0000
+    0:22:57 1255606.2      0.02       0.7       1.7                           135317520.0000
+    0:22:59 1255606.2      0.02       0.7       1.7                           135317520.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:23:01 1255626.2      0.02       0.7       1.7                           135318016.0000
+    0:23:06 1217272.8      0.04       2.1       0.0                           128267552.0000
+    0:23:08 1217359.3      0.00       0.0       0.0                           128265920.0000
+    0:23:08 1217359.3      0.00       0.0       0.0                           128265920.0000
+    0:23:18 1188702.4      0.00       0.0       0.0                           122217256.0000
+    0:23:20 1186443.7      0.00       0.0       0.0                           121885648.0000
+    0:23:22 1183948.9      0.00       0.0       0.0                           121553640.0000
+    0:23:26 1182841.2      0.00       0.0       0.0                           121051080.0000
+    0:23:27 1182515.3      0.00       0.0       0.0                           120677456.0000
+    0:23:27 1182515.3      0.00       0.0       0.0                           120677456.0000
+    0:23:27 1182515.3      0.00       0.0       0.0                           120677456.0000
+    0:23:27 1182515.3      0.00       0.0       0.0                           120677456.0000
+    0:23:27 1182515.3      0.00       0.0       0.0                           120677456.0000
+    0:23:27 1182515.3      0.00       0.0       0.0                           120677456.0000
+    0:23:51 1155328.6      0.00       0.0       0.0                           116046880.0000
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'NN' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 1985 load(s), 1 driver(s)
+     Net 'rst_n': 1286 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#======================================================
+#  Output Reports 
+#======================================================
+report_timing >  Report/$DESIGN\.timing
+report_area >  Report/$DESIGN\.area
+report_resource >  Report/$DESIGN\.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/$DESIGN\_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab034/Lab04/Exercise/02_SYN/Netlist/NN_SYN.v'.
+1
+write_sdf -version 3.0 -context verilog -load_delay cell Netlist/$DESIGN\_SYN.sdf -significant_digits 6
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab034/Lab04/Exercise/02_SYN/Netlist/NN_SYN.sdf'. (WT-3)
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+report_area
+ 
+****************************************
+Report : area
+Design : NN
+Version: T-2022.03
+Date   : Fri Apr  7 23:10:03 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                          196
+Number of nets:                         54277
+Number of cells:                        51289
+Number of combinational cells:          49302
+Number of sequential cells:              1985
+Number of macros/black boxes:               0
+Number of buf/inv:                       8357
+Number of references:                     160
+
+Combinational area:            1026044.722083
+Buf/Inv area:                    94819.034685
+Noncombinational area:          129283.863693
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               1155328.585776
+Total area:                 undefined
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : NN
+Version: T-2022.03
+Date   : Fri Apr  7 23:10:03 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: v_mac_result_L20_reg_26_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: exp_reg_reg_26_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  v_mac_result_L20_reg_26_/CK (DFFHQX2)                   0.00 #     0.00 r
+  v_mac_result_L20_reg_26_/Q (DFFHQX2)                    0.33       0.33 r
+  U17331/Y (INVX2)                                        0.07       0.40 f
+  U26989/Y (NAND3X2)                                      0.15       0.55 r
+  U38133/Y (NOR2X4)                                       0.11       0.65 f
+  U23825/Y (NOR2X4)                                       0.11       0.76 r
+  U23824/Y (NAND2X4)                                      0.10       0.86 f
+  U23823/Y (NAND4X4)                                      0.19       1.04 r
+  U23799/Y (NAND2X4)                                      0.10       1.14 f
+  U25379/Y (BUFX16)                                       0.18       1.32 f
+  U22525/Y (INVX4)                                        0.08       1.40 r
+  U27904/Y (NAND2X1)                                      0.09       1.49 f
+  U22101/Y (NAND3X2)                                      0.17       1.66 r
+  U38414/Y (BUFX8)                                        0.20       1.86 r
+  U27906/Y (INVX3)                                        0.07       1.92 f
+  U22529/Y (OAI21XL)                                      0.17       2.10 r
+  U38713/Y (NAND2X1)                                      0.13       2.23 f
+  U38194/CO (ADDFHX4)                                     0.49       2.72 f
+  U22552/Y (XOR3X2)                                       0.35       3.07 f
+  U39696/S (ADDFHX4)                                      0.38       3.45 r
+  U12785/Y (NOR2X2)                                       0.08       3.53 f
+  U39644/Y (NOR2X2)                                       0.13       3.65 r
+  U38203/Y (NAND2X1)                                      0.07       3.73 f
+  U13392/Y (INVXL)                                        0.09       3.82 r
+  U37014/Y (OAI2BB1X4)                                    0.18       4.00 r
+  U24250/Y (OAI2BB1X4)                                    0.27       4.26 r
+  U24755/Y (CLKINVX3)                                     0.14       4.40 f
+  U37152/Y (OAI21X2)                                      0.21       4.61 r
+  U25915/Y (XOR2X4)                                       0.28       4.88 f
+  U22948/Y (CLKINVX2)                                     0.06       4.95 r
+  U12613/Y (NAND2X1)                                      0.15       5.09 f
+  U36535/Y (NAND3X2)                                      0.16       5.26 r
+  U37676/Y (MXI2X2)                                       0.16       5.42 f
+  U39003/Y (NAND2X1)                                      0.15       5.57 r
+  U23354/Y (NAND3X2)                                      0.11       5.68 f
+  U23379/Y (NOR2X2)                                       0.14       5.82 r
+  U24110/Y (NAND3X2)                                      0.11       5.93 f
+  U24320/Y (NOR2X4)                                       0.12       6.06 r
+  U22623/Y (NAND4X4)                                      0.22       6.27 f
+  U24087/Y (NAND2X1)                                      0.24       6.51 r
+  U24098/Y (NAND2X4)                                      0.16       6.67 f
+  U23357/Y (BUFX16)                                       0.19       6.86 f
+  U25991/Y (NAND2X4)                                      0.11       6.98 r
+  U22824/Y (INVX4)                                        0.06       7.04 f
+  U22666/Y (NAND2X4)                                      0.09       7.13 r
+  U22665/Y (INVX8)                                        0.16       7.29 f
+  U11945/Y (INVX4)                                        0.12       7.41 r
+  U23829/Y (NOR2X4)                                       0.09       7.49 f
+  U39237/Y (INVX2)                                        0.09       7.58 r
+  U23382/Y (NAND2XL)                                      0.08       7.66 f
+  U14524/Y (NOR2X1)                                       0.14       7.80 r
+  U32844/Y (NAND3BX1)                                     0.12       7.92 f
+  U37348/Y (OR2X4)                                        0.24       8.16 f
+  U36498/Y (INVXL)                                        0.09       8.25 r
+  U39056/Y (NAND2X1)                                      0.14       8.39 f
+  U39200/Y (NOR2X4)                                       0.15       8.54 r
+  U11279/Y (NAND2X2)                                      0.12       8.66 f
+  U38897/CO (ADDFHX4)                                     0.35       9.01 f
+  U19420/Y (OAI2BB1X2)                                    0.18       9.20 f
+  U39728/S (ADDFHX4)                                      0.38       9.58 r
+  U24187/Y (INVX1)                                        0.06       9.63 f
+  U28339/Y (NAND2X1)                                      0.07       9.70 r
+  U13340/Y (OAI2BB1X2)                                    0.24       9.95 r
+  U13377/Y (XOR2X2)                                       0.30      10.24 f
+  U30497/Y (INVX2)                                        0.15      10.39 r
+  U37155/Y (XOR2X4)                                       0.37      10.76 r
+  U15708/Y (BUFX12)                                       0.20      10.96 r
+  U10913/Y (XNOR2X1)                                      0.25      11.21 f
+  U38904/Y (OAI22X1)                                      0.38      11.59 r
+  U37930/Y (XOR3X2)                                       0.56      12.15 f
+  U26911/CO (ADDFHX4)                                     0.37      12.52 f
+  U30100/Y (NAND2BXL)                                     0.18      12.70 f
+  U18376/Y (OAI2BB1X2)                                    0.20      12.90 f
+  U39331/CO (ADDFHX1)                                     0.36      13.26 f
+  U42535/S (ADDFHX1)                                      0.49      13.76 r
+  U38631/S (ADDFHX4)                                      0.41      14.17 r
+  U22694/Y (OAI21XL)                                      0.11      14.28 f
+  U10524/Y (NAND2X1)                                      0.14      14.42 r
+  U15439/Y (NAND2X1)                                      0.11      14.52 f
+  U13941/Y (INVX2)                                        0.11      14.63 r
+  U37030/Y (NAND2X4)                                      0.07      14.71 f
+  U38558/Y (NAND2X2)                                      0.13      14.83 r
+  U17830/Y (AOI21X1)                                      0.13      14.96 f
+  U42648/Y (OAI21X1)                                      0.30      15.26 r
+  U25972/Y (NOR2X4)                                       0.08      15.34 f
+  U25971/Y (AOI2BB2X4)                                    0.23      15.57 f
+  U37635/Y (NAND2X4)                                      0.10      15.67 r
+  U25152/Y (NAND2X4)                                      0.08      15.74 f
+  U26772/Y (INVX4)                                        0.06      15.81 r
+  U26771/Y (NAND2X4)                                      0.07      15.88 f
+  U26770/Y (NOR2X4)                                       0.14      16.02 r
+  U39420/Y (NAND4X2)                                      0.16      16.18 f
+  U39482/Y (CLKINVX8)                                     0.13      16.31 r
+  U39599/Y (OR2X2)                                        0.16      16.47 r
+  U39598/Y (NAND3X2)                                      0.12      16.59 f
+  U39543/Y (NAND2X4)                                      0.14      16.73 r
+  U39542/Y (NOR2X4)                                       0.08      16.81 f
+  U26838/Y (NAND2X4)                                      0.14      16.96 r
+  U26835/Y (NAND2X4)                                      0.08      17.03 f
+  U10093/Y (NAND2X2)                                      0.08      17.11 r
+  U10079/Y (CLKINVX2)                                     0.11      17.22 f
+  U26422/Y (NOR2X4)                                       0.14      17.35 r
+  U26420/Y (NAND3X1)                                      0.13      17.48 f
+  U26439/Y (NOR2X2)                                       0.10      17.59 r
+  U10023/Y (NOR2X1)                                       0.12      17.71 f
+  U26438/Y (NAND2X4)                                      0.14      17.85 r
+  U9926/Y (BUFX8)                                         0.18      18.03 r
+  U24539/Y (OAI21X1)                                      0.10      18.13 f
+  exp_reg_reg_26_/D (DFFHQX4)                             0.00      18.13 f
+  data arrival time                                                 18.13
+
+  clock clk (rise edge)                                  18.50      18.50
+  clock network delay (ideal)                             0.00      18.50
+  exp_reg_reg_26_/CK (DFFHQX4)                            0.00      18.50 r
+  library setup time                                     -0.37      18.13
+  data required time                                                18.13
+  --------------------------------------------------------------------------
+  data required time                                                18.13
+  data arrival time                                                -18.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+exit
+
+Memory usage for this session 695 Mbytes.
+Memory usage for this session including child processes 842 Mbytes.
+CPU usage for this session 1424 seconds ( 0.40 hours ).
+Elapsed time for this session 1444 seconds ( 0.40 hours ).
+
+Thank you...

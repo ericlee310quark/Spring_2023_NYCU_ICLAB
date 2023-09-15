@@ -1,0 +1,36 @@
+[ PAT NO. 121 ]
+
+[ Weight U ]
+
+c4602075 48dc8da7 cef8bfda 
+
+4e72b293 47248aa7 3316632b 
+
+c13efbd5 348421c0 3f333ee0 
+
+[ Weight W ]
+
+c1aadccd b15d8bcd 4edbe443 
+
+49e2857f c5d70823 310d490b 
+
+45dd9102 cbf913a4 49bc2899 
+
+[ Weight V ]
+
+cba3ed11 c63ce426 39b7c9b6 
+
+c479481e bae2513d c2436c47 
+
+31a332ca c1c5fb83 c17ef1d1 
+
+[ Input ]
+
+X_1 : bfd783cf bfba21e5 40094b42 
+
+X_2 : 40a0a42c bfaece7b 3fb84df2 
+
+X_3 : 40e80941 c0c404ee bfc14130 
+
+H_0 : bfc5f5c9 4057a99b 4058a307 
+

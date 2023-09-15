@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : MMT
+Version: R-2020.09
+Date   : Tue Mar 28 07:15:25 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+    USERLIB (File: /RAID2/COURSE/iclab/iclab034/Lab05/Exercise/04_MEM/RA1SH_20b_256w.db)
+    USERLIB (File: /RAID2/COURSE/iclab/iclab034/Lab05/Exercise/04_MEM/RA1SH_128b_512w.db)
+
+Number of ports:                         2678
+Number of nets:                         18541
+Number of cells:                        14628
+Number of combinational cells:          13788
+Number of sequential cells:               787
+Number of macros/black boxes:               2
+Number of buf/inv:                       2696
+Number of references:                     140
+
+Combinational area:             290401.375266
+Buf/Inv area:                    28916.396078
+Noncombinational area:           53824.478413
+Macro/Black Box area:           668071.968750
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               1012297.822429
+Total area:                 undefined
+1

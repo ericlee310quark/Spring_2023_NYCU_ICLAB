@@ -1,0 +1,3 @@
+Command Line: /RAID2/EDA/synopsys/verdi/2019.06/platform/LINUXAMD64/bin/Novas -nWave
+uname(Linux linux21 2.6.32-696.el6.x86_64 #1 SMP Tue Mar 21 19:29:05 UTC 2017 x86_64)
+au time 45358.474755 381.931938 427.279044 delta 239120384 239120384 total 668631040 668631040

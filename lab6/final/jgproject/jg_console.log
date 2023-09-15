@@ -1,0 +1,67 @@
+2023-04-18 23:37:20.497273 (238981) main____ INFO    ----------------------------------------
+2023-04-18 23:37:20.497333 (238981) main____ INFO    Jasper version info
+2023-04-18 23:37:20.497339 (238981) main____ INFO      tool      : Jasper 2023.03
+2023-04-18 23:37:20.497344 (238981) main____ INFO      version   : 2023.03 FCS 64 bits
+2023-04-18 23:37:20.497348 (238981) main____ INFO      build date: 2023.03.29 16:16:18 UTC
+2023-04-18 23:37:20.497351 (238981) main____ INFO    ----------------------------------------
+2023-04-18 23:37:20.497353 (238981) main____ INFO    Runtime info:
+2023-04-18 23:37:20.497357 (238981) main____ INFO      platform  : Linux 3.10.0-1160.88.1.el7.x86_64 x86_64
+2023-04-18 23:37:20.497363 (238981) main____ INFO      hostname  : ee24
+2023-04-18 23:37:20.497366 (238981) main____ INFO      pid       : 238981
+2023-04-18 23:37:20.497369 (238981) main____ INFO      arguments : '-style' 'windows' '-superlint'
+2023-04-18 23:37:20.497373 (238981) main____ INFO      locale    : ANSI_X3.4-1968
+2023-04-18 23:37:20.497375 (238981) main____ INFO    ----------------------------------------
+2023-04-18 23:37:20.497378 (238981) main____ INFO    System resource limits info:
+2023-04-18 23:37:20.497382 (238981) main____ INFO      virtual memory: unlimited
+2023-04-18 23:37:20.497385 (238981) main____ INFO      cpu time      : unlimited
+2023-04-18 23:37:20.497391 (238981) main____ INFO      processes     : 4096
+2023-04-18 23:37:20.497399 (238981) main____ INFO      stack size    : 8388608 B
+2023-04-18 23:37:20.497403 (238981) main____ INFO      core file size: 0 B
+2023-04-18 23:37:20.497406 (238981) main____ INFO      open files    : 1024
+2023-04-18 23:37:20.497410 (238981) main____ INFO      file size     : unlimited
+2023-04-18 23:37:20.497412 (238981) main____ INFO    ----------------------------------------
+2023-04-18 23:37:20.497415 (238981) main____ INFO    Memory statistics:
+2023-04-18 23:37:20.497418 (238981) main____ INFO      total physical memory  : 1056530580 kB
+2023-04-18 23:37:20.497421 (238981) main____ INFO      free physical memory   : 1012705868 kB
+2023-04-18 23:37:20.497424 (238981) main____ INFO      committed address space: 13759596 kB
+2023-04-18 23:37:20.497426 (238981) main____ INFO    ----------------------------------------
+2023-04-18 23:37:20.497986 (238981) main____ INFO    Important environment variables:
+2023-04-18 23:37:20.497997 (238981) main____ INFO      CDS_AUTO_64BIT     : 'ALL'
+2023-04-18 23:37:20.498002 (238981) main____ INFO      CDS_LOAD_ENV       : 'CSF'
+2023-04-18 23:37:20.498006 (238981) main____ INFO      CDS_Netlisting_Mode: 'Analog'
+2023-04-18 23:37:20.498011 (238981) main____ INFO      DISPLAY            : 'localhost:11.0'
+2023-04-18 23:37:20.498015 (238981) main____ INFO      JASPER_INSTALL_DIR : '/usr/cad/cadence/JASPER/jasper_2023.03'
+2023-04-18 23:37:20.498019 (238981) main____ INFO      JASPER_KERNEL_CHECK: '1'
+2023-04-18 23:37:20.498023 (238981) main____ INFO      JASPER_OS_CHECK    : '1'
+2023-04-18 23:37:20.498028 (238981) main____ INFO      LM_LICENSE_FILE    : '26585@lshc:5280@lshc:1717@lshc:5280@lstn:5280@lstc:26585@lstn:26585@lstc:'
+2023-04-18 23:37:20.498035 (238981) main____ INFO    ----------------------------------------
+2023-04-18 23:37:20.499715 (238981) lic_core INFO    Initializing license system ...
+2023-04-18 23:37:20.506799 (238981) lic_core INFO    ... license system initialized.
+2023-04-18 23:37:20.525688 (238981) lic__man INFO    Claim 'main' for <ui>.
+2023-04-18 23:37:20.525735 (238981) lic_core INFO    (1) checking out 'jasper_interactive' ...
+2023-04-18 23:37:20.597544 (238981) lic_core INFO    ... (1) checkout succeeded
+2023-04-18 23:37:20.597642 (238981) lic__man INFO    Claim 'superlint' for <ui>.
+2023-04-18 23:37:20.597674 (238981) lic_core INFO    (2) checking out 'jasper_afl' ...
+2023-04-18 23:37:20.813144 (238981) lic_core INFO    ... (2) checkout failed (error: -5) ("FLEXnet ERROR(-5, 0, 0): No such feature exists.")
+2023-04-18 23:37:20.813200 (238981) lic_core INFO    (3) checking out 'jasper_dao' ...
+2023-04-18 23:37:20.879184 (238981) lic_core INFO    ... (3) checkout succeeded
+2023-04-18 23:37:20.879786 (238981) main____ INFO    Tool inactivity delay is 480000 ms.
+2023-04-18 23:37:21.388653 (238981) lic__man INFO    Claim 'superlint' for <ui>.
+2023-04-18 23:37:21.744155 (238981) lic__man INFO    Unclaim 'superlint' for <ui>.
+2023-04-18 23:37:21.744195 (238981) lic__man INFO    Claim 'superlint' for <ui>.
+2023-04-18 23:37:21.769937 (238981) session_ INFO    Starting analysis session with session id 'session_0' (launcher: <local>) ...
+2023-04-18 23:37:21.771690 (238981) session_ INFO    Analysis session with session id 'session_0' started (pid: 239004)
+2023-04-18 23:37:26.246658 (238981) session_ INFO    Analysis session 'session_0' connected to the console (host: 127.0.0.1:48332)
+2023-04-18 23:38:38.024111 (238981) lic__man INFO    Claim 'superlint' for 'session_0'.
+2023-04-18 23:38:38.164402 (238981) main____ INFO    Releasing console memory by request of analysis session 'session_0'.
+2023-04-18 23:38:38.220446 (238981) main____ INFO    Releasing console memory by request of analysis session 'session_0'.
+2023-04-18 23:40:46.760679 (238981) lic__man INFO    Unclaim everything for 'session_0'.
+2023-04-18 23:41:47.660862 (238981) lic__man INFO    Claim 'superlint' for 'session_0'.
+2023-04-18 23:41:47.956774 (238981) lic__man INFO    Claim 'superlint' for 'session_0'.
+2023-04-18 23:41:47.956816 (238981) lic__man INFO    Claim 'superlint' for 'session_0/prove-0'.
+2023-04-18 23:41:50.444416 (238981) lic__man INFO    Unclaim everything for 'session_0/prove-0'.
+2023-04-18 23:48:34.432838 (238981) main____ INFO    About to exit: requested from GUI
+2023-04-18 23:48:34.589970 (238981) session_ INFO    Analysis session 'session_0' disconnected.
+2023-04-18 23:48:34.620438 (238981) lic_core INFO    (1) checkin jasper_interactive
+2023-04-18 23:48:34.622300 (238981) lic_core INFO    (3) checkin jasper_dao
+2023-04-18 23:48:34.625409 (238981) main____ INFO    Exiting with status 0.

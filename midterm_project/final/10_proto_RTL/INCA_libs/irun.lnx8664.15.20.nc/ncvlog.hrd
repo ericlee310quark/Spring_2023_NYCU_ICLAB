@@ -1,0 +1,10 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+-DEFINE
+RTL
+-DEFINE
+FUNC
+-INCDIR
+/usr/synthesis/dw/sim_ver/

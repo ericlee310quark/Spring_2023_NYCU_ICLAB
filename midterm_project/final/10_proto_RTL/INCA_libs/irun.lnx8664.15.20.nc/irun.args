@@ -1,0 +1,17 @@
+//
+// File created by:  irun
+// Do not modify this file
+//
+TESTBED.v
+-define
+RTL
+-define
+FUNC
+-debug
+-f
+file_list.f
+-incdir
+/usr/synthesis/dw/sim_ver/
+-notimingchecks
+-loadpli1
+debpli:novas_pli_boot

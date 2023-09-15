@@ -1,0 +1,8 @@
+PATTERN_iclab2023spring_Mid_v2.v
+/RAID2/COURSE/iclab/iclab034/Midterm_project/00_TESTBED/PATTERN_iclab2023spring_Mid_v2.v
+../00_TESTBED/MEM_MAP_define.v
+/RAID2/COURSE/iclab/iclab034/Midterm_project/00_TESTBED/MEM_MAP_define.v
+../00_TESTBED/pseudo_DRAM.v
+/RAID2/COURSE/iclab/iclab034/Midterm_project/00_TESTBED/pseudo_DRAM.v
+GLCM.v
+/RAID2/COURSE/iclab/iclab034/Midterm_project/10_RTL/GLCM.v

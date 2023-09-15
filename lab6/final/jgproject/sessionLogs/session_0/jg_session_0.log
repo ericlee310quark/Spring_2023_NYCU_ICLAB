@@ -1,0 +1,230 @@
+# ----------------------------------------
+# Jasper Version Info
+# tool      : Jasper 2023.03
+# platform  : Linux 3.10.0-1160.88.1.el7.x86_64
+# version   : 2023.03 FCS 64 bits
+# build date: 2023.03.29 16:16:18 UTC
+# ----------------------------------------
+# started   : 2023-04-18 23:37:25 CST
+# hostname  : ee24.EEHPC
+# pid       : 239004
+# arguments : '-label' 'session_0' '-console' '//127.0.0.1:36678' '-style' 'windows' '-data' 'AAAAhnicY2RgYLCp////PwMYMFcBCQEGHwZfhiAGVyDpzxAGpOGA8QGUYcPIgAwYAxtQaAYGVphCmAogFmHQZShmKGUoYEhlKGLIYchkyGMoAakFABcpDd4=' '-proj' '/RAID2/COURSE/iclab/iclab034/Lab06/jgproject/sessionLogs/session_0' '-init' '-hidden' '/RAID2/COURSE/iclab/iclab034/Lab06/jgproject/.tmp/.initCmds.tcl'
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2023 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc.
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+Jasper Apps Analysis Session - /RAID2/COURSE/iclab/iclab034/Lab06/jgproject/sessionLogs/session_0
+
+WARNING (WG017): [session]: The system's locale is "ANSI_X3.4-1968", which is not UTF-8. Non-ASCII characters might not be handled correctly.
+WARNING (WG017): [jg_console]: The system's locale is "ANSI_X3.4-1968", which is not UTF-8. Non-ASCII characters might not be handled correctly.
+INFO: successfully checked out licenses "jasper_interactive" and "jasper_dao".
+INFO: reading configuration file "/RAID2/COURSE/iclab/iclab034/.config/cadence/jasper.conf".
+% check_superlint -init
+% check_superlint -restore -file /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v
+INFO (IPF121): Cleared environment completely for new design analysis.
+INFO (IPF121): Cleared environment completely for new design analysis.
+ERROR (ESW046): The file "/RAID2/COURSE/iclab/iclab034/Lab06/jgproject/sessionLogs/session_0/.superlint_db/.jdb" does not exist.
+
+
+% config_rtlds -rule  -enable -category {BLACKBOX FILEFORMAT CODINGSTYLE SIM_SYNTH SYNTHESIS STRUCTURAL} 
+% analyze -v2k {/RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v} ; analyze -v2k {/RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v} ; 
+[-- (VERI-1482)] Analyzing Verilog file '/RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v'
+[-- (VERI-1482)] Analyzing Verilog file '/RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v'
+[WARN (VERI-1199)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(26): parameter 'ARCH_TYPE' becomes localparam in 'INV_IP' with formal parameter declaration list
+% elaborate
+[INFO (HIER-8002)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(399): Disabling old hierarchical reference handler
+[INFO (VERI-1018)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(12): compiling module 'INV_IP'
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(368): expression size 6 truncated to fit in target size 5
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(369): expression size 6 truncated to fit in target size 5
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(376): expression size 32 truncated to fit in target size 5
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(381): expression size 5 truncated to fit in target size 4
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(387): expression size 4 truncated to fit in target size 3
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(393): expression size 3 truncated to fit in target size 2
+[INFO (VERI-1018)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(16): compiling module 'EC_TOP'
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(89): expression size 7 truncated to fit in target size 6
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(128): expression size 32 truncated to fit in target size 2
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(129): expression size 32 truncated to fit in target size 2
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(130): expression size 32 truncated to fit in target size 2
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(194): expression size 13 truncated to fit in target size 12
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(202): expression size 13 truncated to fit in target size 12
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(217): expression size 7 truncated to fit in target size 6
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(218): expression size 8 truncated to fit in target size 6
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(233): expression size 7 truncated to fit in target size 6
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(235): expression size 7 truncated to fit in target size 6
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(236): expression size 7 truncated to fit in target size 6
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(246): expression size 8 truncated to fit in target size 6
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(247): expression size 8 truncated to fit in target size 6
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(248): expression size 8 truncated to fit in target size 6
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(249): expression size 8 truncated to fit in target size 6
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(250): expression size 8 truncated to fit in target size 6
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(251): expression size 8 truncated to fit in target size 6
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(259): expression size 12 truncated to fit in target size 8
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(262): expression size 12 truncated to fit in target size 8
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(351): expression size 12 truncated to fit in target size 8
+[WARN (VERI-1209)] /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(354): expression size 12 truncated to fit in target size 8
+INFO (ISW003): Top module name is "EC_TOP".
+INFO (INL208): Elaboration synthesis summary:
+  Number of synthesized netlists          2 (0 packages)
+  Single run mode                         On
+  Pipeline                                On (2 pipelined netlists)
+  Late hierarchical reference connection  On
+  Number of analyzed Verilog modules      2 (2 synthesized)
+  Number of analyzed VHDL entities        0 (0 synthesized)
+WARNING (WNL018): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(388): multiplication operator mult_8u_8u (size 16) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL033): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/EC_TOP.v(390): modulus operator mod_13u_6u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mod" command to prevent automatic black-boxing.
+WARNING (WNL032): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(368): division operator div_6u_6u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_div" command to prevent automatic black-boxing.
+WARNING (WNL033): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(369): modulus operator mod_6u_6u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_mod" command to prevent automatic black-boxing.
+WARNING (WNL032): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(374): division operator div_6u_5u (size 6) automatically black boxed.
+    Use the "elaborate -bbox_div" command to prevent automatic black-boxing.
+WARNING (WNL033): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(375): modulus operator mod_6u_5u (size 5) automatically black boxed.
+    Use the "elaborate -bbox_mod" command to prevent automatic black-boxing.
+WARNING (WNL018): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(376): multiplication operator mult_5u_6u (size 11) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL032): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(380): division operator div_5u_5u (size 5) automatically black boxed.
+    Use the "elaborate -bbox_div" command to prevent automatic black-boxing.
+WARNING (WNL033): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(381): modulus operator mod_5u_5u (size 5) automatically black boxed.
+    Use the "elaborate -bbox_mod" command to prevent automatic black-boxing.
+WARNING (WNL018): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(382): multiplication operator mult_5u_5u (size 10) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL032): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(386): division operator div_5u_4u (size 5) automatically black boxed.
+    Use the "elaborate -bbox_div" command to prevent automatic black-boxing.
+WARNING (WNL033): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(387): modulus operator mod_5u_4u (size 4) automatically black boxed.
+    Use the "elaborate -bbox_mod" command to prevent automatic black-boxing.
+WARNING (WNL018): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(388): multiplication operator mult_5u_5u (size 10) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL032): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(392): division operator div_4u_3u (size 4) automatically black boxed.
+    Use the "elaborate -bbox_div" command to prevent automatic black-boxing.
+WARNING (WNL033): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(393): modulus operator mod_4u_3u (size 3) automatically black boxed.
+    Use the "elaborate -bbox_mod" command to prevent automatic black-boxing.
+WARNING (WNL018): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(394): multiplication operator mult_5u_5u (size 10) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+WARNING (WNL032): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(398): division operator div_3u_2u (size 3) automatically black boxed.
+    Use the "elaborate -bbox_div" command to prevent automatic black-boxing.
+WARNING (WNL018): /RAID2/COURSE/iclab/iclab034/Lab06/Exercise/01_RTL/INV_IP.v(399): multiplication operator mult_5u_4u (size 9) automatically black boxed.
+    Use the "elaborate -bbox_mul" command to prevent automatic black-boxing.
+INFO (INL003): Clearing all state information (assumes, stopats, and so forth).
+EC_TOP
+[<embedded>] % get_clock_info -gui
+[<embedded>] % clock clk -factor 1 -phase 1
+[<embedded>] % reset -expression !rst_n;
+INFO (IPM031): Clearing proof results of all properties.
+INFO (IRS006): Current reset condition is "rst_n".
+[<embedded>] % check_superlint -extract 
+INFO (IRS029): Starting reset analysis: phase 1 of 4.
+INFO (IRS030): Running reset analysis: phase 2 of 4.
+INFO (IRS031): Running reset analysis: phase 3 of 4.
+INFO (IRS020): Starting the reset analysis simulation with a limit of 100 iterations (phase 4 of 4).
+INFO (IRS024): Reset iterations 0 to 3 analyzed.
+INFO (IRS018): Reset analysis simulation executed for 2 iterations. Assigned values for 79 of 79 design flops, 0 of 0 design latches, 25 of 25 internal elements.
+INFO (IRS039): Reset analysis complete.
+INFO (ISL018): Started extraction of structural checks
+INFO (ISL018): Started building clock tree
+INFO (ISL018): Finished building clock tree
+INFO (ISL018): Started building reset tree
+INFO (ISL018): Finished building reset tree
+INFO (ISL018): Violation Count: Errors = 0 Warnings = 128 Info = 0
+INFO (ISL009): Started detection of ASG_AR_OVFL, CAS_NO_UNIQ, CAS_NO_PRIO, BLK_NO_RCHB, ARY_IS_OOBI, EXP_IS_DVBZ, SHF_IS_OVFL, SHF_IS_ABSO checks
+INFO (ISL014): Started extracting properties for ASG_AR_OVFL, CAS_NO_UNIQ, CAS_NO_PRIO, BLK_NO_RCHB, ARY_IS_OOBI, EXP_IS_DVBZ, SHF_IS_OVFL, SHF_IS_ABSO checks
+INFO (ISL015): Extracted 156 properties of ASG_AR_OVFL, CAS_NO_UNIQ, CAS_NO_PRIO, BLK_NO_RCHB, ARY_IS_OOBI, EXP_IS_DVBZ, SHF_IS_OVFL, SHF_IS_ABSO
+INFO (ISL009): Started detection of FSM_IS_LVLK, FSM_IS_DDLK, FSM_NO_RCHB checks
+INFO (ISL014): Started extracting properties for FSM_IS_LVLK, FSM_IS_DDLK, FSM_NO_RCHB checks
+INFO (ISL015): Extracted 11 properties of FSM_IS_LVLK, FSM_IS_DDLK, FSM_NO_RCHB
+INFO (ISL009): Started detection of BUS_IS_CONT, BUS_IS_FLOT checks
+INFO (ISL014): Started extracting properties for BUS_IS_CONT, BUS_IS_FLOT checks
+INFO (ISL009): Started detection of MOD_IS_FCMB checks
+INFO (ISL014): Started extracting properties for MOD_IS_FCMB checks
+INFO (ISL015): Extracted 8 properties of MOD_IS_FCMB
+303
+[<embedded>] % check_superlint -prove  -bg
+----------------------------------------
+| INFO (IPF035): Proving the following tasks:
+|     1:    <SL_AUTO_FORMAL_COMBO_LOOP>
+|     2:    <SL_AUTO_FORMAL_DEAD_CODE>
+|     3:    <SL_AUTO_FORMAL_FSM_DEADLOCK_LIVELOCK>
+|     4:    <SL_AUTO_FORMAL_FSM_REACHABILITY>
+|     5:    <SL_AUTO_FORMAL_OVERFLOW>
+----------------------------------------
+background 0
+INFO (IPF127): Verbosity level: 6
+INFO (IPF127): Using Proof Grid in local mode, with 1 licenses
+INFO (IPF127): Trace generation: Keeping
+INFO (IPF127): Engine C/G memory limit: 2048MB
+INFO (IPF127): Using rule superlint_chunking_rule.
+INFO (IPF127): (traces_plan) Using action: prove_action.
+INFO (IPF036): Starting proof on task: "<SL_AUTO_FORMAL_DEAD_CODE>", 142 properties to prove with 0 already proven/unreachable
+ERROR (ENL024): Combinational loop found within the cone of influence for "add_1a[0]".
+    Do one of the following to learn more about the problematic combinational loops:
+    - Use "check_loop <signal>" to show loops in the COI of the specified signal.
+    - Open the Combo Loop Viewer to see all loops in the design: "check_loop -viewer".
+    - Use "help check_loop -gui" and/or the "Combo Loop Viewer" chapter in the user guide for guidance.
+INFO (IPF127): (traces_plan) Done using action: prove_action.
+INFO (IPF127): (traces_plan) Action result: failed.
+
+==============================================================
+SUMMARY
+==============================================================
+           Total Tasks                        : 6
+           Total Properties                   : 175
+                 assumptions                  : 0
+                  - approved                  : 0
+                  - temporary                 : 0
+                 soft assumptions             : 0
+                 assertions                   : 28
+                  - proven                    : 0 (0%)
+                  - bounded_proven (user)     : 0 (0%)
+                  - bounded_proven (auto)     : 0 (0%)
+                  - marked_proven             : 0 (0%)
+                  - cex                       : 0 (0%)
+                  - ar_cex                    : 0 (0%)
+                  - undetermined              : 0 (0%)
+                  - unknown                   : 28 (100%)
+                  - error                     : 0 (0%)
+                 covers                       : 147
+                  - unreachable               : 0 (0%)
+                  - bounded_unreachable (user): 0 (0%)
+                  - covered                   : 0 (0%)
+                  - ar_covered                : 0 (0%)
+                  - undetermined              : 0 (0%)
+                  - unknown                   : 147 (100%)
+                  - error                     : 0 (0%)
+INFO (IPL005): Received request to exit from the console.
+INFO (IPL014): Waiting for the Tcl-thread to exit.
+INFO: Waiting for proof threads to stop...
+INFO: Proof threads stopped.
+INFO (IPL018): The peak resident set memory use for this session was 0.563 GB.
+INFO (IPL015): The Tcl-thread exited with status 0.
+INFO (IPL016): Exiting the analysis session with status 0.

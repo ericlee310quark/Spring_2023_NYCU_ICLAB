@@ -1,0 +1,5 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(25Aug2022:20:33:53):( xrun -mcl 4 TESTBED.v -define RTL -debug -y /RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/ +libext+.v )

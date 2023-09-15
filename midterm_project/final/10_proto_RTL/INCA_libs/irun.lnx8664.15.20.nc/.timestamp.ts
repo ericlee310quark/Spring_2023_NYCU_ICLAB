@@ -1,0 +1,2 @@
+1681133648 /RAID2/COURSE/iclab/iclab034/Midterm_project/04_MEM/RA1SH_20b_1024w.v
+1681547115 /RAID2/COURSE/iclab/iclab034/Midterm_project/00_TESTBED/TESTBED.v

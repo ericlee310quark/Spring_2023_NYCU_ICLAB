@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : GLCM
+Version: T-2022.03
+Date   : Thu Apr 13 22:18:38 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+    USERLIB (File: /RAID2/COURSE/iclab/iclab034/Midterm_project/04_MEM/RA1SH_20b_1024w.db)
+
+Number of ports:                          252
+Number of nets:                        248281
+Number of cells:                       248013
+Number of combinational cells:         238233
+Number of sequential cells:              9706
+Number of macros/black boxes:               1
+Number of buf/inv:                      11226
+Number of references:                     116
+
+Combinational area:            4378128.001884
+Buf/Inv area:                   115143.339952
+Noncombinational area:          678076.666954
+Macro/Black Box area:           212953.515625
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               5269158.184464
+Total area:                 undefined
+1

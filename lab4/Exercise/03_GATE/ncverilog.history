@@ -1,0 +1,7 @@
+s1(26Aug2022:06:34:42):  ncverilog PATTERN.v NN_SYN.v -v sim_model.v +access+r 
+s2(26Aug2022:06:44:12):  ncverilog PATTERN.v NN_SYN.v -define GATE -v sim_model.v +access+r 
+s3(26Aug2022:06:46:53):  ncverilog TESTBED.v NN_SYN.v -define GATE -v sim_model.v +access+r 
+s4(26Aug2022:06:49:40):  irun -timescale 1ns/1fs -override_precision -sdf_precision 1fs TESTBED.v -define GATE -debug -v /RAID2/COURSE/iclab/iclabta01/umc018/Verilog/umc18_neg.v -y /usr/synthesis/dw/sim_ver/ -nontcglitch 
+s5(26Aug2022:06:50:01):  ncverilog PATTERN.v NN_SYN.v -define GATE -v sim_model.v +access+r 
+s6(26Aug2022:06:50:14):  ncverilog TESTBED.v NN_SYN.v -define GATE -v sim_model.v +access+r 
+s7(26Aug2022:06:53:48):  ncverilog TESTBED.v NN_SYN.v -define GATE -v sim_model.v +access+r 

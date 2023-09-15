@@ -1,0 +1,36 @@
+[ PAT NO. 499 ]
+
+[ Weight U ]
+
+342aa51b 49ab8551 b56cb368 
+
+ca8ee4c7 bd1cded0 31ed6a8c 
+
+39788512 3c3b6569 c413036d 
+
+[ Weight W ]
+
+cb6bfbb6 b42d1105 c54fec4d 
+
+4377c77f 32ab824a b5e2e70d 
+
+ca6e06bd c3cb1836 bbc57210 
+
+[ Weight V ]
+
+3acf7586 c56de20f cc08533f 
+
+407419b0 3536866f bea303f6 
+
+b7be622d c048d211 35ed54a6 
+
+[ Input ]
+
+X_1 : c0f570ba 40983d35 4080ab74 
+
+X_2 : bf840ac0 c054475b 406d471e 
+
+X_3 : 3fbf544f 3f8dd225 bfb2766b 
+
+H_0 : bfed1145 3fca73fa c016fdc6 
+

@@ -1,0 +1,103 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'GLCM' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : GLCM
+Version: T-2022.03
+Date   : Tue Apr 18 01:05:09 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: in_dir_reg_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: GLCM_reg[15][10][3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  in_dir_reg_reg[0]/CK (DFFRHQX4)          0.00 #     0.00 r
+  in_dir_reg_reg[0]/Q (DFFRHQX4)           0.40       0.40 r
+  U252920/Y (NAND2X4)                      0.09       0.49 f
+  U252496/Y (INVX4)                        0.07       0.56 r
+  U252646/Y (NAND2X4)                      0.08       0.64 f
+  U252645/Y (OAI21X4)                      0.11       0.75 r
+  U252845/Y (NOR2X4)                       0.10       0.85 f
+  U253079/Y (NOR2X4)                       0.11       0.96 r
+  U252649/Y (NAND2X4)                      0.07       1.04 f
+  U251544/Y (NAND3X4)                      0.18       1.21 r
+  U252975/Y (INVX4)                        0.09       1.31 f
+  U252186/Y (NAND2X4)                      0.13       1.44 r
+  U252911/Y (NOR2X4)                       0.08       1.53 f
+  U250531/Y (INVX8)                        0.09       1.62 r
+  U255068/Y (INVX8)                        0.05       1.67 f
+  U229134/Y (BUFX12)                       0.17       1.84 f
+  U255084/Y (NAND2X1)                      0.12       1.96 r
+  U239936/Y (NAND3X2)                      0.10       2.06 f
+  U234879/Y (NOR2X2)                       0.18       2.24 r
+  U253417/Y (NAND4X4)                      0.18       2.42 f
+  U253586/Y (NAND2X2)                      0.17       2.59 r
+  U253585/Y (NAND3X4)                      0.12       2.71 f
+  U228771/Y (NAND2X1)                      0.20       2.91 r
+  U253016/Y (NAND4X4)                      0.26       3.17 f
+  U252547/Y (BUFX8)                        0.22       3.39 f
+  U255254/Y (XOR2X2)                       0.21       3.60 f
+  U228551/Y (NOR2X2)                       0.16       3.76 r
+  U255253/Y (NAND4X4)                      0.16       3.93 f
+  U228434/Y (NAND2X1)                      0.27       4.20 r
+  U228425/Y (NOR2X1)                       0.16       4.36 f
+  U255248/Y (NAND2X4)                      0.14       4.50 r
+  U234568/Y (INVX1)                        0.06       4.57 f
+  U230470/Y (NAND3X1)                      0.20       4.76 r
+  U234451/Y (INVX2)                        0.10       4.86 f
+  U249004/Y (INVX2)                        0.10       4.96 r
+  U267252/Y (INVX2)                        0.32       5.29 f
+  U307164/Y (AOI22XL)                      0.26       5.55 r
+  U307166/Y (NAND4XL)                      0.16       5.71 f
+  U255299/Y (NAND3BX2)                     0.20       5.91 f
+  U255298/Y (OR3X2)                        0.32       6.23 f
+  U255072/Y (AOI2BB2XL)                    0.17       6.40 r
+  U245740/Y (AND3X2)                       0.24       6.64 r
+  U252050/Y (NAND4X2)                      0.13       6.77 f
+  U245645/Y (NAND2X2)                      0.13       6.90 r
+  U255070/Y (NOR2X2)                       0.08       6.98 f
+  U253202/Y (OAI21X2)                      0.19       7.17 r
+  U253200/Y (NAND2X4)                      0.12       7.29 f
+  U253197/Y (AOI21X4)                      0.20       7.48 r
+  U237808/Y (BUFX3)                        0.16       7.65 r
+  U226995/Y (XOR2X2)                       0.25       7.89 f
+  U229961/Y (INVX2)                        0.14       8.03 r
+  U269076/Y (INVX1)                        0.16       8.19 f
+  U226735/Y (CLKINVX2)                     0.43       8.62 r
+  U444432/Y (OAI22XL)                      0.16       8.78 f
+  U444438/Y (OAI31XL)                      0.26       9.04 r
+  U444440/Y (OAI211XL)                     0.16       9.20 f
+  U444443/Y (OAI31XL)                      0.24       9.44 r
+  U444445/Y (OAI211XL)                     0.14       9.58 f
+  GLCM_reg[15][10][3]/D (DFFHQX1)          0.00       9.58 f
+  data arrival time                                   9.58
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  GLCM_reg[15][10][3]/CK (DFFHQX1)         0.00      10.00 r
+  library setup time                      -0.42       9.58
+  data required time                                  9.58
+  -----------------------------------------------------------
+  data required time                                  9.58
+  data arrival time                                  -9.58
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1

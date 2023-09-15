@@ -1,0 +1,23 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx86.20.09.d
+-RUNMODE
+TESTBED.v
+-DEFINE
+RTL
+-YDIR
+/RAID2/cad/synopsys/synthesis/cur/dw/sim_ver/
+-LIBEXT
+.v
+-CDSLIB
+./xcelium.d/run.lnx86.20.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx86.20.09.d/hdlrun.var
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx86.20.09.d/xllibs
+-ALLOWUNBOUND

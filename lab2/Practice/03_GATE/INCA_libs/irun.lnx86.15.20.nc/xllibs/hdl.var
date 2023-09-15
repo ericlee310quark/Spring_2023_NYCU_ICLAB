@@ -1,0 +1,3 @@
+define LIB_MAP ( $LIB_MAP \
+, ../../../../../../../iclabta01/umc018/Verilog/umc18_neg.v => umc18_neg \
+)

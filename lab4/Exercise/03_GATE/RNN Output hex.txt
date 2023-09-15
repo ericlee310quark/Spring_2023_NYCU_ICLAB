@@ -1,0 +1,74 @@
+[ PAT NO. 121 ]
+
+[ Layer 1 U*x ]
+
+cf856ccc cecc52ce 41accc00 
+
+[ Layer 0->1 W*h ]
+
+4fba14a1 ca309483 ccc7e63e 
+
+[ Layer 1 U*x+W*h ]
+
+4ed29f54 ceccab18 ccc7e63b 
+
+[ Layer 1 h ]
+
+4ed29f54 cd23bc13 cb1feb63 
+
+[ Layer 1 V*h ]
+
+db06dc9b d3cd090a 4f839aad 
+
+[ Layer 1 y ]
+
+00000000 00000000 3f800000 
+==============================================
+[ Layer 2 U*x ]
+
+cf331f1d 4f984ad0 c26ba761 
+
+[ Layer 1->2 W*h ]
+
+da895d07 593a6fae 599f3419 
+
+[ Layer 2 U*x+W*h ]
+
+da895d08 593a6fc1 599f3419 
+
+[ Layer 2 h ]
+
+d8dbc80d 593a6fc1 599f3419 
+
+[ Layer 2 V*h ]
+
+650c9983 5db7a155 dc175d9e 
+
+[ Layer 2 y ]
+
+3f800000 3f800000 00000000 
+==============================================
+[ Layer 3 U*x ]
+
+4f3b9da9 4fdbf8a3 c2af3860 
+
+[ Layer 2->3 W*h ]
+
+6908bf85 e343b26b e5a6ca82 
+
+[ Layer 3 U*x+W*h ]
+
+6908bf85 e343b26b e5a6ca82 
+
+[ Layer 3 h ]
+
+6908bf85 e19c8ebc e4056ecf 
+
+[ Layer 3 V*h ]
+
+f52f2128 ee052737 660c7339 
+
+[ Layer 3 y ]
+
+00000000 00000000 3f800000 
+==============================================

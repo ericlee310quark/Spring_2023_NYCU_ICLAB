@@ -1,0 +1,543 @@
+// ---------------------------------//
+//  Automatically Generated         //
+// ---------------------------------//
+domain AUTO_FORMAL
+{
+ AUTO_FORMAL_OVERFLOW
+ AUTO_FORMAL_BUS
+ AUTO_FORMAL_CASE
+ AUTO_FORMAL_COMBO_LOOP
+ AUTO_FORMAL_DEAD_CODE
+ AUTO_FORMAL_FSM_DEADLOCK_LIVELOCK
+ AUTO_FORMAL_FSM_REACHABILITY
+ AUTO_FORMAL_OUT_OF_BOUND_INDEXING
+ AUTO_FORMAL_SIGNALS
+ AUTO_FORMAL_X_ASSIGNMENT
+}
+
+domain DFT
+{
+ DFT_FUNCTIONAL
+}
+
+domain LINT
+{
+ BLACKBOX
+ FILEFORMAT
+ CODINGSTYLE
+ SIM_SYNTH
+ SYNTHESIS
+ STRUCTURAL
+}
+
+domain SOC_INTEGRATION
+{
+ HIER_CONSISTENCY
+}
+
+domain RDC
+{
+ RST_SYNCHRONIZATION
+ RST_CONFIGURATION
+}
+
+domain CDC
+{
+ CDC_CONFIGURATION
+ CDC_SYNCHRONIZATION
+ CDC_CONVERGENCE
+ CDC_FUNCTIONAL
+ CDC_METASTABILITY
+}
+
+category AUTO_FORMAL_X_ASSIGNMENT
+{
+  ASG_IS_XRCH  {severity=Error} {msg="Signal '%s' was assigned with an 'x' value"} {status=off}
+}
+
+category AUTO_FORMAL_SIGNALS
+{
+  SIG_NO_TGRS  {severity=Error} {msg="The signal '%s' has not toggled from 0 to 1"} {status=off}
+  SIG_NO_TGFL  {severity=Error} {msg="The signal '%s' has not toggled from 1 to 0"} {status=off}
+  SIG_NO_TGST  {severity=Error} {msg="The signal '%s' has not toggled stable"} {status=off}
+  SIG_IS_DLCK  {severity=Error} {msg="The signal '%s' has deadlock state %s"} {status=off}
+  SIG_IS_STCK  {severity=Error} {msg="The signal '%s' is stuck"} {status=off}
+}
+
+category AUTO_FORMAL_OUT_OF_BOUND_INDEXING
+{
+  ARY_IS_OOBI  {severity=Error} {msg="Variable index '%s' range selection greater than '%s' is outside the defined range of '%s'"}
+}
+
+category AUTO_FORMAL_FSM_REACHABILITY
+{
+  FSM_NO_RCHB  {severity=Error} {msg="Unreachable states found %s in the FSM '%s'"}
+  FSM_NO_TRRN  {severity=Error} {msg="Unreachable transitions found %s->%s in the FSM '%s'"} {status=off}
+  FSM_NO_MTRN  {severity=Error} {msg="Unreachable consequence transitions %s->%s->%s found in the FSM '%s'"} {status=off}
+}
+
+category AUTO_FORMAL_FSM_DEADLOCK_LIVELOCK
+{
+  FSM_IS_LVLK  {severity=Error} {msg="Livelock condition found in the FSM '%s'"}
+  FSM_IS_DDLK  {severity=Error} {msg="Deadlock condition found for state '%s' in the FSM '%s'"}
+  FSM_IS_PLLK  {severity=Warning} {msg="Potential Livelock condition found in the FSM '%s'"} {status=off}
+  FSM_IS_PDLK  {severity=Warning} {msg="Potential Deadlock condition found for state '%s' in the FSM '%s'"} {status=off}
+  FSM_IS_NLLK  {severity=Info} {msg="FSM '%s' does not have any Livelock condition"} {status=off}
+  FSM_IS_NDLK  {severity=Info} {msg="State '%s' in the FSM '%s' does not have any Deadlock condition"} {status=off}
+}
+
+category AUTO_FORMAL_DEAD_CODE
+{
+  BLK_NO_RCHB  {severity=Error} {msg="The %s statement '%s' is not reachable"}
+}
+
+category AUTO_FORMAL_COMBO_LOOP
+{
+  MOD_IS_FCMB  {severity=Error} {msg="Combinational loop detected passing through: '%s'"} {include_latch_data=true} {loop_count_limit=10}
+}
+
+category AUTO_FORMAL_CASE
+{
+  CAS_NO_PRIO  {severity=Error} {msg="Priority case failure found for case with selector '%s'"}
+  CAS_NO_UNIQ  {severity=Error} {msg="Unique case failure found for case with selector '%s'"}
+}
+
+category AUTO_FORMAL_BUS
+{
+  BUS_IS_CONT  {severity=Error} {msg="Contention bus failure found in bus '%s'"}
+  BUS_IS_FLOT  {severity=Error} {msg="Floating bus failure found in bus '%s'"}
+}
+
+category AUTO_FORMAL_OVERFLOW
+{
+  ASG_AR_OVFL  {severity=Error} {msg="Overflow in arithmetic assignment/assignment-like statement. LHS '%s' (%s) is of %s bit(s), RHS '%s' (%s) can be of %s bit(s)"}
+  EXP_AR_OVFL  {severity=Error} {msg="Overflow in expression. Expression size is %s bit(s), but expression value can be %s bit(s)"} {status=off}
+  ASG_IS_OVFL  {severity=Error} {msg="Overflow in non-arithmetic assignment/assignment-like statement. LHS '%s' (%s) is of %s bit(s). RHS '%s' (%s) can be  %s bit(s)"} {status=off}
+  EXP_IS_DVBZ  {severity=Error} {msg="Divide by zero condition found in expression. Divisor '%s' gets zero value"}
+  SHF_IS_OVFL  {severity=Error} {msg="Overflow as a result of shift operation. Shift expression size is %s bit(s), but expression value can be %s bit(s)"}
+  SHF_IS_ABSO  {severity=Error} {msg="All bits shifted out in shift operation. The shifter value exceeds %s bit(s)"}
+}
+
+category DFT_FUNCTIONAL
+{
+  CLK_IS_DLAT  {severity=Warning} {msg="Signal '%h' generated from latch is driving clock of one or more flip-flops"} {status=off}
+  CLK_IS_NDPI  {severity=Warning} {msg="Signal '%h' driving clock of one or more flip-flops, is undriven"} {status=off}
+  CLK_IS_BDPI  {severity=Warning} {msg="Signal '%h' driving clock of one or more flip-flops is blackbox driven"} {status=off}
+  CLK_IS_CDPI  {severity=Warning} {msg="Signal '%h' driving clock of one or more flip-flops is constant driven"} {status=off}
+  FLP_IS_ASFL  {severity=Error} {msg="Asynchronous feedback loop detected through reset/clock of flip-flop and '%s'"} {status=off}
+  FLP_IS_CKLP  {severity=Error} {msg="Feedback loop detected through clock of flip-flop and '%s'"} {status=off}
+  FLP_IS_CDFF  {severity=Warning} {msg="Signal '%h' generated from a flip-flop is driving clock of one or more flip-flops"} {status=off}
+  FLP_IS_CSTD  {severity=Warning} {msg="Inferred flip-flop '%h' has a constant data input"} {status=off} {check_behind_mux=false}
+  FLP_IS_GTCK  {severity=Warning} {msg="Signal '%s' generated from combinational logic is driving clock of one or more flip-flops"} {status=off} {disallowed_combinational_logic=all}
+  FLP_NO_CNPI  {severity=Warning} {msg="Reset signal '%h' of one or more flip-flops is undriven and is not generated from any primary input"} {status=off}
+  FLP_NO_SRST  {severity=Warning} {msg="Flip-flop '%s' does not have any set or reset"} {status=off} {check_on_instance=false} {ignore_constant_flops=false}
+  LAT_EN_NCPI  {severity=Warning} {msg="Enable of latch '%s' is not controllable from primary inputs"} {status=off} {controllable_thru_comb_logic=false}
+  LAT_IS_CSTD  {severity=Warning} {msg="Inferred latch '%' has a constant data input"} {status=off}
+  LAT_IS_INFR  {severity=Warning} {msg="Process/always block models a latch, or signal '%s' is not assigned a value in all branches"} {status=off} {print_full_name=false} {skip_always_latch=false}
+  MOD_IS_CMBL  {severity=Error} {msg="Combinational loop detected passing through: '%h'"} {status=off} {disable_enumerated_loops=false} {include_latch_data=true} {loop_count_limit=10} {loop_unroll_limit=10}
+  NUM_LP_CMBL  {severity=Info} {msg="Loops connected through the signal '%s' exceed the loop limit threshold '%s'"} {status=off}
+  OTP_NO_RGTM  {severity=Warning} {msg="Output '%h' of top-level module/design-unit is not registered"} {status=off} {levels_of_combinational_logic=0}
+  INS_IS_FEED  {severity=Warning} {msg="Feedthrough detected from input/inout '%s' to port '%s'"} {status=off}
+  RST_IS_DDAF  {severity=Warning} {msg="Reset signal '%s' drives the data pin '%s' of one or more flip-flops/latches"} {status=off}
+  RST_MX_EDGE  {severity=Warning} {msg="Signal '%s' is used as active-high reset as well as active-low reset"} {status=off} {convention_for_set_reset_style=mixed}
+  TRI_NO_EPTB  {severity=Warning} {msg="Signal '%h' driving enable pin of the tristate buffer '%h' is not directly controllable by primary input(s)"} {status=off} {controllable_thru_comb_logic=false}
+}
+
+category STRUCTURAL
+{
+  CMB_NR_TLIO  {severity=Warning} {msg="Combinational path detected between top-level input '%s' and top-level output '%s'"} {report_with_latch_in_path=false}
+  FLP_NO_ASRT  {severity=Warning} {msg="Flip-flop '%s' does not have any asynchronous set or reset"}
+  FLP_NR_ASRT  {severity=Warning} {msg="Flip-flop '%s' has both asynchronous set and reset"}
+  FLP_NR_ENCT  {severity=Warning} {msg="Net '%h' driving enable pin of one or more flip-flops, is constant"}
+  FLP_IS_STRH  {severity=Warning} {msg="Potential data shoot-through between flip-flops: '%s' and '%s'"}
+  MOD_NO_IPRG  {severity=Warning} {msg="Input port '%h' of top-level design-unit is not registered"} {levels_of_combinational_logic=0}
+  NET_NO_DRIV  {severity=Error} {msg="Net '%s' declared in design-unit '%s' has no driver but has at least one load"}
+  RST_IS_DCMB  {severity=Error} {msg="Net '%h' generated from combinational logic is driving reset of one or more flip-flops"} {treat_multi_driven_as_combinational_logic=true}
+  RST_IS_DFLP  {severity=Warning} {msg="Net '%h' generated from flip-flop is driving reset of one or more flip-flops"}
+  RST_IS_DLAT  {severity=Warning} {msg="Net '%h' generated from latch is driving reset of one or more flip-flops"}
+  RST_NR_PENA  {severity=Error} {msg="Net '%h' driving reset of one or more flip-flops, is permanently enabled"}
+  SIG_IS_MDRV  {severity=Error} {msg="Net '%s' has multiple drivers"} {ignore_z_drivers=true} {report_same_drivers=false}
+  CLK_NO_INPT  {severity=Warning} {msg="In design-unit '%m', clock '%l' driving one or more flip-flops, is not an input. One such flip-flop is '%l'"}
+  CLK_NS_EDMX  {severity=Warning} {msg="Both edges of clock '%s' used"} {primary_edge=posedge}
+  CLK_NR_GLKN  {severity=Warning} {msg="The control signal '%s' of the gated clock '%s' is not a standard clock gate"}
+}
+
+category SYNTHESIS
+{
+  MOD_NR_NULP  {severity=Error} {msg="Module %s has null formal port(s)"}
+  MOD_NR_PHYD  {severity=Error} {msg="Physical data type '%s' in design-unit '%s' is non-synthesizable"}
+  MOD_NR_USWC  {severity=Error} {msg="%s %s contains non-synthesizable wait construct"}
+  MOD_NS_ADAS  {severity=Warning} {msg="Design-unit %s has assign/de-assign statements"}
+  MOD_NS_DCSP  {severity=Error} {msg="Disconnect specification in design unit '%s' not supported"}
+  MOD_NS_GTIN  {severity=Error} {msg="'%s' not supported"}
+  OPR_NR_WCCO  {severity=Warning} {msg="RHS Inside or wildcard equality operator (==? or !=?) is not constant in '%s'"}
+  SIG_NO_HIER  {severity=Error} {msg="Design-unit '%s' has unsynthesizable hierarchical reference '%s'"}
+  SIG_NO_UHIR  {severity=Error} {msg="Design-unit '%s' has unresolved hierarchical reference '%s'"}
+  SIG_NR_MDRV  {severity=Warning} {msg="VHDL signal '%s' in design-unit '%s', is being driven at edges of more than one signal or same signal with different edges"}
+  SIG_NR_TIME  {severity=Error} {msg="Signal '%s' of data type 'time' used in %s %s"}
+  TSK_NR_CLKE  {severity=Warning} {msg="%s of variable '%s' used in task '%s'"}
+  VAR_NO_COMR  {severity=Warning} {msg="Variable index/range selection of '%s' is too small to access its defined range completely"}
+  VAR_NR_MBLA  {severity=Warning} {msg="In design-unit '%s', variable '%s' has multiple blocking assignments"} {multi_stmt_process_limit=1024}
+  VAR_NR_MNBA  {severity=Warning} {msg="In design-unit '%s', variable '%s' has multiple non-blocking assignments%s"} {mulnba_reset_mode=false} {multi_stmt_process_limit=1024}
+  VAR_NR_OUTR  {severity=Warning} {msg="Bit/part select '%s' is outside the defined range %s for '%s'"}
+  VAR_NR_RDTA  {severity=Warning} {msg="VHDL variable '%s' is used to register data"}
+  VAR_NR_REAL  {severity=Error} {msg="Variable '%s' of data type 'real' used in %s %s"}
+  ALW_IC_SENL  {severity=Warning} {msg="Sensitivity list of always block is incomplete in design-unit %s, missing variable(s): %s"}
+  ALW_NO_COMB  {severity=Warning} {msg="The variable '%s' models a %s in an 'always_comb' block"}
+  ALW_NO_ETRG  {severity=Warning} {msg="Always block with no event trigger at the start in design-unit '%s'"}
+  ALW_NO_EVTS  {severity=Warning} {msg="%s block with no event trigger at the start in %s %s"}
+  ALW_NR_MCLK  {severity=Error} {msg="Multiple clocks specified in variable %s of design-unit %s"}
+  ALW_NR_MIFF  {severity=Warning} {msg="Sensitivity list '%s' of always block containing 'iff' qualifiers, should be sensitive to at most one signal"}
+  ALW_NR_MXCK  {severity=Error} {msg="Always block has both level and edge sensitive variables in its sensitivity list: %s"}
+  ALW_NR_TCST  {severity=Error} {msg="The event expression '%s' cannot be synthesized"} {check_edge_sensitive_only=true} {hide_verific_messages=false}
+  ASG_NR_NBCB  {severity=Warning} {msg="Non-blocking assignment at '%s' encountered in a combinational block"} {allow_independent_NBA=true}
+  ASG_NR_SUPN  {severity=Warning} {msg="Assignment to a supply0/supply1 net %s in design-unit %s is ignored"}
+  BLK_NR_PGDL  {severity=Error} {msg="The VHDL block header containing port/generic declaration found in design-unit %s is not synthesizable"}
+  CAS_NR_EVLX  {severity=Error} {msg="In %s '%s', case item expressions evaluating to 'x/z/?' are ignored"}
+  CLK_IS_NSYT  {severity=Error} {msg="Unable to synthesize clock for VHDL signal '%s' in design-unit '%s'"}
+  CLK_NR_DDBE  {severity=Warning} {msg="Clock %s for flip-flop %s is driving data on both edges"}
+  CLK_NR_EDGE  {severity=Warning} {msg="Clock %s for flip-flop %s does not drive any data. Wrong polarity specified"}
+  CND_NR_CMXZ  {severity=Warning} {msg="In design-unit '%s', conditional expression containing 'x'/'z' is statically evaluated to false"}
+  CST_NR_CCAT  {severity=Warning} {msg="In design-unit '%s', unsized literal '%s' in concatenation will be treated as 32 bits"}
+  DLY_NR_ASGN  {severity=Warning} {msg="Delay '%s' in assignment to '%s' is being ignored"}
+  NOW_NS_FUNC  {severity=Error} {msg="'now' function in design-unit '%s' is not synthesizable"}
+  FLP_NR_ASMX  {severity=Warning} {msg="In the specified always/process block, descriptions of flip-flops with and without asynchronous reset are mixed. Flip-flops without asynchronous reset are: %s"}
+  FLP_NR_BLAS  {severity=Warning} {msg="In design-unit %s, flip-flop is assigned by blocking assignments"}
+  FLP_NR_MBCK  {severity=Warning} {msg="In %s '%s', multi-bit '%s' used as clock for flip-flop '%s'"} {clock_using_bus_signal=false}
+  FNC_NR_CREC  {severity=Warning} {msg="Function '%s' is called recursively in %s '%s'"}
+  FNC_NR_RESL  {severity=Warning} {msg="Resolution function '%s' is found in design-unit '%s'"}
+  IDX_NR_LBOU  {severity=Warning} {msg="Variable index/range selection in LHS of assignment of '%s' is potentially outside the defined range"}
+  IDX_NR_ORNG  {severity=Warning} {msg="Variable index/range selection of '%s' is potentially outside the defined range"}
+  IFC_NO_SENL  {severity=Warning} {msg="If-condition '%s' does not match any sensitivity list edge"}
+  INP_NR_ASGN  {severity=Warning} {msg="Primary input port %s of design-unit %s may be driven inside the design-unit"}
+  INS_NR_TOKN  {severity=Warning} {msg="'.*' token is used '%s' times in the port list"}
+  LAT_NR_BLAS  {severity=Warning} {msg="In design-unit %s, latch is assigned by blocking assignments"}
+  LAT_NR_MXCB  {severity=Warning} {msg="The latches '%s' in the always block are mixed with combinational logic"}
+  LOP_NR_GLID  {severity=Warning} {msg="The loop variable '%s' is used in multiple always blocks"}
+  LOP_NR_INFL  {severity=Warning} {msg="%s '%s' contains a potential infinite loop"}
+  LOP_NR_SRLG  {severity=Warning} {msg="One or more flops has reset and logic section in the same '%s' loop with condition '%s'"}
+  MOD_IS_RCMP  {severity=Warning} {msg="Overwriting previous definition of %s '%s'"}
+  MOD_NR_ALAS  {severity=Error} {msg="Design-unit %s has duplicate ports"}
+  MOD_NR_ASLD  {severity=Warning} {msg="In design-unit %s, the reset value of flip-flop %s is not constant. This infers an asynchronous load"}
+  MOD_NR_CNDO  {severity=Warning} {msg="In design-unit %s, %s comparison is treated as %s"} {ignore_non_const=true}
+  MOD_NR_DATT  {severity=Warning} {msg="Attribute %s is overwritten in design unit %s"}
+  MOD_NR_DSBC  {severity=Error} {msg="Design-unit %s contains non-synthesizable disable construct"}
+  MOD_NR_EVRP  {severity=Error} {msg="%s %s contains event specification which cannot be synthesized"}
+  MOD_NR_FKJN  {severity=Error} {msg="%s %s contains non-synthesizable fork-join constructs"}
+  MOD_NR_SPFY  {severity=Error} {msg="The module '%s' contains non-synthesizable specify block"}
+  MOD_NR_FORE  {severity=Error} {msg="Design-unit %s contains forever construct"}
+  MOD_NR_FREL  {severity=Error} {msg="%s %s contains non-synthesizable force/release constructs"}
+  MOD_NR_IFSM  {severity=Warning} {msg="%s %s contains implicit finite-state machine"}
+  MOD_NR_NSLP  {severity=Error} {msg="%s %s contains non-static loop"}
+}
+
+category SIM_SYNTH
+{
+  ALW_NR_MSLV  {severity=Warning} {msg="Signal '%s' appearing in the sensitivity list is modified inside the block"} {skip_implicit_sensitivity_list=true} {skip_read_and_assigned=false}
+  ALW_NR_UNUV  {severity=Warning} {msg="Signal '%s' appearing in the sensitivity list is not used in the '%s' block"} {report_partially_read_vector=true}
+  CAS_NR_FPIN  {severity=Warning} {msg="In design-unit '%s', full_case pragma/priority case is used with a case statement having select expression '%s', is incomplete %s"} {case_default_specification=relax} {combinational_block_only=false} {consider_all_enum_covered_as_full=false} {consider_default_item_as_full=true} {full_case_with_no_default_allowed=true}
+  CAS_NR_PUOV  {severity=Warning} {msg="In design-unit '%s', parallel_case pragma/unique case is used with a case statement having select expression '%s', in which some case items are overlapping"}
+  CST_NO_BWID  {severity=Warning} {msg="Bit width not specified for constant '%s'"} {bit_width_allowed_bin_system=5} {bit_width_allowed_other_system=5} {skip_declarations=true}
+  CST_NR_MSBX  {severity=Warning} {msg="Extension of 'x' bits in a constant '%s'"}
+  CST_NR_MSBZ  {severity=Warning} {msg="Extension of 'z' bits in a constant '%s'"}
+  DLY_NR_XZVL  {severity=Warning} {msg="Delay value '%s' contains an x/z"}
+  ENM_NR_TOST  {severity=Warning} {msg="In design unit '%s', the data type '%s' of enum '%s' is of 2-state instead of 4-state"}
+  FNC_NO_EVAL  {severity=Warning} {msg="In design-unit '%s', function call '%s' might get blocked by logical operation"}
+  MOD_NR_ACCD  {severity=Error} {msg="Access type '%s' is not supported in design-unit '%s'"}
+  MOD_NR_LOCL  {severity=Warning} {msg="Signal '%s' of task/function '%s' are initialized in design-unit '%s'"}
+  MOD_NR_SYXZ  {severity=Warning} {msg="Synthesizing 'x'/'z' value '%s' in %s '%s'"} {report_value_type=both} {skip_case_default_statement=yes} {skip_param_value=true} {skip_tristate_logic=false}
+  VAR_NR_MBNB  {severity=Warning} {msg="In design-unit '%s', %s is assigned via both blocking and non-blocking assignments"}
+  VAR_NR_NDCL  {severity=Error} {msg="Variable '%s' is declared as '%s'"} {ignore_primitive=""}
+}
+
+category CODINGSTYLE
+{
+  EXP_NR_TNST  {severity=Warning} {msg="In design-unit '%s', nesting of ternary operation %s found at level %d"} {nesting_limit=10}
+  EXP_NR_USTS  {severity=Warning} {msg="Expression '%s' in design-unit '%s' is implicitly converted to type 'signed' from type 'unsigned'"} {skip_loop_declaration=false}
+  FNC_MS_AFPR  {severity=Warning} {msg="Width mismatch between formal '%s' of %s bit(s) and actual '%s' of %s bit(s) arguments of function/task '%s'"} {allow_padding_by_zero=true} {allow_truncation_by_zero=true} {skip_component_declaration=true}
+  FNC_MS_MTYP  {severity=Warning} {msg="Task/function call argument '%s' is of incorrect type (formal %s versus actual %s)"}
+  FNC_NO_AVAC  {severity=Warning} {msg="Function '%s' is not assigned a value in some of the branches of conditional statement(s)"}
+  FNC_NO_LRET  {severity=Warning} {msg="Function '%s' in module/design-unit '%s' must have only one return statement, which should be the last statement in the function"}
+  FNC_NO_UASG  {severity=Warning} {msg="Function '%s' is not assigned a value or is partially assigned. '%s' is not assigned"}
+  FNC_NR_AVGV  {severity=Warning} {msg="Function '%s' in design-unit '%s' assigns a value to global variable '%s'"}
+  FNC_NR_NARG  {severity=Warning} {msg="Task/function/procedure '%s' call has wrong number of arguments"}
+  FNC_NR_RLRT  {severity=Warning} {msg="Function '%s' in design-unit '%s' has return of real datatype"}
+  FNC_NR_UGLV  {severity=Warning} {msg="Variable '%s' used in function '%s' of design-unit '%s' is outside of the function scope"}
+  FNC_NR_SYSV  {severity=Error} {msg="System function/task '%s' is not allowed"} {allow_function_list=""} {disallow_function_list=""}
+  GEN_NO_GREP  {severity=Warning} {msg="For-generate iterator %s does not reference the genvar '%s'"}
+  IFC_NO_FALW  {severity=Warning} {msg="The 'if' statement specifying an asynchronous reset is not the first statement of the always block : '%s'"}
+  IFC_NR_DGEL  {severity=Warning} {msg="else/else-if statement of '%s' in %s '%s' is ambiguous"}
+  INP_NO_LOAD  {severity=Warning} {msg="Input/inout port '%s' declared in the design-unit '%s' has no load"} {ignore_inout_ports=false} {ignore_undriven_ports=true} {top_only=false}
+  INP_UC_INST  {severity=Error} {msg="Input port '%s' of design-unit '%s' is being used inside design-unit, but not connected in its instance '%s'"} {ignore_explicitly_unconnected_port=false} {ignore_inout_ports=false} {ignore_port_with_no_load=false} {report_partially_unused=true}
+  INP_NR_IOUT  {severity=Error} {msg="Top level input port '%s' is connected to inout port '%s' of lower hierarchy"} {ignore_inout_as_input_ports=true}
+  INP_NR_TSUP  {severity=Warning} {msg="In design unit '%s' the input '%s' is tied to supply0/supply1"}
+  INS_MS_PRMS  {severity=Error} {msg="Parameter '%s' has size mismatch between instantiation and declaration, '%s' bits at instantiation and '%s' bits at declaration"} {allow_padding_by_zero=true} {allow_truncation_by_zero=true}
+  INS_MS_PSIZ  {severity=Error} {msg="Port '%s' has size mismatch between design-unit instantiation and port declaration, '%s' bits at instantiation and '%s' bits at declaration"} {allow_padding_by_zero=true} {allow_truncation_by_zero=true}
+  INS_NR_PODL  {severity=Warning} {msg="Port connections for instance '%s' of %s '%s' should be made by name rather than by positional ordered list"} {check_tech_cells=true}
+  INS_NR_PTEX  {severity=Warning} {msg="%s is used in a port expression"} {ignore_sized_literal=true}
+  IOP_NR_UASG  {severity=Warning} {msg="The inout port '%s' declared in the %s '%s' is unassigned, but read"}
+  LOP_NR_CTCE  {severity=Warning} {msg="Design-unit '%s' contains a loop with a constant conditional expression '%s'"} {optimize_condition=true}
+  LOP_NR_FCND  {severity=Warning} {msg="Loop condition '%s' is false"}
+  LOP_NR_MLPV  {severity=Error} {msg="Value of loop variable '%s' modified within the loop"} {skip_loop_declaration=true}
+  LOP_NR_MSTP  {severity=Warning} {msg="Loop step variable '%s' is different from the loop condition or initialization statement"}
+  MAC_NR_DMUL  {severity=Info} {msg="Macro '%s' is defined with same definition"}
+  MOD_NO_LGIC  {severity=Info} {msg="The design unit '%s' contains only declarations but has no logic inside"}
+  MOD_NR_EBLK  {severity=Warning} {msg="'%s' block inside design-unit '%s' does not contain any statement"}
+  MOD_NR_INCD  {severity=Warning} {msg="The compiler directive %s is incomplete or used incorrectly in the design"}
+  MOD_NR_PGAT  {severity=Warning} {msg="Gate instance '%s' is not expected in an RTL design"}
+  MOD_NR_PRIM  {severity=Error} {msg="Primitive instance '%s' is not expected in an RTL design"}
+  MOD_NR_RPXZ  {severity=Warning} {msg="In design-unit '%s', repetition multiplier contains x/z"}
+  MOD_NR_UNGN  {severity=Warning} {msg="Unnamed generate block found in design-unit '%s'"}
+  REP_NR_ZERO  {severity=Warning} {msg="In design unit '%s', all zero replication in concat expression '%s' is not recommended."}
+  NAM_NR_REPU  {severity=Warning} {msg="Identifier name '%s' reused with just case difference as %s"}
+  OPR_NR_LOSD  {severity=Warning} {msg="The result of the "%s" operation between constants in expression "%s" leads to truncation of bits and loss of data in design-unit/block %s. The bits getting lost are '%s'"} {disable_on_port_declaration=false} {skip_loop_declaration=true}
+  OPR_NR_REAL  {severity=Warning} {msg="Real operand ('%s') is used in logical comparison"}
+  OPR_NR_STRE  {severity=Warning} {msg="String '%s' is used in the operation '%s' in %s '%s'"}
+  OPR_NR_UCMP  {severity=Warning} {msg="Unequal length operands in equality operator encountered in design-unit/block %s. LHS operand is %d bits, RHS operand is %d bits"} {allow_padding_by_zero=true} {allow_truncation_by_zero=true} {skip_declarations=true} {skip_event_expression=true} {skip_loop_declaration=true} {skip_loop_index_comparison=true}
+  OPR_NR_UEOP  {severity=Warning} {msg="Unequal length operand in bit operator %s in design-unit/block %s. LHS operand '%s' is %s bits, RHS operand '%s' is %s bits"} {allow_padding_by_zero=true} {allow_truncation_by_zero=true} {ignore_addition=false} {ignore_subtraction=false} {skip_declarations=true} {skip_event_expression=true} {skip_loop_declaration=true} {skip_loop_index_comparison=true}
+  OPR_NR_UEAS  {severity=Warning} {msg="Unequal length operand in arithmetic operator %s in design-unit/block %s. LHS operand '%s' is %s bits, RHS operand '%s' is %s bits"} {allow_padding_by_zero=true} {allow_truncation_by_zero=true} {skip_declarations=true} {skip_event_expression=true} {skip_loop_declaration=true} {skip_loop_index_comparison=true}
+  OPR_NR_TERN  {severity=Warning} {msg="Unequal length operand in ternary operator in design-unit/block %s. First operand '%s' is %s bits. Second operand '%s' is %s bits"} {allow_padding_by_zero=true} {allow_truncation_by_zero=true} {skip_declarations=true} {skip_loop_declaration=true} {skip_loop_index_comparison=true}
+  OPR_NR_UREL  {severity=Warning} {msg="Unequal length operands in relational operator (padding produces incorrect result) in design-unit/block %s -- LHS operand is %d bits, RHS operand is %d bits"} {allow_padding_by_zero=true} {allow_truncation_by_zero=true} {skip_declarations=true} {skip_event_expression=true} {skip_loop_declaration=true} {skip_loop_index_comparison=true} {skip_signed_unsigned_functions=true}
+  OTP_NO_FDRV  {severity=Warning} {msg="Bits '%s' of the output/inout are not driven in the design-unit '%s'"} {ignore_inout_ports=false} {ignore_unloaded_ports=true} {top_only=false}
+  OTP_NR_READ  {severity=Warning} {msg="Output port '%s' is read inside the design-unit '%s'"} {skip_assigned_output=false}
+  OTP_NR_TSUP  {severity=Warning} {msg="The output/inout '%s' is tied to supply0/supply1"}
+  OTP_NR_UDRV  {severity=Warning} {msg="Output/inout '%s' is not driven in the design-unit '%s'"} {ignore_inout_ports=false} {ignore_unloaded_ports=true} {top_only=false}
+  OTP_UC_INST  {severity=Warning} {msg="Port '%s' (which is being used as an output) of design-unit '%s' is being driven inside the design, but not connected in its instance '%s'"} {check_on_std_cells=true} {ignore_explicitly_unconnected_port=false} {ignore_inout_ports=false} {ignore_port_with_no_load=false} {report_partially_unused=true} {show_unconnected_bus_range=false}
+  PAR_MS_SDAS  {severity=Warning} {msg="Parameter '%s' has a size mismatch between its declaration and its value assigned, '%s' bits at declaration and '%s' bits at assigned value"} {allow_padding_by_zero=true} {allow_truncation_by_zero=false}
+  PRG_NR_PROF  {severity=Warning} {msg="'%s' found without corresponding off pragma"}
+  PRO_NR_WAIT  {severity=Warning} {msg="Sensitivity lists should be used instead of wait statement '%s'"}
+  PRT_NO_MODE  {severity=Warning} {msg="In design-unit '%s', the port '%s' does not have a direction"}
+  PRT_NR_BUFF  {severity=Error} {msg="Port '%s' should not be of mode buffer in design-unit '%s'"}
+  PRT_NR_DFRG  {severity=Warning} {msg="Port '%s' with range (%d to %d) is re-declared with a different range (%d to %d)"} {skip_if_only_one_range=true}
+  PRT_NR_LINK  {severity=Error} {msg="Port '%s' should not be of mode linkage in design-unit '%s'"}
+  REG_NR_UASR  {severity=Warning} {msg="Local register variable '%s' is unassigned, but is read at least once in %s %s"} {pattern=""}
+  REP_NR_NPOS  {severity=Error} {msg="Replication multiplier '%s' is negative in expression '%s'"}
+  RST_IS_CPLX  {severity=Warning} {msg="In design-unit '%s', for flip-flop '%s', reset is an expression"}
+  SIG_NO_ASIG  {severity=Warning} {msg="VHDL signal '%s' is unassigned, but is read at least once in %s '%s'"} {pattern=""}
+  TSK_NR_ASGV  {severity=Warning} {msg="Task '%s' in design-unit '%s' assigns a value to global variable '%s'"}
+  TSK_NR_ESDE  {severity=Warning} {msg="Edge specified for data event '%s' in system task '%s'"}
+  TSK_NR_UGLV  {severity=Warning} {msg="Variable '%s' used in task '%s' of design-unit '%s' is outside of the task scope"}
+  VAR_NO_ASIG  {severity=Warning} {msg="VHDL variable '%s' is unassigned, but is read at least once in %s '%s'"} {pattern=""}
+  VAR_NR_NEGT  {severity=Warning} {msg="In design-unit '%s', the %s '%s' has a negative value"} {check_datatype=reg:logic:wire}
+  VAR_NR_OUTL  {severity=Warning} {msg="The loop variable '%s' is used outside the loop"}
+  VAR_NR_PRCD  {severity=Warning} {msg="Procedure '%s' in design-unit '%s' uses global VHDL variable '%s'"}
+  VAR_NR_RDBA  {severity=Warning} {msg="Signal/Variable '%s', is being read before getting assigned"} {enable_vhdl_support=false} {skip_flip_flop=false} {skip_loop_declaration=true}
+  VAR_NR_RDEC  {severity=Warning} {msg="Redeclaration of variable '%s' is not allowed"}
+  VAR_NR_STRN  {severity=Warning} {msg="Variable '%s' is of string datatype"}
+  VAR_NR_UBDL  {severity=Warning} {msg="Variable/Wire '%s' is used before declaration in design-unit '%s'"}
+  WIR_NR_IMPL  {severity=Error} {msg="Variable/Wire '%s' has an implicit declaration in %s '%s'"}
+  WIR_NR_UASR  {severity=Warning} {msg="Wire '%s' declared in %s '%s' is unassigned, but drives at least an object"} {pattern=""}
+  ALW_NR_EMSL  {severity=Warning} {msg="In module '%s', @* expands to an empty list and will never wake up"}
+  ASG_NR_FNCP  {severity=Warning} {msg="In module '%s', illegal %s port in function '%s' used in continuous assignment statement"}
+  ASG_NR_EXPR  {severity=Warning} {msg="In design unit '%s', assignment '%s' is found in the expression"}
+  ASG_NR_EVNT  {severity=Error} {msg="In design-unit '%s', event control '%s' is used at the right-hand side of an assignment statement"}
+  MOD_NR_STRN  {severity=Error} {msg="Signal strength '%s' found in the design-unit '%s'"}
+  ARY_MS_DRNG  {severity=Warning} {msg="Inconsistent ordering of bits in range declarations in design-unit %s -- should be all %s ranges"} {direction=descending} {report_unpacked=true} {skip_component_declaration=true} {skip_unused_signal=false}
+  ARY_NR_LOPR  {severity=Warning} {msg="%s operator applied to multi-bit operand %s in design-unit %s"} {allow_truncation_by_zero=true} {skip_declarations=true}
+  ARY_NR_NERG  {severity=Warning} {msg="Negative value '%s' used as an array range for '%s' in design-unit '%s'"}
+  ARY_NR_SLRG  {severity=Warning} {msg="The signal '%s', defined in %s '%s', is a one pin bus in its instance '%s'"} {top_only=false}
+  ASG_MS_RTRU  {severity=Warning} {msg="Unequal length operands in assignment in design-unit/block '%s'. Length of RHS is greater than LHS: LHS '%s' (%s) - %s bit(s), RHS '%s' (%s) - %s bit(s). %s most significant bit(s) will be lost"} {skip_loop_declaration=true}
+  ASG_MS_VALR  {severity=Warning} {msg="For the given assignment in VHDL design-unit/block '%s', value range of RHS '%s' cannot be accommodated in LHS range '%s'"}
+  ASG_NR_POVF  {severity=Warning} {msg="Potential overflow in assignment in design-unit/block '%s'. LHS '%s' (%s) is of %s bit(s), RHS '%s' (%s) can be of %s bit(s) %s"} {report_all_negative_assignment_to_unsigned=false} {skip_loop_declaration=true} {skip_statement=""}
+  ASG_NR_LMSB  {severity=Warning} {msg="Truncation of bits in a constant '%s' in design-unit/block %s. The most significant bits are lost"} {skip_loop_declaration=true}
+  ASG_NR_MINP  {severity=Warning} {msg="Assignment to a %s input port '%s' is not supported"}
+  ASG_NR_NBFC  {severity=Warning} {msg="Non-blocking assignment encountered in function '%s'"}
+  ASG_NR_SOVF  {severity=Warning} {msg="Overflow in assignment due to shift operation in design-unit '%s'. LHS '%s' (%s) is of %s bit(s) and RHS '%s' (%s) is of %s bit(s)"}
+  CAS_NO_CNST  {severity=Warning} {msg="Case item expression '%s' is not a constant"}
+  CAS_NO_DEFA  {severity=Warning} {msg="Case statement with no default and selector '%s' is too wide to check if all cases are covered"}
+  CAS_NO_OTHR  {severity=Warning} {msg="VHDL case statement with selector '%s' does not have an others clause"}
+  CAS_NR_CMUL  {severity=Warning} {msg="Case item expression '%s' is covered more than once in design-unit %s"} {consider_parallel_case_pragma=false} {report_non_constant_case_item=false}
+  CAS_NR_DEFN  {severity=Error} {msg="Case statement with selector '%s' in %s '%s' is incomplete, %s"} {case_default_specification=relax} {combinational_block_only=false} {consider_all_enum_covered_as_full=false} {consider_default_item_as_full=true} {consider_full_case_as_full=false} {full_case_with_no_default_allowed=true} {verbose_report_all_missing_case_items=false}
+  CAS_NR_DEFX  {severity=Warning} {msg="Signal '%s' assigned in case statement is not assigned to X in default case"} {consider_all_enum_covered_as_full=false} {consider_full_case_as_full=false} {skip_incomplete_case=false} {skip_loop_declaration=true}
+  CAS_NR_EXCS  {severity=Warning} {msg="Case selector '%s' is an expression"} {ignore_operator=concat:replicate:add:subtract:multiply:divide:modulus}
+  CAS_NR_OVCI  {severity=Warning} {msg="Casex/Casez item expression '%s' overlapping with casex/casez item expression '%s' in design-unit %s"} {consider_parallel_case_pragma=false} {ignore_overlap_except_unique=false} {ignore_within_list_overlap=false} {ignore_z_overlap=false}
+  CAS_NR_UCIT  {severity=Warning} {msg="Unequal length in case item comparison (selector is %d bits, case tag expression is %d bits) in design-unit %s"} {allow_padding_by_zero=true} {allow_truncation_by_zero=true} {casesel_lessthan_casetag_allow=false}
+  CAS_NR_XCAZ  {severity=Warning} {msg="Case item expression contains 'x' for a casez statement (useful only in casex statements) in design-unit %s"}
+  CND_IR_CCAS  {severity=Warning} {msg="Constant conditional expression '%s' encountered"} {ignore_reverse_modeling=false} {optimize_condition=true} {report_parameter=false} {report_params_in_condition=true}
+  CND_NR_BWOP  {severity=Warning} {msg="In module '%s', using a bit-wise operation in a conditional expression '%s' is not recommended"}
+  CND_NR_DUPF  {severity=Warning} {msg="In design unit '%s', a duplicate condition '%s' is found inside the '%s' statement"}
+  CND_NR_EVXZ  {severity=Warning} {msg="Conditional expression '%s' evaluates to 'x' or 'z'"}
+  CND_NS_MBEX  {severity=Warning} {msg="The expression '%s' in condition does not result in a single bit value in design-unit %s"}
+  CST_MS_SIZE  {severity=Warning} {msg="Constant '%s' has a value greater than its size"}
+  CST_NO_DELY  {severity=Warning} {msg="Delay %s in assignment is not a constant expression"}
+  CST_NO_HIER  {severity=Warning} {msg="Constant expression '%s' cannot contain a hierarchical identifier"}
+  CST_NO_IVAL  {severity=Error} {msg="The initial value is missing in the declaration of constant '%s'"}
+  CST_NR_REAL  {severity=Warning} {msg="In design-unit '%s', real literal constant '%s' found"} {check_case_only=false}
+  DLY_NO_CSAG  {severity=Error} {msg="Delay used in VHDL conditional signal assignment to '%s'"}
+  DLY_NR_NEGT  {severity=Error} {msg="Negative delay '%s' used in the statement"}
+  DUT_NO_USED  {severity=Warning} {msg="Design unit '%s' is not used"}
+  EXP_NR_DIVZ  {severity=Warning} {msg="Division by zero operation in expression '%s'"}
+  EXP_NR_ITYC  {severity=Warning} {msg="Expression '%s' implicitly converted. LHS is '%s' vs RHS is '%s'"} {skip_operation=false}
+  EXP_NR_OVFB  {severity=Warning} {msg="All bits are lost in shift operation '%s' in module/design-unit '%s'. '%d' bit data has been shifted by '%d'"} {skip_declarations=true}
+  EXP_NR_MXSU  {severity=Warning} {msg="Expression in design-unit '%s' has both signed '%s' and unsigned '%s' expressions"} {skip_expr_in_index=true}
+  EXP_NR_STUS  {severity=Warning} {msg="Expression '%s' in design-unit '%s' is implicitly converted to type 'unsigned' from type 'signed'"}
+}
+
+category FILEFORMAT
+{
+  FIL_NR_MMOD  {severity=Warning} {msg="More than one design-unit definition in file '%s'"}
+  FIL_NS_SUFX  {severity=Warning} {msg="The file name '%s' is missing a valid HDL file name extension"} {local_pattern_style=regex} {local_regex_style=full} {pattern=(^vhd$|^vhdl$|^v$|^sv$)}
+  FIL_MS_DUNM  {severity=Warning} {msg="%s name '%s' differs from file name '%s'"}
+}
+
+category BLACKBOX
+{
+  SIG_IS_ATBX  {severity=Warning} {msg="%s '%s' is automatically blackboxed"}
+  ELB_IS_ERRO  {severity=Error} {msg="Failed to elaborate design-unit '%s'. For more details check errors in the "Design Build" view"}
+  INS_IS_EBXE  {severity=Info} {msg="Instance %s was explicitly blackboxed by user"}
+  MOD_IS_EBXE  {severity=Info} {msg="Module/design-unit %s was explicitly blackboxed by user"}
+  MOD_IS_IBXE  {severity=Warning} {msg="Design-unit %s was implicitly blackboxed by the tool. Check for more details under the BBOX category in the "Design Build" view"}
+  MOD_IS_RBXE  {severity=Warning} {msg="Design-unit %s was blackboxed as a result of resilient compilation. Check for more details under the BBOX category in the "Design Build" view"}
+}
+
+category HIER_CONSISTENCY
+{
+  RST_IN_UPOL  {severity=Error} {msg="Reset port '%s' from IP level is expected to have polarity '%s' but found connected to polarity '%s' at the SoC level"}
+  RST_IN_RORD  {severity=Error} {msg="Reset order for ports '%s' from IP level do not match the reset order at the SoC level"}
+  PRT_NO_CONS  {severity=Error} {msg="Constant port '%s' at IP level is not constant at SoC level"}
+  PRT_DF_CONS  {severity=Error} {msg="Constant port '%s' at IP level with value %d has a different value %d at SoC level"}
+  CDC_IN_NSYN  {severity=Error} {msg="IP level output '%s' associated to clock '%s' is not synchronized at the SoC level"}
+  CLK_IN_UDEF  {severity=Error} {msg="IP level clock input '%s' is not connected to a clock at the SoC level"}
+  CLK_IN_UCKF  {severity=Error} {msg="IP level clock input '%s' is connected to a clock with different factor at the SoC level"}
+  CLK_IN_UREL  {severity=Error} {msg="Clock inputs '%s' and '%s' of instance '%s' are declared as '%s' at IP level, but they are '%s' at the SoC level"}
+  CLK_IN_WREL  {severity=Warning} {msg="Clock inputs '%s' and '%s' of instance '%s' are declared as '%s' at IP level, but they are '%s' at the SoC level"}
+  INV_IN_ASUM  {severity=Error} {msg="Boundary assumption specified at the IP level is not valid at the SoC level"}
+  INV_IN_PCND  {severity=Error} {msg="Precondition for conditional waiver specified at the IP level is not valid at the SoC level"}
+  INT_IN_PROP  {severity=Warning} {msg="Internal assumptions at the IP level could not be proven at the SoC level"}
+  PRT_IN_URAT  {severity=Warning} {msg="Clock association of port '%s' at IP level does not match the clock association at the SoC level"}
+  HDB_IN_LDFL  {severity=Error} {msg="Unable to load database: '%s'"}
+  RST_IN_UDEF  {severity=Error} {msg="Reset port '%s' from IP level is not connected to a reset definition at the SoC level"}
+  RST_IN_URST  {severity=Error} {msg="Reset port '%s' from IP level is expected to be of type '%s' and clock '%s' but found to be of type '%s' and clock '%s' from the SoC level"}
+  RST_IN_URAT  {severity=Warning} {msg="Reset rating of port '%s' at IP level does not match the driver/load reset at the SoC level"}
+}
+
+category RST_CONFIGURATION
+{
+  RST_NO_DECL  {severity=Error} {msg="Undeclared reset source '%s'"}
+  RST_RS_FSAR  {severity=Error} {msg="Reset condition is keeping flop '%s' stuck at its reset value"}
+}
+
+category RST_SYNCHRONIZATION
+{
+  RST_NO_SYNC  {severity=Error} {msg="Reset signal '%s' driven by clock '%s' is not synchronized to the clock '%s' of the destination unit '%s'"} {reset_min_dff=2}
+  RST_RS_CONV  {severity=Error} {msg="One or more resets converge at '%s'. One such reset is '%s'"} {autowaive_reset_clear_logic=true}
+  RDC_RS_SYCA  {severity=Error} {msg="Flops '%s' and '%s' driven by clock '%s' are driven by different reset signals '%s' and '%s' respectively. The source flop is driven asynchronously by a reset source that is fully synchronous"}
+  RDC_RS_DFRS  {severity=Error} {msg="Flops '%s' and '%s' driven by clock '%s' are driven by different asynchronous reset signals '%s' and '%s' respectively"} {autowaive_rdc_with_ndff=true} {ignore_non_resettable_flop=false} {ignore_rdc_from_same_reset_source=true} {treat_boundaries_as_rdc=false}
+  RST_RS_INAC  {severity=Info} {msg="Inactive reset path between source unit '%s' and destination unit '%s' due to constraints"} {status=off}
+  RST_RS_RIDP  {severity=Error} {msg="Asynchronous or Synchronized Reset signal '%s' is connected to the data pin of flop/latch '%s' driven by clock/enable '%s'"} {ignore_reset_in_datapath_for_control_sync=true}
+  SYN_RS_CKPH  {severity=Error} {msg="The flops of reset synchronizer '%s' are driven by different phases of the clock '%s'"}
+  SYN_RS_SMDR  {severity=Error} {msg="The flops of reset synchronizer '%s' are not driven by same reset signal"}
+  SYN_RS_SLGC  {severity=Error} {msg="Combo logic exists between flops of reset synchronizer '%s'"} {reset_sync_chain_logic=Buf}
+  SYN_RS_RDND  {severity=Warning} {msg="Redundant reset synchronizer on reset path between source clock '%s' to destination clock '%s'"}
+  RST_RS_FOUT  {severity=Error} {msg="Fanout of reset source '%s' to multiple reset synchronizers in the same destination clock domain '%s'"}
+  RDC_RS_GLCH  {severity=Error} {msg="Potential glitch at '%s' due to more than one flop from different reset domains combining into a combo logic"} {status=off}
+}
+
+category CDC_METASTABILITY
+{
+  CHK_MS_FAIL  {severity=Error} {msg="User property '%s' failed due to metastability injection"}
+  INJ_MS_FAIL  {severity=Error} {msg="Injection failure: CDC destination unit '%s' could not be made metastability-aware due to the presence of a previous abstraction"}
+}
+
+category CDC_FUNCTIONAL
+{
+  PSH_ON_FULL  {severity=Error} {msg="Write to FIFO '%s' from source clock '%s' is possible when full"}
+  POP_ON_EMTY  {severity=Error} {msg="Read from FIFO '%s' in destination clock '%s' is possible when empty"}
+  WPT_NO_GRAY  {severity=Error} {msg="Write pointer '%s' of FIFO '%s' in source clock '%s' is not Gray encoded"}
+  RPT_NO_GRAY  {severity=Error} {msg="Read pointer '%s' of FIFO '%s' in destination clock '%s' is not Gray encoded"}
+  BUS_NO_GRAY  {severity=Error} {msg="NDFF_BUS '%s' in destination clock '%s' is not Gray encoded"}
+  PLS_IP_WDTH  {severity=Error} {msg="Input pulse to pulse synchronizer '%s' is wider than one cycle of source clock '%s'"}
+  PLS_OP_WDTH  {severity=Error} {msg="Output pulse from pulse synchronizer '%s' is wider than one cycle of destination clock '%s'"}
+  PLS_NO_TOGL  {severity=Error} {msg="Pulse toggle circuit '%s' of pulse synchronizer '%s' does not change according to input pulse"}
+  GPD_NO_STBL  {severity=Error} {msg="Glitch protector data path '%s' is not stable when enable signal '%s' is asserted in destination clock '%s'"}
+  SYN_NO_STBL  {severity=Error} {msg="Sync enabler data path '%s' is not stable when enable signal '%s' is asserted in destination clock '%s'"}
+  INC_FN_PROP  {severity=Error} {msg="Incomplete scheme property generated for synchronizer '%s' in destination clock '%s'"}
+  USR_FN_PROP  {severity=Error} {msg="User defined scheme property '%s' failed for synchronizer '%s'"}
+  CTL_NO_STBL  {severity=Error} {msg="Control path '%s' is not stable long enough to be captured correctly by destination clock '%s'"}
+  PLS_NO_STBL  {severity=Error} {msg="Pulse input '%s' from source clock '%s' is not stable long enough to be captured by destination clock '%s'"}
+  DAT_NO_STBL  {severity=Error} {msg="Data Path '%s' is not stable long enough to be captured by destination clock '%s'"}
+  REQ_NO_HOLD  {severity=Error} {msg="Handshake request signal '%s' from source clock '%s' is de-asserted before acknowledgment is received from destination clock '%s'"}
+  NRQ_WO_DACK  {severity=Error} {msg="New handshake request is asserted by the handshake synchronizer '%s' from the source clock '%s' before the previous acknowledge is de-asserted from the destination clock '%s'"}
+  ACK_WO_SREQ  {severity=Error} {msg="Handshake acknowledge signal of handshake synchronizer '%s' from destination clock '%s' is de-asserted before request from source clock '%s' is de-asserted"}
+  NAK_WO_SREQ  {severity=Error} {msg="New handshake acknowledge is asserted by the handshake synchronizer '%s' from the destination clock '%s' before a new request is asserted from the source clock '%s'"}
+  DAT_HS_STBL  {severity=Error} {msg="Handshake data from source clock '%s' of handshake synchronizer '%s' changes before acknowledge is received from the destination clock '%s'"}
+}
+
+category CDC_CONVERGENCE
+{
+  CNV_ST_GLCH  {severity=Error} {msg="Potential glitch at '%s' in source clock domain '%s'"} {glitch_check=Covered}
+  CNV_ST_CONV  {severity=Error} {msg="Convergence at '%s' in destination clock domain '%s' after synchronization"}
+  CNV_ST_BCNV  {severity=Error} {msg="Potential convergence of bus '%s' from source clock domain '%s' to destination clock domain '%s' outside the module"} {status=off}
+}
+
+category CDC_SYNCHRONIZATION
+{
+  CDC_PR_INAC  {severity=Info} {msg="Inactive CDC path between source unit '%s' driven by clock '%s' and destination unit '%s' driven by clock '%s' due to constraints"} {status=off}
+  CDC_PR_LTCH  {severity=Error} {msg="CDC on latch unit '%s'. At least two latch inputs out of data, enable, and reset inputs are coming from different asynchronous clock domains. Two such domains are '%s' and '%s'"}
+  SYN_DF_SLGC  {severity=Error} {msg="Combo Logic in NDFF synchronizer chain '%s' driven by clock '%s'"} {sync_chain_logic=Buf}
+  SYN_DF_CKPH  {severity=Error} {msg="Different clock phases drive NDFF synchronizer '%s' clocked by '%s'"}
+  SYN_DF_FOUT  {severity=Error} {msg="Multiple fanouts of first flop of NDFF scheme '%s' driven by clock '%s'"}
+  SYN_DF_RDND  {severity=Warning} {msg="Redundant synchronizer to clock '%s' on CDC path between source unit '%s' and destination unit '%s'"} {status=off}
+  SYN_SE_INVL  {severity=Error} {msg="Invalid Sync enable '%s' between source clock domain '%s' and destination clock domain '%s'"}
+  SYN_GP_ASIP  {severity=Error} {msg="Glitch Protector control signal '%s' and data signal '%s' are from asynchronous source clock domains '%s'"}
+  SYN_GP_ASOP  {severity=Error} {msg="Glitch Protector control signal '%s' and output signal '%s' are from asynchronous destination clock domains '%s'"}
+  CDC_NO_SYNC  {severity=Error} {msg="No synchronizer between source unit '%s' driven by clock '%s' and destination unit '%s' driven by clock '%s'"} {n_min=2}
+  CDC_PR_LOGC  {severity=Error} {msg="Combo Logic on CDC path between source unit '%s' driven by clock '%s' and destination unit '%s' driven by clock '%s'"} {autowaive_reset_clamp_pair_logic=false} {cdc_pair_logic=Buf} {do_not_report_unsynchronized_pair_logic=true}
+  CDC_PR_FOUT  {severity=Warning} {msg="Multiple fanouts of source unit '%s' driven by clock '%s' to the same destination clock domain '%s'. One such fanout destination is '%s'"}
+}
+
+category CDC_CONFIGURATION
+{
+  PRT_IS_UNCK  {severity=Error} {msg="No clock association for the '%s' port '%s'"} {autowaive_liberty_unclocked_ports_noarc=true}
+  CLK_IS_CNST  {severity=Warning} {msg="Clock '%s' is constant"}
+  CLK_NO_DECL  {severity=Error} {msg="Undeclared clock port '%s'"}
+  SIG_NO_STAT  {severity=Error} {msg="Signal '%s' is not static"}
+  SIG_NO_GRAY  {severity=Error} {msg="Signal '%s' is not gray encoded"}
+  SIG_NO_EXCL  {severity=Error} {msg="Signals '%s' are not mutually toggle exclusive"}
+  CND_NO_CONS  {severity=Error} {msg="Signal '%s' is not constant"}
+  CKS_NO_CONS  {severity=Warning} {msg="Unconstrained clock mux select '%s' with input clocks '%s'"} {status=off}
+  CLK_IS_CONV  {severity=Error} {msg="Clock Convergence at '%s'. One such clock is '%s'"} {status=off}
+  CKS_IS_CONV  {severity=Error} {msg="Clock Mux Select Convergence at '%s'. One such signal is '%s'"} {status=off}
+  CLK_GT_ASYN  {severity=Error} {msg="Clock signal '%s' and enable signal '%s' are asynchronous and converge at '%s'"} {status=off}
+  LTC_NO_INIT  {severity=Error} {msg="Uninitialized latch at '%s'"}
+  SYN_NO_TARG  {severity=Info} {msg="User-defined scheme '%s' of type '%s' does not qualify any CDC pair"} {status=off}
+}
+
+params CDC {convergence_inside_ctrl_sync=false}
+params CDC {depth=2}
+params CDC {flop_constant_propagation=false}
+params CDC {group_fsm_convergences=false}
+params CDC {ignore_unsync_paths_in_convergence=true}
+params CDC {latch_constant_propagation=false}
+params CDC {liberty_clock_pin_as_datapath=false}
+params CDC {src_unit_domain=Both}
+params CDC {src_unit_signal=Both}
+params CDC {use_only_rtl_constants_for_glitch_simplification=false}
+params RDC {auto_reset_sync_detection=true}
+params RDC {nonblocking_reset_control_logic=false}
+params RDC {report_violations_on_undeclared_reset=false}
+params RDC {rtl_constant_for_reset_scheme=false}
+params RDC {strict_reset_scheme_detection=true}
+params RDC {treat_data_ports_reset_as_async=None}
+params LINT {allow_padding_by_zero=false}
+params LINT {allow_truncation_by_zero=false}
+params LINT {assume_bbox_connected=explicit_bbox}
+params LINT {case_selector_size_limit=14}
+params LINT {disable_partial_reporting=false}
+params LINT {global_pattern_style=wildcard}
+params LINT {hide_verific_messages=true}
+params LINT {local_regex_style=""}
+params LINT {max_supported_bit_size=16384}
+params LINT {pattern_style=""}
+params LINT {regex_style=""}
+params LINT {report_complex_indexed_expr=false}
+params LINT {report_partially_unused_vector=true}
+params LINT {size_as_per_calculation=false}
+params LINT {tags_waiving_gate_no_load=CLK_IS_NDPI}
+params LINT {traverse_inactive_blocks=false}
+params LINT {unbased_literal=size_as_per_type}
+params LINT {unsized_literal=size_as_per_type}
+params DFT {assume_bbox_connected=explicit_bbox}
+params DFT {enable_test_coverage=false}
+params DFT {shift_mode_test_clock=true}
+// ----------------END-------------//

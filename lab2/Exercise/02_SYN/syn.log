@@ -1,0 +1,560 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version R-2020.09 for linux64 - Aug 26, 2020 
+
+                    Copyright (c) 1988 - 2020 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+#======================================================
+#
+# Synopsys Synthesis Scripts (Design Vision dctcl mode)
+#
+#======================================================
+#======================================================
+#  Set Libraries
+#======================================================
+set search_path    {./../01_RTL                     ~iclabta01/umc018/Synthesis/                     /usr/synthesis/libraries/syn/ }
+./../01_RTL                     ~iclabta01/umc018/Synthesis/                     /usr/synthesis/libraries/syn/ 
+set synthetic_library {dw_foundation.sldb}
+dw_foundation.sldb
+set link_library {* dw_foundation.sldb standard.sldb slow.db}
+* dw_foundation.sldb standard.sldb slow.db
+set target_library {slow.db}
+slow.db
+#======================================================
+#  Global Parameters
+#======================================================
+set DESIGN "QUEEN"
+QUEEN
+set hdlin_ff_always_sync_set_reset true
+true
+set CYCLE 6.0
+6.0
+#======================================================
+#  Read RTL Code
+#======================================================
+read_sverilog { QUEEN.v}
+Loading db file '/usr/synthesis/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/synthesis/libraries/syn/standard.sldb'
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/gtech.db'
+Loading db file '/RAID2/EDA/synopsys/synthesis/2020.09/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'gtech'
+Loading sverilog file '/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v:16: Empty port in module declaration. (VER-986)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v:116: signed to unsigned conversion occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v:117: signed to unsigned conversion occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v:122: signed to unsigned conversion occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v:123: signed to unsigned conversion occurs. (VER-318)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v:85: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v:139: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v:178: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v:206: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v:243: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v:1: Port number 10 of 'QUEEN' was named 'Port10'. (VER-441)
+
+Statistics for case statements in always block at line 84 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            85            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 137 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           139            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 177 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           178            |    auto/auto     |
+|           182            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 205 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           206            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 220 in file
+	'/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           243            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine QUEEN line 67 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       out_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine QUEEN line 72 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    out_valid_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine QUEEN line 78 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine QUEEN line 166 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   col_pointer_reg   | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine QUEEN line 220 in file
+		'/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+|      rd_ram_reg      | Flip-flop |  23   |  Y  | N  | Y  | N  | N  | N  | N  |
+| ans_row_position_reg | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+| ans_row_position_reg | Flip-flop |  44   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  fixed_row_flag_reg  | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  fixed_col_flag_reg  | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     testing_reg      | Flip-flop |  12   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      lu_ram_reg      | Flip-flop |  23   |  Y  | N  | Y  | N  | N  | N  | N  |
+================================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|     QUEEN/83     |   16   |    1    |      4       |
+|    QUEEN/210     |   16   |    1    |      4       |
+|    QUEEN/266     |   16   |    1    |      4       |
+======================================================
+Warning:  /RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.v:171: Netlist for always block is empty. (ELAB-985)
+Information:  Complex logic will not be considered for set/reset inference. (ELAB-2008)
+Presto compilation completed successfully.
+Current design is now '/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/01_RTL/QUEEN.db:QUEEN'
+Loaded 1 design.
+Current design is 'QUEEN'.
+QUEEN
+current_design QUEEN
+Current design is 'QUEEN'.
+{QUEEN}
+#======================================================
+#  Global Setting
+#======================================================
+set_wire_load_mode top
+1
+#======================================================
+#  Set Design Constraints
+#======================================================
+create_clock -name "clk" -period $CYCLE clk 
+1
+set_input_delay  [ expr $CYCLE*0.5 ] -clock clk [all_inputs]
+1
+set_output_delay [ expr $CYCLE*0.5 ] -clock clk [all_outputs]
+1
+set_input_delay 0 -clock clk clk
+1
+set_load 0.05 [all_outputs]
+1
+#======================================================
+#  Optimization
+#======================================================
+uniquify
+1
+set_fix_multiple_port_nets -all -buffer_constants
+1
+compile_ultra
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | Q-2019.12-DWBB_201912.0 |     *     |
+| Licensed DW Building Blocks        | Q-2019.12-DWBB_201912.0 |     *     |
+============================================================================
+
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'QUEEN'
+
+Loaded alib file './alib-52/slow.db.alib'
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'QUEEN'
+Information: Added key list 'DesignWare' to design 'QUEEN'. (DDB-72)
+ Implement Synthetic for 'QUEEN'.
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'HOLDX1' in the library 'slow' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:05   62093.9      0.06       1.2       0.0                           8605090.0000
+    0:00:05   61997.4      0.05       0.9       0.0                           8594179.0000
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:05   61997.4      0.05       0.9       0.0                           8594179.0000
+    0:00:06   61997.4      0.05       0.9       0.0                           8594179.0000
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:06   30726.0      0.39      10.1       0.0                           2647269.7500
+    0:00:06   30862.3      0.00       0.0       0.0                           2684750.0000
+    0:00:06   30862.3      0.00       0.0       0.0                           2684750.0000
+    0:00:06   30709.3      0.00       0.0       0.0                           2659181.7500
+    0:00:06   30709.3      0.00       0.0       0.0                           2659181.7500
+    0:00:07   30709.3      0.00       0.0       0.0                           2659181.7500
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:07   30569.6      0.00       0.0       0.0                           2620242.2500
+    0:00:07   30569.6      0.00       0.0       0.0                           2620242.2500
+    0:00:07   30569.6      0.00       0.0       0.0                           2620242.2500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:07   30563.0      0.00       0.0       0.0                           2574032.7500
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+  Global Optimization (Phase 34)
+  Global Optimization (Phase 35)
+  Global Optimization (Phase 36)
+  Global Optimization (Phase 37)
+  Global Optimization (Phase 38)
+  Global Optimization (Phase 39)
+  Global Optimization (Phase 40)
+  Global Optimization (Phase 41)
+  Global Optimization (Phase 42)
+  Global Optimization (Phase 43)
+  Global Optimization (Phase 44)
+  Global Optimization (Phase 45)
+    0:00:07   30506.4      0.00       0.0       0.0                           2253892.0000
+    0:00:07   30506.4      0.00       0.0       0.0                           2253892.0000
+    0:00:07   30506.4      0.00       0.0       0.0                           2253892.0000
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:08   30489.8      0.00       0.0       0.0                           2254945.2500
+    0:00:08   29960.9      0.00       0.0       0.0                           2247679.5000
+    0:00:08   29960.9      0.00       0.0       0.0                           2247679.5000
+    0:00:08   29960.9      0.00       0.0       0.0                           2247679.5000
+    0:00:08   29960.9      0.00       0.0       0.0                           2247679.5000
+    0:00:08   30020.8      0.00       0.0       0.0                           2226583.7500
+    0:00:08   30020.8      0.00       0.0       0.0                           2226583.7500
+    0:00:08   30020.8      0.00       0.0       0.0                           2226583.7500
+    0:00:08   30020.8      0.00       0.0       0.0                           2226583.7500
+    0:00:08   30020.8      0.00       0.0       0.0                           2226583.7500
+    0:00:08   30020.8      0.00       0.0       0.0                           2226583.7500
+    0:00:08   29851.1      0.00       0.0       0.0                           2231151.2500
+Loading db file '/RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#======================================================
+#  Output Reports 
+#======================================================
+check_design > Report/TT.check
+report_timing >  Report/TT.timing
+report_area >  Report/TT.area
+report_resource >  Report/TT.resource
+#======================================================
+#  Change Naming Rule
+#======================================================
+set bus_inference_style "%s\[%d\]"
+%s[%d]
+set bus_naming_style "%s\[%d\]"
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _" -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed "a-z A-Z 0-9 _[]" -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\\*cell\\*" "cell"}}
+1
+change_names -hierarchy -rules name_rule
+1
+#======================================================
+#  Output Results
+#======================================================
+set verilogout_higher_designs_first true
+true
+write -format verilog -output Netlist/QUEEN_SYN.v -hierarchy
+Writing verilog file '/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/02_SYN/Netlist/QUEEN_SYN.v'.
+1
+write_sdf -version 2.1 -context verilog -load_delay cell Netlist/QUEEN_SYN.sdf
+Information: Writing timing information to file '/RAID2/COURSE/iclab/iclab034/Lab02/Exercise/02_SYN/Netlist/QUEEN_SYN.sdf'. (WT-3)
+1
+report_area
+ 
+****************************************
+Report : area
+Design : QUEEN
+Version: R-2020.09
+Date   : Fri Mar 10 19:54:33 2023
+****************************************
+
+Library(s) Used:
+
+    slow (File: /RAID2/COURSE/iclab/iclabta01/umc018/Synthesis/slow.db)
+
+Number of ports:                           21
+Number of nets:                          1524
+Number of cells:                         1481
+Number of combinational cells:           1336
+Number of sequential cells:               145
+Number of macros/black boxes:               0
+Number of buf/inv:                        199
+Number of references:                      67
+
+Combinational area:              19333.037120
+Buf/Inv area:                     2022.451271
+Noncombinational area:           10518.076950
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 29851.114070
+Total area:                 undefined
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : QUEEN
+Version: R-2020.09
+Date   : Fri Mar 10 19:54:33 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: col_pointer_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lu_ram_reg_4_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  col_pointer_reg_0_/CK (DFFRHQX4)         0.00       0.00 r
+  col_pointer_reg_0_/Q (DFFRHQX4)          0.29       0.29 r
+  U2097/Y (BUFX8)                          0.19       0.48 r
+  U2102/Y (NOR2XL)                         0.09       0.57 f
+  U1172/Y (BUFX2)                          0.30       0.87 f
+  U2128/Y (NAND2XL)                        0.14       1.00 r
+  U2130/Y (NAND4XL)                        0.14       1.15 f
+  U2131/Y (NAND2XL)                        0.13       1.28 r
+  U2133/Y (NAND4X1)                        0.18       1.46 f
+  U2134/Y (INVX1)                          0.12       1.58 r
+  U2085/Y (OR2X1)                          0.18       1.76 r
+  U1456/Y (AND2XL)                         0.21       1.97 r
+  U2238/Y (NOR2X1)                         0.09       2.06 f
+  U2239/Y (AOI2BB1X2)                      0.23       2.30 f
+  U2254/Y (NAND2XL)                        0.15       2.44 r
+  U1324/Y (NAND2X1)                        0.15       2.59 f
+  U2272/Y (NOR3X2)                         0.26       2.85 r
+  U1321/Y (OAI21X2)                        0.12       2.97 f
+  U2090/Y (INVX2)                          0.09       3.06 r
+  U1318/Y (NAND4X1)                        0.09       3.15 f
+  U1317/Y (OAI2BB1X2)                      0.26       3.41 f
+  U1408/Y (MXI2X2)                         0.20       3.61 r
+  U1500/Y (NAND2X1)                        0.20       3.81 f
+  U1149/Y (NAND2X1)                        0.19       4.01 r
+  U1531/Y (XOR2X1)                         0.35       4.36 f
+  U1542/Y (INVXL)                          0.16       4.51 r
+  U1263/Y (NOR2X1)                         0.12       4.63 f
+  U1189/Y (AOI22XL)                        0.24       4.87 r
+  U1254/Y (NAND2XL)                        0.10       4.96 f
+  U2314/Y (MXI2X1)                         0.14       5.11 r
+  U2315/Y (AOI2BB1X2)                      0.21       5.32 r
+  U1129/Y (BUFX4)                          0.26       5.58 r
+  U2425/Y (MXI2X1)                         0.13       5.71 f
+  lu_ram_reg_4_/D (DFFRHQXL)               0.00       5.71 f
+  data arrival time                                   5.71
+
+  clock clk (rise edge)                    6.00       6.00
+  clock network delay (ideal)              0.00       6.00
+  lu_ram_reg_4_/CK (DFFRHQXL)              0.00       6.00 r
+  library setup time                      -0.29       5.71
+  data required time                                  5.71
+  -----------------------------------------------------------
+  data required time                                  5.71
+  data arrival time                                  -5.71
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
+#======================================================
+#  Finish and Quit
+#======================================================
+exit
+
+Memory usage for this session 187 Mbytes.
+Memory usage for this session including child processes 187 Mbytes.
+CPU usage for this session 10 seconds ( 0.00 hours ).
+Elapsed time for this session 13 seconds ( 0.00 hours ).
+
+Thank you...
